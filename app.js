@@ -1,4 +1,108 @@
 // ======================================================================
+// 📦 数据部分 — 在此处添加/修改语法和词汇库
+// ======================================================================
+
+// ---------- 语法分类 ----------
+const CATEGORIES = [
+  { id: 3, name: '词类', icon: 'bi-pencil' },
+  { id: 8, name: '句法', icon: 'bi-diagram-3' }
+]
+
+// ---------- 语法 ----------
+// 扩展方法：在对应 categoryId 的数组中追加即可，questions 中可配多选/填空/短文
+let KNOWLEDGE_POINTS = []
+async function loadKnowledgeData() {
+    try {
+        const response = await fetch('data/knowledge.json');
+        KNOWLEDGE_POINTS = await response.json();
+        console.log('✅ 加载成功，共', KNOWLEDGE_POINTS.length, '条');
+    } catch (error) {
+        console.error('❌ 加载失败:', error);
+    }
+}
+// 启动加载
+loadKnowledgeData();
+
+const WORD_CLASS_GROUPS = [
+  { key:'noun', title:'名词', desc:'可数名词及单复数、不可数名词、专有名词、名词所有格。', ids:[9,43,44,45,47,160,46] },
+  { key:'verb', title:'动词', desc:'基本形式、及物/不及物动词、系动词、助动词、情态动词。', ids:[110,161,111,112,113,114,162,163,164,15,115,116,117,118,119,120,121,122] },
+  { key:'adjective', title:'形容词', desc:'基本形式、常见词尾/词缀、定语/表语用法、比较级和最高级。', ids:[165,166,55,10,59] },
+  { key:'adverb', title:'副词', desc:'修饰动词、形容词、副词或整个句子；补充常见 -ly 词尾以及副词比较级、最高级。', ids:[56,167,57,58] },
+  { key:'pronoun', title:'代词', desc:'人称代词、物主代词、反身代词、指示代词、不定代词和替代用法。', ids:[11,48,49,50,51,52,53,54] },
+  { key:'numeral', title:'数词', desc:'基数词、序数词、分数、小数、百分数和年月日时间表达。', ids:[19,65,66,67,68,69] },
+  { key:'article', title:'冠词', desc:'不定冠词、定冠词、零冠词和常见固定搭配。', ids:[20,70,71,72,73] },
+  { key:'preposition', title:'介词', desc:'时间、地点方位、方式和固定介词搭配。', ids:[21,61,62,63,64] }
+]
+const WORD_CLASS_POINT_IDS = new Set(WORD_CLASS_GROUPS.flatMap(g=>g.ids))
+KNOWLEDGE_POINTS.forEach(kp=>{if(WORD_CLASS_POINT_IDS.has(kp.id))kp.categoryId=3})
+
+const SYNTAX_GROUPS = [
+  { key:'sentence-kind', title:'句子种类', desc:'陈述句、疑问句、祈使句、感叹句和反意疑问句。', ids:[74,75,76,77,78,23,24] },
+  { key:'simple-sentence', title:'简单句的基本句型', desc:'五种基本句型和 There be 结构。', ids:[79,80,81,82,83,12,29] },
+  { key:'tense', title:'谓语动词的时态', desc:'be 动词、一般时、进行时、完成时以及时态相关动词变化。', ids:[27,28,1,2,3,4,5,6,17,18,30,31,32,33,34,35,36] },
+  { key:'passive', title:'被动语态', desc:'不同时态的被动语态、by 短语、主动被动转换和特殊动词被动。', ids:[7,8,37,38,39,40,41,42] },
+  { key:'nonfinite', title:'动词的非谓语形式', desc:'动词不定式、动名词以及常见非谓语搭配。', ids:[16,123,124,125,126,26,127,128,129,130,131,132,133] },
+  { key:'compound', title:'并列复合句', desc:'并列连词和相关并列结构。', ids:[134,135,136,137,138] },
+  { key:'complex', title:'主从复合句', desc:'宾语从句、状语从句、定语从句和从属连词。', ids:[13,14,22,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,139,140,141,142,143] },
+  { key:'agreement', title:'主谓一致', desc:'单复数一致、就近原则、不定代词和集合名词作主语。', ids:[25,104,105,106,107,108,109] },
+  { key:'other-patterns', title:'其他常用句式', desc:'不便归入前面句法组的常用结构和固定句型。', ids:[144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159] }
+]
+const SYNTAX_POINT_IDS = new Set(SYNTAX_GROUPS.flatMap(g=>g.ids))
+KNOWLEDGE_POINTS.forEach(kp=>{if(SYNTAX_POINT_IDS.has(kp.id))kp.categoryId=8})
+
+const KNOWLEDGE_GROUPS_BY_CATEGORY = {3:WORD_CLASS_GROUPS,8:SYNTAX_GROUPS}
+const ACTIVE_GRAMMAR_POINT_IDS = [...new Set([...WORD_CLASS_GROUPS.flatMap(g=>g.ids),...SYNTAX_GROUPS.flatMap(g=>g.ids)])]
+const COMPREHENSIVE_PASSAGES = []
+
+// ---------- 词汇库 ----------
+// 基于 1600单词备用.txt；年级、学期、单元未知时保留为 null。
+let VOCABULARY = []
+
+async function loadVocabularyData() {
+    try {
+        const response = await fetch('data/vocabulary.json');
+        VOCABULARY = await response.json();
+        console.log('✅ 加载成功，共', VOCABULARY.length, '个词汇');
+    } catch (error) {
+        console.error('❌ 加载失败:', error);
+    }
+}
+  
+// 启动加载
+loadVocabularyData();
+
+function vocabStageKey(v){return v?.isSupplementalVocabulary?'supplemental':v?.isSecondaryVocabulary?'secondary':'junior'}
+function vocabStatsLevel(v){
+  if(v?.isSupplementalVocabulary)return{key:'supplemental',label:'专题补充词'}
+  if(v?.isSecondaryVocabulary)return{key:'secondary',label:'二级词汇'}
+  if(v?.curriculumLevel==='基本词汇')return{key:'basic',label:'基本词汇'}
+  return{key:'junior',label:'初中阶段'}
+}
+function vocabStageLabel(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='secondary'?'小学阶段':'初中阶段'}
+function vocabStageShort(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='secondary'?'小学阶段':'初中阶段'}
+function vocabStageClass(v){const key=vocabStageKey(v);return key==='supplemental'?'tag-stage-supplemental':key==='secondary'?'tag-stage-secondary':'tag-stage-junior'}
+function vocabHeadwordCount(words){return words.reduce((s,v)=>s+Math.max(1,(v.headwords||[]).length),0)}
+function vocabByWord(word){const raw=String(word||''),l=raw.toLowerCase();return VOCABULARY.find(v=>v.word===raw||(v.headwords||[]).some(h=>String(h)===raw))||VOCABULARY.find(v=>v.word.toLowerCase()===l||(v.headwords||[]).some(h=>String(h).toLowerCase()===l))}
+function vocabRowsByWords(words){return words.map(word=>vocabByWord(word)).filter(Boolean)}
+function specialRow(v,extra){return{word:v.word,translation:v.translation,pos:v.pos,stage:vocabStageShort(v),extra:extra||''}}
+const CARDINAL_WORDS='zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty thirty forty fifty sixty seventy eighty ninety hundred thousand million'.split(' ')
+const ORDINAL_WORDS='first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth twentieth thirtieth fortieth fiftieth sixtieth seventieth eightieth ninetieth hundredth thousandth millionth'.split(' ')
+const MONTH_WORDS='January February March April May June July August September October November December'.split(' ')
+const WEEKDAY_WORDS='Monday Tuesday Wednesday Thursday Friday Saturday Sunday weekday weekend'.split(' ')
+const COUNTRY_WORDS='China Chinese America American England English Britain British Canada Canadian Australia Australian India Indian Japan Japanese France French Germany German Russia Russian'.split(' ')
+const FESTIVAL_WORDS=['festival','Christmas','Easter','Halloween','Thanksgiving','Spring Festival','New Year']
+const SPECIAL_VOCAB_TABLES={
+  numbers:{title:'数词表',headers:['类别','单词','中文','阶段'],groups:[{label:'基数词',words:CARDINAL_WORDS},{label:'序数词',words:ORDINAL_WORDS}]},
+  calendar:{title:'月份/星期表',headers:['类别','单词','中文','阶段'],groups:[{label:'月份',words:MONTH_WORDS},{label:'星期',words:WEEKDAY_WORDS}]},
+  countries:{title:'国家与相关词汇',headers:['类别','单词','中文','阶段'],groups:[{label:'国家',words:COUNTRY_WORDS}]},
+  festivals:{title:'节日词汇',headers:['类别','单词','中文','阶段'],groups:[{label:'节日',words:FESTIVAL_WORDS}]},
+  'word-groups':{title:'其他分类词汇',headers:['类别','单词','中文','阶段'],groups:[{label:'颜色',words:'black blue brown green grey orange pink purple red silver white yellow'.split(' ')},{label:'季节',words:'spring summer autumn winter season'.split(' ')},{label:'运动',words:'badminton baseball basketball football skate ski sport swim volleyball'.split(' ')},{label:'家庭',words:'aunt baby brother cousin dad daughter family father grandparent husband mother parent sister son uncle wife'.split(' ')}]}
+}
+
+const IRREGULAR_VERBS=[{"base":"be","past":["was","were"],"pastParticiple":["been"]},{"base":"become","past":["became"],"pastParticiple":["become"]},{"base":"begin","past":["began"],"pastParticiple":["begun"]},{"base":"break","past":["broke"],"pastParticiple":["broken"]},{"base":"bring","past":["brought"],"pastParticiple":["brought"]},{"base":"build","past":["built"],"pastParticiple":["built"]},{"base":"buy","past":["bought"],"pastParticiple":["bought"]},{"base":"catch","past":["caught"],"pastParticiple":["caught"]},{"base":"choose","past":["chose"],"pastParticiple":["chosen"]},{"base":"come","past":["came"],"pastParticiple":["come"]},{"base":"cost","past":["cost"],"pastParticiple":["cost"]},{"base":"cut","past":["cut"],"pastParticiple":["cut"]},{"base":"do","past":["did"],"pastParticiple":["done"]},{"base":"draw","past":["drew"],"pastParticiple":["drawn"]},{"base":"drink","past":["drank"],"pastParticiple":["drunk"]},{"base":"drive","past":["drove"],"pastParticiple":["driven"]},{"base":"eat","past":["ate"],"pastParticiple":["eaten"]},{"base":"fall","past":["fell"],"pastParticiple":["fallen"]},{"base":"feel","past":["felt"],"pastParticiple":["felt"]},{"base":"find","past":["found"],"pastParticiple":["found"]},{"base":"fly","past":["flew"],"pastParticiple":["flown"]},{"base":"forget","past":["forgot"],"pastParticiple":["forgotten"]},{"base":"get","past":["got"],"pastParticiple":["got","gotten"]},{"base":"give","past":["gave"],"pastParticiple":["given"]},{"base":"go","past":["went"],"pastParticiple":["gone"]},{"base":"grow","past":["grew"],"pastParticiple":["grown"]},{"base":"have","past":["had"],"pastParticiple":["had"]},{"base":"hear","past":["heard"],"pastParticiple":["heard"]},{"base":"hold","past":["held"],"pastParticiple":["held"]},{"base":"keep","past":["kept"],"pastParticiple":["kept"]},{"base":"know","past":["knew"],"pastParticiple":["known"]},{"base":"learn","past":["learnt","learned"],"pastParticiple":["learnt","learned"]},{"base":"leave","past":["left"],"pastParticiple":["left"]},{"base":"lend","past":["lent"],"pastParticiple":["lent"]},{"base":"let","past":["let"],"pastParticiple":["let"]},{"base":"lose","past":["lost"],"pastParticiple":["lost"]},{"base":"make","past":["made"],"pastParticiple":["made"]},{"base":"mean","past":["meant"],"pastParticiple":["meant"]},{"base":"meet","past":["met"],"pastParticiple":["met"]},{"base":"pay","past":["paid"],"pastParticiple":["paid"]},{"base":"put","past":["put"],"pastParticiple":["put"]},{"base":"read","past":["read"],"pastParticiple":["read"]},{"base":"ride","past":["rode"],"pastParticiple":["ridden"]},{"base":"ring","past":["rang"],"pastParticiple":["rung"]},{"base":"rise","past":["rose"],"pastParticiple":["risen"]},{"base":"run","past":["ran"],"pastParticiple":["run"]},{"base":"say","past":["said"],"pastParticiple":["said"]},{"base":"see","past":["saw"],"pastParticiple":["seen"]},{"base":"sell","past":["sold"],"pastParticiple":["sold"]},{"base":"send","past":["sent"],"pastParticiple":["sent"]},{"base":"set","past":["set"],"pastParticiple":["set"]},{"base":"show","past":["showed"],"pastParticiple":["shown","showed"]},{"base":"sing","past":["sang"],"pastParticiple":["sung"]},{"base":"sit","past":["sat"],"pastParticiple":["sat"]},{"base":"sleep","past":["slept"],"pastParticiple":["slept"]},{"base":"speak","past":["spoke"],"pastParticiple":["spoken"]},{"base":"spend","past":["spent"],"pastParticiple":["spent"]},{"base":"stand","past":["stood"],"pastParticiple":["stood"]},{"base":"swim","past":["swam"],"pastParticiple":["swum"]},{"base":"take","past":["took"],"pastParticiple":["taken"]},{"base":"teach","past":["taught"],"pastParticiple":["taught"]},{"base":"tell","past":["told"],"pastParticiple":["told"]},{"base":"think","past":["thought"],"pastParticiple":["thought"]},{"base":"understand","past":["understood"],"pastParticiple":["understood"]},{"base":"wear","past":["wore"],"pastParticiple":["worn"]},{"base":"win","past":["won"],"pastParticiple":["won"]},{"base":"write","past":["wrote"],"pastParticiple":["written"]}]
+
+
+// ======================================================================
 // 🔧 以下为核心逻辑代码
 // ======================================================================
 
@@ -752,58 +856,20 @@ const GENERATED_SINGLE_BANK_CACHE=new Map()
 const PASSAGE_THEMES=[
   ['Community Reading Week','library','reading journal'],['Green Campus Project','school garden','science poster'],['Sports and Health Day','playground','team plan'],['Museum Learning Trip','city museum','history report'],['Neighborhood Help Day','community center','service diary'],['English Drama Festival','school hall','performance script'],['Science Club Challenge','lab','experiment note'],['Family Story Album','home','memory page'],['Digital Study Workshop','computer room','online project'],['Weekend Market Visit','market','survey form']
 ]
-const PASSAGE_CONTEXTS={
-  'Community Reading Week':{
-    intro:'The town library became much busier during Community Reading Week. Children sat on bright mats, older students helped them choose books, and parents wrote short notes about the stories they liked. At the front desk, Ms. Green kept a basket of bookmarks for anyone who finished a chapter.',
-    middle:'On Wednesday afternoon, a shy boy named Leo read a story about a sailor who missed home. At first his voice was low, but the room grew quiet and he became braver. When he reached the last page, several younger children asked him to read another story.',
-    ending:'By Friday, the library wall was covered with paper leaves. Each leaf carried the name of a book and one honest sentence about it. The display did not look expensive, but it made many families promise to keep reading together after the week ended.'
-  },
-  'Green Campus Project':{
-    intro:'The Green Campus Project began with a small problem behind the dining hall. Empty bottles and dry leaves often gathered near the fence, and few students wanted to pass that corner after lunch. A science teacher suggested turning the place into a garden instead of simply cleaning it once.',
-    middle:'Four classes shared the work. Some students tested the soil, some painted old boxes for plants, and others made signs that explained why bees and butterflies were useful. The first seedlings looked weak, but the students watered them every morning before class.',
-    ending:'A month later, the corner looked different. There were tomatoes, herbs, and a narrow path made from broken bricks. More importantly, students began to notice small changes on campus and talked about solving them before they became large problems.'
-  },
-  'Sports and Health Day':{
-    intro:'Sports and Health Day was not only a competition. The school wanted students to learn how sleep, food, practice, and teamwork affected their bodies. Before the races started, each class received a simple plan for warm-ups and water breaks.',
-    middle:'Mia was nervous about the relay because she had dropped the baton once during practice. Her teammates did not blame her. They stayed after school, marked the exchange area with tape, and repeated the move until everyone felt calm.',
-    ending:'When the final race ended, Mia\'s class did not win first prize, but no one looked disappointed. They had run faster than before and had learned how careful preparation could turn fear into confidence.'
-  },
-  'Museum Learning Trip':{
-    intro:'The city museum stood beside the old river bridge. From the outside it looked quiet, but inside the first hall, maps, boats, coins, and photographs told the story of how the city had grown around the river.',
-    middle:'The guide asked students to imagine the market two hundred years ago. Farmers arrived before sunrise, boatmen carried heavy bags of rice, and shop owners waited for news from other towns. The old objects suddenly felt connected to real people.',
-    ending:'On the bus home, the students compared the past with the streets they knew. They realized that history was not just a list of years. It was a record of choices that had shaped the places they walked through every day.'
-  },
-  'Neighborhood Help Day':{
-    intro:'Neighborhood Help Day started after a storm broke several branches along Maple Street. Instead of waiting for adults to do all the work, students from the nearby school joined the community center to visit families and clean shared spaces.',
-    middle:'One group helped Mrs. Lin carry flowerpots back to her balcony. Another group checked the notice board and replaced wet posters with new ones. Nobody did anything dangerous, but each small job made the street feel cared for again.',
-    ending:'In the evening, neighbors brought fruit and warm tea to the center. The students were tired, yet they listened proudly as people thanked them by name. They understood that service was often built from simple, useful actions.'
-  },
-  'English Drama Festival':{
-    intro:'The English Drama Festival gave students a reason to speak loudly and clearly. Instead of memorizing lines without feeling, each group had to choose a short story, design a simple stage, and decide what the audience should understand by the end.',
-    middle:'In Anna\'s group, the quietest student played the king. Everyone expected him to whisper, but he practiced in the empty hall until his voice reached the back row. His classmates helped him slow down and use his hands naturally.',
-    ending:'The performance lasted only ten minutes, but the festival changed the way many students saw speaking English. It became less like answering a question in class and more like sharing a message with real listeners.'
-  },
-  'Science Club Challenge':{
-    intro:'The Science Club Challenge asked students to build a paper bridge that could hold a cup of stones. The rules were simple, but the problem was harder than it looked. A beautiful bridge often fell quickly, while a plain one sometimes stood longer.',
-    middle:'Daniel\'s team tested three designs and wrote down the results after each try. They argued about the shape of the supports, then folded two extra strips under the center. The bridge looked uneven, but it held more stones than their first model.',
-    ending:'At the end of the challenge, the teacher praised the notebooks as much as the bridges. The best teams were not the ones that guessed correctly at once, but the ones that changed their plans after careful observation.'
-  },
-  'Family Story Album':{
-    intro:'The family story album was kept in a blue box under Grandma\'s bed. It held black-and-white photos, train tickets, birthday cards, and a recipe written on thin paper. Every object carried a memory that someone had nearly forgotten.',
-    middle:'One rainy afternoon, Grandma took out a photo of a small shop. She explained how the family had sold breakfast there before moving to the city. Her story made the children ask about people whose names they had only heard at festivals.',
-    ending:'That night, the children added new pages to the album. They wrote dates carefully and left space for future stories. The album no longer felt like an old box of paper; it became a bridge between the past and the next generation.'
-  },
-  'Digital Study Workshop':{
-    intro:'The Digital Study Workshop was held in the computer room after school. Students did not simply learn which buttons to press. They discussed how to search carefully, protect personal information, and decide whether an online answer could be trusted.',
-    middle:'During one task, a group found two websites with different dates for the same event. Instead of copying the first result, they checked the writer, the source, and the time of publication. Their report became slower but much more reliable.',
-    ending:'By the end of the workshop, students had made a checklist for future homework. It reminded them that technology was useful only when the person using it stayed thoughtful and responsible.'
-  },
-  'Weekend Market Visit':{
-    intro:'The weekend market opened before the sun became hot. Fruit sellers arranged peaches in careful rows, a baker carried fresh bread from a small oven, and shoppers moved slowly because every table offered something different to see or smell.',
-    middle:'Lily visited the market to interview sellers for a school survey. She learned that prices changed with weather, transport, and the number of people in the street. A vegetable seller showed her how one rainy week could change the whole plan for a family shop.',
-    ending:'When Lily returned home, her survey was more than a list of numbers. It showed how daily work, patience, and small decisions connected the people who bought food with the people who prepared it.'
-  }
+
+let PASSAGE_CONTEXTS = {}; // 放全局占位
+
+async function loadPassageData() {
+    try {
+        const passageResp = await fetch('data/passage.json');
+        PASSAGE_CONTEXTS = await passageResp.json();
+        console.log('✅ 短文素材加载成功，共', Object.keys(PASSAGE_CONTEXTS).length, '篇');
+    } catch (error) {
+        console.error('❌ 数据加载失败:', error);
+    }
 }
+loadPassageData()
+
 function activeGrammarPoints(){return ACTIVE_GRAMMAR_POINT_IDS.map(id=>KNOWLEDGE_POINTS.find(kp=>kp.id===id)).filter(Boolean)}
 function wordCount(text){return(String(text||'').match(/[A-Za-z]+(?:'[A-Za-z]+)?/g)||[]).length}
 function passageContext(theme){return PASSAGE_CONTEXTS[theme[0]]||PASSAGE_CONTEXTS['Community Reading Week']}
