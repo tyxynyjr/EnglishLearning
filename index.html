@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>初中英语语法词汇练习工具</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+/* ===== Bootstrap 5.3 示例风格定制 ===== */
+:root{
+  --bs-primary:#4a90d9;--bs-primary-rgb:74,144,217;
+  --bs-success:#389e0d;--bs-success-rgb:56,158,13;
+  --bs-warning:#d46b08;--bs-warning-rgb:212,107,8;
+  --bs-danger:#cf1322;--bs-danger-rgb:207,19,34;
+  --bs-info:#0891b2;--bs-info-rgb:8,145,178;
+  --bs-purple:#7952b3;--bs-purple-rgb:121,82,179;
+}
+.text-purple{color:#7952b3}
+body{
+  font-family:system-ui,-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;
+  font-size:17px;color:#212529;background:#e9ecf2;min-height:100vh;
+}
+.btn-primary{--bs-btn-bg:#4a90d9;--bs-btn-border-color:#4a90d9;--bs-btn-hover-bg:#3a80c8;--bs-btn-active-bg:#3575bf}
+.btn-success{--bs-btn-bg:#389e0d;--bs-btn-border-color:#389e0d;--bs-btn-hover-bg:#2f8a0b}
+.btn-warning{--bs-btn-bg:#d46b08;--bs-btn-border-color:#d46b08;--bs-btn-hover-bg:#be5d07;--bs-btn-color:#fff}
+.btn-outline-primary{--bs-btn-color:#4a90d9;--bs-btn-border-color:#4a90d9;--bs-btn-hover-bg:#4a90d9;--bs-btn-hover-color:#fff}
+.btn{font-weight:600;border-radius:.5rem}
+
+/* 应用容器 - 移动端全宽，PC端居中卡片 */
+.app-container{display:flex;flex-direction:column;height:100dvh;max-width:600px;width:100%;margin:0 auto;background:#fff}
+@media(min-width:768px){
+  body{display:flex;align-items:center;justify-content:center;padding:2rem}
+  .app-container{max-width:820px;height:85vh;border-radius:1rem;overflow:hidden;box-shadow:0 .5rem 1rem rgba(0,0,0,.15)}
+}
+@media(min-width:1200px){.app-container{max-width:960px;height:88vh}}
+
+.pages-wrap{flex:1;min-height:0;position:relative;overflow:hidden}
+.page{position:absolute;inset:0;display:none;overflow-y:auto;padding:1.25rem 1.25rem 5.2rem;scrollbar-gutter:stable}
+.page.active{display:block;animation:fadeIn .2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* 底部导航 */
+.tab-bar{
+  position:fixed;bottom:0;left:50%;transform:translateX(-50%);
+  width:100%;max-width:600px;
+  background:#fff;box-shadow:0 -2px 12px rgba(0,0,0,.08);
+  border-top:1px solid #e9ecef;display:flex;z-index:1030;
+  padding:.5rem 0 env(safe-area-inset-bottom,0);
+}
+@media(min-width:768px){.tab-bar{max-width:820px;border-radius:0 0 1rem 1rem}}
+@media(min-width:1200px){.tab-bar{max-width:960px}}
+.tab-bar .tab{
+  flex:1;text-align:center;cursor:pointer;color:#868e96;font-size:.75rem;
+  font-weight:500;transition:all .2s;-webkit-tap-highlight-color:transparent;user-select:none;
+  padding:.4rem 0 .45rem;
+}
+.tab-bar .tab .icon{font-size:1.5rem;display:block;line-height:1.2;margin-bottom:3px}
+.tab-bar .tab .icon i{font-size:inherit}
+.tab-bar .tab.active{color:#4a90d9;font-weight:700}
+.tab-bar .tab:hover{color:#4a90d9}
+
+/* 统计卡片 */
+.stat-card{
+  background:linear-gradient(135deg,#eef3ff,#e3ecfe);border-radius:.75rem;
+  padding:1.25rem 1rem;text-align:center;height:100%;
+  border:1px solid rgba(74,144,217,.08);transition:transform .15s;
+}
+.stat-card:hover{transform:translateY(-3px)}
+.stat-card .num{font-size:1.75rem;font-weight:700;color:#4a90d9;line-height:1.1}
+.stat-card .label{font-size:.8rem;color:#868e96;margin-top:.25rem}
+@media(min-width:768px){.stat-card .num{font-size:2rem}}
+
+/* 语法分类 */
+.category-list{display:flex;gap:.4rem;overflow-x:auto;padding:.25rem 0 .5rem;position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.category-list.stuck{border-bottom-color:#e9ecef;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.category-list .cat{
+  flex-shrink:0;padding:.45rem 1.1rem;border-radius:1.25rem;background:#f1f3f5;
+  font-size:.82rem;cursor:pointer;border:1.5px solid transparent;
+  transition:all .2s;user-select:none;white-space:nowrap;
+}
+.category-list .cat:hover{background:#e3ecfe}
+.category-list .cat.active{background:#e3ecfe;border-color:#4a90d9;color:#4a90d9;font-weight:600}
+
+/* 语法卡片 */
+.kp-card{
+  padding:.75rem 1rem;border-radius:.5rem;background:#fff;
+  border:1px solid #e9ecef;margin-bottom:.4rem;cursor:pointer;transition:all .15s;
+}
+.kp-card:hover{border-color:#4a90d9;background:#f8faff}
+.kp-card .title{font-size:.92rem;font-weight:600;color:#212529}
+.kp-card .meta{font-size:.75rem;color:#adb5bd;margin-top:.2rem;display:flex;gap:.4rem;flex-wrap:wrap}
+.diff-1{background:#d9f7d9;color:#389e0d;border-radius:.3rem;padding:0 .35rem;font-weight:500}
+.diff-2{background:#fff3e0;color:#d46b08;border-radius:.3rem;padding:0 .35rem;font-weight:500}
+.diff-3{background:#ffebee;color:#cf1322;border-radius:.3rem;padding:0 .35rem;font-weight:500}
+.kp-detail{display:none;padding:1rem;background:#eef2f8;border-radius:0 0 .5rem .5rem;margin-top:.4rem;border-top:1px solid #dde4f0}
+.kp-detail.open{display:block}
+.kp-detail .content{font-size:.88rem;line-height:1.8;white-space:pre-wrap}
+.kp-detail .example{margin:.65rem 0;padding:.65rem;background:#fff;border-radius:.4rem;font-size:.88rem}
+.kp-detail .example .en{color:#4a90d9}
+.kp-detail .example .cn{color:#868e96;margin-top:.1rem}
+
+/* 词汇 */
+.vocab-item{
+  display:flex;gap:1rem;padding:.7rem 1rem;
+  border:1px solid #e9ecef;border-radius:.5rem;
+  margin-bottom:.35rem;transition:all .15s;background:#fff;
+}
+.vocab-item:hover{
+  border-color:#4a90d9;background:#f8fbff;
+  transform:translateY(-1px);box-shadow:0 .2rem .4rem rgba(74,144,217,.1);
+}
+.vocab-word-col{flex:1;min-width:0;display:flex;flex-direction:column;justify-content:center}
+.vocab-word-col .word-row{display:flex;align-items:baseline;gap:.3rem;flex-wrap:wrap}
+.vocab-word-col .word{font-size:1.05rem;font-weight:600}
+.vocab-word-col .phonetic{font-size:.75rem;color:#adb5bd;font-weight:400}
+.vocab-word-col .meta{font-size:.78rem;color:#868e96;margin-top:.1rem;display:flex;gap:.3rem;flex-wrap:wrap;align-items:center}
+.vocab-word-col .stars{color:#d46b08;font-size:.7rem;letter-spacing:1px}
+.vocab-ex-col{flex:1;min-width:0;border-left:1px dashed #e9ecef;padding-left:.85rem;display:flex;flex-direction:column;justify-content:center;gap:.2rem}
+.vocab-ex-col .ex{font-size:.78rem;line-height:1.5}
+.vocab-ex-col .ex .en{color:#4a90d9}
+.vocab-ex-col .ex .cn{color:#868e96;margin-left:.2rem}
+.vocab-ex-col .no-ex{color:#c0c4cc;font-size:.72rem;font-style:italic}
+@media(max-width:500px){
+  .vocab-item{flex-direction:column;gap:.35rem}
+  .vocab-ex-col{border-left:none;border-top:1px dashed #e9ecef;padding-left:0;padding-top:.35rem}
+}
+
+/* 词汇统计条 */
+.vocab-stats{display:flex;gap:.5rem;margin-bottom:.55rem;flex-wrap:wrap;align-items:center}
+.vocab-stats .stat-chip{font-size:.78rem;padding:.25rem .6rem;border-radius:2rem;font-weight:500;white-space:nowrap;cursor:pointer;transition:all .12s;border:2px solid transparent}
+.vocab-stats .stat-chip.total{background:#e9ecef;color:#495057}
+.vocab-stats .stat-chip.total:hover{background:#dee2e6}
+.vocab-stats .stat-chip.total.active{border-color:#6c757d}
+.vocab-stats .stat-chip.mastered{background:#d4edda;color:#1a5c23}
+.vocab-stats .stat-chip.mastered:hover{background:#c3e6cb}
+.vocab-stats .stat-chip.mastered.active{border-color:#389e0d}
+.vocab-stats .stat-chip.learning{background:#fff3e0;color:#b45309}
+.vocab-stats .stat-chip.learning:hover{background:#ffe8cc}
+.vocab-stats .stat-chip.learning.active{border-color:#d46b08}
+.vocab-stats .stat-chip.weak{background:#ffe0e0;color:#a61010}
+.vocab-stats .stat-chip.weak:hover{background:#ffcccc}
+.vocab-stats .stat-chip.weak.active{border-color:#cf1322}
+.vocab-stats .stat-chip.unquizzed{background:#f1f3f5;color:#868e96}
+.vocab-stats .stat-chip.unquizzed:hover{background:#e9ecef}
+.vocab-stats .stat-chip.unquizzed.active{border-color:#adb5bd}
+
+/* 词汇筛选导航 */
+.vocab-filter-row{display:flex;flex-wrap:wrap;gap:.25rem;margin-bottom:.35rem;align-items:center}
+.vocab-filter-row .filter-label{font-size:.7rem;color:#adb5bd;display:flex;align-items:center;margin-right:.15rem;white-space:nowrap}
+.vocab-filter-chip{font-size:.72rem;padding:.2rem .55rem;border-radius:2rem;border:1px solid #dee2e6;background:#fff;color:#6c757d;cursor:pointer;transition:all .12s;white-space:nowrap;user-select:none}
+.vocab-filter-chip:hover{border-color:#4a90d9;color:#4a90d9}
+.vocab-filter-chip.on{background:#4a90d9;border-color:#4a90d9;color:#fff;font-weight:500}
+.vocab-reset-btn{font-size:.7rem;color:#adb5bd;cursor:pointer;padding:.15rem .4rem;border-radius:.35rem;transition:all .12s;white-space:nowrap}
+.vocab-reset-btn:hover{color:#cf1322;background:#fff0f0}
+
+/* 词汇工具栏 - 冻结 */
+.vocab-toolbar{position:sticky;top:0;z-index:10;background:#fff;padding-top:.3rem;margin-bottom:.3rem;border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.vocab-toolbar.stuck{border-bottom-color:#e9ecef;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+
+/* 字母快捷导航 */
+.vocab-letter-nav{display:flex;flex-wrap:wrap;gap:2px;margin-bottom:.55rem;padding:.3rem 0}
+.vocab-letter-nav .letter-btn{width:1.7rem;height:1.7rem;border-radius:.35rem;border:1px solid #e9ecef;background:#fff;font-size:.72rem;font-weight:600;color:#6c757d;cursor:pointer;transition:all .1s;display:flex;align-items:center;justify-content:center}
+.vocab-letter-nav .letter-btn:hover{background:#4a90d9;color:#fff;border-color:#4a90d9}
+.vocab-letter-nav .letter-btn.active{background:#4a90d9;color:#fff;border-color:#4a90d9}
+.vocab-letter-nav .letter-btn.empty{color:#dee2e6;pointer-events:none;border-color:#f1f3f5}
+
+/* 字母分组标题 */
+.vocab-group-header{font-size:.82rem;font-weight:700;color:#4a90d9;padding:.4rem .5rem;margin-top:.6rem;margin-bottom:.2rem;border-bottom:2px solid #4a90d9;display:flex;justify-content:space-between;align-items:baseline}
+.vocab-group-header .count{font-size:.68rem;font-weight:400;color:#adb5bd}
+
+/* 测试设置 */
+.quiz-section-label{
+  font-size:.85rem;font-weight:600;color:#868e96;
+  text-transform:uppercase;letter-spacing:.05em;margin-bottom:.35rem;
+}
+.quiz-type-card{
+  padding:.7rem .55rem;border-radius:.65rem;border:2px solid #e9ecef;
+  text-align:center;cursor:pointer;transition:all .2s;background:#fff;height:100%;
+}
+.quiz-type-card:hover{border-color:#b8d4f0;background:#f8fbff;transform:translateY(-2px);box-shadow:0 .25rem .75rem rgba(74,144,217,.1)}
+.quiz-type-card.selected{border-color:#4a90d9;background:#eef6ff}
+.quiz-type-card .icon{font-size:1.25rem;display:block;margin-bottom:.1rem;line-height:1.2}
+.quiz-type-card .icon i{font-size:inherit}
+.quiz-type-card .label{font-size:.8rem;color:#212529;font-weight:500}
+.quiz-type-card .desc{font-size:.65rem;color:#adb5bd;margin-top:.1rem;display:none}
+.quiz-type-card.selected .desc{display:block}
+@media(min-width:768px){.quiz-type-card .icon{font-size:1.5rem}.quiz-type-card .icon i{font-size:inherit}.quiz-type-card .label{font-size:.85rem}}
+
+.source-grid{
+  max-height:220px;overflow-y:auto;padding:.25rem;
+  border:1px solid #e9ecef;border-radius:.5rem;background:#fff;
+}
+.source-grid label{
+  display:flex;align-items:center;gap:.5rem;font-size:.82rem;
+  padding:.5rem .7rem;border-radius:.35rem;background:#fff;
+  cursor:pointer;border:1px solid #f1f3f5;
+}
+.source-grid label:hover{background:#f0f6ff;border-color:#b8d4f0}
+.source-grid input{accent-color:#4a90d9;width:1rem;height:1rem;cursor:pointer}
+
+/* 进度圆点 */
+.quiz-progress{display:flex;gap:.35rem;margin-bottom:1rem;overflow-x:auto;padding:.25rem 0}
+.quiz-progress .dot{
+  width:1.8rem;height:1.8rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:.65rem;
+  border:2px solid #dee2e6;color:#adb5bd;flex-shrink:0;cursor:pointer;background:#fff;
+}
+.quiz-progress .dot.done{background:#389e0d;color:#fff;border-color:#389e0d}
+.quiz-progress .dot.wrong{background:#cf1322;color:#fff;border-color:#cf1322}
+.quiz-progress .dot.current{border-color:#4a90d9;color:#4a90d9;font-weight:700;box-shadow:0 0 0 3px rgba(74,144,217,.12)}
+
+/* 答题 */
+.quiz-question{
+  font-size:1.15rem;font-weight:500;margin-bottom:1.5rem;line-height:1.7;
+  padding:1rem;background:#f8faff;border-radius:.75rem;border:1px solid #e8f0fe;
+}
+.quiz-question .blank{
+  display:inline-block;min-width:80px;border-bottom:2.5px solid #4a90d9;
+  padding:0 .25rem;color:#4a90d9;font-weight:600;
+}
+
+/* 选项 */
+.quiz-options{display:flex;flex-direction:column;gap:.6rem}
+.quiz-options .opt{
+  padding:.9rem 1.1rem;border-radius:.5rem;border:2px solid #e9ecef;
+  cursor:pointer;font-size:.95rem;transition:all .15s;background:#fff;
+  display:flex;align-items:center;gap:.65rem;
+}
+.quiz-options .opt:before{
+  content:attr(data-letter);width:1.65rem;height:1.65rem;border-radius:50%;
+  background:#f1f3f5;display:inline-flex;align-items:center;justify-content:center;
+  font-size:.75rem;font-weight:600;color:#adb5bd;flex-shrink:0;transition:all .2s;
+}
+.quiz-options .opt:hover{border-color:#b8d4f0;background:#f8fbff}
+.quiz-options .opt.selected{border-color:#4a90d9;background:#eef6ff}
+.quiz-options .opt.selected:before{background:#4a90d9;color:#fff}
+.quiz-options .opt.correct{border-color:#389e0d;background:#f1f8e9;color:#2d7a0a}
+.quiz-options .opt.correct:before{background:#389e0d;color:#fff}
+.quiz-options .opt.wrong{border-color:#cf1322;background:#fef0f0;color:#a8131b}
+.quiz-options .opt.wrong:before{background:#cf1322;color:#fff}
+.quiz-options .opt.show-correct{border-color:#389e0d;background:#f1f8e9;color:#2d7a0a}
+.quiz-options .opt.show-correct:before{background:#389e0d;color:#fff}
+
+/* 短文 */
+.passage-box{
+  background:#f8faff;border-radius:.75rem;padding:1.25rem;
+  line-height:2.2;font-size:.95rem;border:1px solid #e8f0fe;
+}
+.passage-box .p-blank{
+  display:inline-block;min-width:80px;border-bottom:2.5px solid #4a90d9;
+  margin:0 .25rem;padding:0 .35rem;color:#4a90d9;text-align:center;
+}
+.passage-box .p-blank:focus{outline:none;border-bottom-color:#389e0d;background:#f1f8e9;border-radius:4px 4px 0 0}
+.passage-box .p-blank.filled{border-color:#389e0d;color:#389e0d}
+.passage-box .p-blank.wrong{border-color:#cf1322;color:#cf1322}
+
+/* 反馈 */
+.quiz-feedback{padding:1rem 1.25rem;border-radius:.5rem;margin-top:1.25rem;display:none;font-size:.85rem;line-height:1.6}
+.quiz-feedback.show{display:block}
+.quiz-feedback.correct{background:#f1f8e9;border:1.5px solid #b7eb8f;color:#2d7a0a}
+.quiz-feedback.wrong{background:#fef0f0;border:1.5px solid #ffccc7;color:#a8131b}
+
+/* 结果页 */
+.result-circle{
+  width:8rem;height:8rem;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 1rem;font-size:2.5rem;font-weight:700;
+}
+.result-circle.good{background:linear-gradient(135deg,#f1f8e9,#e0f2d0);color:#389e0d;border:4px solid #389e0d}
+.result-circle.ok{background:linear-gradient(135deg,#fffbe6,#fef4d0);color:#d46b08;border:4px solid #d46b08}
+.result-circle.bad{background:linear-gradient(135deg,#fef0f0,#fce5e5);color:#cf1322;border:4px solid #cf1322}
+.result-review .rq{
+  padding:.8rem 1rem;border-radius:.5rem;margin-bottom:.5rem;border:1px solid #f1f3f5;
+}
+.result-review .rq .q-text{font-size:.92rem;margin-bottom:.3rem;font-weight:500}
+.result-review .rq .wrong{color:#cf1322;font-weight:500}
+.result-review .rq .correct{color:#389e0d;font-weight:500}
+.result-review .rq .explain{
+  color:#868e96;font-size:.75rem;margin-top:.3rem;padding:.6rem .75rem;
+  background:#f8f9fa;border-radius:.4rem;border-left:3px solid #4a90d9;
+}
+
+/* 图表 */
+.chart-bar{display:flex;align-items:end;gap:.25rem;height:100px;padding:.5rem 0}
+.chart-bar .col{flex:1;display:flex;flex-direction:column;align-items:center}
+.chart-bar .col .bar{width:100%;max-width:2.5rem;border-radius:4px 4px 0 0;min-height:2px;transition:height .5s ease;background:#4a90d9}
+.chart-bar .col .bar.empty{background:#e9ecef}
+
+/* 错题 */
+.error-filter .badge{cursor:pointer;transition:all .2s}
+.error-item{
+  padding:1rem;border-radius:.5rem;border:1px solid #ffccc7;
+  background:#fff;margin-bottom:.6rem;
+}
+.error-item .q-text{font-size:.92rem;margin-bottom:.6rem;line-height:1.5}
+.error-item .wrong{color:#cf1322;text-decoration:line-through;font-weight:500}
+.error-item .correct{color:#389e0d;font-weight:600}
+
+/* 标签徽章 */
+.tag-blue{background:#e3ecfe;color:#4a90d9}
+.tag-green{background:#d9f7d9;color:#389e0d}
+.tag-orange{background:#fff3e0;color:#d46b08}
+.tag-red{background:#ffebee;color:#cf1322}
+.empty-state{text-align:center;padding:3rem 1rem;color:#adb5bd}
+.empty-state .icon{font-size:3rem;margin-bottom:.5rem}
+
+/* 图标色彩 — 每个位置独立颜色 */
+/* 底部导航 */
+.tab-bar .tab:nth-child(1) .icon i{color:#4a90d9}
+.tab-bar .tab:nth-child(2) .icon i{color:#d46b08}
+.tab-bar .tab:nth-child(3) .icon i{color:#389e0d}
+.tab-bar .tab:nth-child(4) .icon i{color:#7952b3}
+.tab-bar .tab:nth-child(5) .icon i{color:#0891b2}
+.tab-bar .tab:nth-child(6) .icon i{color:#cf1322}
+.tab-bar .tab .icon i{transition:color .2s;opacity:.7}
+.tab-bar .tab.active .icon i{opacity:1}
+/* 题型卡片 */
+.quiz-type-card[data-type=grammar] .icon i{color:#4a90d9}
+.quiz-type-card[data-type=vocabulary] .icon i{color:#389e0d}
+.quiz-type-card[data-type=passage] .icon i{color:#7952b3}
+.quiz-type-card[data-type=error] .icon i{color:#d46b08}
+.quiz-type-card .icon i{transition:color .2s;opacity:.7}
+.quiz-type-card.selected .icon i{opacity:1}
+.quiz-type-card:hover .icon i{opacity:1}
+/* 页面标题 */
+#page-knowledge .page-title i{color:#d46b08}
+#page-vocabulary .page-title i{color:#389e0d}
+#page-quiz .page-title i{color:#7952b3}
+#page-stats .page-title i{color:#0891b2}
+#page-errors .page-title i{color:#cf1322}
+/* 答案反馈 */
+.result-review .rq .correct i{color:#389e0d}
+.result-review .rq .wrong i{color:#cf1322}
+.error-item .correct i{color:#389e0d}
+.error-item .wrong i{color:#cf1322}
+.quiz-feedback.correct i{color:#389e0d}
+.quiz-feedback.wrong i{color:#cf1322}
+/* 答题标签 */
+#quiz-tag i{color:#4a90d9}
+/* 分类标签 */
+.category-list .cat i{transition:color .2s}
+.category-list .cat:nth-child(1) i{color:#d46b08}
+.category-list .cat:nth-child(2) i{color:#0891b2}
+.category-list .cat:nth-child(3) i{color:#4a90d9}
+.category-list .cat:nth-child(4) i{color:#7952b3}
+.category-list .cat:nth-child(5) i{color:#389e0d}
+.category-list .cat.active i{opacity:1;filter:none}
+/* 统计表格折叠 */
+.stats-toggle{cursor:pointer;user-select:none;border:none;background:none;padding:0;color:inherit;font:inherit;width:100%;text-align:left}
+.stats-toggle:hover{opacity:.8}
+.stats-toggle i{transition:transform .2s}
+.stats-toggle.collapsed i.bi-chevron-down{transform:rotate(-90deg)}
+.stats-sub{display:table-row}
+.stats-sub.collapsed{display:none}
+.stats-has-error{font-weight:700;color:#cf1322!important}
+.stats-row-err td:first-child{border-left:3px solid #cf1322}
+.stats-mastery{font-size:.7rem;white-space:nowrap}
+</style>
+</head>
+<body>
+<div class="app-container">
+<div class="pages-wrap">
+
+<!-- ============ 首页 ============ -->
+<div id="page-home" class="page active">
+  <div class="text-end mb-1">
+    <button class="btn btn-link btn-sm text-secondary text-decoration-none p-0 me-1" onclick="exportData()" title="导出数据"><i class="bi bi-download me-1"></i>导出</button>
+    <button class="btn btn-link btn-sm text-secondary text-decoration-none p-0" onclick="document.getElementById('import-file').click()" title="导入数据"><i class="bi bi-upload me-1"></i>导入</button>
+    <input type="file" id="import-file" accept=".json" style="display:none" onchange="importData(this)">
+    <div style="font-size:.6rem;color:#d46b08">* 导入将覆盖当前数据，建议先导出备份</div>
+  </div>
+  <div class="text-center py-2 mb-2">
+    <h2 class="fw-bold mb-1">初中英语语法词汇练习工具</h2>
+    <p class="text-secondary small mb-0" id="greeting">今天也来学习英语吧！</p>
+  </div>
+  <div class="row g-2" id="home-stats">
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="stat-today-q">0</div><div class="label">今日答题</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="stat-accuracy">0%</div><div class="label">总正确率</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="stat-study-days">0</div><div class="label">学习天数</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="stat-errors">0</div><div class="label">待复习错题</div></div></div>
+  </div>
+  <div class="card shadow-sm border-0 rounded-3 mt-3 mb-2">
+    <div class="card-body pb-2">
+      <h6 class="card-title fw-semibold small text-secondary mb-3"><i class="bi bi-graph-up me-1"></i>近7天正确率</h6>
+      <div class="chart-bar" id="trend-chart"></div>
+    </div>
+  </div>
+  <div class="card shadow-sm border-0 rounded-3 mb-2">
+    <div class="card-body">
+      <h6 class="fw-semibold small text-secondary mb-3"><i class="bi bi-pie-chart me-1"></i>分类掌握度</h6>
+      <div id="home-breakdown"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 语法 ============ -->
+<div id="page-knowledge" class="page">
+  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-book-fill me-2"></i>语法</h4>
+  <div class="category-list" id="category-list"></div>
+  <div id="kp-list" class="mt-1"></div>
+</div>
+
+<!-- ============ 词汇库 ============ -->
+<div id="page-vocabulary" class="page">
+  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-bookmark-fill me-2"></i>词汇库</h4>
+  <div class="vocab-toolbar" id="vocab-toolbar">
+  <div class="input-group mb-2">
+    <span class="input-group-text bg-white border-end-0 rounded-start-3"><i class="bi bi-search"></i></span>
+    <input id="vocab-search" class="form-control border-start-0 rounded-end-3" placeholder="搜索单词或中文..." oninput="renderVocabulary()">
+  </div>
+  <div class="vocab-filter-row" id="vocab-filter-grade">
+    <span class="filter-label"><i class="bi bi-mortarboard"></i></span>
+    <span class="vocab-filter-chip on" data-val="all" onclick="toggleFilterChip(this,'vocab-filter-grade')">全部</span>
+    <span class="vocab-filter-chip" data-val="7" onclick="toggleFilterChip(this,'vocab-filter-grade')">7年级</span>
+    <span class="vocab-filter-chip" data-val="8" onclick="toggleFilterChip(this,'vocab-filter-grade')">8年级</span>
+    <span class="vocab-filter-chip" data-val="9" onclick="toggleFilterChip(this,'vocab-filter-grade')">9年级</span>
+  </div>
+  <div class="vocab-filter-row" id="vocab-filter-semester">
+    <span class="filter-label"><i class="bi bi-calendar3"></i></span>
+    <span class="vocab-filter-chip on" data-val="all" onclick="toggleFilterChip(this,'vocab-filter-semester')">全部</span>
+    <span class="vocab-filter-chip" data-val="1" onclick="toggleFilterChip(this,'vocab-filter-semester')">上学期</span>
+    <span class="vocab-filter-chip" data-val="2" onclick="toggleFilterChip(this,'vocab-filter-semester')">下学期</span>
+  </div>
+  <div class="vocab-filter-row" id="vocab-filter-unit">
+    <span class="filter-label"><i class="bi bi-collection"></i></span>
+    <span class="vocab-filter-chip on" data-val="all">全部</span>
+  </div>
+  <div class="vocab-filter-row"><span class="vocab-reset-btn" onclick="resetVocabFilters()"><i class="bi bi-arrow-counterclockwise"></i> 重置筛选</span></div>
+  <div id="vocab-stats" class="vocab-stats"></div>
+  <div id="vocab-letter-nav" class="vocab-letter-nav"></div>
+  </div><!-- /vocab-toolbar -->
+  <div id="vocab-list"></div>
+</div>
+
+<!-- ============ 测试 ============ -->
+<div id="page-quiz" class="page">
+  <div id="quiz-container">
+    <h4 class="fw-bold mb-3 page-title"><i class="bi bi-pencil-square me-2"></i>测试</h4>
+    <div id="quiz-setup">
+      <div class="mb-3">
+        <div class="quiz-section-label">测试类型</div>
+        <div class="row g-2">
+          <div class="col-6 col-md-3"><div class="quiz-type-card selected" data-type="grammar" onclick="selectQuizType('grammar')"><div class="icon"><i class="bi bi-journal-check fs-2"></i></div><div class="label">单句练习</div><div class="desc">选择/填空</div></div></div>
+          <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="vocabulary" onclick="selectQuizType('vocabulary')"><div class="icon"><i class="bi bi-fonts fs-2"></i></div><div class="label">词汇测试</div><div class="desc">英译中/中译英</div></div></div>
+          <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="passage" onclick="selectQuizType('passage')"><div class="icon"><i class="bi bi-file-earmark-text fs-2"></i></div><div class="label">短文练习</div><div class="desc">多空短文填空</div></div></div>
+          <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="error" onclick="selectQuizType('error')"><div class="icon"><i class="bi bi-arrow-repeat fs-2"></i></div><div class="label">错题重练</div><div class="desc">针对错题练习</div></div></div>
+        </div>
+      </div>
+      <div id="quiz-source-section" class="mb-3">
+        <div class="quiz-section-label" id="source-label">选择语法范围</div>
+        <div id="source-options" class="mt-1"></div>
+      </div>
+      <div class="mb-3">
+        <div class="quiz-section-label">题目数量</div>
+        <div class="d-flex gap-2 flex-wrap" id="qty-options">
+          <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-val="5" onclick="selectQty(this)" style="cursor:pointer">5 题</span>
+          <span class="badge bg-primary rounded-pill px-3 py-2" data-val="10" onclick="selectQty(this)" style="cursor:pointer">10 题</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-val="15" onclick="selectQty(this)" style="cursor:pointer">15 题</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-val="20" onclick="selectQty(this)" style="cursor:pointer">20 题</span>
+        </div>
+      </div>
+      <button class="btn btn-primary btn-lg w-100 rounded-3 fw-bold" onclick="startQuiz()"><i class="bi bi-play-circle-fill me-1"></i> 开始答题</button>
+    </div>
+
+    <!-- 答题界面 -->
+    <div id="quiz-taking" class="d-none">
+      <div class="d-flex justify-content-between align-items-center small text-secondary mb-2">
+        <span id="quiz-counter">第 1/10 题</span>
+        <span id="quiz-tag" class="badge bg-light text-primary rounded-pill fw-normal"></span>
+        <span id="quiz-timer"><i class="bi bi-clock me-1"></i>00:00</span>
+      </div>
+      <div class="quiz-progress" id="quiz-progress"></div>
+      <div class="quiz-question" id="quiz-question"></div>
+      <div id="quiz-answer-area"></div>
+      <div class="quiz-feedback" id="quiz-feedback"></div>
+      <div class="d-flex gap-2 mt-4" id="quiz-nav">
+        <button class="btn btn-outline-secondary" id="quiz-prev-btn">← 上一题</button>
+        <button class="btn btn-primary flex-grow-1" id="quiz-next-btn">下一题 →</button>
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn btn-outline-danger btn-sm rounded-pill px-4" id="quiz-exit-btn" onclick="exitQuiz()"><i class="bi bi-box-arrow-left me-1"></i>退出测试</button>
+      </div>
+    </div>
+
+    <!-- 结果页 -->
+    <div id="quiz-result" class="d-none">
+      <h4 class="fw-bold text-center mb-3"><i class="bi bi-clipboard-check me-1"></i> 测验结果</h4>
+      <div class="text-center mb-4">
+        <div class="result-circle" id="result-circle">0</div>
+        <p class="fw-semibold fs-5 mb-0" id="result-text"></p>
+      </div>
+      <div class="row g-2 mb-4">
+        <div class="col-4"><div class="p-3 text-center bg-light rounded-3"><div class="fw-bold fs-5" id="r-correct">0</div><div class="small text-secondary mt-1"><i class="bi bi-check-circle"></i> 正确</div></div></div>
+        <div class="col-4"><div class="p-3 text-center bg-light rounded-3"><div class="fw-bold fs-5" id="r-total">0</div><div class="small text-secondary mt-1"><i class="bi bi-list-ol"></i> 总题数</div></div></div>
+        <div class="col-4"><div class="p-3 text-center bg-light rounded-3"><div class="fw-bold fs-5" id="r-time">00:00</div><div class="small text-secondary mt-1"><i class="bi bi-clock me-1"></i>用时</div></div></div>
+      </div>
+      <div class="result-review mb-3" id="result-review"></div>
+      <div class="d-grid gap-2 d-sm-flex">
+        <button class="btn btn-primary flex-fill" onclick="switchTab('quiz')">再来一次</button>
+        <button class="btn btn-outline-primary flex-fill" onclick="switchTab('home')">返回首页</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 统计 ============ -->
+<div id="page-stats" class="page">
+  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-bar-chart-fill me-2"></i>学习统计</h4>
+  <div class="row g-2" id="stats-grid">
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="s-total-q">0</div><div class="label">总答题数</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="s-accuracy">0%</div><div class="label">总正确率</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="s-total-time">0h</div><div class="label">总学习时长</div></div></div>
+    <div class="col-6 col-md-3"><div class="stat-card"><div class="num" id="s-days">0</div><div class="label">学习天数</div></div></div>
+  </div>
+  <div class="card shadow-sm border-0 rounded-3 mt-3">
+    <div class="card-body pb-2"><h6 class="card-title fw-semibold small text-secondary mb-3"><i class="bi bi-graph-up me-1"></i> 近7天趋势</h6><div class="chart-bar" id="stats-trend-chart"></div></div>
+  </div>
+  <div class="card shadow-sm border-0 rounded-3 mt-3 mb-2">
+    <div class="card-body"><h6 class="card-title fw-semibold small text-secondary mb-2"><i class="bi bi-graph-up me-1"></i> 各分类正确率</h6>
+      <table class="table align-middle mb-0 table-borderless"><thead class="table-light small text-secondary"><tr><th>分类</th><th>测试次数</th><th>错误</th><th>正确率</th><th>掌握度</th></tr></thead><tbody class="small" id="category-stats-body"></tbody></table>
+    </div>
+  </div>
+</div>
+
+<!-- ============ 错题集 ============ -->
+<div id="page-errors" class="page">
+  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>错题集</h4>
+  <div class="d-flex gap-1 flex-wrap mb-3" id="error-filter">
+    <span class="badge bg-primary rounded-pill px-3 py-2" data-filter="all" onclick="filterErrors('all',this)" style="cursor:pointer">全部</span>
+    <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="grammar" onclick="filterErrors('grammar',this)" style="cursor:pointer">语法类</span>
+    <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="vocabulary" onclick="filterErrors('vocabulary',this)" style="cursor:pointer">词汇类</span>
+    <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="unreviewed" onclick="filterErrors('unreviewed',this)" style="cursor:pointer">未复习</span>
+  </div>
+  <div id="error-list"></div>
+</div>
+
+<!-- ============ 底部导航 ============ -->
+</div><!-- /.pages-wrap -->
+<div class="tab-bar">
+  <div class="tab active" data-tab="home" onclick="switchTab('home')"><span class="icon"><i class="bi bi-house-door-fill"></i></span>首页</div>
+  <div class="tab" data-tab="knowledge" onclick="switchTab('knowledge')"><span class="icon"><i class="bi bi-book-fill"></i></span>语法</div>
+  <div class="tab" data-tab="vocabulary" onclick="switchTab('vocabulary')"><span class="icon"><i class="bi bi-bookmark-fill"></i></span>词汇</div>
+  <div class="tab" data-tab="quiz" onclick="switchTab('quiz')"><span class="icon"><i class="bi bi-pencil-square"></i></span>测试</div>
+  <div class="tab" data-tab="stats" onclick="switchTab('stats')"><span class="icon"><i class="bi bi-bar-chart-fill"></i></span>统计</div>
+  <div class="tab" data-tab="errors" onclick="switchTab('errors')"><span class="icon"><i class="bi bi-exclamation-triangle-fill"></i></span>错题</div>
+</div>
+</div><!-- /.app-container -->
+
+<script>
+// ======================================================================
+// 📦 数据部分 — 在此处添加/修改语法和词汇库
+// ======================================================================
+
+// ---------- 语法分类 ----------
+const CATEGORIES = [
+  { id: 1, name: '时态', icon: 'bi-clock' },
+  { id: 2, name: '语态', icon: 'bi-arrow-repeat' },
+  { id: 3, name: '词性', icon: 'bi-pencil' },
+  { id: 4, name: '句型', icon: 'bi-layout-text-window' },
+  { id: 5, name: '词汇用法', icon: 'bi-fonts' }
+]
+
+// ---------- 语法 ----------
+// 扩展方法：在对应 categoryId 的数组中追加即可，questions 中可配多选/填空/短文
+const KNOWLEDGE_POINTS = [
+  // 时态
+  { id:1, categoryId:1, title:'一般现在时 (Simple Present)',
+    content:'一般现在时表示经常发生的动作或客观真理。\n\n结构：主语 + 动词原形/三单形式\n\n标志词：always, usually, often, sometimes, every day\n\n注意：主语是第三人称单数时动词加 -s 或 -es',
+    examples:[{en:'I go to school every day.',cn:'我每天去上学。'},{en:'She likes reading books.',cn:'她喜欢读书。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'She ___ to school every day.',options:['go','goes','going','went'],answer:1,explanation:'主语是第三人称单数 She，动词用三单形式 goes'},
+        {sentence:'They often ___ football after school.',options:['play','plays','playing','played'],answer:0,explanation:'主语 They 是复数，动词用原形 play'}
+      ],
+      fillBlank:[
+        {sentence:'My mother ___ (cook) dinner every evening.',answer:'cooks',explanation:'主语是第三人称单数，cook 加 s'},
+        {sentence:'We usually ___ (have) lunch at 12:00.',answer:'have',explanation:'主语 We 是复数，动词用原形'}
+      ],
+      passage:[
+        {title:'My Daily Routine',text:'I ___ (get) up at 6:30 every morning. Then I ___ (have) breakfast at 7:00. My father ___ (read) newspapers while eating. My mother ___ (cook) lunch for us. After that, I ___ (go) to school by bus. School ___ (start) at 8:30. I usually ___ (finish) my homework before dinner.',blanks:['get','have','reads','cooks','go','starts','finish'],explanation:'一般现在时描述日常习惯和规律动作'},
+        {title:'Tom\'s Life',text:'Tom ___ (live) in Beijing. He ___ (study) at No.1 Middle School. Every day he ___ (take) the subway to school. He ___ (like) English very much. His teacher often ___ (praise) him. After school, Tom ___ (play) basketball with his friends.',blanks:['lives','studies','takes','likes','praises','plays'],explanation:'一般现在时，注意第三人称单数动词加 s/es'}
+      ]
+    }
+  },
+  { id:2, categoryId:1, title:'现在进行时 (Present Continuous)',
+    content:'现在进行时表示现在正在进行的动作。\n\n结构：主语 + am/is/are + 动词-ing\n\n标志词：now, at the moment, listen!, look!',
+    examples:[{en:'I am reading a book now.',cn:'我现在正在读书。'},{en:'Look! The boys are playing basketball.',cn:'看！男孩们正在打篮球。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'Listen! Someone ___ outside.',options:['sing','sings','is singing','sang'],answer:2,explanation:'Listen! 提示正在发生，用现在进行时'},
+        {sentence:'The children ___ TV now.',options:['watch','watches','are watching','watching'],answer:2,explanation:'now 提示现在进行时'}
+      ],
+      fillBlank:[
+        {sentence:'Look! It ___ (rain) outside.',answer:'is raining',explanation:'Look! 提示正在发生'},
+        {sentence:'She ___ (wear) a red dress today.',answer:'is wearing',explanation:'今天正在穿'}
+      ],
+      passage:[
+        {title:'At the Park',text:'Right now, I ___ (sit) on a bench. Some children ___ (play) soccer nearby. A girl ___ (run) after a ball. Two boys ___ (climb) the tree. Their mother ___ (call) them. A dog ___ (bark) loudly.',blanks:['am sitting','are playing','is running','are climbing','is calling','is barking'],explanation:'现在进行时 — 描述此刻正在发生的动作'}
+      ]
+    }
+  },
+  { id:3, categoryId:1, title:'一般过去时 (Simple Past)',
+    content:'一般过去时表示过去某个时间发生的动作或存在的状态。\n\n结构：主语 + 动词过去式\n\n标志词：yesterday, last night, ...ago, in 2020',
+    examples:[{en:'I visited my grandma yesterday.',cn:'我昨天看望了我奶奶。'},{en:'She was late for school this morning.',cn:'她今天早上上学迟到了。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'She ___ to Beijing last week.',options:['go','goes','went','gone'],answer:2,explanation:'last week 是过去时间，go → went'},
+        {sentence:'They ___ at home last night.',options:['are','were','was','be'],answer:1,explanation:'last night 过去时间，主语 They 用 were'}
+      ],
+      fillBlank:[
+        {sentence:'He ___ (buy) a new book yesterday.',answer:'bought',explanation:'buy → bought 不规则变化'},
+        {sentence:'I ___ (see) her in the library just now.',answer:'saw',explanation:'just now 刚才，see → saw'}
+      ],
+      passage:[
+        {title:'My Weekend',text:'Last weekend, I ___ (go) to the park with my family. We ___ (see) many beautiful flowers. My sister ___ (take) a lot of photos. My father ___ (buy) us ice cream. We ___ (sit) on the grass and ___ (have) a picnic. Later, we ___ (visit) my grandparents.',blanks:['went','saw','took','bought','sat','had','visited'],explanation:'一般过去时，注意不规则动词的过去式'},
+        {title:'Yesterday',text:'Yesterday, Tom ___ (wake) up at 7:00. He ___ (eat) a quick breakfast. Then he ___ (ride) his bike to school. In class, he ___ (answer) a difficult question. The teacher ___ (feel) very pleased. After school, Tom ___ (do) his homework carefully.',blanks:['woke','ate','rode','answered','felt','did'],explanation:'过去时，多个不规则动词'}
+      ]
+    }
+  },
+  { id:4, categoryId:1, title:'一般将来时 (Simple Future)',
+    content:'一般将来时表示将要发生的动作。\n\n结构：主语 + will + 动词原形 / 主语 + am/is/are going to + 动词原形\n\n标志词：tomorrow, next week, in the future',
+    examples:[{en:'I will go to Beijing tomorrow.',cn:'我明天要去北京。'},{en:'She is going to study hard next term.',cn:'她下学期打算努力学习。'}],
+    difficulty:2, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'They ___ a football match tomorrow.',options:['have','had','will have','are having'],answer:2,explanation:'tomorrow 是将来时间，用 will have'},
+        {sentence:'We ___ visit our grandparents next Sunday.',options:['are','will','do','have'],answer:1,explanation:'next Sunday 用将来时'}
+      ],
+      fillBlank:[{sentence:'I ___ (call) you when I get home.',answer:'will call',explanation:'将来的动作，用 will call'}],
+      passage:[
+        {title:'My Summer Plan',text:'This summer, I ___ (visit) my grandparents. They ___ (be) very happy to see me. I ___ (stay) with them for two weeks. We ___ (go) fishing together. My grandpa ___ (teach) me how to swim. I think we ___ (have) a wonderful time.',blanks:['will visit','will be','will stay','will go','will teach','will have'],explanation:'一般将来时 will + 动词原形'},
+        {title:'Next Week',text:'Next week, our class ___ (have) a sports meeting. Many students ___ (take) part in it. I ___ (run) in the 400-meter race. My friend ___ (jump) in the high jump. We ___ (practice) hard every day now. I believe we ___ (win) some prizes.',blanks:['will have','will take','will run','will jump','are practicing','will win'],explanation:'一般将来时和现在进行时的混合练习'}
+      ]
+    }
+  },
+  { id:5, categoryId:1, title:'现在完成时 (Present Perfect)',
+    content:'现在完成时表示过去发生的动作对现在造成的影响，或从过去持续到现在的动作。\n\n结构：主语 + have/has + 过去分词\n\n标志词：already, yet, ever, never, just, since, for',
+    examples:[{en:'I have already finished my homework.',cn:'我已经完成了作业。'},{en:'She has never been to Shanghai.',cn:'她从未去过上海。'}],
+    difficulty:3, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'I ___ already ___ my breakfast.',options:['have...eat','have...eaten','has...eaten','had...eaten'],answer:1,explanation:'现在完成时，I 用 have eaten'},
+        {sentence:'___ you ever ___ a horse?',options:['Do...ride','Did...rode','Have...ridden','Will...ride'],answer:2,explanation:'ever 用于现在完成时'}
+      ],
+      fillBlank:[
+        {sentence:'I ___ just ___ (finish) my homework.',answer:'have finished',explanation:'just 提示用现在完成时'},
+        {sentence:'She ___ (live) here since 2020.',answer:'has lived',explanation:'since 2020 用现在完成时'}
+      ],
+      passage:[
+        {title:'Changes in My Life',text:'I ___ (live) in this city since I was born. I ___ (be) to many places. I ___ already ___ (visit) the Great Wall twice. My English ___ (improve) a lot recently. I ___ (make) many new friends. But I ___ never ___ (travel) abroad.',blanks:['have lived','have been','have visited','has improved','have made','have travelled'],explanation:'现在完成时，含 have/has + 过去分词'}
+      ]
+    }
+  },
+  { id:6, categoryId:1, title:'过去进行时 (Past Continuous)',
+    content:'过去进行时表示过去某个时刻正在进行的动作。\n\n结构：主语 + was/were + 动词-ing\n\n标志词：at 8:00 yesterday, while, when',
+    examples:[{en:'I was watching TV at 8:00 last night.',cn:'昨晚八点我正在看电视。'},{en:'She was doing her homework when I called her.',cn:'我给她打电话时她正在做作业。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'I ___ TV when she called.',options:['watch','was watching','watched','am watching'],answer:1,explanation:'when 从句用过去时，主句用过去进行时'},
+        {sentence:'While I ___ my homework, my mother came in.',options:['do','was doing','did','am doing'],answer:1,explanation:'while 后接进行时'}
+      ],
+      fillBlank:[{sentence:'At 7:00 yesterday evening, I ___ (have) dinner.',answer:'was having',explanation:'昨晚 7 点正在吃饭'}],
+      passage:[{title:'A Stormy Night',text:'Last night at 8:00, I ___ (do) my homework. My mother ___ (cook) in the kitchen. My father ___ (read) a newspaper. Outside, the wind ___ (blow) hard. It ___ (rain) heavily. Some people ___ (run) home quickly.',blanks:['was doing','was cooking','was reading','was blowing','was raining','were running'],explanation:'过去进行时 — was/were + 动词ing，描述过去某时刻正在进行的动作'}]
+    }
+  },
+
+  // 语态
+  { id:7, categoryId:2, title:'被动语态-一般现在时 (Passive: Present)',
+    content:'被动语态表示主语是动作的承受者。\n\n结构：主语 + am/is/are + 过去分词',
+    examples:[{en:'English is spoken in many countries.',cn:'很多国家说英语。'},{en:'The classroom is cleaned every day.',cn:'教室每天被打扫。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'Rice ___ in the south of China.',options:['grow','is grown','grows','growing'],answer:1,explanation:'水稻被种植，is grown'},
+        {sentence:'These computers ___ in China.',options:['make','are made','makes','making'],answer:1,explanation:'电脑被制造，are made'}
+      ],
+      fillBlank:[{sentence:'The room ___ (clean) every morning.',answer:'is cleaned',explanation:'房间被打扫，被动语态'}],
+      passage:[{title:'How Paper Is Made',text:'Paper ___ (make) from wood. First, trees ___ (cut) down. Then the wood ___ (take) to a factory. At the factory, the wood ___ (break) into small pieces. Water ___ (add) to make pulp. Finally, the pulp ___ (press) and dried to form paper.',blanks:['is made','are cut','is taken','is broken','is added','is pressed'],explanation:'被动语态现在时 — be + 过去分词，主语是动作承受者'}]}
+  },
+  { id:8, categoryId:2, title:'被动语态-一般过去时 (Passive: Past)',
+    content:'结构：主语 + was/were + 过去分词',
+    examples:[{en:'The bridge was built in 1990.',cn:'这座桥建于1990年。'},{en:'The window was broken by Tom.',cn:'窗户被汤姆打破了。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[{sentence:'The Great Wall ___ built over 2000 years ago.',options:['is','was','were','has'],answer:1,explanation:'was built'}],
+      fillBlank:[{sentence:'The Eiffel Tower ___ (build) in 1889.',answer:'was built',explanation:'过去时被动语态'}],
+      passage:[{title:'The Old Bridge',text:'The old bridge ___ (build) over 200 years ago. It ___ (design) by a famous architect. The stones ___ (carry) from a nearby mountain. The work ___ (finish) in only three years. The bridge ___ (use) by thousands of people every day. It was said that the bridge ___ (name) after a brave soldier.',blanks:['was built','was designed','were carried','was finished','is used','was named'],explanation:'被动语态过去时和现在时的混合练习'}]
+    }
+  },
+
+  // 词性
+  { id:9, categoryId:3, title:'名词 (Nouns)',
+    content:'名词分为可数名词和不可数名词。\n\n可数名词复数变法：一般加-s；s/x/ch/sh结尾加-es；辅音+y变y为i加-es；f/fe变ves；不规则变化如 child→children',
+    examples:[{en:'I have two apples.',cn:'我有两个苹果。'},{en:'There is some water in the cup.',cn:'杯子里有一些水。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'There are five ___ in the room.',options:['child','childs','children','childrens'],answer:2,explanation:'child 复数是不规则变化 children'},
+        {sentence:'There are many ___ on the farm.',options:['sheep','sheeps','sheepes','a sheep'],answer:0,explanation:'sheep 单复数同形'}
+      ],
+      fillBlank:[{sentence:'There are three ___ (box) on the table.',answer:'boxes',explanation:'box → boxes'}],
+      passage:[{title:'In the Classroom',text:'There are many ___ (student) in the classroom. On the desk, there are several ___ (pencil) and two ___ (eraser). Three ___ (child) are reading books. The teacher has many ___ (box) of chalk. There are five ___ (sheep) in the picture on the wall.',blanks:['students','pencils','erasers','children','boxes','sheep'],explanation:'名词复数变化：一般加s，特殊变化 child→children, sheep→sheep'}]
+    }
+  },
+  { id:10, categoryId:3, title:'形容词和副词 (Adjectives & Adverbs)',
+    content:'比较级和最高级：单音节加 -er/-est；多音节加 more/most；特殊 good→better→best, bad→worse→worst',
+    examples:[{en:'She is taller than me.',cn:'她比我高。'},{en:'This book is more interesting than that one.',cn:'这本书比那本更有趣。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'This coat is ___ than that one.',options:['cheap','cheaper','cheapest','more cheap'],answer:1,explanation:'than 提示比较级'},
+        {sentence:'She is the ___ student in our class.',options:['good','better','best','well'],answer:2,explanation:'in our class 最高级用 best'}
+      ],
+      fillBlank:[{sentence:'This question is ___ (easy) than that one.',answer:'easier',explanation:'easy → easier'}],
+      passage:[{title:'Who Is the Best?',text:'Tom is ___ (tall) than Jack. But Jack is ___ (strong) than Tom. Among all of us, Mary is the ___ (smart) student. She works ___ (hard) than anyone else. This math problem is the ___ (difficult) of all. My bag is ___ (heavy) than yours.',blanks:['taller','stronger','smartest','harder','most difficult','heavier'],explanation:'比较级和最高级混合练习 — 单音节加er/est，多音节加more/most'}]
+    }
+  },
+  { id:11, categoryId:3, title:'代词 (Pronouns)',
+    content:'人称代词主格 I/you/he/she/it/we/they，宾格 me/you/him/her/it/us/them，物主代词 my/mine/your/yours 等',
+    examples:[{en:'I like her. She likes me.',cn:'我喜欢她。她喜欢我。'},{en:'This is my book. That is yours.',cn:'这是我的书。那是你的。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'___ is my friend. ___ name is Lily.',options:['She/She','Her/Her','She/Her','Her/She'],answer:2,explanation:'主语用 She，名词前用 Her'},
+        {sentence:'Is this ___ pen? Yes, it\'s ___.',options:['your/mine','yours/my','your/my','yours/mine'],answer:0,explanation:'名词前用 your，后面无名词用 mine'}
+      ],
+      fillBlank:[{sentence:'Please give ___ (他) the book.',answer:'him',explanation:'介词后用宾格 him'}],
+      passage:[{title:'A Letter to a Friend',text:'___ (我) want to tell you about ___ (我的) family. ___ (我们) live in a small town. ___ (我们的) house is near the river. ___ (你) should come to visit ___ (我们) someday. ___ (我) am sure ___ (你) will like it here.',blanks:['I','my','We','Our','You','us','I','you'],explanation:'人称代词主格、物主代词、宾格的综合练习'}]
+    }
+  },
+
+  // 句型
+  { id:12, categoryId:4, title:'There be 句型',
+    content:'表示"某处有某物"：There is/are + 名词 + 地点\n\n就近原则：be 动词与最近的名词保持一致',
+    examples:[{en:'There is a cat under the table.',cn:'桌子下面有一只猫。'},{en:'There are many students in the classroom.',cn:'教室里有很多学生。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'___ a book on the desk.',options:['There is','There are','It is','They are'],answer:0,explanation:'a book 是单数，用 There is'},
+        {sentence:'There ___ a pen and two pencils in the box.',options:['is','are','have','has'],answer:0,explanation:'就近原则，a pen 是单数'}
+      ],
+      fillBlank:[{sentence:'___ ___ many people in the park yesterday.',answer:'There were',explanation:'过去时，people 复数用 There were'}],
+      passage:[{title:'My Neighborhood',text:'___ (有) a big park near my home. ___ (有) many trees and flowers in it. ___ (有) also a small lake. ___ (有) some ducks on the lake. ___ (有) a bench under the big tree. ___ (有) many children playing every afternoon.',blanks:['There is','There are','There is','There are','There is','There are'],explanation:'There be 句型 — 就近原则，注意 There is/are 的选择'}]
+    }
+  },
+  { id:13, categoryId:4, title:'宾语从句 (Object Clauses)',
+    content:'主句 + 连接词 + 从句（陈述语序）\n\n连接词：that(陈述句)，if/whether(是否)，特殊疑问词',
+    examples:[{en:'I think (that) he is right.',cn:'我认为他是对的。'},{en:'Can you tell me where the station is?',cn:'你能告诉我车站在哪里吗？'}],
+    difficulty:3, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'I don\'t know ___ he will come.',options:['that','if','what','which'],answer:1,explanation:'是否来，用 if'},
+        {sentence:'Can you tell me ___?',options:['where is the bank','where the bank is','the bank is where','where was the bank'],answer:1,explanation:'宾语从句用陈述语序'}
+      ],
+      fillBlank:[{sentence:'I wonder ___ she will come. (是否)',answer:'if',explanation:'if 或 whether 表示"是否"'}],
+      passage:[{title:'What I Think',text:'I think ___ English is very useful. I don\'t know ___ I can pass the exam. My teacher often asks me ___ I have finished my homework. Can you tell me ___ the library is? I wonder ___ he will come tomorrow. I believe ___ hard work pays off.',blanks:['that','if','whether','where','if','that'],explanation:'宾语从句 — that, if/whether, 特殊疑问词的用法'}]
+    }
+  },
+  { id:14, categoryId:4, title:'状语从句 (Adverbial Clauses)',
+    content:'时间(when/while/before/after)，条件(if/unless)，原因(because/since)\n\n主将从现：主句将来时，从句一般现在时',
+    examples:[{en:'If it rains, I will stay at home.',cn:'如果下雨我就待在家。'},{en:'I was reading when she came in.',cn:'她进来时我正在读书。'}],
+    difficulty:3, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'If it ___ tomorrow, we won\'t go hiking.',options:['rain','rains','will rain','rained'],answer:1,explanation:'if 从句用一般现在时'},
+        {sentence:'She didn\'t come to school ___ she was sick.',options:['so','because','but','and'],answer:1,explanation:'because 表示原因'}
+      ],
+      fillBlank:[{sentence:'He will be happy if he ___ (get) a gift.',answer:'gets',explanation:'if 从句用一般现在时'}],
+      passage:[{title:'Planning a Trip',text:'If it ___ (not rain) tomorrow, we ___ (go) hiking. When we ___ (arrive) at the mountain, we ___ (start) climbing. I ___ (stay) home if I ___ (feel) sick. Unless you ___ (hurry) up, we ___ (miss) the bus.',blanks:["doesn't rain","will go","arrive","will start","will stay","feel","hurry","will miss"],explanation:'状语从句 — 主将从现原则，if/when/unless 从句用一般现在时'}]
+    }
+  },
+
+  // 词汇用法
+  { id:15, categoryId:5, title:'情态动词 (Modal Verbs)',
+    content:'can/could(能)，must(必须)，may/might(可能)，should(应该)\n\n情态动词后接动词原形',
+    examples:[{en:'I can swim.',cn:'我会游泳。'},{en:'You must finish your homework first.',cn:'你必须先完成作业。'}],
+    difficulty:2, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'You ___ cross the street when the light is red.',options:["mustn't",'can','should',"needn't"],answer:0,explanation:'红灯时禁止通行，mustn\'t'},
+        {sentence:'___ I borrow your pen?',options:['Must','Need','May','Do'],answer:2,explanation:'请求许可用 May I'}
+      ],
+      fillBlank:[{sentence:'You ___ (应该) listen to the teacher.',answer:'should',explanation:'表示建议用 should'}],
+      passage:[{title:'School Rules',text:'Every student ___ (必须) wear school uniform. You ___ (不允许) eat in the classroom. You ___ (应该) hand in homework on time. You ___ (不能) use mobile phones in class. ___ I ___ (可以) borrow a pen? We ___ (必须) respect our teachers.',blanks:['must','must not','should','cannot','May borrow','must'],explanation:'情态动词 — must(必须), should(应该), can/may(可以), mustn\'t(禁止)'}]
+    }
+  },
+  { id:16, categoryId:5, title:'动词不定式 (Infinitives)',
+    content:'to + 动词原形，可作宾语(want to do)、目的状语、宾语补足语等\n\nIt\'s + adj. + to do sth.',
+    examples:[{en:'I want to be a teacher.',cn:'我想成为一名老师。'},{en:'It\'s important to learn English well.',cn:'学好英语很重要。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'It\'s important ___ English well.',options:['learn','to learn','learning','learned'],answer:1,explanation:'It\'s + adj. + to do'},
+        {sentence:'She wants ___ a doctor.',options:['be','to be','being','is'],answer:1,explanation:'want to do sth.'}
+      ],
+      fillBlank:[{sentence:'He decided ___ (study) harder.',answer:'to study',explanation:'decide to do sth.'}],
+      passage:[{title:'My Dream',text:'I want ___ (become) a doctor when I grow up. It\'s important ___ (study) hard now. My parents encourage me ___ (follow) my dream. I plan ___ (go) to a good medical school. It\'s not easy ___ (achieve) this goal. I hope ___ (help) many people in the future.',blanks:['to become','to study','to follow','to go','to achieve','to help'],explanation:'动词不定式 to do — 作宾语(want to do)、目的、宾语补足语，It\'s + adj + to do'}]
+    }
+  },
+
+  // 时态补充
+  { id:17, categoryId:1, title:'过去将来时 (Past Future)',
+    content:'过去将来时表示从过去某个时间看将要发生的动作。\n\n结构：主语 + would + 动词原形 / was/were going to + 动词原形\n\n常用在宾语从句中，主句是过去时，从句表示将来。',
+    examples:[{en:'He said he would come the next day.',cn:'他说他第二天会来。'},{en:'I knew she was going to be late.',cn:'我知道她会迟到。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'He told me he ___ help me.',options:['will','would','is going to','can'],answer:1,explanation:'主句是过去时，从句用过去将来时 would'},
+        {sentence:'She said she ___ visit her grandma the next week.',options:['is going to','was going to','will','goes'],answer:1,explanation:'过去将来时 was/were going to'}
+      ],
+      fillBlank:[{sentence:'I thought you ___ (come) to the party.',answer:'would come',explanation:'thought 是过去时，从句用 would come'}],
+      passage:[{title:'What He Promised',text:'Tom said he ___ (call) me later. He promised he ___ (finish) his homework before dinner. He told me he ___ (not be) late again. I believed he ___ (keep) his word.',blanks:['would call','would finish','would not be','would keep'],explanation:'过去将来时 — 过去说的将来动作，would + 动词原形'}]
+    }
+  },
+  { id:18, categoryId:1, title:'过去完成时 (Past Perfect)',
+    content:'过去完成时表示在过去某个时间之前已经完成的动作。\n\n结构：主语 + had + 过去分词\n\n标志词：by the end of..., before, after, when',
+    examples:[{en:'I had finished my homework before dinner.',cn:'我晚饭前已经完成了作业。'},{en:'She had left when I arrived.',cn:'我到的时候她已经走了。'}],
+    difficulty:3, grade:9,
+    questions:{
+      multipleChoice:[
+        {sentence:'By the time I got to the station, the train ___.',options:['left','has left','had left','was leaving'],answer:2,explanation:'got 是过去时，火车离开在之前，用过去完成时 had left'},
+        {sentence:'She ___ never ___ such a beautiful place before.',options:['has...seen','had...seen','was...seeing','did...see'],answer:1,explanation:'由 before 可知用过去完成时 had seen'}
+      ],
+      fillBlank:[{sentence:'I realized I ___ (lose) my key.',answer:'had lost',explanation:'realized 是过去时，丢钥匙在之前，用 had lost'}],
+      passage:[{title:'A Surprising Day',text:'When I got home, I realized I ___ (forget) to lock the door. My mother ___ already ___ (cook) dinner. My brother ___ (finish) his homework before I arrived. I ___ never ___ (feel) so tired before.',blanks:['had forgotten','had cooked','had finished','had felt'],explanation:'过去完成时 — 过去的过去，had + 过去分词'}]
+    }
+  },
+
+  // 词性补充
+  { id:19, categoryId:3, title:'数词 (Numerals)',
+    content:'基数词 (one, two...) 表示数量；序数词 (first, second...) 表示顺序。\n\n基数词特殊变法：13-19 加 -teen；20-90加 -ty；百 hundred，千 thousand\n序数词：一般加 -th；特殊 first, second, third, fifth, eighth, ninth, twelfth',
+    examples:[{en:'There are forty students in our class.',cn:'我们班有四十个学生。'},{en:'He finished second in the race.',cn:'他在比赛中获得第二名。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'There are ___ students in our class.',options:['fourty','forty','fourteen','fourteenth'],answer:1,explanation:'40 的正确拼写是 forty，注意没有 u'},
+        {sentence:'My birthday is on the ___ of May.',options:['nineth','ninth','nine','nineteen'],answer:1,explanation:'第九是 ninth，nine去掉e加th'}
+      ],
+      fillBlank:[{sentence:'December is the ___ (12) month of the year.',answer:'twelfth',explanation:'第十二是 twelfth，特殊变化'}],
+      passage:[{title:'My School',text:'There are ___ (55) students in our class. I sit in the ___ (3) row. The ___ (1) lesson is English. We have ___ (8) subjects this term. My classroom is on the ___ (4) floor.',blanks:['fifty-five','third','first','eight','fourth'],explanation:'基数词和序数词的综合练习'}]
+    }
+  },
+  { id:20, categoryId:3, title:'冠词 (Articles)',
+    content:'不定冠词 a/an 表泛指；定冠词 the 表特指。\n\na 用于辅音音素开头的词前，an 用于元音音素开头的词前。\n\nthe 用于：特指某人/物、第二次提到、独一无二的事物、序数词/最高级前。',
+    examples:[{en:'I have a book. The book is interesting.',cn:'我有一本书。这本书很有趣。'},{en:'She is an honest girl.',cn:'她是个诚实的女孩。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'I have ___ useful book.',options:['a','an','the','/'],answer:0,explanation:'useful 以辅音音素 /j/ 开头，用 a'},
+        {sentence:'___ sun rises in the east.',options:['A','An','The','/'],answer:2,explanation:'太阳是独一无二的，用 the'}
+      ],
+      fillBlank:[{sentence:'She is ___ honest girl.',answer:'an',explanation:'honest 以元音音素开头，用 an'}],
+      passage:[{title:'My Day',text:'I have ___ apple and ___ banana for breakfast. After breakfast, I go to ___ school by ___ bus. In the evening, I read ___ interesting book. ___ moon is very bright tonight.',blanks:['an','a','/','/','an','The'],explanation:'冠词 a/an/the 的综合练习，注意零冠词的情况'}]
+    }
+  },
+  { id:21, categoryId:3, title:'介词 (Prepositions)',
+    content:'时间介词：at(时刻), on(某天), in(年月季节)；方位介词：in(在…里), on(在…上), under(在…下), behind(在…后), between(在…之间)；方式介词：by(乘/通过), with(用)',
+    examples:[{en:'I get up at 7:00 in the morning.',cn:'我早上七点起床。'},{en:'The book is on the desk.',cn:'书在桌子上。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'I often go to school ___ bus.',options:['by','on','in','with'],answer:0,explanation:'by bus = 乘公交车，by + 交通工具'},
+        {sentence:'The cat is ___ the table.',options:['in','on','under','between'],answer:2,explanation:'猫在桌子下面，用 under'}
+      ],
+      fillBlank:[{sentence:'I was born ___ July, 2008.',answer:'in',explanation:'月份前用 in'}],
+      passage:[{title:'My Room',text:'There is a desk ___ (在…旁边) the window. The chair is ___ (在…前面) the desk. My bag is ___ (在…上) the chair. Some books are ___ (在…里) the desk drawer. I do my homework ___ (在) night.',blanks:['beside','in front of','on','in','at'],explanation:'方位介词和时间介词的综合练习'}]
+    }
+  },
+
+  // 句型补充
+  { id:22, categoryId:4, title:'定语从句 (Relative Clauses)',
+    content:'定语从句修饰名词或代词。\n\n关系代词：who(人/主语), whom(人/宾语), which(物), that(人/物)\n关系副词：when(时间), where(地点), why(原因)',
+    examples:[{en:'The book that I bought is very interesting.',cn:'我买的那本书很有趣。'},{en:'Do you know the girl who is singing?',cn:'你认识那个正在唱歌的女孩吗？'}],
+    difficulty:3, grade:9,
+    questions:{
+      multipleChoice:[
+        {sentence:'This is the book ___ I bought yesterday.',options:['who','which','whom','whose'],answer:1,explanation:'book 是物，用 which/that'},
+        {sentence:'The man ___ is wearing a hat is my uncle.',options:['which','who','whom','what'],answer:1,explanation:'man 是人，作主语用 who/that'}
+      ],
+      fillBlank:[{sentence:'This is the school ___ I studied three years ago. (在那里)',answer:'where',explanation:'地点用 where = in which'}],
+      passage:[{title:'My Friends',text:'The boy ___ (who/which) sits next to me is Tom. The girl ___ (who/which) you met yesterday is my sister. The book ___ (that/who) I borrowed from the library is very interesting. This is the reason ___ (why/which) I like English.',blanks:['who','who','that','why'],explanation:'定语从句 — 选择正确的关系代词或关系副词'}]
+    }
+  },
+  { id:23, categoryId:4, title:'感叹句 (Exclamatory Sentences)',
+    content:'What + (a/an) + 形容词 + 名词 + (主语+谓语)!\nHow + 形容词/副词 + (主语+谓语)!\n\nWhat 后接名词，How 后接形容词或副词。',
+    examples:[{en:'What a beautiful flower it is!',cn:'多漂亮的花啊！'},{en:'How beautiful the flower is!',cn:'这花多漂亮啊！'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'___ beautiful the girl is!',options:['What','What a','How','How a'],answer:2,explanation:'beautiful 是形容词，用 How'},
+        {sentence:'___ wonderful movie it is!',options:['What','What a','How','How a'],answer:1,explanation:'movie 是可数名词单数，用 What a'}
+      ],
+      fillBlank:[{sentence:'___ ___ exciting game it is!',answer:'What an',explanation:'exciting 以元音开头，用 What an'}],
+      passage:[{title:'Expressing Feelings',text:'___ (多么) a beautiful day! ___ (多么) blue the sky is! ___ (多么) fresh the air smells! ___ (多么) happy the children are! ___ (多么) a wonderful world!',blanks:['What','How','How','How','What'],explanation:'感叹句 — What 接名词，How 接形容词/副词'}]
+    }
+  },
+  { id:24, categoryId:4, title:'祈使句 (Imperative Sentences)',
+    content:'祈使句表示命令、请求或建议。\n\n肯定：动词原形 + 其他\n否定：Don\'t + 动词原形\nLet\'s + 动词原形（表示建议）',
+    examples:[{en:'Open the door, please.',cn:'请开门。'},{en:'Don\'t be late.',cn:'别迟到。'}],
+    difficulty:1, grade:7,
+    questions:{
+      multipleChoice:[
+        {sentence:'___ in the library.',options:['Don\'t talk','Not talk','No talk','Don\'t talking'],answer:0,explanation:'祈使句否定用 Don\'t + 动词原形'},
+        {sentence:'___ go to the park together!',options:['Let\'s','Let we','Let us to','We let'],answer:0,explanation:'Let\'s + 动词原形表示建议'}
+      ],
+      fillBlank:[{sentence:'Please ___ (open) the window.',answer:'open',explanation:'祈使句肯定用动词原形'}],
+      passage:[{title:'Classroom Rules',text:'___ (not run) in the hallway. ___ (keep) the classroom clean. ___ (not eat) in class. ___ (listen) to the teacher carefully. ___ (let\'s, be) quiet now.',blanks:["Don't run",'Keep',"Don't eat",'Listen',"Let's be"],explanation:'祈使句 — 肯定用动词原形，否定用 Don\'t + 动词原形'}]
+    }
+  },
+
+  // 综合类
+  { id:25, categoryId:5, title:'主谓一致 (Subject-Verb Agreement)',
+    content:'谓语动词要和主语在人称和数上保持一致。\n\n关键原则：语法一致(单复对应)、意义一致(集合名词)、就近一致(neither...nor..., either...or..., there be)',
+    examples:[{en:'Everyone in our class likes English.',cn:'我们班每个人都喜欢英语。'},{en:'Neither he nor I am right.',cn:'他和我都不对。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'Each of the students ___ a new book.',options:['have','has','are having','were having'],answer:1,explanation:'each 作主语，谓语用单数 has'},
+        {sentence:'There ___ a pen and two books on the desk.',options:['is','are','have','has'],answer:0,explanation:'There be 就近原则，a pen 是单数用 is'}
+      ],
+      fillBlank:[{sentence:'Neither Tom nor his friends ___ (like) math.',answer:'like',explanation:'neither...nor 就近原则，friends 是复数用 like'}],
+      passage:[{title:'Our Class',text:'Everyone in our class ___ (be) friendly. Each of us ___ (have) a dream. The team ___ (be) practicing hard these days. Neither the students nor the teacher ___ (know) the answer yet.',blanks:['is','has','is','knows'],explanation:'主谓一致 — 不定代词单数、集合名词、就近原则'}]
+    }
+  },
+  { id:26, categoryId:5, title:'动名词 (Gerunds)',
+    content:'动名词由动词+ing构成，具有名词性质，可作主语、宾语、表语。\n\n常见搭配：enjoy/finish/mind/practice/suggest doing sth.\n介词后接动名词：be good at doing, be interested in doing, thank you for doing',
+    examples:[{en:'I enjoy reading books.',cn:'我喜欢读书。'},{en:'Thank you for helping me.',cn:'谢谢你帮我。'}],
+    difficulty:2, grade:8,
+    questions:{
+      multipleChoice:[
+        {sentence:'I enjoy ___ to music.',options:['listen','to listen','listening','listened'],answer:2,explanation:'enjoy 后接动名词 listening'},
+        {sentence:'He is good at ___ basketball.',options:['play','plays','played','playing'],answer:3,explanation:'介词 at 后接动名词 playing'}
+      ],
+      fillBlank:[{sentence:'Would you mind ___ (open) the door?',answer:'opening',explanation:'mind 后接动名词 opening'}],
+      passage:[{title:'My Hobbies',text:'I enjoy ___ (read) books in my free time. I am interested in ___ (learn) English. My brother practices ___ (play) the piano every day. We look forward to ___ (visit) the museum.',blanks:['reading','learning','playing','visiting'],explanation:'动名词 — 动词/介词后接 doing'}]
+    }
+  }
+]
+
+// ---------- 词汇库 ----------
+// 扩展：按 id 递增追加，grade(7/8/9) semester(1=上/2=下) unit
+// 基于人教版 Go for it! 初中核心词汇 ~500 词
+const VOCABULARY = [
+  // ========== 七年级 上学期 (Starter + U1-U4) ==========
+  {id:1,word:'morning',phonetic:'/ˈmɔːrnɪŋ/',translation:'早晨',pos:'n.',grade:7,semester:1,unit:0,examples:[{"en":"Good morning!","cn":"早上好！"}]},
+  {id:2,word:'afternoon',phonetic:'/ˌæftərˈnuːn/',translation:'下午',pos:'n.',grade:7,semester:1,unit:0,examples:[{"en":"Good afternoon, class.","cn":"下午好，同学们。"}]},
+  {id:3,word:'evening',phonetic:'/ˈiːvnɪŋ/',translation:'傍晚',pos:'n.',grade:7,semester:1,unit:0,examples:[{"en":"I do my homework in the evening.","cn":"我晚上做作业。"}]},
+  {id:4,word:'hello',phonetic:'/həˈloʊ/',translation:'你好',pos:'int.',grade:7,semester:1,unit:0,examples:[{"en":"Hello, how are you?","cn":"你好，你怎么样？"}]},
+  {id:5,word:'goodbye',phonetic:'/ɡʊdˈbaɪ/',translation:'再见',pos:'int.',grade:7,semester:1,unit:0,examples:[{"en":"Goodbye, see you tomorrow.","cn":"再见，明天见。"}]},
+  {id:6,word:'how',phonetic:'/haʊ/',translation:'怎样',pos:'adv.',grade:7,semester:1,unit:0,examples:[{"en":"How are you?","cn":"你好吗？"}]},
+  {id:7,word:'fine',phonetic:'/faɪn/',translation:'好的',pos:'adj.',grade:7,semester:1,unit:0,examples:[{"en":"I'm fine, thank you.","cn":"我很好，谢谢。"}]},
+  {id:8,word:'thanks',phonetic:'/θæŋks/',translation:'感谢',pos:'int.',grade:7,semester:1,unit:0,examples:[{"en":"Thanks for your help.","cn":"谢谢你的帮助。"}]},
+  {id:9,word:'name',phonetic:'/neɪm/',translation:'名字',pos:'n.',grade:7,semester:1,unit:1,examples:[{"en":"My name is Tom.","cn":"我叫汤姆。"}]},
+  {id:10,word:'nice',phonetic:'/naɪs/',translation:'好的',pos:'adj.',grade:7,semester:1,unit:1,examples:[{"en":"Nice to meet you.","cn":"很高兴见到你。"}]},
+  {id:11,word:'meet',phonetic:'/miːt/',translation:'遇见',pos:'v.',grade:7,semester:1,unit:1,examples:[{"en":"I want to meet your family.","cn":"我想见见你的家人。"}]},
+  {id:12,word:'first',phonetic:'/fɜːrst/',translation:'第一',pos:'adj.',grade:7,semester:1,unit:1,examples:[{"en":"This is my first time here.","cn":"这是我第一次来这里。"}]},
+  {id:13,word:'last',phonetic:'/læst/',translation:'最后的',pos:'adj.',grade:7,semester:1,unit:1,examples:[{"en":"He was the last to leave.","cn":"他是最后一个离开的。"}]},
+  {id:14,word:'number',phonetic:'/ˈnʌmbər/',translation:'数字',pos:'n.',grade:7,semester:1,unit:1,examples:[{"en":"What is your phone number?","cn":"你的电话号码是多少？"}]},
+  {id:15,word:'phone',phonetic:'/foʊn/',translation:'电话',pos:'n.',grade:7,semester:1,unit:1,examples:[{"en":"My phone is on the desk.","cn":"我的手机在桌子上。"}]},
+  {id:16,word:'family',phonetic:'/ˈfæməli/',translation:'家庭',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"I love my family.","cn":"我爱我的家人。"}]},
+  {id:17,word:'mother',phonetic:'/ˈmʌðər/',translation:'母亲',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My mother is a teacher.","cn":"我妈妈是老师。"}]},
+  {id:18,word:'father',phonetic:'/ˈfɑːðər/',translation:'父亲',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My father works in a hospital.","cn":"我爸爸在医院工作。"}]},
+  {id:19,word:'brother',phonetic:'/ˈbrʌðər/',translation:'兄弟',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"I have an elder brother.","cn":"我有一个哥哥。"}]},
+  {id:20,word:'sister',phonetic:'/ˈsɪstər/',translation:'姐妹',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My sister is very kind.","cn":"我姐姐很善良。"}]},
+  {id:21,word:'parent',phonetic:'/ˈperənt/',translation:'父母',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My parents are proud of me.","cn":"我父母为我感到骄傲。"}]},
+  {id:22,word:'grandmother',phonetic:'/ˈɡrænmʌðər/',translation:'祖母',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My grandmother lives with us.","cn":"我奶奶和我们住在一起。"}]},
+  {id:23,word:'grandfather',phonetic:'/ˈɡrænfɑːðər/',translation:'祖父',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"My grandfather tells good stories.","cn":"我爷爷讲故事很好听。"}]},
+  {id:24,word:'these',phonetic:'/ðiːz/',translation:'这些',pos:'pron.',grade:7,semester:1,unit:2,examples:[{"en":"These books are mine.","cn":"这些书是我的。"}]},
+  {id:25,word:'photo',phonetic:'/ˈfoʊtoʊ/',translation:'照片',pos:'n.',grade:7,semester:1,unit:2,examples:[{"en":"This is a photo of my family.","cn":"这是我家的照片。"}]},
+  {id:26,word:'pencil',phonetic:'/ˈpensl/',translation:'铅笔',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"I need a pencil to write.","cn":"我需要一支铅笔写字。"}]},
+  {id:27,word:'eraser',phonetic:'/ɪˈreɪsər/',translation:'橡皮',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"Can I borrow your eraser?","cn":"我能借你的橡皮吗？"}]},
+  {id:28,word:'schoolbag',phonetic:'/ˈskuːlbæɡ/',translation:'书包',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"My schoolbag is very heavy.","cn":"我的书包很重。"}]},
+  {id:29,word:'dictionary',phonetic:'/ˈdɪkʃəneri/',translation:'词典',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"I use a dictionary to look up words.","cn":"我用词典查单词。"}]},
+  {id:30,word:'notebook',phonetic:'/ˈnoʊtbʊk/',translation:'笔记本',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"Write it down in your notebook.","cn":"把它记在你的笔记本上。"}]},
+  {id:31,word:'library',phonetic:'/ˈlaɪbreri/',translation:'图书馆',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"We often study in the library.","cn":"我们经常在图书馆学习。"}]},
+  {id:32,word:'classroom',phonetic:'/ˈklæsruːm/',translation:'教室',pos:'n.',grade:7,semester:1,unit:3,examples:[{"en":"Our classroom is bright and clean.","cn":"我们的教室明亮整洁。"}]},
+  {id:33,word:'where',phonetic:'/wer/',translation:'在哪里',pos:'adv.',grade:7,semester:1,unit:4,examples:[{"en":"Where is the nearest bank?","cn":"最近的银行在哪里？"}]},
+  {id:34,word:'bed',phonetic:'/bed/',translation:'床',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"I go to bed at ten.","cn":"我十点上床睡觉。"}]},
+  {id:35,word:'sofa',phonetic:'/ˈsoʊfə/',translation:'沙发',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"The cat is sleeping on the sofa.","cn":"猫在沙发上睡觉。"}]},
+  {id:36,word:'chair',phonetic:'/tʃer/',translation:'椅子',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"Please sit on the chair.","cn":"请坐在椅子上。"}]},
+  {id:37,word:'table',phonetic:'/ˈteɪbl/',translation:'桌子',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"There is a book on the table.","cn":"桌子上有一本书。"}]},
+  {id:38,word:'room',phonetic:'/ruːm/',translation:'房间',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"My room is small but clean.","cn":"我的房间虽小但干净。"}]},
+  {id:39,word:'radio',phonetic:'/ˈreɪdioʊ/',translation:'收音机',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"I listen to the radio every morning.","cn":"我每天早上听收音机。"}]},
+  {id:40,word:'hat',phonetic:'/hæt/',translation:'帽子',pos:'n.',grade:7,semester:1,unit:4,examples:[{"en":"She is wearing a red hat.","cn":"她戴着一顶红帽子。"}]},
+  {id:41,word:'know',phonetic:'/noʊ/',translation:'知道',pos:'v.',grade:7,semester:1,unit:4,examples:[{"en":"I know the answer.","cn":"我知道答案。"}]},
+
+  // ========== 七年级 上学期 (U5-U9) ==========
+  {id:42,word:'soccer',phonetic:'/ˈsɑːkər/',translation:'足球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"I like playing soccer.","cn":"我喜欢踢足球。"}]},
+  {id:43,word:'basketball',phonetic:'/ˈbæskɪtbɔːl/',translation:'篮球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"He is good at basketball.","cn":"他擅长篮球。"}]},
+  {id:44,word:'tennis',phonetic:'/ˈtenɪs/',translation:'网球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"Let us play tennis.","cn":"我们去打网球吧。"}]},
+  {id:45,word:'baseball',phonetic:'/ˈbeɪsbɔːl/',translation:'棒球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"Baseball is popular in the US.","cn":"棒球在美国很流行。"}]},
+  {id:46,word:'volleyball',phonetic:'/ˈvɑːlibɔːl/',translation:'排球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"She plays volleyball after school.","cn":"她放学后打排球。"}]},
+  {id:47,word:'ping-pong',phonetic:'/ˈpɪŋpɔːŋ/',translation:'乒乓球',pos:'n.',grade:7,semester:1,unit:5,examples:[{"en":"Can you play ping-pong?","cn":"你会打乒乓球吗？"}]},
+  {id:48,word:'interesting',phonetic:'/ˈɪntrəstɪŋ/',translation:'有趣的',pos:'adj.',grade:7,semester:1,unit:5,examples:[{"en":"This book is very interesting.","cn":"这本书很有趣。"}]},
+  {id:49,word:'boring',phonetic:'/ˈbɔːrɪŋ/',translation:'无聊的',pos:'adj.',grade:7,semester:1,unit:5,examples:[{"en":"The movie was so boring.","cn":"那部电影太无聊了。"}]},
+  {id:50,word:'difficult',phonetic:'/ˈdɪfɪkəlt/',translation:'困难的',pos:'adj.',grade:7,semester:1,unit:5,examples:[{"en":"Math is difficult for me.","cn":"数学对我来说很难。"}]},
+  {id:51,word:'banana',phonetic:'/bəˈnænə/',translation:'香蕉',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"I eat a banana every morning.","cn":"我每天早上吃一根香蕉。"}]},
+  {id:52,word:'orange',phonetic:'/ˈɔːrɪndʒ/',translation:'橙子',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"Would you like an orange?","cn":"你想吃个橙子吗？"}]},
+  {id:53,word:'strawberry',phonetic:'/ˈstrɔːberi/',translation:'草莓',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"Strawberries are my favorite fruit.","cn":"草莓是我最喜欢的水果。"}]},
+  {id:54,word:'vegetable',phonetic:'/ˈvedʒtəbl/',translation:'蔬菜',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"Eat more vegetables to stay healthy.","cn":"多吃蔬菜保持健康。"}]},
+  {id:55,word:'chicken',phonetic:'/ˈtʃɪkɪn/',translation:'鸡肉',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"We had chicken for dinner.","cn":"我们晚餐吃了鸡肉。"}]},
+  {id:56,word:'breakfast',phonetic:'/ˈbrekfəst/',translation:'早餐',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"I have bread and milk for breakfast.","cn":"我早餐吃面包喝牛奶。"}]},
+  {id:57,word:'lunch',phonetic:'/lʌntʃ/',translation:'午餐',pos:'n.',grade:7,semester:1,unit:6,examples:[{"en":"What did you have for lunch?","cn":"你午饭吃了什么？"}]},
+  {id:58,word:'healthy',phonetic:'/ˈhelθi/',translation:'健康的',pos:'adj.',grade:7,semester:1,unit:6,examples:[{"en":"Running is a healthy habit.","cn":"跑步是健康的习惯。"}]},
+  {id:59,word:'sock',phonetic:'/sɑːk/',translation:'短袜',pos:'n.',grade:7,semester:1,unit:7,examples:[{"en":"I need a pair of socks.","cn":"我需要一双袜子。"}]},
+  {id:60,word:'sweater',phonetic:'/ˈswetər/',translation:'毛衣',pos:'n.',grade:7,semester:1,unit:7,examples:[{"en":"She is wearing a warm sweater.","cn":"她穿着一件暖和的毛衣。"}]},
+  {id:61,word:'trousers',phonetic:'/ˈtraʊzərz/',translation:'裤子',pos:'n.',grade:7,semester:1,unit:7,examples:[{"en":"These trousers are too long.","cn":"这条裤子太长了。"}]},
+  {id:62,word:'dollar',phonetic:'/ˈdɑːlər/',translation:'美元',pos:'n.',grade:7,semester:1,unit:7,examples:[{"en":"It costs five dollars.","cn":"它要五美元。"}]},
+  {id:63,word:'price',phonetic:'/praɪs/',translation:'价格',pos:'n.',grade:7,semester:1,unit:7,examples:[{"en":"What is the price of this shirt?","cn":"这件衬衫多少钱？"}]},
+  {id:64,word:'January',phonetic:'/ˈdʒænjueri/',translation:'一月',pos:'n.',grade:7,semester:1,unit:8,examples:[{"en":"January is the first month.","cn":"一月是第一个月。"}]},
+  {id:65,word:'February',phonetic:'/ˈfebrueri/',translation:'二月',pos:'n.',grade:7,semester:1,unit:8,examples:[{"en":"February has 28 days.","cn":"二月有二十八天。"}]},
+  {id:66,word:'March',phonetic:'/mɑːrtʃ/',translation:'三月',pos:'n.',grade:7,semester:1,unit:8,examples:[{"en":"Spring starts in March.","cn":"春天从三月开始。"}]},
+  {id:67,word:'birthday',phonetic:'/ˈbɜːrθdeɪ/',translation:'生日',pos:'n.',grade:7,semester:1,unit:8,examples:[{"en":"Today is my birthday.","cn":"今天是我的生日。"}]},
+  {id:68,word:'December',phonetic:'/dɪˈsembər/',translation:'十二月',pos:'n.',grade:7,semester:1,unit:8,examples:[{"en":"It snows in December.","cn":"十二月下雪。"}]},
+  {id:69,word:'science',phonetic:'/ˈsaɪəns/',translation:'科学',pos:'n.',grade:7,semester:1,unit:9,examples:[{"en":"Science is my favorite subject.","cn":"科学是我最喜欢的科目。"}]},
+  {id:70,word:'history',phonetic:'/ˈhɪstri/',translation:'历史',pos:'n.',grade:7,semester:1,unit:9,examples:[{"en":"I enjoy learning history.","cn":"我喜欢学历史。"}]},
+  {id:71,word:'geography',phonetic:'/dʒiˈɑːɡrəfi/',translation:'地理',pos:'n.',grade:7,semester:1,unit:9,examples:[{"en":"Geography teaches us about the world.","cn":"地理教我们认识世界。"}]},
+
+  // ========== 七年级 下学期 (U1-U6) ==========
+  {id:72,word:'guitar',phonetic:'/ɡɪˈtɑːr/',translation:'吉他',pos:'n.',grade:7,semester:2,unit:1,examples:[{"en":"He can play the guitar.","cn":"他会弹吉他。"}]},
+  {id:73,word:'swim',phonetic:'/swɪm/',translation:'游泳',pos:'v.',grade:7,semester:2,unit:1,examples:[{"en":"I can swim very well.","cn":"我游泳游得很好。"}]},
+  {id:74,word:'dance',phonetic:'/dæns/',translation:'跳舞',pos:'v.',grade:7,semester:2,unit:1,examples:[{"en":"She loves to dance.","cn":"她喜欢跳舞。"}]},
+  {id:75,word:'draw',phonetic:'/drɔː/',translation:'画画',pos:'v.',grade:7,semester:2,unit:1,examples:[{"en":"He can draw beautiful pictures.","cn":"他能画出漂亮的画。"}]},
+  {id:76,word:'speak',phonetic:'/spiːk/',translation:'说',pos:'v.',grade:7,semester:2,unit:1,examples:[{"en":"Can you speak English?","cn":"你会说英语吗？"}]},
+  {id:77,word:'story',phonetic:'/ˈstɔːri/',translation:'故事',pos:'n.',grade:7,semester:2,unit:1,examples:[{"en":"Tell me a story.","cn":"给我讲个故事吧。"}]},
+  {id:78,word:'usually',phonetic:'/ˈjuːʒuəli/',translation:'通常',pos:'adv.',grade:7,semester:2,unit:2,examples:[{"en":"I usually get up at seven.","cn":"我通常七点起床。"}]},
+  {id:79,word:'sometimes',phonetic:'/ˈsʌmtaɪmz/',translation:'有时',pos:'adv.',grade:7,semester:2,unit:2,examples:[{"en":"Sometimes I walk to school.","cn":"有时候我走路去学校。"}]},
+  {id:80,word:'never',phonetic:'/ˈnevər/',translation:'从不',pos:'adv.',grade:7,semester:2,unit:2,examples:[{"en":"Never give up!","cn":"永不放弃！"}]},
+  {id:81,word:'early',phonetic:'/ˈɜːrli/',translation:'早',pos:'adv.',grade:7,semester:2,unit:2,examples:[{"en":"She always comes early.","cn":"她总是来得很早。"}]},
+  {id:82,word:'quickly',phonetic:'/ˈkwɪkli/',translation:'快速地',pos:'adv.',grade:7,semester:2,unit:2,examples:[{"en":"He ran quickly to catch the bus.","cn":"他飞快地跑去赶公交。"}]},
+  {id:83,word:'train',phonetic:'/treɪn/',translation:'火车',pos:'n.',grade:7,semester:2,unit:3,examples:[{"en":"I go to Beijing by train.","cn":"我坐火车去北京。"}]},
+  {id:84,word:'subway',phonetic:'/ˈsʌbweɪ/',translation:'地铁',pos:'n.',grade:7,semester:2,unit:3,examples:[{"en":"The subway is faster than the bus.","cn":"地铁比公交车快。"}]},
+  {id:85,word:'kilometer',phonetic:'/kɪˈlɑːmɪtər/',translation:'千米',pos:'n.',grade:7,semester:2,unit:3,examples:[{"en":"It is about five kilometers away.","cn":"大约五公里远。"}]},
+  {id:86,word:'between',phonetic:'/bɪˈtwiːn/',translation:'在…之间',pos:'prep.',grade:7,semester:2,unit:3,examples:[{"en":"The bank is between the hotel and the school.","cn":"银行在酒店和学校之间。"}]},
+  {id:87,word:'afraid',phonetic:'/əˈfreɪd/',translation:'害怕的',pos:'adj.',grade:7,semester:2,unit:3,examples:[{"en":"Don't be afraid of making mistakes.","cn":"别怕犯错。"}]},
+  {id:88,word:'quiet',phonetic:'/ˈkwaɪət/',translation:'安静的',pos:'adj.',grade:7,semester:2,unit:4,examples:[{"en":"Please keep quiet in the library.","cn":"请在图书馆保持安静。"}]},
+  {id:89,word:'noisy',phonetic:'/ˈnɔɪzi/',translation:'吵闹的',pos:'adj.',grade:7,semester:2,unit:4,examples:[{"en":"The street is too noisy.","cn":"这条街太吵了。"}]},
+  {id:90,word:'relax',phonetic:'/rɪˈlæks/',translation:'放松',pos:'v.',grade:7,semester:2,unit:4,examples:[{"en":"I like to relax with music.","cn":"我喜欢听音乐放松。"}]},
+  {id:91,word:'remember',phonetic:'/rɪˈmembər/',translation:'记住',pos:'v.',grade:7,semester:2,unit:4,examples:[{"en":"Remember to bring your homework.","cn":"记得带上你的作业。"}]},
+  {id:92,word:'elephant',phonetic:'/ˈelɪfənt/',translation:'大象',pos:'n.',grade:7,semester:2,unit:5,examples:[{"en":"An elephant is very big.","cn":"大象非常大。"}]},
+  {id:93,word:'panda',phonetic:'/ˈpændə/',translation:'熊猫',pos:'n.',grade:7,semester:2,unit:5,examples:[{"en":"Pandas are so cute.","cn":"熊猫太可爱了。"}]},
+  {id:94,word:'lion',phonetic:'/ˈlaɪən/',translation:'狮子',pos:'n.',grade:7,semester:2,unit:5,examples:[{"en":"The lion is the king of animals.","cn":"狮子是百兽之王。"}]},
+  {id:95,word:'danger',phonetic:'/ˈdeɪndʒər/',translation:'危险',pos:'n.',grade:7,semester:2,unit:5,examples:[{"en":"There is danger ahead.","cn":"前面有危险。"}]},
+  {id:96,word:'weather',phonetic:'/ˈweðər/',translation:'天气',pos:'n.',grade:7,semester:2,unit:6,examples:[{"en":"The weather is nice today.","cn":"今天天气很好。"}]},
+  {id:97,word:'sunny',phonetic:'/ˈsʌni/',translation:'晴朗的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"It is sunny and warm.","cn":"天气晴朗温暖。"}]},
+  {id:98,word:'cloudy',phonetic:'/ˈklaʊdi/',translation:'多云的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"It is cloudy today.","cn":"今天多云。"}]},
+  {id:99,word:'rainy',phonetic:'/ˈreɪni/',translation:'下雨的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"Take an umbrella on rainy days.","cn":"下雨天带把伞。"}]},
+  {id:100,word:'snowy',phonetic:'/ˈsnoʊi/',translation:'下雪的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"It is snowy in winter here.","cn":"这里冬天下雪。"}]},
+  {id:101,word:'windy',phonetic:'/ˈwɪndi/',translation:'有风的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"It is too windy to go outside.","cn":"风太大了，不适合外出。"}]},
+  {id:102,word:'warm',phonetic:'/wɔːrm/',translation:'温暖的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"Spring is warm and nice.","cn":"春天温暖宜人。"}]},
+  {id:103,word:'cold',phonetic:'/koʊld/',translation:'冷的',pos:'adj.',grade:7,semester:2,unit:6,examples:[{"en":"It is very cold in January.","cn":"一月份非常冷。"}]},
+  {id:104,word:'cook',phonetic:'/kʊk/',translation:'烹饪',pos:'v.',grade:7,semester:2,unit:6,examples:[{"en":"My mother cooks delicious food.","cn":"我妈妈做可口的饭菜。"}]},
+
+  // ========== 八年级 上学期 (U1-U5) ==========
+  {id:105,word:'vacation',phonetic:'/veɪˈkeɪʃn/',translation:'假期',pos:'n.',grade:8,semester:1,unit:1,examples:[{"en":"I went to the beach on vacation.","cn":"我假期去了海滩。"}]},
+  {id:106,word:'wonderful',phonetic:'/ˈwʌndərfl/',translation:'精彩的',pos:'adj.',grade:8,semester:1,unit:1,examples:[{"en":"We had a wonderful time.","cn":"我们玩得很开心。"}]},
+  {id:107,word:'decide',phonetic:'/dɪˈsaɪd/',translation:'决定',pos:'v.',grade:8,semester:1,unit:1,examples:[{"en":"I decided to study harder.","cn":"我决定更加努力学习。"}]},
+  {id:108,word:'enough',phonetic:'/ɪˈnʌf/',translation:'足够的',pos:'adj.',grade:8,semester:1,unit:1,examples:[{"en":"That is enough, thank you.","cn":"够了，谢谢你。"}]},
+  {id:109,word:'hungry',phonetic:'/ˈhʌŋɡri/',translation:'饥饿的',pos:'adj.',grade:8,semester:1,unit:1,examples:[{"en":"I am hungry. Let us eat.","cn":"我饿了。我们吃饭吧。"}]},
+  {id:110,word:'exercise',phonetic:'/ˈeksərsaɪz/',translation:'锻炼',pos:'v.',grade:8,semester:1,unit:2,examples:[{"en":"I exercise every morning.","cn":"我每天早上锻炼。"}]},
+  {id:111,word:'hardly',phonetic:'/ˈhɑːrdli/',translation:'几乎不',pos:'adv.',grade:8,semester:1,unit:2,examples:[{"en":"I hardly ever eat junk food.","cn":"我几乎不吃垃圾食品。"}]},
+  {id:112,word:'twice',phonetic:'/twaɪs/',translation:'两次',pos:'adv.',grade:8,semester:1,unit:2,examples:[{"en":"I brush my teeth twice a day.","cn":"我每天刷两次牙。"}]},
+  {id:113,word:'percent',phonetic:'/pərˈsent/',translation:'百分比',pos:'n.',grade:8,semester:1,unit:2,examples:[{"en":"Ninety percent of students passed.","cn":"百分之九十的学生通过了。"}]},
+  {id:114,word:'although',phonetic:'/ɔːlˈðoʊ/',translation:'虽然',pos:'conj.',grade:8,semester:1,unit:2,examples:[{"en":"Although it rained, we went out.","cn":"虽然下雨了，我们还是出去了。"}]},
+  {id:115,word:'outgoing',phonetic:'/ˈaʊtɡoʊɪŋ/',translation:'外向的',pos:'adj.',grade:8,semester:1,unit:3,examples:[{"en":"She is very outgoing and friendly.","cn":"她非常外向友好。"}]},
+  {id:116,word:'serious',phonetic:'/ˈsɪriəs/',translation:'严肃的',pos:'adj.',grade:8,semester:1,unit:3,examples:[{"en":"He is a serious person.","cn":"他是个严肃的人。"}]},
+  {id:117,word:'competition',phonetic:'/ˌkɑːmpəˈtɪʃn/',translation:'比赛',pos:'n.',grade:8,semester:1,unit:3,examples:[{"en":"I won the first prize in the competition.","cn":"我在比赛中获得了一等奖。"}]},
+  {id:118,word:'clearly',phonetic:'/ˈklɪrli/',translation:'清楚地',pos:'adv.',grade:8,semester:1,unit:3,examples:[{"en":"Please speak clearly.","cn":"请说清楚。"}]},
+  {id:119,word:'theater',phonetic:'/ˈθiːətər/',translation:'剧院',pos:'n.',grade:8,semester:1,unit:4,examples:[{"en":"Let us go to the theater tonight.","cn":"我们今晚去剧院吧。"}]},
+  {id:120,word:'comfortable',phonetic:'/ˈkʌmftəbl/',translation:'舒适的',pos:'adj.',grade:8,semester:1,unit:4,examples:[{"en":"This chair is very comfortable.","cn":"这把椅子很舒服。"}]},
+  {id:121,word:'choose',phonetic:'/tʃuːz/',translation:'选择',pos:'v.',grade:8,semester:1,unit:4,examples:[{"en":"You can choose any book you like.","cn":"你可以选任何你喜欢的书。"}]},
+  {id:122,word:'prize',phonetic:'/praɪz/',translation:'奖品',pos:'n.',grade:8,semester:1,unit:4,examples:[{"en":"She won the first prize.","cn":"她获得了一等奖。"}]},
+  {id:123,word:'creative',phonetic:'/kriˈeɪtɪv/',translation:'有创造力的',pos:'adj.',grade:8,semester:1,unit:4,examples:[{"en":"He is very creative in art.","cn":"他在艺术方面很有创造力。"}]},
+  {id:124,word:'news',phonetic:'/nuːz/',translation:'新闻',pos:'n.',grade:8,semester:1,unit:5,examples:[{"en":"I watch the news every evening.","cn":"我每晚看新闻。"}]},
+  {id:125,word:'expect',phonetic:'/ɪkˈspekt/',translation:'期待',pos:'v.',grade:8,semester:1,unit:5,examples:[{"en":"I expect to pass the exam.","cn":"我希望能通过考试。"}]},
+  {id:126,word:'culture',phonetic:'/ˈkʌltʃər/',translation:'文化',pos:'n.',grade:8,semester:1,unit:5,examples:[{"en":"Chinese culture is very rich.","cn":"中国文化非常丰富。"}]},
+  {id:127,word:'successful',phonetic:'/səkˈsesfl/',translation:'成功的',pos:'adj.',grade:8,semester:1,unit:5,examples:[{"en":"She is a successful businesswoman.","cn":"她是一位成功的女商人。"}]},
+  {id:128,word:'discussion',phonetic:'/dɪˈskʌʃn/',translation:'讨论',pos:'n.',grade:8,semester:1,unit:5,examples:[{"en":"We had a long discussion about the plan.","cn":"我们就这个计划进行了长时间的讨论。"}]},
+  {id:129,word:'appear',phonetic:'/əˈpɪr/',translation:'出现',pos:'v.',grade:8,semester:1,unit:5,examples:[{"en":"He appeared at the door suddenly.","cn":"他突然出现在门口。"}]},
+  {id:130,word:'ready',phonetic:'/ˈredi/',translation:'准备好的',pos:'adj.',grade:8,semester:1,unit:5,examples:[{"en":"Are you ready to go?","cn":"你准备好出发了吗？"}]},
+
+  // ========== 八年级 下学期 (U6-U10) ==========
+  {id:131,word:'engineer',phonetic:'/ˌendʒɪˈnɪr/',translation:'工程师',pos:'n.',grade:8,semester:2,unit:6,examples:[{"en":"My father is an engineer.","cn":"我爸爸是工程师。"}]},
+  {id:132,word:'promise',phonetic:'/ˈprɑːmɪs/',translation:'承诺',pos:'v.',grade:8,semester:2,unit:6,examples:[{"en":"I promise to help you.","cn":"我保证帮助你。"}]},
+  {id:133,word:'improve',phonetic:'/ɪmˈpruːv/',translation:'提高',pos:'v.',grade:8,semester:2,unit:6,examples:[{"en":"I want to improve my English.","cn":"我想提高我的英语水平。"}]},
+  {id:134,word:'physical',phonetic:'/ˈfɪzɪkl/',translation:'身体的',pos:'adj.',grade:8,semester:2,unit:6,examples:[{"en":"Physical exercise is good for health.","cn":"体育锻炼有益健康。"}]},
+  {id:135,word:'pollution',phonetic:'/pəˈluːʃn/',translation:'污染',pos:'n.',grade:8,semester:2,unit:7,examples:[{"en":"Air pollution is a serious problem.","cn":"空气污染是个严重的问题。"}]},
+  {id:136,word:'environment',phonetic:'/ɪnˈvaɪrənmənt/',translation:'环境',pos:'n.',grade:8,semester:2,unit:7,examples:[{"en":"We must protect the environment.","cn":"我们必须保护环境。"}]},
+  {id:137,word:'future',phonetic:'/ˈfjuːtʃər/',translation:'未来',pos:'n.',grade:8,semester:2,unit:7,examples:[{"en":"What do you want to be in the future?","cn":"你将来想做什么？"}]},
+  {id:138,word:'believe',phonetic:'/bɪˈliːv/',translation:'相信',pos:'v.',grade:8,semester:2,unit:7,examples:[{"en":"I believe you can do it.","cn":"我相信你能做到。"}]},
+  {id:139,word:'dangerous',phonetic:'/ˈdeɪndʒərəs/',translation:'危险的',pos:'adj.',grade:8,semester:2,unit:7,examples:[{"en":"It is dangerous to swim here.","cn":"在这里游泳很危险。"}]},
+  {id:140,word:'shake',phonetic:'/ʃeɪk/',translation:'摇动',pos:'v.',grade:8,semester:2,unit:8,examples:[{"en":"Shake the bottle before drinking.","cn":"喝之前摇一摇瓶子。"}]},
+  {id:141,word:'pour',phonetic:'/pɔːr/',translation:'倾倒',pos:'v.',grade:8,semester:2,unit:8,examples:[{"en":"Pour the milk into the cup.","cn":"把牛奶倒进杯子里。"}]},
+  {id:142,word:'temperature',phonetic:'/ˈtemprətʃər/',translation:'温度',pos:'n.',grade:8,semester:2,unit:8,examples:[{"en":"The temperature is very high today.","cn":"今天气温很高。"}]},
+  {id:143,word:'prepare',phonetic:'/prɪˈper/',translation:'准备',pos:'v.',grade:8,semester:2,unit:9,examples:[{"en":"I need to prepare for the exam.","cn":"我需要为考试做准备。"}]},
+  {id:144,word:'invite',phonetic:'/ɪnˈvaɪt/',translation:'邀请',pos:'v.',grade:8,semester:2,unit:9,examples:[{"en":"I want to invite you to my party.","cn":"我想邀请你来我的聚会。"}]},
+  {id:145,word:'refuse',phonetic:'/rɪˈfjuːz/',translation:'拒绝',pos:'v.',grade:8,semester:2,unit:9,examples:[{"en":"He refused to answer the question.","cn":"他拒绝回答这个问题。"}]},
+  {id:146,word:'available',phonetic:'/əˈveɪləbl/',translation:'有空的',pos:'adj.',grade:8,semester:2,unit:9,examples:[{"en":"Are you available this afternoon?","cn":"你今天下午有空吗？"}]},
+  {id:147,word:'experience',phonetic:'/ɪkˈspɪriəns/',translation:'经历',pos:'n.',grade:8,semester:2,unit:10,examples:[{"en":"Traveling is a great experience.","cn":"旅行是一次很棒的经历。"}]},
+  {id:148,word:'probably',phonetic:'/ˈprɑːbəbli/',translation:'大概',pos:'adv.',grade:8,semester:2,unit:10,examples:[{"en":"It will probably rain tomorrow.","cn":"明天可能会下雨。"}]},
+  {id:149,word:'solve',phonetic:'/sɑːlv/',translation:'解决',pos:'v.',grade:8,semester:2,unit:10,examples:[{"en":"Can you solve this problem?","cn":"你能解决这个问题吗？"}]},
+
+  // ========== 九年级 上学期 (U1-U7) ==========
+  {id:150,word:'textbook',phonetic:'/ˈtekstbʊk/',translation:'教科书',pos:'n.',grade:9,semester:1,unit:1,examples:[{"en":"Open your textbook to page 20.","cn":"打开课本到第20页。"}]},
+  {id:151,word:'conversation',phonetic:'/ˌkɑːnvərˈseɪʃn/',translation:'对话',pos:'n.',grade:9,semester:1,unit:1,examples:[{"en":"I had a nice conversation with her.","cn":"我和她进行了一次愉快的对话。"}]},
+  {id:152,word:'pronounce',phonetic:'/prəˈnaʊns/',translation:'发音',pos:'v.',grade:9,semester:1,unit:1,examples:[{"en":"How do you pronounce this word?","cn":"这个词怎么发音？"}]},
+  {id:153,word:'sentence',phonetic:'/ˈsentəns/',translation:'句子',pos:'n.',grade:9,semester:1,unit:1,examples:[{"en":"Please make a sentence with this word.","cn":"请用这个词造句。"}]},
+  {id:154,word:'patient',phonetic:'/ˈpeɪʃnt/',translation:'耐心的',pos:'adj.',grade:9,semester:1,unit:1,examples:[{"en":"You need to be patient with children.","cn":"对孩子要有耐心。"}]},
+  {id:155,word:'partner',phonetic:'/ˈpɑːrtnər/',translation:'搭档',pos:'n.',grade:9,semester:1,unit:1,examples:[{"en":"Work with your partner on this task.","cn":"和你的搭档一起完成这个任务。"}]},
+  {id:156,word:'stranger',phonetic:'/ˈstreɪndʒər/',translation:'陌生人',pos:'n.',grade:9,semester:1,unit:2,examples:[{"en":"Don't talk to strangers.","cn":"不要和陌生人说话。"}]},
+  {id:157,word:'relative',phonetic:'/ˈrelətɪv/',translation:'亲戚',pos:'n.',grade:9,semester:1,unit:2,examples:[{"en":"My relatives come to visit every Spring Festival.","cn":"我的亲戚每年春节都来拜访。"}]},
+  {id:158,word:'steal',phonetic:'/stiːl/',translation:'偷',pos:'v.',grade:9,semester:1,unit:2,examples:[{"en":"Someone stole my wallet.","cn":"有人偷了我的钱包。"}]},
+  {id:159,word:'spread',phonetic:'/spred/',translation:'传播',pos:'v.',grade:9,semester:1,unit:2,examples:[{"en":"The news spread quickly.","cn":"消息很快传开了。"}]},
+  {id:160,word:'address',phonetic:'/ˈædres/',translation:'地址',pos:'n.',grade:9,semester:1,unit:3,examples:[{"en":"What is your email address?","cn":"你的邮箱地址是什么？"}]},
+  {id:161,word:'convenient',phonetic:'/kənˈviːniənt/',translation:'方便的',pos:'adj.',grade:9,semester:1,unit:3,examples:[{"en":"The subway is very convenient.","cn":"地铁非常方便。"}]},
+  {id:162,word:'suggest',phonetic:'/səˈdʒest/',translation:'建议',pos:'v.',grade:9,semester:1,unit:3,examples:[{"en":"I suggest we go there by bus.","cn":"我建议我们坐公交去。"}]},
+  {id:163,word:'request',phonetic:'/rɪˈkwest/',translation:'请求',pos:'n.',grade:9,semester:1,unit:3,examples:[{"en":"He made a request for help.","cn":"他发出了求助请求。"}]},
+  {id:164,word:'humorous',phonetic:'/ˈhjuːmərəs/',translation:'幽默的',pos:'adj.',grade:9,semester:1,unit:4,examples:[{"en":"He is a humorous person.","cn":"他是个幽默的人。"}]},
+  {id:165,word:'silent',phonetic:'/ˈsaɪlənt/',translation:'沉默的',pos:'adj.',grade:9,semester:1,unit:4,examples:[{"en":"The room became silent.","cn":"房间变得安静了。"}]},
+  {id:166,word:'background',phonetic:'/ˈbækɡraʊnd/',translation:'背景',pos:'n.',grade:9,semester:1,unit:4,examples:[{"en":"I like the background music.","cn":"我喜欢这首背景音乐。"}]},
+  {id:167,word:'proud',phonetic:'/praʊd/',translation:'自豪的',pos:'adj.',grade:9,semester:1,unit:4,examples:[{"en":"I am proud of my country.","cn":"我为我的国家感到自豪。"}]},
+  {id:168,word:'material',phonetic:'/məˈtɪriəl/',translation:'材料',pos:'n.',grade:9,semester:1,unit:5,examples:[{"en":"What material is this shirt made of?","cn":"这件衬衫是什么材料做的？"}]},
+  {id:169,word:'produce',phonetic:'/prəˈduːs/',translation:'生产',pos:'v.',grade:9,semester:1,unit:5,examples:[{"en":"This factory produces cars.","cn":"这家工厂生产汽车。"}]},
+  {id:170,word:'international',phonetic:'/ˌɪntərˈnæʃnəl/',translation:'国际的',pos:'adj.',grade:9,semester:1,unit:5,examples:[{"en":"English is an international language.","cn":"英语是国际语言。"}]},
+  {id:171,word:'invent',phonetic:'/ɪnˈvent/',translation:'发明',pos:'v.',grade:9,semester:1,unit:6,examples:[{"en":"Who invented the telephone?","cn":"谁发明了电话？"}]},
+  {id:172,word:'mention',phonetic:'/ˈmenʃn/',translation:'提到',pos:'v.',grade:9,semester:1,unit:6,examples:[{"en":"He mentioned your name in his speech.","cn":"他在演讲中提到了你的名字。"}]},
+  {id:173,word:'electricity',phonetic:'/ɪˌlekˈtrɪsəti/',translation:'电',pos:'n.',grade:9,semester:1,unit:6,examples:[{"en":"We use electricity every day.","cn":"我们每天都用电。"}]},
+  {id:174,word:'accidental',phonetic:'/ˌæksɪˈdentl/',translation:'偶然的',pos:'adj.',grade:9,semester:1,unit:6,examples:[{"en":"It was an accidental meeting.","cn":"那是一次偶然的相遇。"}]},
+  {id:175,word:'license',phonetic:'/ˈlaɪsns/',translation:'执照',pos:'n.',grade:9,semester:1,unit:7,examples:[{"en":"You need a license to drive.","cn":"开车需要驾照。"}]},
+  {id:176,word:'safety',phonetic:'/ˈseɪfti/',translation:'安全',pos:'n.',grade:9,semester:1,unit:7,examples:[{"en":"Safety comes first.","cn":"安全第一。"}]},
+  {id:177,word:'educate',phonetic:'/ˈedʒukeɪt/',translation:'教育',pos:'v.',grade:9,semester:1,unit:7,examples:[{"en":"We should educate children about safety.","cn":"我们应该教育孩子注意安全。"}]},
+  {id:178,word:'support',phonetic:'/səˈpɔːrt/',translation:'支持',pos:'v.',grade:9,semester:1,unit:7,examples:[{"en":"My family always supports me.","cn":"我的家人一直支持我。"}]},
+  {id:179,word:'manage',phonetic:'/ˈmænɪdʒ/',translation:'管理',pos:'v.',grade:9,semester:1,unit:7,examples:[{"en":"Can you manage this task?","cn":"你能处理这个任务吗？"}]},
+  {id:180,word:'community',phonetic:'/kəˈmjuːnəti/',translation:'社区',pos:'n.',grade:9,semester:1,unit:7,examples:[{"en":"Our community is very friendly.","cn":"我们的社区非常友好。"}]},
+
+  // ========== 九年级 下学期 (U8-U14) ==========
+  {id:181,word:'belong',phonetic:'/bɪˈlɔːŋ/',translation:'属于',pos:'v.',grade:9,semester:2,unit:8,examples:[{"en":"This book belongs to me.","cn":"这本书属于我。"}]},
+  {id:182,word:'mystery',phonetic:'/ˈmɪstri/',translation:'神秘',pos:'n.',grade:9,semester:2,unit:8,examples:[{"en":"It is a mystery to everyone.","cn":"这对每个人来说都是一个谜。"}]},
+  {id:183,word:'valuable',phonetic:'/ˈvæljuəbl/',translation:'贵重的',pos:'adj.',grade:9,semester:2,unit:8,examples:[{"en":"Time is more valuable than money.","cn":"时间比金钱更宝贵。"}]},
+  {id:184,word:'attend',phonetic:'/əˈtend/',translation:'参加',pos:'v.',grade:9,semester:2,unit:8,examples:[{"en":"I will attend the meeting.","cn":"我会参加会议。"}]},
+  {id:185,word:'energy',phonetic:'/ˈenərdʒi/',translation:'能量',pos:'n.',grade:9,semester:2,unit:8,examples:[{"en":"Solar energy is clean.","cn":"太阳能是清洁能源。"}]},
+  {id:186,word:'prefer',phonetic:'/prɪˈfɜːr/',translation:'更喜欢',pos:'v.',grade:9,semester:2,unit:9,examples:[{"en":"I prefer tea to coffee.","cn":"比起咖啡我更喜欢茶。"}]},
+  {id:187,word:'suppose',phonetic:'/səˈpoʊz/',translation:'假定',pos:'v.',grade:9,semester:2,unit:9,examples:[{"en":"I suppose you are right.","cn":"我想你是对的。"}]},
+  {id:188,word:'plenty',phonetic:'/ˈplenti/',translation:'大量',pos:'pron.',grade:9,semester:2,unit:9,examples:[{"en":"There is plenty of food.","cn":"食物很充足。"}]},
+  {id:189,word:'smooth',phonetic:'/smuːð/',translation:'悦耳的',pos:'adj.',grade:9,semester:2,unit:9,examples:[{"en":"The music sounds very smooth.","cn":"这音乐听起来很流畅。"}]},
+  {id:190,word:'custom',phonetic:'/ˈkʌstəm/',translation:'风俗',pos:'n.',grade:9,semester:2,unit:10,examples:[{"en":"It is a Chinese custom.","cn":"这是中国的习俗。"}]},
+  {id:191,word:'exchange',phonetic:'/ɪksˈtʃeɪndʒ/',translation:'交换',pos:'v.',grade:9,semester:2,unit:10,examples:[{"en":"Can I exchange this shirt?","cn":"我能换一件衬衫吗？"}]},
+  {id:192,word:'behave',phonetic:'/bɪˈheɪv/',translation:'表现',pos:'v.',grade:9,semester:2,unit:10,examples:[{"en":"Please behave yourself at the party.","cn":"请在聚会上举止得体。"}]},
+  {id:193,word:'gradual',phonetic:'/ˈɡrædʒuəl/',translation:'逐渐的',pos:'adj.',grade:9,semester:2,unit:10,examples:[{"en":"It is a gradual process.","cn":"这是一个渐进的过程。"}]},
+  {id:194,word:'friendship',phonetic:'/ˈfrendʃɪp/',translation:'友谊',pos:'n.',grade:9,semester:2,unit:11,examples:[{"en":"True friendship lasts forever.","cn":"真正的友谊永恒不变。"}]},
+  {id:195,word:'disappoint',phonetic:'/ˌdɪsəˈpɔɪnt/',translation:'使失望',pos:'v.',grade:9,semester:2,unit:11,examples:[{"en":"I don't want to disappoint my parents.","cn":"我不想让父母失望。"}]},
+  {id:196,word:'uncomfortable',phonetic:'/ʌnˈkʌmftəbl/',translation:'不舒服的',pos:'adj.',grade:9,semester:2,unit:11,examples:[{"en":"This chair is very uncomfortable.","cn":"这把椅子很不舒服。"}]},
+  {id:197,word:'unexpected',phonetic:'/ˌʌnɪkˈspektɪd/',translation:'出乎意料的',pos:'adj.',grade:9,semester:2,unit:12,examples:[{"en":"An unexpected guest arrived.","cn":"来了一位不速之客。"}]},
+  {id:198,word:'discovery',phonetic:'/dɪˈskʌvəri/',translation:'发现',pos:'n.',grade:9,semester:2,unit:12,examples:[{"en":"It was an important discovery.","cn":"那是一个重要的发现。"}]},
+  {id:199,word:'cancel',phonetic:'/ˈkænsl/',translation:'取消',pos:'v.',grade:9,semester:2,unit:12,examples:[{"en":"The meeting was canceled.","cn":"会议被取消了。"}]},
+  {id:200,word:'harmful',phonetic:'/ˈhɑːrmfl/',translation:'有害的',pos:'adj.',grade:9,semester:2,unit:13,examples:[{"en":"Smoking is harmful to health.","cn":"吸烟有害健康。"}]},
+  {id:201,word:'recycle',phonetic:'/ˌriːˈsaɪkl/',translation:'回收',pos:'v.',grade:9,semester:2,unit:13,examples:[{"en":"We should recycle paper and plastic.","cn":"我们应该回收纸张和塑料。"}]},
+  {id:202,word:'creativity',phonetic:'/ˌkriːeɪˈtɪvəti/',translation:'创造力',pos:'n.',grade:9,semester:2,unit:13,examples:[{"en":"Children have great creativity.","cn":"孩子们有很强的创造力。"}]},
+  {id:203,word:'overcome',phonetic:'/ˌoʊvərˈkʌm/',translation:'克服',pos:'v.',grade:9,semester:2,unit:14,examples:[{"en":"We can overcome any difficulty.","cn":"我们能克服任何困难。"}]},
+  {id:204,word:'graduation',phonetic:'/ˌɡrædʒuˈeɪʃn/',translation:'毕业',pos:'n.',grade:9,semester:2,unit:14,examples:[{"en":"Graduation is an important moment.","cn":"毕业是一个重要时刻。"}]},
+  {id:205,word:'challenge',phonetic:'/ˈtʃælɪndʒ/',translation:'挑战',pos:'n.',grade:9,semester:2,unit:14,examples:[{"en":"Life is full of challenges.","cn":"生活充满挑战。"}]}
+]
+
+// ======================================================================
+// 🔧 以下为核心逻辑代码
+// ======================================================================
+
+const App={currentTab:'home',quizType:'grammar',quizQty:10,quizSources:[],questions:[],currentQ:0,answers:[],timer:null,seconds:0,answered:false,errorFilter:'all',statsDays:7}
+function lsGet(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}}
+function lsSet(k,v){localStorage.setItem(k,JSON.stringify(v))}
+function getMastery(){return lsGet('el_vocab_mastery',{})}
+function setMastery(m){lsSet('el_vocab_mastery',m)}
+function getKpStats(){return lsGet('el_knowledge_stats',{})}
+function setKpStats(s){lsSet('el_knowledge_stats',s)}
+function getErrors(){return lsGet('el_error_items',[])}
+function setErrors(e){lsSet('el_error_items',e)}
+function getQuizRecords(){return lsGet('el_quiz_records',[])}
+function setQuizRecords(r){lsSet('el_quiz_records',r)}
+function getStudyLog(){return lsGet('el_study_log',{})}
+function setStudyLog(l){lsSet('el_study_log',l)}
+function today(){return new Date().toISOString().slice(0,10)}
+function formatTime(s){const m=Math.floor(s/60);return String(m).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+
+function exportData(){
+  const data={};['el_quiz_records','el_error_items','el_vocab_mastery','el_knowledge_stats','el_study_log'].forEach(k=>{data[k]=lsGet(k,null)})
+  const blob=new Blob([JSON.stringify(data,null,2)],{type:'application/json'})
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='英语练习备份_'+today()+'.json';a.click()
+  URL.revokeObjectURL(a.href)
+}
+
+function importData(input){
+  const file=input.files[0];if(!file)return
+  const reader=new FileReader()
+  reader.onload=function(e){
+    try{
+      const data=JSON.parse(e.target.result)
+      const keys=['el_quiz_records','el_error_items','el_vocab_mastery','el_knowledge_stats','el_study_log']
+      let imported=0
+      keys.forEach(k=>{if(data[k]!==undefined){lsSet(k,data[k]);imported++}})
+      if(imported>0){alert('已导入 '+imported+' 项数据。');renderHome();renderStats()}
+      else{alert('文件中没有找到有效数据。')}
+    }catch(ex){alert('文件格式错误，请选择有效的备份文件。')}
+  }
+  reader.readAsText(file)
+  input.value=''
+}
+
+let studyTimer=null,studySec=0
+function logStudyStart(){if(studyTimer)return;studyTimer=setInterval(()=>{studySec++;if(studySec%30===0){const l=getStudyLog(),d=today();l[d]=(l[d]||0)+30;setStudyLog(l)}},1000)}
+function logStudyStop(){if(studyTimer){clearInterval(studyTimer);studyTimer=null;if(studySec>0){const l=getStudyLog(),d=today();l[d]=(l[d]||0)+studySec;setStudyLog(l)}studySec=0}}
+
+function switchTab(tab){
+  // 离开测试页时自动保存进度
+  if(App.currentTab==='quiz'&&tab!=='quiz'&&App.questions.length>0){
+    const answered=App.answers.filter(a=>a!==null&&a!==undefined).length
+    if(answered>0)exitQuiz()
+  }
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'))
+  document.getElementById('page-'+tab).classList.add('active')
+  document.querySelector('.tab[data-tab="'+tab+'"]').classList.add('active')
+  App.currentTab=tab;logStudyStart()
+  if(tab==='home')renderHome()
+  else if(tab==='knowledge')renderKnowledge()
+  else if(tab==='vocabulary')renderVocabulary()
+  else if(tab==='quiz')resetQuizUI()
+  else if(tab==='stats')renderStats()
+  else if(tab==='errors')renderErrors()
+}
+
+function renderHome(){
+  const log=getStudyLog(),records=getQuizRecords(),errors=getErrors(),d=today()
+  document.getElementById('stat-today-q').textContent=records.filter(r=>r.date===d).reduce((s,r)=>s+r.total,0)
+  const tQ=records.reduce((s,r)=>s+r.total,0),tC=records.reduce((s,r)=>s+r.correct,0)
+  document.getElementById('stat-accuracy').textContent=(tQ>0?Math.round(tC/tQ*100):0)+'%'
+  document.getElementById('stat-study-days').textContent=Object.keys(log).length
+  document.getElementById('stat-errors').textContent=errors.filter(e=>!e.mastered).length
+  renderTrendChart('trend-chart',7)
+
+  // 分类掌握度
+  const kpStats=getKpStats(),vm=getMastery()
+  let html=''
+  const gTotal=CATEGORIES.reduce((s,c)=>{const ids=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id).map(k=>k.id);let t=0;ids.forEach(id=>{const st=kpStats[id];if(st)t+=st.quizzedCount||0});return s+t},0)
+  const gErr=CATEGORIES.reduce((s,c)=>{const ids=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id).map(k=>k.id);let e=0;ids.forEach(id=>{const st=kpStats[id];if(st)e+=st.errorCount||0});return s+e},0)
+  const gAcc=gTotal>0?Math.round((gTotal-gErr)/gTotal*100):0
+  html+='<div class="d-flex align-items-center gap-2 mb-3"><div class="rounded-circle d-flex align-items-center justify-content-center fw-bold text-white" style="width:36px;height:36px;font-size:.75rem;background:'+(gAcc>=80?'#389e0d':gAcc>=60?'#d46b08':'#cf1322')+'">'+gAcc+'</div><div><div class="small fw-semibold"><i class="bi bi-journal-text me-1"></i>语法</div><div class="d-flex align-items-center gap-2"><div class="flex-grow-1 rounded-pill" style="height:6px;background:#e9ecef"><div class="rounded-pill h-100" style="width:'+gAcc+'%;background:'+(gAcc>=80?'#389e0d':gAcc>=60?'#d46b08':'#cf1322')+'"></div></div><span class="small text-secondary">'+gTotal+'题</span></div></div></div>'
+
+  const vAll=VOCABULARY;let vTotal=0,vErr=0
+  vAll.forEach(v=>{const m=vm[v.id]||{};vTotal+=m.quizzedCount||0;vErr+=m.errorCount||0})
+  const vAcc=vTotal>0?Math.round((vTotal-vErr)/vTotal*100):0
+  html+='<div class="d-flex align-items-center gap-2"><div class="rounded-circle d-flex align-items-center justify-content-center fw-bold text-white" style="width:36px;height:36px;font-size:.75rem;background:'+(vAcc>=80?'#389e0d':vAcc>=60?'#d46b08':'#cf1322')+'">'+vAcc+'</div><div><div class="small fw-semibold"><i class="bi bi-bookmark-star me-1"></i>词汇</div><div class="d-flex align-items-center gap-2"><div class="flex-grow-1 rounded-pill" style="height:6px;background:#e9ecef"><div class="rounded-pill h-100" style="width:'+vAcc+'%;background:'+(vAcc>=80?'#389e0d':vAcc>=60?'#d46b08':'#cf1322')+'"></div></div><span class="small text-secondary">'+vTotal+'题</span></div></div></div>'
+
+  document.getElementById('home-breakdown').innerHTML=html||'<p class="text-secondary small text-center mb-0">完成测试后显示掌握度</p>'
+
+  const h=new Date().getHours();let g='今天也来学习英语吧！'
+  if(h<6)g='这么晚了还在学习，真棒！';else if(h<9)g='早上好！新的一天从学习开始～';else if(h<12)g='上午好！一起学习英语吧！';else if(h<14)g='中午好！休息一下再学习吧～';else if(h<18)g='下午好！继续加油！';else g='晚上好！今天的学习任务完成了吗？'
+  document.getElementById('greeting').textContent=g
+}
+
+function renderTrendChart(eId,d){
+  const records=getQuizRecords(),el=document.getElementById(eId);if(!el)return
+  const dates=[];for(let i=d-1;i>=0;i--){const d2=new Date();d2.setDate(d2.getDate()-i);dates.push(d2.toISOString().slice(0,10))}
+  const data=dates.map(date=>{const r=records.filter(x=>x.date===date);const t=r.reduce((s,x)=>s+x.total,0),c=r.reduce((s,x)=>s+x.correct,0);return t>0?Math.round(c/t*100):0})
+  const mx=Math.max(...data,100)
+  el.innerHTML=dates.map((d,i)=>{const h=data[i]>0?Math.max(data[i]/mx*80,4):2;const cls=data[i]>0?'bar':'bar empty';return '<div class="col"><div class="'+cls+'" style="height:'+h+'px"></div><div class="day" style="font-size:.6rem;color:#adb5bd;margin-top:.25rem">'+d.slice(5)+'</div></div>'}).join('')
+}
+
+function renderKnowledge(){
+  const el=document.getElementById('category-list')
+  el.innerHTML=CATEGORIES.map(c=>'<span class="cat" data-cat="'+c.id+'" onclick="filterKnowledge('+c.id+',this)"><i class="bi '+c.icon+' me-1"></i>'+c.name+'</span>').join('')
+  const cats=el.querySelectorAll('.cat');if(cats.length>0)cats[0].classList.add('active')
+  filterKnowledge(CATEGORIES[0]?.id||0)
+}
+
+function filterKnowledge(catId,el){
+  if(el){document.querySelectorAll('.category-list .cat').forEach(c=>c.classList.remove('active'));el.classList.add('active')}
+  const kps=KNOWLEDGE_POINTS.filter(k=>k.categoryId===catId)
+  document.getElementById('kp-list').innerHTML=kps.map(kp=>'<div class="kp-card" onclick="toggleKpDetail('+kp.id+')"><div class="title">'+kp.title+'</div><div class="meta"><span class="diff diff-'+kp.difficulty+'">'+['','简单','中等','困难'][kp.difficulty]+'</span><span>'+kp.grade+'年级</span><span>'+(kp.examples?.length||0)+'个例句</span></div><div class="kp-detail" id="kp-detail-'+kp.id+'"><div class="content">'+kp.content.replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>').replace(/\n/g,'<br>')+'</div>'+(kp.examples||[]).map(ex=>'<div class="example"><div class="en">'+ex.en+'</div><div class="cn">'+ex.cn+'</div></div>').join('')+'</div></div>').join('')
+}
+
+function toggleKpDetail(id){document.getElementById('kp-detail-'+id).classList.toggle('open')}
+
+// 词汇筛选芯片读取
+function getFilterChips(rowId){
+  const allChip=document.querySelector('#'+rowId+' [data-val="all"]')
+  if(allChip&&allChip.classList.contains('on'))return ['all']
+  const chips=document.querySelectorAll('#'+rowId+' .vocab-filter-chip:not([data-val="all"])')
+  return [...chips].filter(c=>c.classList.contains('on')).map(c=>c.dataset.val)
+}
+function toggleFilterChip(el,rowId){
+  const allChip=document.querySelector('#'+rowId+' [data-val="all"]')
+  if(el.dataset.val==='all'){
+    document.querySelectorAll('#'+rowId+' .vocab-filter-chip').forEach(c=>c.classList.remove('on'))
+    allChip.classList.add('on')
+  }else{
+    allChip.classList.remove('on')
+    el.classList.toggle('on')
+    const anyOn=[...document.querySelectorAll('#'+rowId+' .vocab-filter-chip:not([data-val="all"])')].some(c=>c.classList.contains('on'))
+    if(!anyOn)allChip.classList.add('on')
+  }
+  renderVocabulary()
+}
+
+// 统计条点击：按掌握度筛选
+function filterByMastery(type,el){
+  const container=document.getElementById('vocab-stats')
+  const curActive=container.querySelector('.stat-chip.active')
+  if(curActive===el){el.classList.remove('active');renderVocabulary();return}
+  container.querySelectorAll('.stat-chip').forEach(c=>c.classList.remove('active'))
+  el.classList.add('active')
+  renderVocabulary()
+}
+
+// 重置所有筛选
+function resetVocabFilters(){
+  ['vocab-filter-grade','vocab-filter-semester','vocab-filter-unit'].forEach(id=>{
+    document.querySelectorAll('#'+id+' .vocab-filter-chip').forEach(c=>c.classList.remove('on'))
+    document.querySelector('#'+id+' [data-val="all"]').classList.add('on')
+  })
+  document.getElementById('vocab-search').value=''
+  document.querySelectorAll('#vocab-stats .stat-chip').forEach(c=>c.classList.remove('active'))
+  vocabLetterFilter=null
+  renderVocabulary()
+}
+
+function populateUnitFilter(){
+  const grades=getFilterChips('vocab-filter-grade')
+  const sems=getFilterChips('vocab-filter-semester')
+  let words=VOCABULARY
+  if(!grades.includes('all'))words=words.filter(v=>grades.includes(String(v.grade)))
+  if(!sems.includes('all'))words=words.filter(v=>sems.includes(String(v.semester)))
+  const units=[...new Set(words.map(v=>v.unit))].sort((a,b)=>a-b)
+  const container=document.getElementById('vocab-filter-unit')
+  const allOn=container.querySelector('[data-val="all"]')?.classList.contains('on')
+  container.innerHTML='<span class="filter-label"><i class="bi bi-collection"></i></span><span class="vocab-filter-chip'+(allOn?' on':'')+'" data-val="all" onclick="toggleFilterChip(this,\'vocab-filter-unit\')">全部</span>'
+    +units.map(u=>'<span class="vocab-filter-chip" data-val="'+u+'" onclick="toggleFilterChip(this,\'vocab-filter-unit\')">'+(u===0?'预备篇':'U'+u)+'</span>').join('')
+  if(!allOn){
+    const prevOn=sessionStorage.getItem('vocab_unit_on')||''
+    prevOn.split(',').forEach(v=>{
+      const chip=container.querySelector('[data-val="'+v+'"]')
+      if(chip)chip.classList.add('on')
+    })
+  }
+}
+
+function renderVocabulary(){
+  populateUnitFilter()
+  const search=document.getElementById('vocab-search').value.trim().toLowerCase()
+  const grades=getFilterChips('vocab-filter-grade')
+  const sems=getFilterChips('vocab-filter-semester')
+  const units=getFilterChips('vocab-filter-unit')
+  const mastery=getMastery()
+
+  // 保存单元选中态供 populateUnitFilter 恢复
+  const uContainer=document.getElementById('vocab-filter-unit')
+  const uAllOn=uContainer.querySelector('[data-val="all"]')?.classList.contains('on')
+  sessionStorage.setItem('vocab_unit_on',uAllOn?'':[...uContainer.querySelectorAll('.vocab-filter-chip.on:not([data-val="all"])')].map(c=>c.dataset.val).join(','))
+
+  // 读取掌握度筛选
+  const activeMastery=document.querySelector('#vocab-stats .stat-chip.active')
+  const masteryFilter=activeMastery?activeMastery.dataset.mastery:null
+
+  // 读取字母筛选（从全局变量）
+  const letterFilter=vocabLetterFilter
+
+  // 先做基础筛选（年级/学期/单元/搜索），统计基于此
+  let baseList=VOCABULARY.filter(v=>{
+    if(!grades.includes('all')&&!grades.includes(String(v.grade)))return false
+    if(!sems.includes('all')&&!sems.includes(String(v.semester)))return false
+    if(!units.includes('all')&&!units.includes(String(v.unit)))return false
+    if(search)return v.word.toLowerCase().includes(search)||v.translation.includes(search)
+    return true
+  })
+
+  // 基于基础列表计算统计（不受掌握度/字母筛选影响）
+  let mTotal=0,mUnquizzed=0,mMastered=0,mLearning=0,mWeak=0
+  baseList.forEach(v=>{
+    const mv=mastery[v.id]||{level:0,quizzedCount:0}
+    mTotal++
+    if((mv.quizzedCount||0)===0)mUnquizzed++
+    else if(mv.level>=4)mMastered++
+    else if(mv.level>=2)mLearning++
+    else mWeak++
+  })
+
+  // 再应用掌握度/字母筛选得到展示列表
+  let list=baseList.filter(v=>{
+    const mv=mastery[v.id]||{level:0,quizzedCount:0}
+    const ml=mv.level,qc=mv.quizzedCount||0
+    if(masteryFilter==='unquizzed'&&qc>0)return false
+    if(masteryFilter==='mastered'&&ml<4)return false
+    if(masteryFilter==='learning'&&(ml<2||ml>3))return false
+    if(masteryFilter==='weak'&&(qc===0||ml>1))return false
+    if(letterFilter&&v.word[0].toUpperCase()!==letterFilter)return false
+    return true
+  })
+
+  // 统计条始终显示，共XX词不受掌握度筛选影响
+  document.getElementById('vocab-stats').innerHTML=`<span class="stat-chip total${(masteryFilter===null||masteryFilter==='all')?' active':''}" data-mastery="all" onclick="filterByMastery('all',this)" title="基础筛选后的总数"><i class="bi bi-book"></i> 共 ${mTotal}</span><span class="stat-chip unquizzed${masteryFilter==='unquizzed'?' active':''}" data-mastery="unquizzed" onclick="filterByMastery('unquizzed',this)" title="quizzedCount===0"><i class="bi bi-circle"></i> 未学习 ${mUnquizzed}</span><span class="stat-chip mastered${masteryFilter==='mastered'?' active':''}" data-mastery="mastered" onclick="filterByMastery('mastered',this)" title="level≥4"><i class="bi bi-star-fill"></i> 已掌握 ${mMastered}</span><span class="stat-chip learning${masteryFilter==='learning'?' active':''}" data-mastery="learning" onclick="filterByMastery('learning',this)" title="level 2-3"><i class="bi bi-book-half"></i> 学习中 ${mLearning}</span><span class="stat-chip weak${masteryFilter==='weak'?' active':''}" data-mastery="weak" onclick="filterByMastery('weak',this)" title="quizzedCount>0且level≤1"><i class="bi bi-exclamation-triangle-fill"></i> 薄弱 ${mWeak}</span>`
+  // 调试：输出前5个词的mastery数据到控制台
+  const sample=VOCABULARY.slice(0,5).map(v=>{const mv=mastery[v.id];return v.word+': '+(mv?JSON.stringify(mv):'null')}).join(', ')
+  console.log('vocab stats: total='+mTotal+' unquizzed='+mUnquizzed+' mastered='+mMastered+' learning='+mLearning+' weak='+mWeak+' | sample:',sample)
+
+  // 字母导航的空状态基于 baseList（不受字母筛选影响），可随时切换
+  const baseGroups={}
+  baseList.forEach(v=>{let l=v.word[0].toUpperCase();if(!/^[A-Z]$/.test(l))l='#';if(!baseGroups[l])baseGroups[l]=[];baseGroups[l].push(v)})
+  document.getElementById('vocab-letter-nav').innerHTML='ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(l=>{
+    const has=baseGroups[l]?'':' empty'
+    const active=letterFilter===l?' active':''
+    return '<span class="letter-btn'+has+active+'" onclick="setVocabLetterFilter(\''+l+'\')">'+l+'</span>'
+  }).join('')
+
+  // 按首字母分组（基于筛选后的 list，用于展示）
+  const groups={}
+  list.forEach(v=>{let l=v.word[0].toUpperCase();if(!/^[A-Z]$/.test(l))l='#';if(!groups[l])groups[l]=[];groups[l].push(v)})
+  const sortedLetters=Object.keys(groups).sort()
+
+  // 分组渲染
+  document.getElementById('vocab-list').innerHTML=sortedLetters.map(l=>{
+    const words=groups[l].map(v=>{
+      const m=mastery[v.id]||{level:0};const stars='★'.repeat(m.level)+'☆'.repeat(5-m.level)
+      const sl=v.semester===1?'上':'下'
+      const exs=v.examples||[]
+      const exHtml=exs.length?exs.map(ex=>'<div class="ex"><span class="en">'+ex.en+'</span><span class="cn">'+ex.cn+'</span></div>').join(''):'<span class="no-ex">暂无例句</span>'
+      return{html:'<div class="vocab-item"><div class="vocab-word-col"><div class="word-row"><span class="word">'+v.word+'</span><span class="phonetic">'+v.phonetic+'</span></div><div class="meta"><span class="badge tag-blue">'+v.pos+'</span><span class="badge tag-green">'+v.grade+'年级'+sl+'</span><span class="text-secondary" style="font-size:.7rem">'+(v.unit===0?'预备篇':'Unit '+v.unit)+'</span><span class="stars">'+stars+'</span></div></div><div class="vocab-ex-col">'+exHtml+'</div></div>',level:m.level||0}
+    }).sort((a,b)=>a.level-b.level).map(x=>x.html).join('')
+    return '<div class="vocab-group-header" id="vg-'+l+'"><span>📌 '+l+'</span><span class="count">'+groups[l].length+'词</span></div>'+words
+  }).join('')
+}
+
+function resetQuizUI(){
+  document.getElementById('quiz-setup').classList.remove('d-none')
+  document.getElementById('quiz-taking').classList.add('d-none')
+  document.getElementById('quiz-result').classList.add('d-none')
+  App.questions=[];App.currentQ=0;App.answers=[];App.answered=false
+  if(App.timer){clearInterval(App.timer);App.timer=null}
+  renderSourceOptions()
+}
+
+function selectQuizType(type){
+  App.quizType=type
+  document.querySelectorAll('.quiz-type-card').forEach(c=>c.classList.remove('selected'))
+  document.querySelector('.quiz-type-card[data-type="'+type+'"]').classList.add('selected')
+  renderSourceOptions()
+}
+
+function selectQty(el){
+  document.querySelectorAll('#qty-options .badge').forEach(o=>{o.className='badge bg-light text-dark rounded-pill px-3 py-2';o.style.cursor='pointer'})
+  el.className='badge bg-primary rounded-pill px-3 py-2';el.style.cursor='pointer'
+  App.quizQty=parseInt(el.dataset.val)
+}
+
+function renderSourceOptions(){
+  const container=document.getElementById('source-options'),label=document.getElementById('source-label'),section=document.getElementById('quiz-source-section')
+  if(App.quizType==='vocabulary'){
+    label.textContent='选择词汇范围';section.classList.remove('d-none')
+    container.innerHTML='<div class="d-flex gap-2 flex-wrap"><select id="vocab-src-grade" onchange="renderVocabUnits()" class="form-select form-select-sm" style="width:auto"><option value="7">七年级</option><option value="8">八年级</option><option value="9">九年级</option></select><select id="vocab-src-semester" onchange="renderVocabUnits()" class="form-select form-select-sm" style="width:auto"><option value="all">全学期</option><option value="1">上学期</option><option value="2">下学期</option></select><select id="vocab-src-unit" class="form-select form-select-sm" style="width:auto"><option value="all">全部单元</option></select></div><div class="mt-2 small text-secondary">将从这些词汇中随机抽取题目</div>'
+    renderVocabUnits();return
+  }
+  if(App.quizType==='error'){
+    label.textContent='选择错题类型';section.classList.remove('d-none')
+    const errs=getErrors().filter(e=>!e.mastered)
+    container.innerHTML='<div class="d-flex gap-2 flex-wrap"><span class="badge bg-primary rounded-pill px-3 py-2" data-val="all" onclick="selectErrorSrc(\'all\',this)" style="cursor:pointer">全部 ('+errs.length+')</span><span class="badge bg-light text-dark rounded-pill px-3 py-2" data-val="grammar" onclick="selectErrorSrc(\'grammar\',this)" style="cursor:pointer">语法 ('+errs.filter(e=>e.type==='grammar').length+')</span><span class="badge bg-light text-dark rounded-pill px-3 py-2" data-val="vocabulary" onclick="selectErrorSrc(\'vocabulary\',this)" style="cursor:pointer">词汇 ('+errs.filter(e=>e.type==='vocabulary').length+')</span></div>'
+    return
+  }
+  label.textContent=App.quizType==='passage'?'勾选语法点做短文练习（留空=随机出题）':'勾选语法点针对性练习（留空=随机测试全部）'
+  section.classList.remove('d-none')
+  container.innerHTML=CATEGORIES.map((c,i)=>{
+    const pts=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id)
+    return'<div class="mb-2 border rounded-3"><button type="button" class="w-100 text-start p-2 bg-light rounded-3 border-0 fw-semibold small" onclick="toggleSrcGroup(this)"><i class="bi bi-chevron-right me-1" style="transition:transform .2s"></i><i class="bi '+c.icon+' me-1"></i>'+c.name+' <span class="text-secondary fw-normal">('+pts.length+'个)</span></button><div class="row g-1 source-grid p-2 mx-1 mb-2" style="display:none">'+pts.map(p=>'<div class="col-6 col-md-4"><label><input type="checkbox" value="'+p.id+'"> <span class="small">'+p.title+'</span></label></div>').join('')+'</div></div>'
+  }).join('')
+}
+
+function renderVocabUnits(){
+  const grade=parseInt(document.getElementById('vocab-src-grade').value)
+  const semEl=document.getElementById('vocab-src-semester')
+  const sem=semEl?semEl.value:'all'
+  let words=VOCABULARY.filter(v=>v.grade===grade)
+  if(sem!=='all')words=words.filter(v=>v.semester===parseInt(sem))
+  const units=[...new Set(words.map(v=>v.unit))].sort()
+  const sel=document.getElementById('vocab-src-unit')
+  sel.innerHTML='<option value="all">全部单元</option>'+units.map(u=>'<option value="'+u+'">'+(u===0?'预备篇':'Unit '+u)+'</option>').join('')
+}
+
+function selectErrorSrc(val,el){
+  document.querySelectorAll('#source-options .badge').forEach(o=>{o.className='badge bg-light text-dark rounded-pill px-3 py-2';o.style.cursor='pointer'})
+  el.className='badge bg-primary rounded-pill px-3 py-2';el.style.cursor='pointer';App.errorSrcFilter=val
+}
+
+function startQuiz(){
+  let qs=[]
+  if(App.quizType==='grammar'||App.quizType==='passage'){
+    const ck=document.querySelectorAll('#source-options input[type="checkbox"]:checked')
+    const ids=ck.length>0?[...ck].map(c=>parseInt(c.value)):KNOWLEDGE_POINTS.map(k=>k.id)
+    qs=generateGrammar(ids,App.quizQty,App.quizType==='passage')
+  }else if(App.quizType==='vocabulary'){
+    const g=parseInt(document.getElementById('vocab-src-grade').value),u=document.getElementById('vocab-src-unit').value
+    qs=generateVocab(g,u,App.quizQty)
+  }else if(App.quizType==='error'){qs=generateError(App.quizQty,App.errorSrcFilter||'all')}
+  if(qs.length===0){alert('没有足够的题目');return}
+  App.questions=qs;App.currentQ=0;App.answers=qs.map(()=>null);App.seconds=0
+  document.getElementById('quiz-setup').classList.add('d-none');document.getElementById('quiz-taking').classList.remove('d-none');document.getElementById('quiz-result').classList.add('d-none')
+  if(App.timer)clearInterval(App.timer)
+  App.timer=setInterval(()=>{App.seconds++;document.getElementById('quiz-timer').innerHTML='<i class="bi bi-clock me-1"></i>'+formatTime(App.seconds)},1000)
+  renderQ()
+}
+
+function weightedPick(items,weights){
+  const total=weights.reduce((s,w)=>s+w,0);let r=Math.random()*total
+  for(let i=0;i<items.length;i++){r-=weights[i];if(r<=0)return items[i]}
+  return items[items.length-1]
+}
+
+// 艾宾浩斯记忆曲线：根据复习次数和距上次复习时间计算间隔乘数
+const EB_INTERVALS=[8,24,72,168,336,720] // 8h, 1d, 3d, 7d, 14d, 30d
+function ebMultiplier(reviewCount,lastQuizzed){
+  if(!lastQuizzed||reviewCount===0)return 1
+  const hoursSince=(Date.now()-lastQuizzed)/3600000
+  const stage=Math.min(reviewCount,EB_INTERVALS.length-1)
+  const dueIn=EB_INTERVALS[stage]
+  const ratio=hoursSince/dueIn
+  if(ratio>=1.5)return 50  // 严重超期未复习
+  if(ratio>=0.8)return 20  // 接近或刚过复习窗口
+  if(ratio>=0.4)return 5   // 快该复习了
+  return 0.3               // 还不到复习时间，降低权重
+}
+
+function generateGrammar(ids,count,isPassage){
+  const stats=getKpStats()
+  let cand=ids.map(id=>{const kp=KNOWLEDGE_POINTS.find(k=>k.id===id);if(!kp)return null;const s=stats[id]||{}
+    const reviewCount=s.reviewCount||0,lastQuizzed=s.lastQuizzed||0
+    let w
+    if((s.quizzedCount||0)===0)       w=100
+    else if((s.errorCount||0)>0)       w=30+(s.errorCount||0)*3+ebMultiplier(reviewCount,lastQuizzed)*2
+    else                               w=1+ebMultiplier(reviewCount,lastQuizzed)
+    return{kp,weight:w}
+  }).filter(Boolean)
+  // 短文模式：仅保留有 passage 数据的语法
+  if(isPassage){cand=cand.filter(c=>c.kp.questions?.passage?.length>0)}
+  const qs=[],usedKs=new Set();let att=0
+  // 统计可用题目库存
+  let totalAvail
+  if(isPassage){totalAvail=cand.reduce((s,c)=>s+(c.kp.questions?.passage?.length||0),0)}
+  else{totalAvail=cand.reduce((s,c)=>s+(c.kp.questions?.fillBlank?.length||0)+(c.kp.questions?.multipleChoice?.length||0),0)}
+  const target=Math.min(count,totalAvail)
+  while(qs.length<target&&att<target*5&&cand.length>0){
+    att++;const w=cand.map(c=>c.weight),ch=weightedPick(cand,w);if(!ch)continue
+    const{kp}=ch
+    if(isPassage){
+      const avail=kp.questions.passage.filter((_,i)=>!usedKs.has('p-'+kp.id+'-'+i))
+      if(avail.length===0){ch.weight=0;continue}
+      const p=avail[Math.floor(Math.random()*avail.length)]
+      usedKs.add('p-'+kp.id+'-'+kp.questions.passage.indexOf(p))
+      const s=stats[kp.id]||{};s.quizzedCount=(s.quizzedCount||0)+1;s.reviewCount=(s.reviewCount||0)+1;s.lastQuizzed=Date.now();stats[kp.id]=s;setKpStats(stats)
+      qs.push({type:'passage',kpId:kp.id,kpTitle:kp.title,title:p.title,text:p.text,blanks:p.blanks,explanation:p.explanation})
+    }else{
+      const pool=[]
+      kp.questions?.fillBlank?.forEach((f,i)=>{if(!usedKs.has('f-'+kp.id+'-'+i))pool.push({t:'fill_blank',idx:i,data:f})})
+      kp.questions?.multipleChoice?.forEach((m,i)=>{if(!usedKs.has('m-'+kp.id+'-'+i))pool.push({t:'multiple_choice',idx:i,data:m})})
+      if(pool.length===0){ch.weight=0;continue}
+      const pick=pool[Math.floor(Math.random()*pool.length)]
+      usedKs.add(pick.t.charAt(0)+'-'+kp.id+'-'+pick.idx)
+      const s=stats[kp.id]||{};s.quizzedCount=(s.quizzedCount||0)+1;s.reviewCount=(s.reviewCount||0)+1;s.lastQuizzed=Date.now();stats[kp.id]=s;setKpStats(stats)
+      if(pick.t==='fill_blank'){
+        qs.push({type:'fill_blank',kpId:kp.id,kpTitle:kp.title,sentence:pick.data.sentence,answer:pick.data.answer,explanation:pick.data.explanation})
+      }else{
+        qs.push({type:'multiple_choice',kpId:kp.id,kpTitle:kp.title,sentence:pick.data.sentence,options:pick.data.options,answer:pick.data.answer,explanation:pick.data.explanation})
+      }
+    }
+  }
+  return qs
+}
+
+function generateVocab(grade,unit,count){
+  const mastery=getMastery()
+  const semEl=document.getElementById('vocab-src-semester'),sem=semEl?semEl.value:'all'
+  let cand=VOCABULARY.filter(v=>v.grade===grade&&(unit==='all'||v.unit===parseInt(unit))&&(sem==='all'||v.semester===parseInt(sem)))
+  if(cand.length===0)return[]
+  cand=cand.map(v=>{const m=mastery[v.id]||{level:0,quizzedCount:0,errorCount:0,reviewCount:0};const reviewCount=m.reviewCount||0,lastQuizzed=m.lastQuizzed||0;let w;if((m.quizzedCount||0)===0)w=100;else if((m.errorCount||0)>0)w=30+m.errorCount*3+ebMultiplier(reviewCount,lastQuizzed)*2;else w=1+ebMultiplier(reviewCount,lastQuizzed);return{v,weight:w}})
+  const qs=[],used=new Set(),usedDir=new Set();let att=0,direction=0
+  while(qs.length<count&&att<count*3&&used.size<cand.length){
+    att++;const av=cand.filter(c=>!used.has(c.v.id));if(av.length===0)break
+    const w=av.map(c=>c.weight),ch=weightedPick(av,w);if(!ch)continue
+    const v=ch.v
+    const keyEn=v.id+'_en',keyCn=v.id+'_cn'
+    // 优先出没出过的方向，交替出题
+    let doEn2cn=!usedDir.has(keyEn)&&(usedDir.has(keyCn)||direction%2===0)
+    if(usedDir.has(keyEn)&&!usedDir.has(keyCn))doEn2cn=false
+    if(doEn2cn){
+      usedDir.add(keyEn);direction++
+      const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
+      const opts=[v.translation,...wg.map(c=>c.v.translation)].sort(()=>Math.random()-0.5)
+      qs.push({type:'vocab_en2cn',vId:v.id,word:v.word,phonetic:v.phonetic,answer:v.translation,options:opts,qText:'请选择 "'+v.word+'" 的中文意思'})
+    }else{
+      usedDir.add(keyCn);direction++
+      const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
+      const opts=[v.word,...wg.map(c=>c.v.word)].sort(()=>Math.random()-0.5)
+      qs.push({type:'vocab_cn2en',vId:v.id,translation:v.translation,options:opts,answer:v.word,qText:'请选择 "'+v.translation+'" 对应的英文'})
+    }
+    // 两个方向都出了才标记这个词已用
+    if(usedDir.has(keyEn)&&usedDir.has(keyCn))used.add(v.id)
+  }
+  return qs
+}
+
+function generateError(count,filter){
+  let errs=getErrors().filter(e=>!e.mastered)
+  if(filter!=='all')errs=errs.filter(e=>e.type===filter)
+  errs.sort((a,b)=>(b.errorCount||1)-(a.errorCount||1))
+  // 去重：同一道错题只出现一次
+  const seen=new Set(),uniq=[]
+  for(const e of errs){const key=e.questionText+'|'+e.correctAnswer;if(!seen.has(key)){seen.add(key);uniq.push(e)}}
+  return uniq.slice(0,Math.min(count,uniq.length)).map(e=>({type:'error_review',errorId:e.id,qText:e.questionText,answer:e.correctAnswer,wrongAnswer:e.wrongAnswer,explanation:e.explanation||'复习这个语法'}))
+}
+
+function renderQ(){
+  const q=App.questions[App.currentQ];if(!q)return
+  document.getElementById('quiz-counter').textContent='第 '+(App.currentQ+1)+'/'+App.questions.length+' 题'
+  const tagEl=document.getElementById('quiz-tag')
+  if(q.type==='passage')tagEl.innerHTML='<i class="bi bi-file-earmark-text me-1"></i>短文'
+  else if(q.type==='fill_blank')tagEl.innerHTML='<i class="bi bi-pencil me-1"></i>填空'
+  else if(q.type==='multiple_choice')tagEl.innerHTML='<i class="bi bi-ui-checks me-1"></i>选择'
+  else if(q.type==='vocab_en2cn')tagEl.innerHTML='<i class="bi bi-translate me-1"></i>英译中'
+  else if(q.type==='vocab_cn2en')tagEl.innerHTML='<i class="bi bi-translate me-1"></i>中译英'
+  else if(q.type==='error_review')tagEl.innerHTML='<i class="bi bi-arrow-repeat me-1"></i>错题重练'
+  else tagEl.innerHTML=''
+  const dots=App.questions.map((_,i)=>{
+    const ans=App.answers[i];let c='dot'
+    if(ans!==null&&ans!==undefined)c+=isAnswerCorrect(App.questions[i],ans)?' done':' wrong'
+    else if(i===App.currentQ)c+=' current'
+    return'<span class="'+c+'" onclick="jumpToQ('+i+')">'+(i+1)+'</span>'
+  }).join('')
+  document.getElementById('quiz-progress').innerHTML=dots
+  const fbEl=document.getElementById('quiz-feedback');fbEl.style.display='none'
+  const ans=App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined
+  if(q.type==='passage'){renderPassage(q,ans);return}
+  const qEl=document.getElementById('quiz-question'),aEl=document.getElementById('quiz-answer-area')
+  if(q.type==='multiple_choice'){
+    qEl.textContent=q.sentence
+    aEl.innerHTML='<div class="quiz-options">'+q.options.map((o,i)=>{
+      let c='opt';if(ans){if(i===q.answer)c+=' show-correct';if(App.answers[App.currentQ]===i&&i!==q.answer)c+=' wrong';else if(App.answers[App.currentQ]===i)c+=' correct'}
+      const oc=ans?'':'selectOption('+i+')'
+      return'<div class="'+c+'" data-letter="'+String.fromCharCode(65+i)+'" onclick="'+oc+'">'+o+'</div>'
+    }).join('')+'</div>'
+  }else if(q.type==='fill_blank'){
+    const parts=q.sentence.split('___')
+    qEl.innerHTML=parts[0]+'<span class="blank">______</span>'+(parts[1]||'')
+    if(ans){aEl.innerHTML='<div class="mt-2 small">你的答案：<strong class="text-primary">'+esc(App.answers[App.currentQ])+'</strong></div>'}
+    else{aEl.innerHTML='<input class="form-control form-control-lg rounded-3 mt-2" id="fill-input" placeholder="输入答案..." onkeydown="if(event.key===\'Enter\')submitFill()">';setTimeout(()=>document.getElementById('fill-input')?.focus(),100)}
+  }else if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en'){
+    qEl.innerHTML=q.qText+(q.phonetic?' <small class="text-secondary">'+q.phonetic+'</small>':'')
+    aEl.innerHTML='<div class="quiz-options">'+q.options.map((o,i)=>{
+      let c='opt';if(ans){if(o===q.answer)c+=' show-correct';if(App.answers[App.currentQ]===o&&o!==q.answer)c+=' wrong';else if(App.answers[App.currentQ]===o)c+=' correct'}
+      const oc=ans?'':'selectVocabOption(\''+esc(o)+'\')'
+      return'<div class="'+c+'" data-letter="'+String.fromCharCode(65+i)+'" onclick="'+oc+'">'+o+'</div>'
+    }).join('')+'</div>'
+  }else if(q.type==='error_review'){
+    qEl.innerHTML='<div class="text-secondary small mb-2">【错题重练】</div>'+esc(q.qText)
+    if(ans){aEl.innerHTML='<div class="mt-2 small">你的答案：<strong class="text-'+(App.answers[App.currentQ]==='correct'?'success':'danger')+'">'+(App.answers[App.currentQ]==='correct'?q.answer:q.wrongAnswer)+'</strong></div>'}
+    else{aEl.innerHTML='<div class="quiz-options"><div class="opt" data-letter="A" onclick="selectErrorOpt(0)">'+esc(q.answer)+'</div><div class="opt" data-letter="B" onclick="selectErrorOpt(1)">'+esc(q.wrongAnswer)+'</div></div>'}
+  }
+  if(ans){const cr=isAnswerCorrect(q,App.answers[App.currentQ]);showFB(cr,q.explanation||'',q)}
+  updateNav()
+}
+
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')}
+
+function isAnswerCorrect(q,ans){
+  if(ans===null||ans===undefined)return false
+  if(q.type==='multiple_choice')return ans===q.answer
+  if(q.type==='fill_blank')return String(ans).toLowerCase().trim()===q.answer.toLowerCase().trim()
+  if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en')return ans===q.answer
+  if(q.type==='error_review')return ans==='correct'
+  if(q.type==='passage'){if(!Array.isArray(ans))return false;return ans.every((a,i)=>a&&q.blanks[i]&&a.toLowerCase().trim()===q.blanks[i].toLowerCase().trim())}
+  return false
+}
+
+function renderPassage(q,ans){
+  document.getElementById('quiz-question').innerHTML='<div class="text-secondary small mb-1">【短文练习】'+q.kpTitle+'</div><div class="fw-semibold mb-2">'+q.title+'</div>'
+  const aEl=document.getElementById('quiz-answer-area'),parts=q.text.split(/___/g)
+  if(ans){const a=App.answers[App.currentQ]||[];aEl.innerHTML='<div class="passage-box">'+parts.map((p,i)=>{if(i===parts.length-1)return p;const ok=a[i]&&a[i].toLowerCase().trim()===(q.blanks[i]||'').toLowerCase().trim();return p+'<span class="p-blank '+(ok?'filled':'wrong')+'">'+(a[i]||'___')+'</span>'}).join('')+'</div>'}
+  else{aEl.innerHTML='<div class="passage-box">'+parts.map((p,i)=>{if(i===parts.length-1)return p;return p+'<input class="p-blank" id="passage-blank-'+i+'" placeholder="填空'+(i+1)+'">'}).join('')+'</div><div class="d-flex justify-content-end mt-2"><button class="btn btn-primary btn-sm rounded-3" onclick="submitPassage()">提交答案</button></div>'}
+}
+
+function selectOption(i){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ];App.answers[App.currentQ]=i;updateMastery(q,i===q.answer);trackE(q,i===q.answer,q.options[i],q.options[q.answer]);renderQ()}
+function selectVocabOption(v){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;updateVocabMastery(q,v===q.answer);trackE(q,v===q.answer,v,q.answer);renderQ()}
+function selectErrorOpt(i){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ],cr=i===0;App.answers[App.currentQ]=cr?'correct':'wrong';if(cr){const e=getErrors(),er=e.find(x=>x.id===q.errorId);if(er){er.mastered=true;setErrors(e)}}renderQ()}
+
+function submitFill(){
+  if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return
+  const inp=document.getElementById('fill-input');if(!inp)return;const v=inp.value.trim();if(!v){alert('请输入答案');return}
+  const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;updateMastery(q,v.toLowerCase()===q.answer.toLowerCase());trackE(q,v.toLowerCase()===q.answer.toLowerCase(),v,q.answer);renderQ()
+}
+
+function submitPassage(){
+  const q=App.questions[App.currentQ],ans=q.blanks.map((_,i)=>{const el=document.getElementById('passage-blank-'+i);return el?el.value.trim():''})
+  App.answers[App.currentQ]=ans
+  const all=ans.every((a,i)=>a.toLowerCase()===q.blanks[i].toLowerCase())
+  updateMastery(q,all)
+  // 跟踪每个空的错误
+  ans.forEach((a,i)=>{if(a&&a.toLowerCase()!==q.blanks[i].toLowerCase()){trackE(q,false,a,q.blanks[i])}})
+  renderQ()
+}
+
+function showFB(cr,exp,q){
+  const el=document.getElementById('quiz-feedback');el.style.display='block';el.className='quiz-feedback show '+(cr?'correct':'wrong')
+  const info=q?.kpTitle?'<div class="small text-secondary mb-1"><i class="bi bi-journal-text me-1"></i>'+q.kpTitle+'</div>':''
+  el.innerHTML=cr?info+'<strong><i class="bi bi-check-circle me-1"></i>回答正确！</strong>'+(exp?'<br><span class="small">'+exp+'</span>':''):info+'<strong><i class="bi bi-x-circle me-1"></i>回答错误</strong>'+(exp?'<br><span class="small">'+exp+'</span>':'')
+}
+
+function updateNav(){
+  const nb=document.getElementById('quiz-next-btn'),pb=document.getElementById('quiz-prev-btn')
+  const last=App.currentQ===App.questions.length-1,ans=App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined
+  if(pb){pb.style.visibility=App.currentQ===0?'hidden':'visible';pb.onclick=prevQ}
+  if(last){nb.innerHTML='<i class="bi bi-send me-1"></i>交卷';nb.onclick=submitQuiz;nb.style.opacity='1'}
+  else{nb.innerHTML='下一题 <i class="bi bi-arrow-right"></i>';nb.style.opacity=ans?'1':'0.5';nb.onclick=()=>{if(!ans){alert('请先作答');return}nextQ()}}
+}
+function nextQ(){if(App.currentQ<App.questions.length-1){App.currentQ++;renderQ()}}
+function prevQ(){if(App.currentQ>0){App.currentQ--;renderQ()}}
+function jumpToQ(i){App.currentQ=i;renderQ()}
+
+function exitQuiz(){
+  const answered=App.answers.filter(a=>a!==null&&a!==undefined).length
+  if(answered>0){
+    let cc=0,valid=0;App.questions.forEach((q,i)=>{const a=App.answers[i];if(a!==null&&a!==undefined){valid++;if(isAnswerCorrect(q,a))cc++}})
+    if(App.timer){clearInterval(App.timer);App.timer=null}
+    const rec={date:today(),timestamp:Date.now(),type:App.quizType,total:valid,correct:cc,duration:App.seconds,exited:true}
+    const recs=getQuizRecords();recs.push(rec);setQuizRecords(recs)
+  }
+  resetQuizUI()
+}
+
+function submitQuiz(){
+  if(!App.answers.some(a=>a!==null&&a!==undefined)){alert('还没有作答任何题目');return}
+  if(App.timer){clearInterval(App.timer);App.timer=null}
+  let cc=0,valid=0;const res=App.questions.map((q,i)=>{const a=App.answers[i];if(a!==null&&a!==undefined){valid++;const ok=isAnswerCorrect(q,a);if(ok)cc++;return{q,answer:a,isCorrect:ok}}else{return{q,answer:null,isCorrect:false}}}).filter(r=>r.answer!==null)
+  const rec={date:today(),timestamp:Date.now(),type:App.quizType,total:valid,correct:cc,duration:App.seconds}
+  const recs=getQuizRecords();recs.push(rec);setQuizRecords(recs)
+  document.getElementById('quiz-taking').classList.add('d-none');document.getElementById('quiz-result').classList.remove('d-none')
+  const sc=valid>0?Math.round(cc/valid*100):0;const ci=document.getElementById('result-circle')
+  let cls='bad';if(sc>=80)cls='good';else if(sc>=60)cls='ok'
+  ci.className='result-circle '+cls;ci.textContent=sc+'%'
+  document.getElementById('result-text').textContent={good:'太棒了！继续保持！',ok:'还不错，继续加油！',bad:'需要多练习哦！'}[cls]
+  document.getElementById('r-correct').textContent=cc;document.getElementById('r-total').textContent=valid;document.getElementById('r-time').textContent=formatTime(App.seconds)
+  const rev=document.getElementById('result-review')
+  rev.innerHTML='<h6 class="fw-semibold mb-3"><i class="bi bi-list-check me-1"></i>逐题回顾</h6>'+res.map((r,i)=>{
+    const q=r.q;let qd=q.sentence||q.qText||''
+    if(q.type==='fill_blank')qd=q.sentence?.replace('___','______')
+    const icon=r.isCorrect?'<i class="bi bi-check-circle-fill text-success me-1"></i>':'<i class="bi bi-x-circle-fill text-danger me-1"></i>'
+    let ca='';if(q.type==='multiple_choice'&&q.options)ca=q.options[q.answer];else if(q.type==='fill_blank')ca=q.answer;else if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en')ca=q.answer;else if(q.type==='passage')ca=q.blanks?.join(', ');else ca=q.answer
+    let ya='';if(r.answer!==null&&r.answer!==undefined){if(typeof r.answer==='number'&&q.options)ya=q.options[r.answer];else if(Array.isArray(r.answer))ya=r.answer.join(', ');else if(r.answer==='correct')ya=ca;else if(r.answer==='wrong')ya='答错';else ya=r.answer}else ya='未作答'
+    return'<div class="rq"><div class="q-text">'+icon+esc(qd)+'</div><div class="correct"><i class="bi bi-check-lg me-1"></i>正确答案：'+esc(ca)+'</div>'+(r.isCorrect?'':'<div class="wrong"><i class="bi bi-x-lg me-1"></i>你的答案：'+esc(ya)+'</div>')+(q.explanation?'<div class="explain"><i class="bi bi-lightbulb me-1"></i>'+esc(q.explanation)+'</div>':'')+'</div>'
+  }).join('')
+}
+
+function updateMastery(q,cr){if(!q.kpId)return;const s=getKpStats(),st=s[q.kpId]||{quizzedCount:0,errorCount:0,reviewCount:0};if(!cr)st.errorCount=(st.errorCount||0)+1;s[q.kpId]=st;setKpStats(s)}
+function updateVocabMastery(q,cr){if(!q.vId)return;const m=getMastery(),mv=m[q.vId]||{level:0,quizzedCount:0,errorCount:0,reviewCount:0,lastQuizzed:Date.now()};mv.quizzedCount=(mv.quizzedCount||0)+1;mv.reviewCount=(mv.reviewCount||0)+1;if(cr){if((mv.level||0)===0)mv.level=2;else mv.level=Math.min(5,(mv.level||0)+1)}else{mv.errorCount=(mv.errorCount||0)+1;mv.level=Math.max(0,(mv.level||0)-1)}mv.lastQuizzed=Date.now();m[q.vId]=mv;setMastery(m)}
+
+function trackE(q,cr,sa,ca){
+  if(cr||!sa||sa===''||sa===ca)return;const errs=getErrors(),qt=q.sentence||q.qText||'',tp=q.type?.startsWith('vocab')?'vocabulary':'grammar'
+  const ex=errs.find(e=>e.questionText===qt&&e.correctAnswer===ca&&!e.mastered)
+  if(ex){ex.errorCount=(ex.errorCount||1)+1;ex.lastWrongAt=Date.now();ex.wrongAnswer=sa}else{errs.push({id:Date.now(),type:tp,questionText:qt,correctAnswer:ca,wrongAnswer:sa,explanation:q.explanation||'',errorCount:1,lastWrongAt:Date.now(),reviewed:false,mastered:false,createdAt:Date.now()})}
+  setErrors(errs)
+}
+
+function filterErrors(f,el){
+  if(el){document.querySelectorAll('#error-filter .badge').forEach(x=>{x.className='badge bg-light text-dark rounded-pill px-3 py-2';x.style.cursor='pointer'})}
+  el.className='badge bg-primary rounded-pill px-3 py-2';el.style.cursor='pointer'
+  App.errorFilter=f;renderErrors()
+}
+
+function renderErrors(){
+  let errors=getErrors().filter(e=>!e.mastered);const f=App.errorFilter
+  if(f==='grammar')errors=errors.filter(e=>e.type==='grammar')
+  else if(f==='vocabulary')errors=errors.filter(e=>e.type==='vocabulary')
+  else if(f==='unreviewed')errors=errors.filter(e=>!e.reviewed)
+  errors.sort((a,b)=>b.lastWrongAt-a.lastWrongAt)
+  const el=document.getElementById('error-list');if(!el)return
+  if(errors.length===0){el.innerHTML='<div class="empty-state"><div class="icon"><i class="bi bi-emoji-smile fs-1"></i></div>没有错题，继续保持！</div>';return}
+  el.innerHTML=errors.map(e=>'<div class="error-item" data-id="'+e.id+'"><div class="q-text">'+(e.type==='grammar'?'<span class="badge tag-orange me-1">语法</span>':'<span class="badge tag-blue me-1">词汇</span>')+esc(e.questionText)+'</div><div class="d-flex gap-3 mb-2 small"><span class="wrong"><i class="bi bi-x-lg me-1"></i>'+esc(e.wrongAnswer)+'</span><span class="correct"><i class="bi bi-check-lg me-1"></i>'+esc(e.correctAnswer)+'</span></div><div class="small text-secondary mb-2" id="err-status-'+e.id+'">错误 '+e.errorCount+' 次 · '+(e.reviewed?'<span class="text-success">已复习 ✓</span>':'<span class="text-warning">未复习</span>')+'</div><div class="d-flex gap-2">'+(e.reviewed?'':'<button class="btn btn-sm btn-outline-warning err-btn-review" data-id="'+e.id+'"><i class="bi bi-eye me-1"></i>标记已复习</button>')+'<button class="btn btn-sm btn-outline-success err-btn-master" data-id="'+e.id+'"><i class="bi bi-check-circle me-1"></i>已掌握</button></div></div>').join('')
+  el.querySelectorAll('.err-btn-review').forEach(b=>{b.onclick=function(e){e.stopPropagation();markReviewed(parseInt(this.dataset.id))}})
+  el.querySelectorAll('.err-btn-master').forEach(b=>{b.onclick=function(e){e.stopPropagation();markMastered(parseInt(this.dataset.id))}})
+}
+
+function markReviewed(id){
+  const errors=getErrors(),err=errors.find(x=>x.id===id)
+  if(!err||err.reviewed)return
+  err.reviewed=true;setErrors(errors)
+  const statusEl=document.getElementById('err-status-'+id)
+  if(statusEl){statusEl.innerHTML='错误 '+err.errorCount+' 次 · <span class="text-success">已复习 ✓</span>'}
+  const btn=document.querySelector('.err-btn-review[data-id="'+id+'"]')
+  if(btn)btn.remove()
+}
+
+function markMastered(id){
+  const errors=getErrors(),err=errors.find(x=>x.id===id)
+  if(!err||err.mastered)return
+  err.mastered=true;setErrors(errors)
+  const item=document.querySelector('.error-item[data-id="'+id+'"]')
+  if(item){item.style.opacity='0';item.style.transform='translateX(20px)';item.style.transition='all .3s';setTimeout(()=>{item.remove();if(document.querySelectorAll('.error-item').length===0)document.getElementById('error-list').innerHTML='<div class="empty-state"><div class="icon"><i class="bi bi-emoji-smile fs-1"></i></div>没有错题，继续保持！</div>'},300)}
+  else renderErrors()
+}
+
+function renderStats(){
+  const records=getQuizRecords(),log=getStudyLog()
+  const tQ=records.reduce((s,r)=>s+r.total,0),tC=records.reduce((s,r)=>s+r.correct,0),tS=Object.values(log).reduce((s,v)=>s+v,0)
+  document.getElementById('s-total-q').textContent=tQ
+  document.getElementById('s-accuracy').textContent=(tQ>0?Math.round(tC/tQ*100):0)+'%'
+  document.getElementById('s-total-time').textContent=Math.round(tS/3600*10)/10+'h'
+  document.getElementById('s-days').textContent=Object.keys(log).length
+  renderTrendChart('stats-trend-chart',7)
+  const kpStats=getKpStats(),vocabMastery=getMastery()
+  let html=''
+
+  function acc(q,e){return q>0?Math.round((q-e)/q*100)+'%':'-'}
+  function masteryTag(e,q){if(q===0)return'';const r=(q-e)/q;if(r>=.9)return'<span class="stats-mastery text-success">★ 熟练</span>';if(r>=.7)return'<span class="stats-mastery text-warning">◇ 一般</span>';return'<span class="stats-mastery text-danger">△ 薄弱</span>'}
+  function rowClass(e,q){return e>0?' class="stats-row-err"':''}
+  function cellClass(e){return e>0?' class="stats-has-error"':''}
+
+  // === 语法大类 ===
+  const gTotal=CATEGORIES.reduce((s,c)=>{const ids=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id).map(k=>k.id);let t=0;ids.forEach(id=>{const st=kpStats[id];if(st)t+=st.quizzedCount||0});return s+t},0)
+  const gErr=CATEGORIES.reduce((s,c)=>{const ids=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id).map(k=>k.id);let e=0;ids.forEach(id=>{const st=kpStats[id];if(st)e+=st.errorCount||0});return s+e},0)
+  html+='<tr class="table-active fw-bold"><td><button class="stats-toggle" data-group="grammar" onclick="toggleStatsGroup(this)"><i class="bi bi-chevron-down me-1"></i><i class="bi bi-journal-text me-2"></i>语法</button></td><td>'+gTotal+'</td><td'+cellClass(gErr)+'>'+gErr+'</td><td>'+acc(gTotal,gErr)+'</td><td class="text-secondary small">'+KNOWLEDGE_POINTS.length+'个语法</td></tr>'
+  // 子分类按错误数降序排列
+  const gRows=CATEGORIES.map(c=>{const ids=KNOWLEDGE_POINTS.filter(k=>k.categoryId===c.id).map(k=>k.id);let t=0,e=0;ids.forEach(id=>{const st=kpStats[id];if(st){t+=st.quizzedCount||0;e+=st.errorCount||0}});return{c,t,e}}).sort((a,b)=>b.e-a.e)
+  gRows.forEach(r=>{html+='<tr class="stats-sub stats-sub-grammar"'+rowClass(r.e,r.t)+'><td class="ps-4"><i class="bi '+r.c.icon+' me-1"></i>'+r.c.name+'</td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t)+'</td></tr>'});
+
+  // === 词汇大类 (按年级+学期+单元三级折叠) ===
+  const grades=[7,8,9];const semesters=[1,2];const vAll=VOCABULARY;let vTotal=0,vErr=0
+  vAll.forEach(v=>{const m=vocabMastery[v.id]||{};vTotal+=m.quizzedCount||0;vErr+=m.errorCount||0})
+  html+='<tr class="table-active fw-bold"><td><button class="stats-toggle" data-group="vocab" onclick="toggleStatsGroup(this)"><i class="bi bi-chevron-down me-1"></i><i class="bi bi-bookmark-star me-2"></i>词汇</button></td><td>'+vTotal+'</td><td'+cellClass(vErr)+'>'+vErr+'</td><td>'+acc(vTotal,vErr)+'</td><td class="text-secondary small">'+vAll.length+'个单词</td></tr>'
+  grades.forEach(g=>{
+    semesters.forEach(sem=>{
+      const wds=vAll.filter(v=>v.grade===g&&v.semester===sem)
+      if(wds.length===0)return
+      const semName=sem===1?'上学期':'下学期'
+      let gt=0,ge=0;wds.forEach(v=>{const m=vocabMastery[v.id]||{};gt+=m.quizzedCount||0;ge+=m.errorCount||0})
+      const units=[...new Set(wds.map(v=>v.unit))].sort((a,b)=>a-b)
+      const gs='vocab-g'+g+'s'+sem
+      html+='<tr class="stats-sub stats-sub-vocab stats-sub-vocab-main"'+rowClass(ge,gt)+'><td class="ps-3"><button class="stats-toggle fw-semibold" data-group="'+gs+'" onclick="toggleStatsGroup(this)"><i class="bi bi-chevron-down me-1 small"></i>'+g+'年级'+semName+'</button></td><td>'+gt+'</td><td'+cellClass(ge)+'>'+ge+'</td><td>'+acc(gt,ge)+'</td><td>'+masteryTag(ge,gt)+'</td></tr>'
+      const uRows=units.map(u=>{const uwds=wds.filter(v=>v.unit===u);let ut=0,ue=0;uwds.forEach(v=>{const m=vocabMastery[v.id]||{};ut+=m.quizzedCount||0;ue+=m.errorCount||0});return{u,ut,ue}}).sort((a,b)=>b.ue-a.ue)
+      uRows.forEach(r=>{html+='<tr class="stats-sub stats-sub-vocab stats-sub-'+gs+'"'+rowClass(r.ue,r.ut)+'><td class="ps-5">'+(r.u===0?'预备篇':'Unit '+r.u)+'</td><td>'+r.ut+'</td><td'+cellClass(r.ue)+'>'+r.ue+'</td><td>'+acc(r.ut,r.ue)+'</td><td>'+masteryTag(r.ue,r.ut)+'</td></tr>'})
+    })
+  })
+
+  document.getElementById('category-stats-body').innerHTML=html
+}
+
+function toggleSrcGroup(btn){
+  const icon=btn.querySelector('.bi-chevron-right')
+  const container=btn.nextElementSibling
+  if(!container)return
+  const collapsed=container.style.display==='none'
+  container.style.display=collapsed?'':'none'
+  if(icon)icon.style.transform=collapsed?'rotate(90deg)':'rotate(0deg)'
+}
+
+function toggleStatsGroup(btn){
+  const group=btn.dataset.group
+  const rows=document.querySelectorAll('.stats-sub-'+group)
+  const icon=btn.querySelector('.bi-chevron-down')
+  if(rows.length===0)return
+  const collapsed=rows[0].classList.contains('collapsed')
+  rows.forEach(r=>r.classList.toggle('collapsed'))
+  if(icon){icon.style.transform=collapsed?'rotate(0deg)':'rotate(-90deg)'}
+}
+
+let vocabLetterFilter=null // 当前字母筛选，null=显示全部
+function setVocabLetterFilter(letter){
+  vocabLetterFilter=letter
+  renderVocabulary()
+}
+
+function initApp(){renderHome();logStudyStart();window.addEventListener('beforeunload',logStudyStop)
+  // 冻结工具栏阴影：监听各页面内部滚动
+  let vocabTick=0,grammarTick=0
+  const vocabPage=document.getElementById('page-vocabulary')
+  const grammarPage=document.getElementById('page-knowledge')
+  vocabPage.addEventListener('scroll',()=>{
+    cancelAnimationFrame(vocabTick)
+    vocabTick=requestAnimationFrame(()=>{
+      const el=document.getElementById('vocab-toolbar')
+      if(el)el.classList.toggle('stuck',vocabPage.scrollTop>0)
+    })
+  },{passive:true})
+  grammarPage.addEventListener('scroll',()=>{
+    cancelAnimationFrame(grammarTick)
+    grammarTick=requestAnimationFrame(()=>{
+      const el=document.getElementById('category-list')
+      if(el)el.classList.toggle('stuck',grammarPage.scrollTop>0)
+    })
+  },{passive:true})
+}
+document.addEventListener('DOMContentLoaded',initApp)
+</script>
+</body>
+</html>
