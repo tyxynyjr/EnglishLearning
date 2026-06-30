@@ -113,12 +113,48 @@ const STORAGE_PREFIX='ezlangent:schema'+STORAGE_SCHEMA_VERSION+':'
 const DATA_KEYS=['el_quiz_records','el_error_items','el_vocab_mastery','el_knowledge_stats','el_study_log','el_daily_tasks']
 const DAILY_TASK_FLOW_VERSION=2
 const App={currentTab:'home',quizType:'grammar',quizQty:10,quizQtyTouched:false,quizSources:[],questions:[],currentQ:0,answers:[],timer:null,seconds:0,answered:false,errorFilter:'all',statsDays:7,parentReportType:'daily',vocabView:'words',vocabFilters:{mastery:'all',letter:null},activeDailyTaskId:null,activeDailyTaskCountedIndexes:[],pendingDailyTaskReviewId:null}
-function storageKey(k){return STORAGE_PREFIX+k}
+function storageKey(k){
+  const ns = (typeof currentUser !== 'undefined' && currentUser && currentUser.username) ? currentUser.username : 'guest'
+  return STORAGE_PREFIX + ns + ':' + k
+}
+function userStorageKey(username, k) {
+  // 管理员跨用户读取时使用，直接构造指定用户的全键名
+  return STORAGE_PREFIX + username + ':' + k
+}
 function parseStored(v,d){try{return v?JSON.parse(v):d}catch{return d}}
 function lsGet(k,d){return parseStored(localStorage.getItem(storageKey(k)),d)}
 function lsSet(k,v){localStorage.setItem(storageKey(k),JSON.stringify(v))}
 function ensureStorageSchema(){
   localStorage.setItem(storageKey('el_storage_meta'),JSON.stringify({app:'ezlangent',appVersion:APP_VERSION,schemaVersion:STORAGE_SCHEMA_VERSION,updatedAt:new Date().toISOString()}))
+}
+// 从旧数据格式（无用户命名空间）迁移到当前用户的命名空间
+// 每个用户独立判断：如果用户命名空间为空且有旧数据，则执行迁移
+function migrateOldData(){
+  const OLD_PREFIX = STORAGE_PREFIX  // 旧格式：ezlangent:schema3:el_...
+  const ns = (typeof currentUser !== 'undefined' && currentUser && currentUser.username) ? currentUser.username : null
+  if (!ns) return
+  const MIGRATED_KEY = STORAGE_PREFIX + '_migrated_' + ns
+  if (localStorage.getItem(MIGRATED_KEY)) return // 该用户已迁移过
+  // 检查该用户命名空间是否已有数据
+  let hasOwnData = false
+  DATA_KEYS.forEach(k => {
+    if (localStorage.getItem(storageKey(k))) hasOwnData = true
+  })
+  if (hasOwnData) return  // 已有数据，无需迁移
+  // 检查是否有旧格式数据
+  let found = false
+  DATA_KEYS.forEach(k => {
+    const oldKey = OLD_PREFIX + k
+    const oldVal = localStorage.getItem(oldKey)
+    if (oldVal) {
+      localStorage.setItem(storageKey(k), oldVal)
+      found = true
+    }
+  })
+  if (found) {
+    localStorage.setItem(MIGRATED_KEY, '1')
+    console.log('✅ 已将旧格式数据迁移到用户“'+ns+'”')
+  }
 }
 function getMastery(){return lsGet('el_vocab_mastery',{})}
 function refreshParentReportIfOpen(){const modal=document.getElementById('parent-report-modal');if(modal&&!modal.classList.contains('d-none'))renderParentReport()}
@@ -363,6 +399,8 @@ function switchTab(tab){
 }
 
 function renderHome(){
+  updateUserBadge()
+  if(typeof isAdmin==='function'&&isAdmin())renderAdminOverview()
   const log=getStudyLog(),records=getQuizRecords(),errors=getErrors(),d=today()
   const kpStats=getKpStats(),vm=getMastery()
   renderDailyTaskBar()
@@ -1744,7 +1782,60 @@ function setVocabLetterFilter(letter){
   renderVocabulary()
 }
 
-function initApp(){bindAppViewportHeight();ensureStorageSchema();renderHome();renderIrregularVerbs();logStudyStart();window.addEventListener('beforeunload',logStudyStop)
+function updateUserBadge(){
+  const badge=document.getElementById('user-badge')
+  if(!badge)return
+  if(typeof currentUser!=='undefined'&&currentUser){
+    const label=currentUser.displayName||currentUser.username
+    badge.innerHTML='<i class="bi bi-person-circle me-1"></i>'+esc(label)
+    badge.style.display='inline-flex'
+    const adminSec=document.getElementById('admin-overview')
+    if(adminSec)adminSec.classList.toggle('d-none',typeof isAdmin==='function'?!isAdmin():true)
+  }else{
+    badge.style.display='none'
+  }
+}
+
+function renderAdminOverview(){
+  if(typeof USERS==='undefined'||typeof isAdmin==='undefined'||!isAdmin())return
+  const container=document.getElementById('admin-overview-content')
+  if(!container)return
+  const students=USERS.filter(u=>u.role==='student')
+  if(!students.length){container.innerHTML='<p class="text-secondary small">暂无学生账号</p>';return}
+  let html=''
+  students.forEach(s=>{
+    const getData=(key,def)=>{
+      try{const v=localStorage.getItem(userStorageKey(s.username,key));return v?JSON.parse(v):def}catch{return def}
+    }
+    const records=getData('el_quiz_records',[])
+    const log=getData('el_study_log',{})
+    const errors=getData('el_error_items',[])
+    const dailyTasks=getData('el_daily_tasks',{})
+    const now=new Date()
+    const tKey=now.getFullYear()+'-'+String(now.getMonth()+1).padStart(2,'0')+'-'+String(now.getDate()).padStart(2,'0')
+    const todayRecords=records.filter(r=>r.date===tKey)
+    const todayQ=todayRecords.reduce((s,r)=>s+r.total,0)
+    const totalQ=records.reduce((s,r)=>s+r.total,0),totalC=records.reduce((s,r)=>s+r.correct,0)
+    const acc=totalQ>0?Math.round(totalC/totalQ*100):0
+    const studyMin=Math.round((Object.values(log).reduce((s,v)=>s+v,0))/60)
+    const unmastered=errors.filter(e=>!e.mastered&&!e.reviewed).length
+    const taskDone=Object.values(dailyTasks).some(t=>t.completed&&t.date===tKey)
+    const doneClass=taskDone?'done':''
+    const accClass=acc>=80?'good':acc>=60?'ok':'bad'
+    html+='<div class="admin-student-item"><div class="admin-student-name"><i class="bi bi-person-circle me-1"></i>'+esc(s.displayName||s.username)+'</div><div class="admin-student-stats"><span class="admin-stat '+doneClass+'">'+(taskDone?'已做':'未做')+'</span><span class="admin-stat">'+totalQ+'题</span><span class="admin-stat '+accClass+'">'+acc+'%</span><span class="admin-stat">'+studyMin+'分</span><span class="admin-stat'+(unmastered>0?' warn':'')+'">错'+unmastered+'</span></div></div>'
+  })
+  container.innerHTML=html||'<p class="text-secondary small">暂无学生数据</p>'
+}
+
+function initApp(){
+  // 检查登录状态
+  if(typeof isLoggedIn==='function'&&!isLoggedIn()){
+    if(typeof showLogin==='function')showLogin()
+    setTimeout(()=>document.getElementById('login-username')?.focus(),100)
+    return
+  }
+  updateUserBadge()
+  bindAppViewportHeight();ensureStorageSchema();migrateOldData();renderHome();renderIrregularVerbs();logStudyStart();window.addEventListener('beforeunload',logStudyStop)
   const taking=document.getElementById('quiz-taking');if(taking)taking.addEventListener('click',handleQuizBlankClick)
   // 冻结工具栏阴影：监听各页面内部滚动
   const stickyPairs=[['page-home','home-toolbar'],['page-knowledge','knowledge-toolbar'],['page-vocabulary','vocab-toolbar'],['page-quiz','quiz-toolbar'],['page-stats','stats-toolbar'],['page-errors','errors-toolbar']]
@@ -1759,5 +1850,7 @@ function initApp(){bindAppViewportHeight();ensureStorageSchema();renderHome();re
       })
     },{passive:true})
   })
+  // 管理员概览
+  if(typeof isAdmin==='function'&&isAdmin())renderAdminOverview()
 }
 document.addEventListener('DOMContentLoaded',initApp)

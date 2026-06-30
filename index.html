@@ -9,6 +9,24 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<!-- ============ 登录界面 ============ -->
+<div id="login-overlay" class="login-overlay d-none">
+  <div class="login-card">
+    <div class="login-icon"><i class="bi bi-shield-lock-fill"></i></div>
+    <h3 class="login-title">英语学习工具</h3>
+    <p class="login-subtitle">请输入用户名和密码</p>
+    <div class="login-input-group">
+      <i class="bi bi-person-fill login-input-icon"></i>
+      <input id="login-username" class="login-input" type="text" placeholder="用户名" autocomplete="username" onkeydown="handleLoginKeydown(event)" autocapitalize="off" autofocus>
+    </div>
+    <div class="login-input-group">
+      <i class="bi bi-lock-fill login-input-icon"></i>
+      <input id="login-password" class="login-input" type="password" placeholder="密码" autocomplete="current-password" onkeydown="handleLoginKeydown(event)">
+    </div>
+    <div id="login-error" class="login-error"></div>
+    <button id="login-btn" class="login-btn" onclick="handleLogin()">登 录</button>
+  </div>
+</div>
 <div class="app-container">
 <div class="pages-wrap">
 
@@ -16,7 +34,7 @@
 <div id="page-home" class="page active">
   <div class="page-sticky-header" id="home-toolbar">
   <div class="text-center py-2 mb-2">
-    <div class="home-title-wrap"><h2 class="fw-bold mb-1">英语学习工具</h2><button class="home-info-btn" type="button" onclick="openStudentGuide()" aria-label="查看使用说明" title="使用说明"><i class="bi bi-info-lg"></i></button></div>
+    <div class="home-title-wrap"><h2 class="fw-bold mb-1">英语学习工具</h2><button class="home-info-btn" type="button" onclick="openStudentGuide()" aria-label="查看使用说明" title="使用说明"><i class="bi bi-info-lg"></i></button><span class="user-badge" id="user-badge"></span><button class="home-info-btn logout-btn" onclick="handleLogout()" aria-label="退出登录" title="退出登录"><i class="bi bi-box-arrow-right"></i></button></div>
     <p class="text-secondary small mb-0" id="greeting">今天也来学习英语吧！</p>
     <div class="home-actions">
       <button class="home-action-btn report" onclick="openParentReport('daily')" title="家长日报"><i class="bi bi-clipboard-data me-1"></i>家长日报</button>
@@ -57,6 +75,10 @@
           <li>如果数据没有自动接上，可用<span class="key">导入数据</span>恢复存档。</li>
         </ul>
       </div>
+  </div>
+  <div class="app-section d-none" id="admin-overview">
+      <div class="app-section-title"><i class="bi bi-people-fill me-1"></i>学生概览</div>
+      <div id="admin-overview-content"><p class="text-secondary small">加载中...</p></div>
   </div>
 </div>
 
@@ -293,6 +315,7 @@
     </div>
   </div>
 </div>
+<script src="auth.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
