@@ -24,9 +24,9 @@ async function loadKnowledgeData() {
 loadKnowledgeData();
 
 const WORD_CLASS_GROUPS = [
-  { key:'noun', title:'名词', desc:'可数名词及单复数、不可数名词、专有名词、名词所有格。', ids:[9,43,44,45,47,160,46] },
-  { key:'verb', title:'动词', desc:'基本形式、及物/不及物动词、系动词、助动词、情态动词。', ids:[110,161,111,112,113,114,162,163,164,15,115,116,117,118,119,120,121,122] },
-  { key:'adjective', title:'形容词', desc:'基本形式、常见词尾/词缀、定语/表语用法、比较级和最高级。', ids:[165,166,55,10,59] },
+  { key:'noun', title:'名词', desc:'可数名词及其单复数、不可数名词、专有名词、名词所有格。', ids:[44,47,160,46] },
+  { key:'verb', title:'动词', desc:'基本形式、及物/不及物动词、系动词、助动词、情态动词。', ids:[110,121,162,163,164,15,161,111,112,113] },
+  { key:'adjective', title:'形容词', desc:'基本形式、常见词尾/词缀、比较级和最高级。', ids:[165,166,10,59] },
   { key:'adverb', title:'副词', desc:'修饰动词、形容词、副词或整个句子；补充常见 -ly 词尾以及副词比较级、最高级。', ids:[56,167,57,58] },
   { key:'pronoun', title:'代词', desc:'人称代词、物主代词、反身代词、指示代词、不定代词和替代用法。', ids:[11,48,49,50,51,52,53,54] },
   { key:'numeral', title:'数词', desc:'基数词、序数词、分数、小数、百分数和年月日时间表达。', ids:[19,65,66,67,68,69] },
@@ -41,7 +41,7 @@ const SYNTAX_GROUPS = [
   { key:'simple-sentence', title:'简单句的基本句型', desc:'五种基本句型和 There be 结构。', ids:[79,80,81,82,83,12,29] },
   { key:'tense', title:'谓语动词的时态', desc:'be 动词、一般时、进行时、完成时以及时态相关动词变化。', ids:[27,28,1,2,3,4,5,6,17,18,30,31,32,33,34,35,36] },
   { key:'passive', title:'被动语态', desc:'不同时态的被动语态、by 短语、主动被动转换和特殊动词被动。', ids:[7,8,37,38,39,40,41,42] },
-  { key:'nonfinite', title:'动词的非谓语形式', desc:'动词不定式、动名词以及常见非谓语搭配。', ids:[16,123,124,125,126,26,127,128,129,130,131,132,133] },
+  { key:'nonfinite', title:'动词的非谓语形式', desc:'动词不定式、动词-ing形式。', ids:[16,114,129] },
   { key:'compound', title:'并列复合句', desc:'并列连词和相关并列结构。', ids:[134,135,136,137,138] },
   { key:'complex', title:'主从复合句', desc:'宾语从句、状语从句、定语从句和从属连词。', ids:[13,14,22,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,139,140,141,142,143] },
   { key:'agreement', title:'主谓一致', desc:'单复数一致、就近原则、不定代词和集合名词作主语。', ids:[25,104,105,106,107,108,109] },
@@ -651,12 +651,6 @@ function vocabMetaHtml(v,stars){
   if(!hasVocabQuizData(v))tags.push('<span class="text-secondary" style="font-size:.7rem">待补释义</span>')
   tags.push('<span class="stars">'+stars+'</span>')
   return tags.join('')
-}
-
-function renderIrregularVerbs(){
-  const body=document.getElementById('irregular-verbs-body');if(!body)return
-  const vocabByWord=Object.fromEntries(VOCABULARY.map(v=>[v.word.toLowerCase(),v]))
-  body.innerHTML=IRREGULAR_VERBS.map(row=>{const v=vocabByWord[row.base.toLowerCase()]||{};return '<tr><td class="fw-semibold">'+esc(row.base)+'</td><td>'+esc(row.past.join(' / '))+'</td><td>'+esc(row.pastParticiple.join(' / '))+'</td><td>'+esc(v.translation||'')+'</td></tr>'}).join('')
 }
 
 function renderSpecialVocabTable(view){

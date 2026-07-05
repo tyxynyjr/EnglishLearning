@@ -1,0 +1,1645 @@
+{
+  "sentence": {
+    "multipleChoice": [
+      {
+        "id": "mc-1",
+        "kpIds": [
+          1
+        ],
+        "sentence": "She ___ to school every day.",
+        "options": [
+          "go",
+          "goes",
+          "going",
+          "went"
+        ],
+        "answerIndex": 1,
+        "answer": "goes",
+        "explanation": "主语是第三人称单数 She，动词用三单形式 goes",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-2",
+        "kpIds": [
+          1
+        ],
+        "sentence": "They often ___ football after school.",
+        "options": [
+          "play",
+          "plays",
+          "playing",
+          "played"
+        ],
+        "answerIndex": 0,
+        "answer": "play",
+        "explanation": "主语 They 是复数，动词用原形 play",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-3",
+        "kpIds": [
+          2
+        ],
+        "sentence": "Listen! Someone ___ outside.",
+        "options": [
+          "sing",
+          "sings",
+          "is singing",
+          "sang"
+        ],
+        "answerIndex": 2,
+        "answer": "is singing",
+        "explanation": "Listen! 提示正在发生，用现在进行时",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-4",
+        "kpIds": [
+          2
+        ],
+        "sentence": "The children ___ TV now.",
+        "options": [
+          "watch",
+          "watches",
+          "are watching",
+          "watching"
+        ],
+        "answerIndex": 2,
+        "answer": "are watching",
+        "explanation": "now 提示现在进行时",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-5",
+        "kpIds": [
+          3
+        ],
+        "sentence": "She ___ to Beijing last week.",
+        "options": [
+          "go",
+          "goes",
+          "went",
+          "gone"
+        ],
+        "answerIndex": 2,
+        "answer": "went",
+        "explanation": "last week 是过去时间，go → went",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-6",
+        "kpIds": [
+          3
+        ],
+        "sentence": "They ___ at home last night.",
+        "options": [
+          "are",
+          "were",
+          "was",
+          "be"
+        ],
+        "answerIndex": 1,
+        "answer": "were",
+        "explanation": "last night 过去时间，主语 They 用 were",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-7",
+        "kpIds": [
+          4
+        ],
+        "sentence": "They ___ a football match tomorrow.",
+        "options": [
+          "have",
+          "had",
+          "will have",
+          "are having"
+        ],
+        "answerIndex": 2,
+        "answer": "will have",
+        "explanation": "tomorrow 是将来时间，用 will have",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "mc-8",
+        "kpIds": [
+          4
+        ],
+        "sentence": "We ___ visit our grandparents next Sunday.",
+        "options": [
+          "are",
+          "will",
+          "do",
+          "have"
+        ],
+        "answerIndex": 1,
+        "answer": "will",
+        "explanation": "next Sunday 用将来时",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "mc-9",
+        "kpIds": [
+          5
+        ],
+        "sentence": "I ___ already ___ my breakfast.",
+        "options": [
+          "have...eat",
+          "have...eaten",
+          "has...eaten",
+          "had...eaten"
+        ],
+        "answerIndex": 1,
+        "answer": "have...eaten",
+        "explanation": "现在完成时，I 用 have eaten",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-10",
+        "kpIds": [
+          5
+        ],
+        "sentence": "___ you ever ___ a horse?",
+        "options": [
+          "Do...ride",
+          "Did...rode",
+          "Have...ridden",
+          "Will...ride"
+        ],
+        "answerIndex": 2,
+        "answer": "Have...ridden",
+        "explanation": "ever 用于现在完成时",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-11",
+        "kpIds": [
+          6
+        ],
+        "sentence": "I ___ TV when she called.",
+        "options": [
+          "watch",
+          "was watching",
+          "watched",
+          "am watching"
+        ],
+        "answerIndex": 1,
+        "answer": "was watching",
+        "explanation": "when 从句用过去时，主句用过去进行时",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-12",
+        "kpIds": [
+          6
+        ],
+        "sentence": "While I ___ my homework, my mother came in.",
+        "options": [
+          "do",
+          "was doing",
+          "did",
+          "am doing"
+        ],
+        "answerIndex": 1,
+        "answer": "was doing",
+        "explanation": "while 后接进行时",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-13",
+        "kpIds": [
+          7
+        ],
+        "sentence": "Rice ___ in the south of China.",
+        "options": [
+          "grow",
+          "is grown",
+          "grows",
+          "growing"
+        ],
+        "answerIndex": 1,
+        "answer": "is grown",
+        "explanation": "水稻被种植，is grown",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-14",
+        "kpIds": [
+          7
+        ],
+        "sentence": "These computers ___ in China.",
+        "options": [
+          "make",
+          "are made",
+          "makes",
+          "making"
+        ],
+        "answerIndex": 1,
+        "answer": "are made",
+        "explanation": "电脑被制造，are made",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-15",
+        "kpIds": [
+          8
+        ],
+        "sentence": "The Great Wall ___ built over 2000 years ago.",
+        "options": [
+          "is",
+          "was",
+          "were",
+          "has"
+        ],
+        "answerIndex": 1,
+        "answer": "was",
+        "explanation": "was built",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-16",
+        "kpIds": [
+          9
+        ],
+        "sentence": "There are five ___ in the room.",
+        "options": [
+          "child",
+          "childs",
+          "children",
+          "childrens"
+        ],
+        "answerIndex": 2,
+        "answer": "children",
+        "explanation": "child 复数是不规则变化 children",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-17",
+        "kpIds": [
+          9
+        ],
+        "sentence": "There are many ___ on the farm.",
+        "options": [
+          "sheep",
+          "sheeps",
+          "sheepes",
+          "a sheep"
+        ],
+        "answerIndex": 0,
+        "answer": "sheep",
+        "explanation": "sheep 单复数同形",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-18",
+        "kpIds": [
+          10
+        ],
+        "sentence": "This coat is ___ than that one.",
+        "options": [
+          "cheap",
+          "cheaper",
+          "cheapest",
+          "more cheap"
+        ],
+        "answerIndex": 1,
+        "answer": "cheaper",
+        "explanation": "than 提示比较级",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-19",
+        "kpIds": [
+          10
+        ],
+        "sentence": "She is the ___ student in our class.",
+        "options": [
+          "good",
+          "better",
+          "best",
+          "well"
+        ],
+        "answerIndex": 2,
+        "answer": "best",
+        "explanation": "in our class 最高级用 best",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-20",
+        "kpIds": [
+          11
+        ],
+        "sentence": "___ is my friend. ___ name is Lily.",
+        "options": [
+          "She/She",
+          "Her/Her",
+          "She/Her",
+          "Her/She"
+        ],
+        "answerIndex": 2,
+        "answer": "She/Her",
+        "explanation": "主语用 She，名词前用 Her",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-21",
+        "kpIds": [
+          11
+        ],
+        "sentence": "Is this ___ pen? Yes, it's ___.",
+        "options": [
+          "your/mine",
+          "yours/my",
+          "your/my",
+          "yours/mine"
+        ],
+        "answerIndex": 0,
+        "answer": "your/mine",
+        "explanation": "名词前用 your，后面无名词用 mine",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-22",
+        "kpIds": [
+          12
+        ],
+        "sentence": "___ a book on the desk.",
+        "options": [
+          "There is",
+          "There are",
+          "It is",
+          "They are"
+        ],
+        "answerIndex": 0,
+        "answer": "There is",
+        "explanation": "a book 是单数，用 There is",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-23",
+        "kpIds": [
+          12
+        ],
+        "sentence": "There ___ a pen and two pencils in the box.",
+        "options": [
+          "is",
+          "are",
+          "have",
+          "has"
+        ],
+        "answerIndex": 0,
+        "answer": "is",
+        "explanation": "就近原则，a pen 是单数",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-24",
+        "kpIds": [
+          13
+        ],
+        "sentence": "I don't know ___ he will come.",
+        "options": [
+          "that",
+          "if",
+          "what",
+          "which"
+        ],
+        "answerIndex": 1,
+        "answer": "if",
+        "explanation": "是否来，用 if",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-25",
+        "kpIds": [
+          13
+        ],
+        "sentence": "Can you tell me ___?",
+        "options": [
+          "where is the bank",
+          "where the bank is",
+          "the bank is where",
+          "where was the bank"
+        ],
+        "answerIndex": 1,
+        "answer": "where the bank is",
+        "explanation": "宾语从句用陈述语序",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-26",
+        "kpIds": [
+          14
+        ],
+        "sentence": "If it ___ tomorrow, we won't go hiking.",
+        "options": [
+          "rain",
+          "rains",
+          "will rain",
+          "rained"
+        ],
+        "answerIndex": 1,
+        "answer": "rains",
+        "explanation": "if 从句用一般现在时",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-27",
+        "kpIds": [
+          14
+        ],
+        "sentence": "She didn't come to school ___ she was sick.",
+        "options": [
+          "so",
+          "because",
+          "but",
+          "and"
+        ],
+        "answerIndex": 1,
+        "answer": "because",
+        "explanation": "because 表示原因",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "mc-28",
+        "kpIds": [
+          15
+        ],
+        "sentence": "You ___ cross the street when the light is red.",
+        "options": [
+          "mustn't",
+          "can",
+          "should",
+          "needn't"
+        ],
+        "answerIndex": 0,
+        "answer": "mustn't",
+        "explanation": "红灯时禁止通行，mustn't",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "mc-29",
+        "kpIds": [
+          15
+        ],
+        "sentence": "___ I borrow your pen?",
+        "options": [
+          "Must",
+          "Need",
+          "May",
+          "Do"
+        ],
+        "answerIndex": 2,
+        "answer": "May",
+        "explanation": "请求许可用 May I",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "mc-30",
+        "kpIds": [
+          16
+        ],
+        "sentence": "It's important ___ English well.",
+        "options": [
+          "learn",
+          "to learn",
+          "learning",
+          "learned"
+        ],
+        "answerIndex": 1,
+        "answer": "to learn",
+        "explanation": "It's + adj. + to do",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-31",
+        "kpIds": [
+          16
+        ],
+        "sentence": "She wants ___ a doctor.",
+        "options": [
+          "be",
+          "to be",
+          "being",
+          "is"
+        ],
+        "answerIndex": 1,
+        "answer": "to be",
+        "explanation": "want to do sth.",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-32",
+        "kpIds": [
+          17
+        ],
+        "sentence": "He told me he ___ help me.",
+        "options": [
+          "will",
+          "would",
+          "is going to",
+          "can"
+        ],
+        "answerIndex": 1,
+        "answer": "would",
+        "explanation": "主句是过去时，从句用过去将来时 would",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-33",
+        "kpIds": [
+          17
+        ],
+        "sentence": "She said she ___ visit her grandma the next week.",
+        "options": [
+          "is going to",
+          "was going to",
+          "will",
+          "goes"
+        ],
+        "answerIndex": 1,
+        "answer": "was going to",
+        "explanation": "过去将来时 was/were going to",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-34",
+        "kpIds": [
+          18
+        ],
+        "sentence": "By the time I got to the station, the train ___.",
+        "options": [
+          "left",
+          "has left",
+          "had left",
+          "was leaving"
+        ],
+        "answerIndex": 2,
+        "answer": "had left",
+        "explanation": "got 是过去时，火车离开在之前，用过去完成时 had left",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "mc-35",
+        "kpIds": [
+          18
+        ],
+        "sentence": "She ___ never ___ such a beautiful place before.",
+        "options": [
+          "has...seen",
+          "had...seen",
+          "was...seeing",
+          "did...see"
+        ],
+        "answerIndex": 1,
+        "answer": "had...seen",
+        "explanation": "由 before 可知用过去完成时 had seen",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "mc-36",
+        "kpIds": [
+          19
+        ],
+        "sentence": "There are ___ students in our class.",
+        "options": [
+          "fourty",
+          "forty",
+          "fourteen",
+          "fourteenth"
+        ],
+        "answerIndex": 1,
+        "answer": "forty",
+        "explanation": "40 的正确拼写是 forty，注意没有 u",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-37",
+        "kpIds": [
+          19
+        ],
+        "sentence": "My birthday is on the ___ of May.",
+        "options": [
+          "nineth",
+          "ninth",
+          "nine",
+          "nineteen"
+        ],
+        "answerIndex": 1,
+        "answer": "ninth",
+        "explanation": "第九是 ninth，nine去掉e加th",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-38",
+        "kpIds": [
+          20
+        ],
+        "sentence": "I have ___ useful book.",
+        "options": [
+          "a",
+          "an",
+          "the",
+          "/"
+        ],
+        "answerIndex": 0,
+        "answer": "a",
+        "explanation": "useful 以辅音音素 /j/ 开头，用 a",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-39",
+        "kpIds": [
+          20
+        ],
+        "sentence": "___ sun rises in the east.",
+        "options": [
+          "A",
+          "An",
+          "The",
+          "/"
+        ],
+        "answerIndex": 2,
+        "answer": "The",
+        "explanation": "太阳是独一无二的，用 the",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-40",
+        "kpIds": [
+          21
+        ],
+        "sentence": "I often go to school ___ bus.",
+        "options": [
+          "by",
+          "on",
+          "in",
+          "with"
+        ],
+        "answerIndex": 0,
+        "answer": "by",
+        "explanation": "by bus = 乘公交车，by + 交通工具",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-41",
+        "kpIds": [
+          21
+        ],
+        "sentence": "The cat is ___ the table.",
+        "options": [
+          "in",
+          "on",
+          "under",
+          "between"
+        ],
+        "answerIndex": 2,
+        "answer": "under",
+        "explanation": "猫在桌子下面，用 under",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-42",
+        "kpIds": [
+          22
+        ],
+        "sentence": "This is the book ___ I bought yesterday.",
+        "options": [
+          "who",
+          "which",
+          "whom",
+          "whose"
+        ],
+        "answerIndex": 1,
+        "answer": "which",
+        "explanation": "book 是物，用 which/that",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "mc-43",
+        "kpIds": [
+          22
+        ],
+        "sentence": "The man ___ is wearing a hat is my uncle.",
+        "options": [
+          "which",
+          "who",
+          "whom",
+          "what"
+        ],
+        "answerIndex": 1,
+        "answer": "who",
+        "explanation": "man 是人，作主语用 who/that",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "mc-44",
+        "kpIds": [
+          23
+        ],
+        "sentence": "___ beautiful the girl is!",
+        "options": [
+          "What",
+          "What a",
+          "How",
+          "How a"
+        ],
+        "answerIndex": 2,
+        "answer": "How",
+        "explanation": "beautiful 是形容词，用 How",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-45",
+        "kpIds": [
+          23
+        ],
+        "sentence": "___ wonderful movie it is!",
+        "options": [
+          "What",
+          "What a",
+          "How",
+          "How a"
+        ],
+        "answerIndex": 1,
+        "answer": "What a",
+        "explanation": "movie 是可数名词单数，用 What a",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-46",
+        "kpIds": [
+          24
+        ],
+        "sentence": "___ in the library.",
+        "options": [
+          "Don't talk",
+          "Not talk",
+          "No talk",
+          "Don't talking"
+        ],
+        "answerIndex": 0,
+        "answer": "Don't talk",
+        "explanation": "祈使句否定用 Don't + 动词原形",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-47",
+        "kpIds": [
+          24
+        ],
+        "sentence": "___ go to the park together!",
+        "options": [
+          "Let's",
+          "Let we",
+          "Let us to",
+          "We let"
+        ],
+        "answerIndex": 0,
+        "answer": "Let's",
+        "explanation": "Let's + 动词原形表示建议",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "mc-48",
+        "kpIds": [
+          25
+        ],
+        "sentence": "Each of the students ___ a new book.",
+        "options": [
+          "have",
+          "has",
+          "are having",
+          "were having"
+        ],
+        "answerIndex": 1,
+        "answer": "has",
+        "explanation": "each 作主语，谓语用单数 has",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-49",
+        "kpIds": [
+          25
+        ],
+        "sentence": "There ___ a pen and two books on the desk.",
+        "options": [
+          "is",
+          "are",
+          "have",
+          "has"
+        ],
+        "answerIndex": 0,
+        "answer": "is",
+        "explanation": "There be 就近原则，a pen 是单数用 is",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-50",
+        "kpIds": [
+          26
+        ],
+        "sentence": "I enjoy ___ to music.",
+        "options": [
+          "listen",
+          "to listen",
+          "listening",
+          "listened"
+        ],
+        "answerIndex": 2,
+        "answer": "listening",
+        "explanation": "enjoy 后接动名词 listening",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-51",
+        "kpIds": [
+          26
+        ],
+        "sentence": "He is good at ___ basketball.",
+        "options": [
+          "play",
+          "plays",
+          "played",
+          "playing"
+        ],
+        "answerIndex": 3,
+        "answer": "playing",
+        "explanation": "介词 at 后接动名词 playing",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "mc-52",
+        "kpIds": [
+          166
+        ],
+        "sentence": "Which word is usually an adjective?",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "cared"
+        ],
+        "answerIndex": 0,
+        "answer": "careful",
+        "explanation": "-ful 常构成形容词，careful 意为“仔细的”。",
+        "difficulty": 2,
+        "grade": null
+      },
+      {
+        "id": "mc-53",
+        "kpIds": [
+          166
+        ],
+        "sentence": "The film is very ___. I am ___ in it.",
+        "options": [
+          "interesting; interested",
+          "interested; interesting",
+          "interest; interested",
+          "interesting; interest"
+        ],
+        "answerIndex": 0,
+        "answer": "interesting; interested",
+        "explanation": "-ing 形容词多描述事物特征，-ed 形容词多描述人的感受。",
+        "difficulty": 2,
+        "grade": null
+      },
+      {
+        "id": "mc-54",
+        "kpIds": [
+          167
+        ],
+        "sentence": "Which word is usually an adverb?",
+        "options": [
+          "quickly",
+          "quick",
+          "friendly",
+          "lovely"
+        ],
+        "answerIndex": 0,
+        "answer": "quickly",
+        "explanation": "quickly 是由 quick 加 -ly 构成的方式副词；friendly 和 lovely 通常是形容词。",
+        "difficulty": 2,
+        "grade": null
+      }
+    ],
+    "fillBlank": [
+      {
+        "id": "fb-1",
+        "kpIds": [
+          1
+        ],
+        "sentence": "My mother ___ (cook) dinner every evening.",
+        "answer": "cooks",
+        "explanation": "主语是第三人称单数，cook 加 s",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-2",
+        "kpIds": [
+          1
+        ],
+        "sentence": "We usually ___ (have) lunch at 12:00.",
+        "answer": "have",
+        "explanation": "主语 We 是复数，动词用原形",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-3",
+        "kpIds": [
+          2
+        ],
+        "sentence": "Look! It ___ (rain) outside.",
+        "answer": "is raining",
+        "explanation": "Look! 提示正在发生",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-4",
+        "kpIds": [
+          2
+        ],
+        "sentence": "She ___ (wear) a red dress today.",
+        "answer": "is wearing",
+        "explanation": "今天正在穿",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-5",
+        "kpIds": [
+          3
+        ],
+        "sentence": "He ___ (buy) a new book yesterday.",
+        "answer": "bought",
+        "explanation": "buy → bought 不规则变化",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-6",
+        "kpIds": [
+          3
+        ],
+        "sentence": "I ___ (see) her in the library just now.",
+        "answer": "saw",
+        "explanation": "just now 刚才，see → saw",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-7",
+        "kpIds": [
+          4
+        ],
+        "sentence": "I ___ (call) you when I get home.",
+        "answer": "will call",
+        "explanation": "将来的动作，用 will call",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "fb-8",
+        "kpIds": [
+          5
+        ],
+        "sentence": "I ___ just ___ (finish) my homework.",
+        "answer": "have finished",
+        "explanation": "just 提示用现在完成时",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "fb-9",
+        "kpIds": [
+          5
+        ],
+        "sentence": "She ___ (live) here since 2020.",
+        "answer": "has lived",
+        "explanation": "since 2020 用现在完成时",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "fb-10",
+        "kpIds": [
+          6
+        ],
+        "sentence": "At 7:00 yesterday evening, I ___ (have) dinner.",
+        "answer": "was having",
+        "explanation": "昨晚 7 点正在吃饭",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-11",
+        "kpIds": [
+          7
+        ],
+        "sentence": "The room ___ (clean) every morning.",
+        "answer": "is cleaned",
+        "explanation": "房间被打扫，被动语态",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-12",
+        "kpIds": [
+          8
+        ],
+        "sentence": "The Eiffel Tower ___ (build) in 1889.",
+        "answer": "was built",
+        "explanation": "过去时被动语态",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-13",
+        "kpIds": [
+          9
+        ],
+        "sentence": "There are three ___ (box) on the table.",
+        "answer": "boxes",
+        "explanation": "box → boxes",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-14",
+        "kpIds": [
+          10
+        ],
+        "sentence": "This question is ___ (easy) than that one.",
+        "answer": "easier",
+        "explanation": "easy → easier",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-15",
+        "kpIds": [
+          11
+        ],
+        "sentence": "Please give ___ (他) the book.",
+        "answer": "him",
+        "explanation": "介词后用宾格 him",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-16",
+        "kpIds": [
+          12
+        ],
+        "sentence": "___ ___ many people in the park yesterday.",
+        "answer": "There were",
+        "explanation": "过去时，people 复数用 There were",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-17",
+        "kpIds": [
+          13
+        ],
+        "sentence": "I wonder ___ she will come. (是否)",
+        "answer": "if",
+        "explanation": "if 或 whether 表示\"是否\"",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "fb-18",
+        "kpIds": [
+          14
+        ],
+        "sentence": "He will be happy if he ___ (get) a gift.",
+        "answer": "gets",
+        "explanation": "if 从句用一般现在时",
+        "difficulty": 3,
+        "grade": 8
+      },
+      {
+        "id": "fb-19",
+        "kpIds": [
+          15
+        ],
+        "sentence": "You ___ (应该) listen to the teacher.",
+        "answer": "should",
+        "explanation": "表示建议用 should",
+        "difficulty": 2,
+        "grade": 7
+      },
+      {
+        "id": "fb-20",
+        "kpIds": [
+          16
+        ],
+        "sentence": "He decided ___ (study) harder.",
+        "answer": "to study",
+        "explanation": "decide to do sth.",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-21",
+        "kpIds": [
+          17
+        ],
+        "sentence": "I thought you ___ (come) to the party.",
+        "answer": "would come",
+        "explanation": "thought 是过去时，从句用 would come",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-22",
+        "kpIds": [
+          18
+        ],
+        "sentence": "I realized I ___ (lose) my key.",
+        "answer": "had lost",
+        "explanation": "realized 是过去时，丢钥匙在之前，用 had lost",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "fb-23",
+        "kpIds": [
+          19
+        ],
+        "sentence": "December is the ___ (12) month of the year.",
+        "answer": "twelfth",
+        "explanation": "第十二是 twelfth，特殊变化",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-24",
+        "kpIds": [
+          20
+        ],
+        "sentence": "She is ___ honest girl.",
+        "answer": "an",
+        "explanation": "honest 以元音音素开头，用 an",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-25",
+        "kpIds": [
+          21
+        ],
+        "sentence": "I was born ___ July, 2008.",
+        "answer": "in",
+        "explanation": "月份前用 in",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-26",
+        "kpIds": [
+          22
+        ],
+        "sentence": "This is the school ___ I studied three years ago. (在那里)",
+        "answer": "where",
+        "explanation": "地点用 where = in which",
+        "difficulty": 3,
+        "grade": 9
+      },
+      {
+        "id": "fb-27",
+        "kpIds": [
+          23
+        ],
+        "sentence": "___ ___ exciting game it is!",
+        "answer": "What an",
+        "explanation": "exciting 以元音开头，用 What an",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-28",
+        "kpIds": [
+          24
+        ],
+        "sentence": "Please ___ (open) the window.",
+        "answer": "open",
+        "explanation": "祈使句肯定用动词原形",
+        "difficulty": 1,
+        "grade": 7
+      },
+      {
+        "id": "fb-29",
+        "kpIds": [
+          25
+        ],
+        "sentence": "Neither Tom nor his friends ___ (like) math.",
+        "answer": "like",
+        "explanation": "neither...nor 就近原则，friends 是复数用 like",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-30",
+        "kpIds": [
+          26
+        ],
+        "sentence": "Would you mind ___ (open) the door?",
+        "answer": "opening",
+        "explanation": "mind 后接动名词 opening",
+        "difficulty": 2,
+        "grade": 8
+      },
+      {
+        "id": "fb-31",
+        "kpIds": [
+          166
+        ],
+        "sentence": "The prefix \"un-\" in \"unhappy\" usually means ___.",
+        "answer": "not",
+        "explanation": "un- 常构成反义词，表示“不、非”。",
+        "difficulty": 2,
+        "grade": null
+      },
+      {
+        "id": "fb-32",
+        "kpIds": [
+          167
+        ],
+        "sentence": "happy becomes ___ when it is used as an adverb.",
+        "answer": "happily",
+        "explanation": "辅音字母+y 结尾的形容词变副词时，常变 y 为 i 再加 -ly。",
+        "difficulty": 2,
+        "grade": null
+      }
+    ]
+  },
+  "passage": [
+    {
+      "id": "pg-1",
+      "subType": "cloze",
+      "title": "My Daily Routine",
+      "text": "I ___ (get) up at 6:30 every morning. Then I ___ (have) breakfast at 7:00. My father ___ (read) newspapers while eating. My mother ___ (cook) lunch for us. After that, I ___ (go) to school by bus. School ___ (start) at 8:30. I usually ___ (finish) my homework before dinner.",
+      "blanks": [
+        {
+          "blankId": "pg-1-b0",
+          "kpIds": [
+            1
+          ],
+          "answer": "get",
+          "sentence": "I ___ (get) up at 6:30 every morning.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b1",
+          "kpIds": [
+            1
+          ],
+          "answer": "have",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b2",
+          "kpIds": [
+            1
+          ],
+          "answer": "reads",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b3",
+          "kpIds": [
+            1
+          ],
+          "answer": "cooks",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b4",
+          "kpIds": [
+            1
+          ],
+          "answer": "go",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b5",
+          "kpIds": [
+            1
+          ],
+          "answer": "starts",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        },
+        {
+          "blankId": "pg-1-b6",
+          "kpIds": [
+            1
+          ],
+          "answer": "finish",
+          "sentence": "Then I ___ (have) breakfast at 7:00.",
+          "explanation": "一般现在时描述日常习惯和规律动作"
+        }
+      ],
+      "difficulty": 1,
+      "grade": 7
+    },
+    {
+      "id": "pg-3",
+      "subType": "cloze",
+      "title": "At the Park",
+      "text": "Right now, I ___ (sit) on a bench. Some children ___ (play) soccer nearby. A girl ___ (run) after a ball. Two boys ___ (climb) the tree. Their mother ___ (call) them. A dog ___ (bark) loudly.",
+      "blanks": [
+        {
+          "blankId": "pg-3-b0",
+          "kpIds": [
+            2
+          ],
+          "answer": "am sitting",
+          "sentence": "Right now, I ___ (sit) on a bench.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        },
+        {
+          "blankId": "pg-3-b1",
+          "kpIds": [
+            2
+          ],
+          "answer": "are playing",
+          "sentence": "Some children ___ (play) soccer nearby.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        },
+        {
+          "blankId": "pg-3-b2",
+          "kpIds": [
+            2
+          ],
+          "answer": "is running",
+          "sentence": "Some children ___ (play) soccer nearby.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        },
+        {
+          "blankId": "pg-3-b3",
+          "kpIds": [
+            2
+          ],
+          "answer": "are climbing",
+          "sentence": "Some children ___ (play) soccer nearby.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        },
+        {
+          "blankId": "pg-3-b4",
+          "kpIds": [
+            2
+          ],
+          "answer": "is calling",
+          "sentence": "Some children ___ (play) soccer nearby.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        },
+        {
+          "blankId": "pg-3-b5",
+          "kpIds": [
+            2
+          ],
+          "answer": "is barking",
+          "sentence": "Some children ___ (play) soccer nearby.",
+          "explanation": "现在进行时 — 描述此刻正在发生的动作"
+        }
+      ],
+      "difficulty": 1,
+      "grade": 7
+    },
+    {
+      "id": "pg-10",
+      "subType": "cloze",
+      "title": "How Paper Is Made",
+      "text": "Paper ___ (make) from wood. First, trees ___ (cut) down. Then the wood ___ (take) to a factory. At the factory, the wood ___ (break) into small pieces. Water ___ (add) to make pulp. Finally, the pulp ___ (press) and dried to form paper.",
+      "blanks": [
+        {
+          "blankId": "pg-10-b0",
+          "kpIds": [
+            7
+          ],
+          "answer": "is made",
+          "sentence": "Paper ___ (make) from wood.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        },
+        {
+          "blankId": "pg-10-b1",
+          "kpIds": [
+            7
+          ],
+          "answer": "are cut",
+          "sentence": "First, trees ___ (cut) down.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        },
+        {
+          "blankId": "pg-10-b2",
+          "kpIds": [
+            7
+          ],
+          "answer": "is taken",
+          "sentence": "First, trees ___ (cut) down.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        },
+        {
+          "blankId": "pg-10-b3",
+          "kpIds": [
+            7
+          ],
+          "answer": "is broken",
+          "sentence": "First, trees ___ (cut) down.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        },
+        {
+          "blankId": "pg-10-b4",
+          "kpIds": [
+            7
+          ],
+          "answer": "is added",
+          "sentence": "First, trees ___ (cut) down.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        },
+        {
+          "blankId": "pg-10-b5",
+          "kpIds": [
+            7
+          ],
+          "answer": "is pressed",
+          "sentence": "First, trees ___ (cut) down.",
+          "explanation": "被动语态现在时 — be + 过去分词，主语是动作承受者"
+        }
+      ],
+      "difficulty": 2,
+      "grade": 8
+    },
+    {
+      "id": "pg-16",
+      "subType": "cloze",
+      "title": "What I Think",
+      "text": "I think ___ English is very useful. I don't know ___ I can pass the exam. My teacher often asks me ___ I have finished my homework. Can you tell me ___ the library is? I wonder ___ he will come tomorrow. I believe ___ hard work pays off.",
+      "blanks": [
+        {
+          "blankId": "pg-16-b0",
+          "kpIds": [
+            13
+          ],
+          "answer": "that",
+          "sentence": "I think ___ English is very useful.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        },
+        {
+          "blankId": "pg-16-b1",
+          "kpIds": [
+            13
+          ],
+          "answer": "if",
+          "sentence": "I don't know ___ I can pass the exam.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        },
+        {
+          "blankId": "pg-16-b2",
+          "kpIds": [
+            13
+          ],
+          "answer": "whether",
+          "sentence": "I don't know ___ I can pass the exam.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        },
+        {
+          "blankId": "pg-16-b3",
+          "kpIds": [
+            13
+          ],
+          "answer": "where",
+          "sentence": "I don't know ___ I can pass the exam.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        },
+        {
+          "blankId": "pg-16-b4",
+          "kpIds": [
+            13
+          ],
+          "answer": "if",
+          "sentence": "I don't know ___ I can pass the exam.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        },
+        {
+          "blankId": "pg-16-b5",
+          "kpIds": [
+            13
+          ],
+          "answer": "that",
+          "sentence": "I don't know ___ I can pass the exam.",
+          "explanation": "宾语从句 — that, if/whether, 特殊疑问词的用法"
+        }
+      ],
+      "difficulty": 3,
+      "grade": 8
+    },
+    {
+      "id": "pg-25",
+      "subType": "cloze",
+      "title": "My Friends",
+      "text": "The boy ___ (who/which) sits next to me is Tom. The girl ___ (who/which) you met yesterday is my sister. The book ___ (that/who) I borrowed from the library is very interesting. This is the reason ___ (why/which) I like English.",
+      "blanks": [
+        {
+          "blankId": "pg-25-b0",
+          "kpIds": [
+            22
+          ],
+          "answer": "who",
+          "sentence": "The boy ___ (who/which) sits next to me is Tom.",
+          "explanation": "定语从句 — 选择正确的关系代词或关系副词"
+        },
+        {
+          "blankId": "pg-25-b1",
+          "kpIds": [
+            22
+          ],
+          "answer": "who",
+          "sentence": "The girl ___ (who/which) you met yesterday is my sister.",
+          "explanation": "定语从句 — 选择正确的关系代词或关系副词"
+        },
+        {
+          "blankId": "pg-25-b2",
+          "kpIds": [
+            22
+          ],
+          "answer": "that",
+          "sentence": "The girl ___ (who/which) you met yesterday is my sister.",
+          "explanation": "定语从句 — 选择正确的关系代词或关系副词"
+        },
+        {
+          "blankId": "pg-25-b3",
+          "kpIds": [
+            22
+          ],
+          "answer": "why",
+          "sentence": "The girl ___ (who/which) you met yesterday is my sister.",
+          "explanation": "定语从句 — 选择正确的关系代词或关系副词"
+        }
+      ],
+      "difficulty": 3,
+      "grade": 9
+    }
+  ]
+}

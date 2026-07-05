@@ -86,7 +86,48 @@
 <div id="page-knowledge" class="page">
   <div class="page-sticky-header" id="knowledge-toolbar">
     <h4 class="fw-bold mb-3 page-title"><i class="bi bi-book-fill me-2"></i>语法</h4>
-    <div class="category-list" id="category-list"></div>
+     <div class="category-list" id="category-list"></div>
+    <div class="grammar-ref-tabs" id="grammar-ref-tabs"></div>
+  </div>
+  <div id="ref-adj-comp" class="grammar-ref-section d-none">
+    <div class="vocab-table-wrap">
+      <table class="table table-sm align-middle grammar-ref-table">
+        <thead><tr><th>类型</th><th>规则说明</th><th>原级</th><th>比较级</th><th>最高级</th></tr></thead>
+        <tbody id="adj-comp-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <div id="ref-adv-comp" class="grammar-ref-section d-none">
+    <div class="vocab-table-wrap">
+      <table class="table table-sm align-middle grammar-ref-table">
+        <thead><tr><th>类型</th><th>规则说明</th><th>原级</th><th>比较级</th><th>最高级</th></tr></thead>
+        <tbody id="adv-comp-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <div id="ref-irregular-verbs" class="grammar-ref-section d-none">
+    <div class="vocab-table-wrap">
+      <table class="table table-sm align-middle grammar-ref-table">
+        <thead><tr><th>原形</th><th>过去式</th><th>过去分词</th><th>中文</th></tr></thead>
+        <tbody id="irregular-verbs-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <div id="ref-pronoun" class="grammar-ref-section d-none">
+    <div class="vocab-table-wrap">
+      <table class="table table-sm align-middle grammar-ref-table">
+        <thead><tr><th>人称</th><th>主格</th><th>宾格</th><th>形物代</th><th>名物代</th><th>反身代词</th></tr></thead>
+        <tbody id="pronoun-body"></tbody>
+      </table>
+    </div>
+  </div>
+  <div id="ref-indefinite-pronoun" class="grammar-ref-section d-none">
+    <div class="vocab-table-wrap">
+      <table class="table table-sm align-middle grammar-ref-table">
+        <thead><tr><th>分类</th><th>用于肯定/单数</th><th>用于否定/疑问</th><th>指可数</th><th>指不可数</th><th>谓语单数</th><th>谓语复数</th></tr></thead>
+        <tbody id="indefinite-pronoun-body"></tbody>
+      </table>
+    </div>
   </div>
   <div id="kp-list" class="mt-1"></div>
 </div>
@@ -100,7 +141,6 @@
     <input id="vocab-search" class="form-control border-start-0 rounded-end-3" placeholder="搜索单词或中文..." oninput="handleVocabSearch()">
   </div>
   <div class="vocab-view-tabs" role="tablist" aria-label="词汇专题表">
-    <button class="vocab-view-tab" type="button" data-vocab-view="irregular" onclick="switchVocabView('irregular')">不规则动词</button>
     <button class="vocab-view-tab" type="button" data-vocab-view="numbers" onclick="switchVocabView('numbers')">数词</button>
     <button class="vocab-view-tab" type="button" data-vocab-view="calendar" onclick="switchVocabView('calendar')">月份/星期</button>
     <button class="vocab-view-tab" type="button" data-vocab-view="countries" onclick="switchVocabView('countries')">国家</button>
@@ -113,14 +153,6 @@
   </div>
   </div><!-- /vocab-toolbar -->
   <div id="vocab-list"></div>
-  <div class="vocab-table-section d-none" id="irregular-verbs-section">
-    <div class="vocab-table-wrap">
-      <table class="table table-sm align-middle vocab-table">
-        <thead><tr><th>原形</th><th>过去式</th><th>过去分词</th><th>中文</th></tr></thead>
-        <tbody id="irregular-verbs-body"></tbody>
-      </table>
-    </div>
-  </div>
   <div class="vocab-table-section d-none" id="special-vocab-section">
     <div class="vocab-table-wrap">
       <table class="table table-sm align-middle vocab-table">
@@ -316,6 +348,14 @@
   </div>
 </div>
 <script src="auth.js"></script>
-<script src="app.js"></script>
+<script src="storage.js"></script>
+<script src="data.js"></script>
+<script src="daily-task.js"></script>
+<script src="parent-report.js"></script>
+<script src="quiz-gen.js"></script>
+<script src="quiz-engine.js"></script>
+<script src="ui-pages.js"></script>
+<script src="data-io.js"></script>
+<script src="init.js"></script>
 </body>
 </html>
