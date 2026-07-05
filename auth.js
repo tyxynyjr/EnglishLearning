@@ -9,10 +9,10 @@
 // 管理员可在浏览器控制台运行 addUser() 添加新用户，或使用
 //   generateHash('新密码') 生成哈希后手动填入下方数组。
 const USERS = [
-  { username: 'admin',   passwordHash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', role: 'admin',   displayName: '老师' },
-  { username: 'demo1',   passwordHash: '8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92', role: 'student', displayName: '演示学生1' },
-  { username: 'demo2',   passwordHash: 'b6234d2ea0d6022be63db80d7b80e221097fe4a469dc44febcd2a9241effdeba', role: 'student', displayName: '演示学生2' },
-  { username: 'yixuan',   passwordHash: '69ffcf9637f4aba4ef13f22903efc5b3962001266d5c9c33085b02de457231e4', role: 'student', displayName: 'Yi Xuan' },
+  { username: 'admin',   passwordHash: '37bd45d638c2d11c49c641d2e9c4f49f406caf3ee282743e0c800aa1ed68e2ee', role: 'admin',   displayName: '老师' },
+  { username: 'xuruobing',   passwordHash: '2795f13848f1f4be21f06e0fd028ccd5f0dcbe69c07c8f47f347f088fd880adc', role: 'student', displayName: 'Xu Ruobing' },
+  { username: 'xuruotong',   passwordHash: '4f1f91c6ff833a0df3d3ae09ffa07c7a4cd66bef2d53857332a9c5d679690a4d', role: 'student', displayName: 'Xu Ruotong' },
+  { username: 'zhaoyuchen',   passwordHash: 'e18d8479a77bb9a98022a13ecbfb91b7a142f2e390aa433e735a7f2d50d5de75', role: 'student', displayName: 'Zhao Yuchen' },
   // ↑ 发布前请修改默认密码并删掉不需要的账号
 ]
 
