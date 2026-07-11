@@ -219,6 +219,9 @@ function renderVocabulary(){
     if(search)return v.word.toLowerCase().includes(search)||String(v.translation||'').includes(search)||String(v.sourceRaw||'').toLowerCase().includes(search)
     return true
   })
+  // Dedup by word for stats
+  var seenWord=new Set()
+  baseList=baseList.filter(function(v){var w=v.word.toLowerCase();if(seenWord.has(w))return false;seenWord.add(w);return true})
   let mTotal=0,mUnquizzed=0,mMastered=0,mLearning=0,mWeak=0
   baseList.forEach(v=>{
     const bucket=vocabMasteryBucket(mastery[v.id])
@@ -319,23 +322,25 @@ function renderStats(){
     })
     return{total:t,err:t-c}
   }
-  const vAll=[...VOCABULARY,...(KET_VOCABULARY||[])],vocabRecords=records.filter(r=>r.type==='vocabulary')
-  const recTotal=vocabRecords.reduce((s,r)=>s+(r.total||0),0),recCorrect=vocabRecords.reduce((s,r)=>s+(r.correct||0),0)
-  let masteryTotal=0,masteryErr=0
-  vAll.forEach(v=>{const m=vocabMastery[v.id]||{};masteryTotal+=m.quizzedCount||0;masteryErr+=m.errorCount||0})
-  const vTotal=recTotal||masteryTotal,vErr=recTotal?recTotal-recCorrect:masteryErr
-  html+='<tr class="table-active fw-bold"><td><button class="stats-toggle collapsed" data-group="vocab" onclick="toggleStatsGroup(this)"><span class="stats-arrow">▾</span>词汇</button></td><td>'+vTotal+'</td><td'+cellClass(vErr)+'>'+vErr+'</td><td>'+acc(vTotal,vErr)+'</td><td></td></tr>'
+  const vAll=[...VOCABULARY,...(KET_VOCABULARY||[])]
+  const kindTypes=[{key:'vocab_regular',label:'选择题'},{key:'vocab_dictation',label:'默写题'},{key:'vocab_irregular',label:'不规则动词'}]
   const vocabLevelOrder={basic:1,secondary:2,ket:3,junior:4,supplemental:5}
+  // Compute level totals from kindStats
   const vocabLevels=new Map()
   ;[...vAll,...(KET_VOCABULARY||[])].forEach(v=>{
     const level=vocabStatsLevel(v)
-    if(!vocabLevels.has(level.key))vocabLevels.set(level.key,{key:level.key,label:level.label,t:0,e:0})
-    const row=vocabLevels.get(level.key),m=vocabMastery[v.id]||{}
-    row.t+=m.quizzedCount||0;row.e+=m.errorCount||0
+    if(!vocabLevels.has(level.key))vocabLevels.set(level.key,{key:level.key,label:level.label,vT:0,vE:0})
   })
-  const kindTypes=[{key:'vocab_regular',label:'选择题'},{key:'vocab_dictation',label:'默写题'},{key:'vocab_irregular',label:'不规则动词'}]
+  ;[...vocabLevels.keys()].forEach(key=>{
+    const row=vocabLevels.get(key)
+    kindTypes.forEach(k=>{const ks=sumKindByLevel(key,k.key);row.vT+=ks.total||0;row.vE+=ks.err||0})
+  })
+  // Header row = sum of all level rows
+  var vTotal=0,vErr=0
+  vocabLevels.forEach(function(r){vTotal+=r.vT;vErr+=r.vE})
+  html+='<tr class="table-active fw-bold"><td><button class="stats-toggle" data-group="vocab" onclick="toggleStatsGroup(this)"><span class="stats-arrow">▾</span>词汇</button></td><td>'+vTotal+'</td><td'+cellClass(vErr)+'>'+vErr+'</td><td>'+acc(vTotal,vErr)+'</td><td></td></tr>'
   ;[...vocabLevels.values()].sort((a,b)=>(vocabLevelOrder[a.key]||9)-(vocabLevelOrder[b.key]||9)).forEach(r=>{
-    html+='<tr class="stats-sub stats-sub-vocab collapsed'+rowClass(r.e,r.t)+'"><td class="ps-3"><button class="stats-toggle collapsed" data-group="vocab-'+r.key+'" onclick="toggleStatsGroup(this)" style="background:none;border:none;font-weight:inherit;color:inherit;padding:0;width:100%;text-align:left"><span class="stats-arrow">▾</span>'+esc(r.label)+'</button><span class="ps-1"></span></td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t,'vocabulary')+'</td></tr>'
+    html+='<tr class="stats-sub stats-sub-vocab'+rowClass(r.vE,r.vT)+'"><td class="ps-3"><button class="stats-toggle collapsed" data-group="vocab-'+r.key+'" onclick="toggleStatsGroup(this)" style="background:none;border:none;font-weight:inherit;color:inherit;padding:0;width:100%;text-align:left"><span class="stats-arrow">▾</span>'+esc(r.label)+'</button><span class="ps-1"></span></td><td>'+r.vT+'</td><td'+cellClass(r.vE)+'>'+r.vE+'</td><td>'+acc(r.vT,r.vE)+'</td><td>'+masteryTag(r.vE,r.vT,'vocabulary')+'</td></tr>'
     kindTypes.forEach(k=>{
       const ks=sumKindByLevel(r.key,k.key)
       html+='<tr class="stats-sub stats-sub-vocab-'+r.key+' collapsed'+rowClass(ks.err,ks.total)+'"><td class="ps-4 small text-secondary">'+esc(k.label)+'</td><td>'+ks.total+'</td><td'+cellClass(ks.err)+'>'+ks.err+'</td><td>'+acc(ks.total,ks.err)+'</td><td></td></tr>'

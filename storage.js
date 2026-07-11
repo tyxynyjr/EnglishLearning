@@ -9,7 +9,7 @@ const STORAGE_PREFIX='ezlangent:schema'+STORAGE_SCHEMA_VERSION+':'
 const DATA_KEYS=['el_quiz_records','el_error_items','el_vocab_mastery','el_knowledge_stats','el_study_log','el_daily_tasks']
 const DAILY_TASK_FLOW_VERSION=12
 const EB_INTERVALS=[8,24,72,168,336,720]
-const App={currentTab:'home',quizType:'grammar',quizQty:10,quizQtyTouched:false,quizSources:[],questions:[],currentQ:0,answers:[],timer:null,seconds:0,answered:false,errorFilter:'all',statsDays:7,parentReportType:'daily',vocabView:'words',vocabFilters:{mastery:'all',letter:null},activeDailyTaskId:null,activeDailyTaskCountedIndexes:[],pendingDailyTaskReviewId:null}
+const App={currentTab:'home',quizType:'vocabulary',quizQty:10,quizQtyTouched:false,quizSources:[],questions:[],currentQ:0,answers:[],timer:null,seconds:0,answered:false,errorFilter:'all',statsDays:7,parentReportType:'daily',vocabView:'words',vocabFilters:{mastery:'all',letter:null},activeDailyTaskId:null,activeDailyTaskCountedIndexes:[],pendingDailyTaskReviewId:null}
 
 function storageKey(k){
   const ns = (typeof currentUser !== 'undefined' && currentUser && currentUser.username) ? currentUser.username : 'guest'

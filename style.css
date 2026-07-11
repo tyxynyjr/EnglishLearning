@@ -304,6 +304,9 @@ body{
 .vocab-level-tab.active{background:#389e0d;border-color:#389e0d;color:#fff}
 .quiz-type-vocab{background:#e8f4ff!important;border-color:#b7d4e8!important}
 .quiz-type-vocab.selected{background:#b7d9f0!important;border-color:#4a90d9!important;color:#1f5f99!important}
+.quiz-type-passage{background:#f0f0f0!important;border-color:#d0d0d0!important}
+.quiz-type-passage .desc{display:block!important}
+.quiz-type-passage.selected{background:#d9d9d9!important;border-color:#999!important;color:#333!important}
 
 .vocab-table-section{background:#fff;border:1px solid #d7eaff;border-radius:.65rem;margin-top:.75rem;overflow:visible}
 .vocab-table-wrap{overflow:visible}

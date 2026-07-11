@@ -61,24 +61,35 @@ function renderQ(){
   if(ans){const cr=isAnswerCorrect(q,App.answers[App.currentQ]);showFB(cr,q.explanation||'',q)}
   updateNav()
 }
+function normalizeAnswer(s){
+  return String(s||'').trim().toLowerCase()
+    .replace(/[\uff01-\uff5e]/g,function(ch){return String.fromCharCode(ch.charCodeAt(0)-0xFEE0)})
+    .replace(/\u3000/g,' ')
+    .replace(/\s+/g,' ')
+}
 function cleanVocabQuestionText(text){
   return String(text||'').replace(/\s*\/[^/]+\/\s*/g,' ').replace(/\s+/g,' ').trim()
 }
 function isAnswerCorrect(q,ans){
   if(ans===null||ans===undefined)return false
   if(q.type==='multiple_choice')return ans===q.answer
-  if(q.type==='fill_blank')return String(ans).toLowerCase().trim()===q.answer.toLowerCase().trim()
+  if(q.type==='fill_blank')return normalizeAnswer(ans)===normalizeAnswer(q.answer)
   if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en'||q.type==='vocab_irregular')return ans===q.answer
   if(q.type==='vocab_dictation'){
-    if(q.direction==='cn2en')return String(ans).toLowerCase().trim()===q.answer.toLowerCase().trim()
-    var user=String(ans||'').trim(),correct=String(q.answer||'').trim()
-    if(correct.length<=1)return user===correct
-    if(correct.length===2)return Array.from(correct).some(function(c){return user.includes(c)})
-    var common=Array.from(correct).filter(function(c){return user.includes(c)}).length
-    return common/correct.length>=0.6
+    if(q.direction==='cn2en')return normalizeAnswer(ans)===normalizeAnswer(q.answer)
+    var user=String(ans||'').trim()
+    var meanings=String(q.answer||'').split('；').map(function(m){return m.trim()}).filter(Boolean)
+    for(var mi=0;mi<meanings.length;mi++){
+      var correct=meanings[mi]
+      if(correct.length<=1){if(user===correct)return true;continue}
+      if(correct.length===2){if(Array.from(correct).some(function(c){return user.includes(c)}))return true;continue}
+      var common=Array.from(correct).filter(function(c){return user.includes(c)}).length
+      if(common/correct.length>=0.6)return true
+    }
+    return false
   }
   if(q.type==='error_review')return ans==='correct'
-  if(q.type==='passage'){if(!Array.isArray(ans))return false;return ans.every((a,i)=>a&&q.blanks[i]&&a.toLowerCase().trim()===q.blanks[i].toLowerCase().trim())}
+  if(q.type==='passage'){if(!Array.isArray(ans))return false;return ans.every((a,i)=>a&&q.blanks[i]&&normalizeAnswer(a)===normalizeAnswer(q.blanks[i]))}
   return false
 }
 function passageKpList(q){
@@ -98,7 +109,7 @@ function selectErrorOpt(i){if(App.answers[App.currentQ]!==null&&App.answers[App.
 function submitFill(){
   if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return
   const inp=document.getElementById('fill-input');if(!inp)return;const v=inp.value.trim();if(!v){showToast('请输入答案');return}
-  const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;const dictCr=q.type==='vocab_dictation'?isAnswerCorrect(q,v):v.toLowerCase()===q.answer.toLowerCase();updateMastery(q,dictCr);trackE(q,dictCr,v,q.answer);renderQ()
+  const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;const dictCr=q.type==='vocab_dictation'?isAnswerCorrect(q,v):v.toLowerCase()===q.answer.toLowerCase();if(q.type?.startsWith('vocab'))updateVocabMastery(q,dictCr);else updateMastery(q,dictCr);trackE(q,dictCr,v,q.answer);renderQ()
 }
 function submitPassage(){
   const q=App.questions[App.currentQ],ans=q.blanks.map((_,i)=>{const el=document.getElementById('passage-blank-'+i);return el?el.value.trim():''})
@@ -134,7 +145,8 @@ function showFB(cr,exp,q){
     el.innerHTML=info+'<strong><i class="bi '+(cr?'bi-check-circle':'bi-x-circle')+' me-1"></i>'+(cr?'已填写部分全部正确！':'已批改，注意核对标红处')+'</strong><div class="result-passage-answers"><div class="panel-label"><i class="bi bi-list-check me-1"></i>答案核对</div>'+answerRows+'</div>'+explain+action
     return
   }
-  el.innerHTML=cr?info+'<strong><i class="bi bi-check-circle me-1"></i>回答正确！</strong>'+(exp?'<br><span class="small">'+exp+'</span>':''):info+'<strong><i class="bi bi-x-circle me-1"></i>回答错误</strong>'+(exp?'<br><span class="small">'+exp+'</span>':'')
+  var expHtml=exp?('<br><span class="small">'+esc(exp).replace('【解析】','<br>【解析】')+'</span>'):''
+  el.innerHTML=cr?info+'<strong><i class="bi bi-check-circle me-1"></i>回答正确！</strong>'+expHtml:info+'<strong><i class="bi bi-x-circle me-1"></i>回答错误</strong>'+expHtml
 }
 function updateNav(){
   const nb=document.getElementById('quiz-next-btn'),pb=document.getElementById('quiz-prev-btn'),sb=document.getElementById('quiz-submit-btn')
@@ -522,7 +534,7 @@ function resetQuizUI(){
   document.getElementById('quiz-taking').classList.add('d-none')
   document.getElementById('quiz-result').classList.add('d-none')
   App.questions=[];App.currentQ=0;App.answers=[];App.answered=false;App.activeDailyTaskId=null;App.activeDailyTaskCountedIndexes=[]
-  if(App.quizType==='daily')App.quizType='grammar'
+  if(App.quizType==='daily')App.quizType='vocabulary'
   document.querySelectorAll('.quiz-type-card').forEach(c=>c.classList.toggle('selected',c.dataset.type===App.quizType))
   if(App.timer){clearInterval(App.timer);App.timer=null}
   renderSourceOptions()

@@ -6,18 +6,21 @@ function pullQuestions(ids, count, isPassage) {
   if (!QUESTIONS) return []
   const idSet = new Set(ids), result = []
   if (!isPassage) {
-    for (const q of (QUESTIONS.sentence?.multipleChoice || [])) {
-      if (result.length >= count) break
-      if (q.kpIds?.some(id => idSet.has(id))) {
-        const kp = KNOWLEDGE_POINTS.find(k => k.id === q.kpIds[0])
-        result.push({ type: 'multiple_choice', kpId: q.kpIds[0], kpTitle: kp?.title || '', sentence: q.sentence, options: [...q.options], answer: q.answerIndex, explanation: q.explanation || '' })
-      }
-    }
-    for (const q of (QUESTIONS.sentence?.fillBlank || [])) {
-      if (result.length >= count) break
-      if (q.kpIds?.some(id => idSet.has(id))) {
-        const kp = KNOWLEDGE_POINTS.find(k => k.id === q.kpIds[0])
-        result.push({ type: 'fill_blank', kpId: q.kpIds[0], kpTitle: kp?.title || '', sentence: q.sentence, answer: q.answer, explanation: q.explanation || '' })
+    // Merge choice + blank, filter batch=new, shuffle
+    var pool=[]
+    ;(QUESTIONS.sentence?.multipleChoice||[]).forEach(function(q){if(q.batch==='new')pool.push({q:q,type:'multiple_choice'})})
+    ;(QUESTIONS.sentence?.fillBlank||[]).forEach(function(q){if(q.batch==='new')pool.push({q:q,type:'fill_blank'})})
+    // Fisher-Yates shuffle
+    for(var i=pool.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=pool[i];pool[i]=pool[j];pool[j]=tmp}
+    for(var i=0;i<pool.length&&result.length<count;i++){
+      var item=pool[i],q=item.q
+      if(!q.kpIds||!q.kpIds.some(function(id){return idSet.has(id)}))continue
+      var kp=KNOWLEDGE_POINTS.find(function(k){return k.id===q.kpIds[0]})
+      var kpTitle=kp?.title||''
+      if(item.type==='multiple_choice'){
+        result.push({type:'multiple_choice',kpId:q.kpIds[0],kpTitle:kpTitle,sentence:q.sentence,options:[].concat(q.options),answer:q.answerIndex,explanation:q.explanation||''})
+      }else{
+        result.push({type:'fill_blank',kpId:q.kpIds[0],kpTitle:kpTitle,sentence:q.sentence,answer:q.answer,explanation:q.explanation||''})
       }
     }
   } else {
@@ -38,33 +41,34 @@ function pullQuestions(ids, count, isPassage) {
 
 function generateGrammar(ids,count,isPassage,mixedPassage=false){
   if(isPassage)return pullQuestions(ids,count,true)
-  const stats=getKpStats()
-  let cand=ids.map(id=>{const kp=KNOWLEDGE_POINTS.find(k=>k.id===id);if(!kp)return null;const s=stats[id]||{}
-    const reviewCount=s.reviewCount||0,lastQuizzed=s.lastQuizzed||0
-    let w
-    if((s.quizzedCount||0)===0)       w=100
-    else if((s.errorCount||0)>0)       w=30+(s.errorCount||0)*3+ebMultiplier(reviewCount,lastQuizzed)*2
-    else                               w=1+ebMultiplier(reviewCount,lastQuizzed)
-    return{kp,weight:w}
-  }).filter(Boolean)
-  const fromQuestions = pullQuestions(ids, count, false)
-  const qs=[],usedKs=new Set();let att=0
-  const remaining = Math.max(0, count - fromQuestions.length)
-  const totalAvail = Math.min(remaining, cand.reduce((s,c)=>s+generatedGrammarSingles(c.kp).length,0))
-  const target=Math.min(count, fromQuestions.length + totalAvail)
-  qs.push(...fromQuestions.slice(0, count))
-  while(qs.length<target&&att<target*5&&cand.length>0){
-    att++;const availableCand=cand.filter(c=>generatedGrammarSingles(c.kp).some((_,i)=>!usedKs.has('q-'+c.kp.id+'-'+i)))
-    if(availableCand.length===0)break
-    const w=availableCand.map(c=>c.weight),ch=weightedPick(availableCand,w);if(!ch)continue
-    const{kp}=ch
-    const pool=generatedGrammarSingles(kp).map((data,i)=>({idx:i,data})).filter(item=>!usedKs.has('q-'+kp.id+'-'+item.idx))
-    if(pool.length===0)continue
-    const pick=pool[Math.floor(Math.random()*pool.length)]
-    usedKs.add('q-'+kp.id+'-'+pick.idx)
-    qs.push({type:'multiple_choice',kpId:kp.id,kpTitle:kp.title,sentence:pick.data.sentence,options:pick.data.options,answer:pick.data.answer,explanation:pick.data.explanation})
+  var fromQuestions=pullQuestions(ids,count,false)
+  if(fromQuestions.length===0)return[]
+  // Weight KPs by mastery: unquizzed > error > overdue
+  var stats=getKpStats()
+  var cand={}
+  fromQuestions.forEach(function(q){
+    var kpId=q.kpId;if(!kpId)return
+    if(!cand[kpId])cand[kpId]={kpId:kpId,title:q.kpTitle||'',questions:[]}
+    cand[kpId].questions.push(q)
+  })
+  var sorted=Object.keys(cand).map(function(id){
+    var s=stats[id]||{},eb=ebMultiplier(s.reviewCount||0,s.lastQuizzed||0)
+    var w=(s.quizzedCount||0)===0?100:(s.errorCount||0)>0?30+(s.errorCount||0)*3+eb*2:1+eb
+    return{kpId:parseInt(id),title:cand[id].title,weight:w,questions:cand[id].questions}
+  }).sort(function(a,b){return b.weight-a.weight})
+  var result=[],usedQs=new Set()
+  for(var si=0;si<sorted.length&&result.length<count;si++){
+    var kp=sorted[si]
+    // Shuffle this KP's questions
+    var qs=[].concat(kp.questions)
+    for(var i=qs.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=qs[i];qs[i]=qs[j];qs[j]=tmp}
+    for(var qi=0;qi<qs.length&&result.length<count;qi++){
+      var q=qs[qi]
+      var key=q.sentence+'|'+(q.type||'')+'|'+(q.answer!==undefined?q.answer:'')
+      if(!usedQs.has(key)){usedQs.add(key);result.push(q)}
+    }
   }
-  return qs
+  return result
 }
 
 function generateVocab(count, levelFilter, questionType){
