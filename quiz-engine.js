@@ -38,8 +38,8 @@ function renderQ(){
       return'<div class="'+c+'" data-letter="'+String.fromCharCode(65+i)+'" onclick="'+oc+'">'+o+'</div>'
     }).join('')+'</div>'
   }else if(q.type==='fill_blank'){
-    const parts=q.sentence.split('___')
-    qEl.innerHTML=parts[0]+'<span class="blank">______</span>'+(parts[1]||'')
+    var parts=q.sentence.split('___')
+    qEl.innerHTML=parts.map(function(p,i){return p+(i<parts.length-1?'<span class="blank">______</span>':'')}).join('')
     if(ans){aEl.innerHTML='<div class="mt-2 small">你的答案：<strong class="text-primary">'+esc(App.answers[App.currentQ])+'</strong></div>'}
     else{aEl.innerHTML='<input class="form-control form-control-lg rounded-3 mt-2" id="fill-input" placeholder="输入答案..." onkeydown="if(event.key===\'Enter\')submitFill()">';setTimeout(()=>document.getElementById('fill-input')?.focus(),100)}
   }else if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en'||q.type==='vocab_irregular'){
@@ -73,7 +73,7 @@ function cleanVocabQuestionText(text){
 function isAnswerCorrect(q,ans){
   if(ans===null||ans===undefined)return false
   if(q.type==='multiple_choice')return ans===q.answer
-  if(q.type==='fill_blank')return normalizeAnswer(ans)===normalizeAnswer(q.answer)
+  if(q.type==='fill_blank'){var parts=q.answer.split(/[；;…]+/).map(function(p){return normalizeAnswer(p)});var u=normalizeAnswer(ans);return parts.every(function(p){return u.includes(p)})}
   if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en'||q.type==='vocab_irregular')return ans===q.answer
   if(q.type==='vocab_dictation'){
     if(q.direction==='cn2en')return normalizeAnswer(ans)===normalizeAnswer(q.answer)
@@ -345,15 +345,15 @@ function inferErrorContext(e){
   if(ctx.questionKind==='passage')return ctx
   if(QUESTIONS){
     for(const q of QUESTIONS.sentence?.multipleChoice||[]){
-      if(q.sentence===qText||q.options?.includes(e.correctAnswer)){
+      if(q.sentence===qText){
         const kp=KNOWLEDGE_POINTS.find(k=>k.id===(q.kpIds||[])[0])
-        ctx.kpTitle=ctx.kpTitle||(kp?.title||'');ctx.questionKind=ctx.questionKind||'multiple_choice';ctx.questionText=q.sentence;ctx.explanation=ctx.explanation||q.explanation;return ctx
+        ctx.kpTitle=ctx.kpTitle||(kp?.title||'');ctx.questionKind='multiple_choice';ctx.questionText=q.sentence;ctx.explanation=ctx.explanation||q.explanation;return ctx
       }
     }
     for(const q of QUESTIONS.sentence?.fillBlank||[]){
-      if(q.sentence===qText||q.answer===e.correctAnswer){
+      if(q.sentence===qText){
         const kp=KNOWLEDGE_POINTS.find(k=>k.id===(q.kpIds||[])[0])
-        ctx.kpTitle=ctx.kpTitle||(kp?.title||'');ctx.questionKind=ctx.questionKind||'fill_blank';ctx.questionText=q.sentence;ctx.explanation=ctx.explanation||q.explanation;return ctx
+        ctx.kpTitle=ctx.kpTitle||(kp?.title||'');ctx.questionKind='fill_blank';ctx.questionText=q.sentence;ctx.explanation=ctx.explanation||q.explanation;return ctx
       }
     }
   }

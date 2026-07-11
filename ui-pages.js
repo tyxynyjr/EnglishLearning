@@ -316,7 +316,7 @@ function renderStats(){
   gRows.forEach(r=>{html+='<tr class="stats-sub stats-sub-grammar collapsed'+rowClass(r.e,r.t)+'"><td class="ps-3">'+esc(r.title)+'</td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t)+'</td></tr>'})
   function sumKindByLevel(lvl,kind){
     let t=0,c=0
-    records.filter(r=>r.type==='vocabulary').forEach(r=>{
+    records.filter(function(r){return r.type==='vocabulary'||r.type==='daily'}).forEach(function(r){
       const st=r.kindStats&&r.kindStats[lvl+'|'+kind]
       if(st){t+=st.total||0;c+=st.correct||0}
     })

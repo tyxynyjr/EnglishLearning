@@ -43,9 +43,7 @@ function generateGrammar(ids,count,isPassage,mixedPassage=false){
   if(isPassage)return pullQuestions(ids,count,true)
   var fromQuestions=pullQuestions(ids,count,false)
   if(fromQuestions.length===0)return[]
-  // Weight KPs by mastery: unquizzed > error > overdue
-  var stats=getKpStats()
-  var cand={}
+  var stats=getKpStats(),cand={}
   fromQuestions.forEach(function(q){
     var kpId=q.kpId;if(!kpId)return
     if(!cand[kpId])cand[kpId]={kpId:kpId,title:q.kpTitle||'',questions:[]}
@@ -54,18 +52,13 @@ function generateGrammar(ids,count,isPassage,mixedPassage=false){
   var sorted=Object.keys(cand).map(function(id){
     var s=stats[id]||{},eb=ebMultiplier(s.reviewCount||0,s.lastQuizzed||0)
     var w=(s.quizzedCount||0)===0?100:(s.errorCount||0)>0?30+(s.errorCount||0)*3+eb*2:1+eb
-    return{kpId:parseInt(id),title:cand[id].title,weight:w,questions:cand[id].questions}
+    return{kpId:parseInt(id),weight:w,questions:cand[id].questions}
   }).sort(function(a,b){return b.weight-a.weight})
-  var result=[],usedQs=new Set()
+  var result=[]
   for(var si=0;si<sorted.length&&result.length<count;si++){
-    var kp=sorted[si]
-    // Shuffle this KP's questions
-    var qs=[].concat(kp.questions)
-    for(var i=qs.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var tmp=qs[i];qs[i]=qs[j];qs[j]=tmp}
+    var qs=sorted[si].questions
     for(var qi=0;qi<qs.length&&result.length<count;qi++){
-      var q=qs[qi]
-      var key=q.sentence+'|'+(q.type||'')+'|'+(q.answer!==undefined?q.answer:'')
-      if(!usedQs.has(key)){usedQs.add(key);result.push(q)}
+      result.push(qs[qi])
     }
   }
   return result
