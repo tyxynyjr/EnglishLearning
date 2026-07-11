@@ -49,6 +49,10 @@ function renderQ(){
       const oc=ans?'':'selectVocabOption(\''+esc(o)+'\')'
       return'<div class="'+c+'" data-letter="'+String.fromCharCode(65+i)+'" onclick="'+oc+'">'+o+'</div>'
     }).join('')+'</div>'
+  }else if(q.type==='vocab_dictation'){
+    qEl.innerHTML=q.qText+(q.phonetic?' <small class="text-secondary">'+q.phonetic+'</small>':'')
+    if(ans){var cr2=isAnswerCorrect(q,App.answers[App.currentQ]);aEl.innerHTML='<div class="mt-2 small">你的答案：<strong class="text-'+(cr2?'success':'danger')+'">'+esc(App.answers[App.currentQ])+'</strong></div><div class="mt-1 small text-secondary">正确答案：<strong>'+esc(q.answer)+'</strong></div>'}
+    else{aEl.innerHTML='<input class="form-control form-control-lg rounded-3 mt-2" id="fill-input" placeholder="输入答案..." onkeydown="if(event.key===\'Enter\')submitFill()">';setTimeout(()=>document.getElementById('fill-input')?.focus(),100)}
   }else if(q.type==='error_review'){
     qEl.innerHTML='<div class="text-secondary small mb-2">【错题重练】</div>'+esc(q.qText)
     if(ans){aEl.innerHTML='<div class="mt-2 small">你的答案：<strong class="text-'+(App.answers[App.currentQ]==='correct'?'success':'danger')+'">'+(App.answers[App.currentQ]==='correct'?q.answer:q.wrongAnswer)+'</strong></div>'}
@@ -65,6 +69,14 @@ function isAnswerCorrect(q,ans){
   if(q.type==='multiple_choice')return ans===q.answer
   if(q.type==='fill_blank')return String(ans).toLowerCase().trim()===q.answer.toLowerCase().trim()
   if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en'||q.type==='vocab_irregular')return ans===q.answer
+  if(q.type==='vocab_dictation'){
+    if(q.direction==='cn2en')return String(ans).toLowerCase().trim()===q.answer.toLowerCase().trim()
+    var user=String(ans||'').trim(),correct=String(q.answer||'').trim()
+    if(correct.length<=1)return user===correct
+    if(correct.length===2)return Array.from(correct).some(function(c){return user.includes(c)})
+    var common=Array.from(correct).filter(function(c){return user.includes(c)}).length
+    return common/correct.length>=0.6
+  }
   if(q.type==='error_review')return ans==='correct'
   if(q.type==='passage'){if(!Array.isArray(ans))return false;return ans.every((a,i)=>a&&q.blanks[i]&&a.toLowerCase().trim()===q.blanks[i].toLowerCase().trim())}
   return false
@@ -82,11 +94,11 @@ function renderPassage(q,ans){
 }
 function selectOption(i){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ];App.answers[App.currentQ]=i;updateMastery(q,i===q.answer);trackE(q,i===q.answer,q.options[i],q.options[q.answer]);renderQ()}
 function selectVocabOption(v){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;updateVocabMastery(q,v===q.answer);trackE(q,v===q.answer,v,q.answer);renderQ()}
-function selectErrorOpt(i){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ],cr=i===0;App.answers[App.currentQ]=cr?'correct':'wrong';if(cr){const e=getErrors(),er=e.find(x=>x.id===q.errorId);if(er){er.reviewed=true;er.mastered=true;setErrors(e)}}renderQ()}
+function selectErrorOpt(i){if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return;const q=App.questions[App.currentQ],cr=i===0;App.answers[App.currentQ]=cr?'correct':'wrong';if(cr){const e=getErrors(),er=e.find(x=>x.id===q.errorId);if(er){er.correctCount=(er.correctCount||0)+1;if(er.correctCount>=3)er.mastered=true;er.reviewed=true;setErrors(e)}}renderQ()}
 function submitFill(){
   if(App.answers[App.currentQ]!==null&&App.answers[App.currentQ]!==undefined)return
   const inp=document.getElementById('fill-input');if(!inp)return;const v=inp.value.trim();if(!v){showToast('请输入答案');return}
-  const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;updateMastery(q,v.toLowerCase()===q.answer.toLowerCase());trackE(q,v.toLowerCase()===q.answer.toLowerCase(),v,q.answer);renderQ()
+  const q=App.questions[App.currentQ];App.answers[App.currentQ]=v;const dictCr=q.type==='vocab_dictation'?isAnswerCorrect(q,v):v.toLowerCase()===q.answer.toLowerCase();updateMastery(q,dictCr);trackE(q,dictCr,v,q.answer);renderQ()
 }
 function submitPassage(){
   const q=App.questions[App.currentQ],ans=q.blanks.map((_,i)=>{const el=document.getElementById('passage-blank-'+i);return el?el.value.trim():''})
@@ -156,6 +168,7 @@ function confirmExitQuiz(){exitQuiz()}
 function quizKindKey(q){
   if(q.type==='vocab_irregular')return'vocab_irregular'
   if(q.type==='vocab_en2cn'||q.type==='vocab_cn2en')return'vocab_regular'
+  if(q.type==='vocab_dictation')return'vocab_dictation'
   if(q.type==='passage')return'grammar_passage'
   return q.type||'other'
 }
@@ -169,7 +182,7 @@ function buildQuizKindStats(indexes){
     if(allowed&&!allowed.has(i))return
     const a=App.answers[i]
     if(a===null||a===undefined)return
-    const key=quizKindKey(q),st=stats[key]||{total:0,correct:0}
+    const key=(q.vocabLevel||'other')+'|'+quizKindKey(q),st=stats[key]||{total:0,correct:0}
     st.total++;if(isAnswerCorrect(q,a))st.correct++
     stats[key]=st
   })
@@ -341,7 +354,7 @@ function trackE(q,cr,sa,ca,blankIndex){
   const meta={kpTitle:pc.kpTitle||q.kpTitle||'',questionTitle:q.title||'',questionKind:q.type||'',blankIndex:blankIndex??null,fullQuestionText:q.text||q.sentence||q.qText||'',fullCorrectAnswer:q.type==='passage'?'':Array.isArray(q.blanks)?q.blanks.join(', '):'',explanation:pc.explanation||q.explanation||'',dailyTaskId:App.activeDailyTaskId||null}
   const ex=errs.find(e=>e.questionText===qt&&e.correctAnswer===ca&&!e.mastered)
   const now=Date.now()
-  if(ex){ex.errorCount=(ex.errorCount||1)+1;ex.lastWrongAt=now;ex.wrongAnswer=sa;ex.reviewed=false;Object.assign(ex,meta)}else{errs.push({id:now+'-'+Math.random().toString(36).slice(2,8),type:tp,questionText:qt,correctAnswer:ca,wrongAnswer:sa,errorCount:1,lastWrongAt:now,reviewed:false,mastered:false,createdAt:now,...meta})}
+  if(ex){ex.errorCount=(ex.errorCount||1)+1;ex.lastWrongAt=now;ex.wrongAnswer=sa;ex.reviewed=false;ex.correctCount=0;Object.assign(ex,meta)}else{errs.push({id:now+'-'+Math.random().toString(36).slice(2,8),type:tp,questionText:qt,correctAnswer:ca,wrongAnswer:sa,errorCount:1,lastWrongAt:now,reviewed:false,mastered:false,correctCount:0,createdAt:now,...meta})}
   setErrors(errs)
 }
 function filterErrors(f,el){
@@ -350,10 +363,11 @@ function filterErrors(f,el){
   App.errorFilter=f;renderErrors()
 }
 function renderErrors(){
-  let errors=getErrors().filter(e=>!e.mastered&&!e.reviewed);const f=App.errorFilter
+  const f=App.errorFilter
+  let errors=getErrors()
   if(f==='grammar')errors=errors.filter(e=>e.type==='grammar')
   else if(f==='vocabulary')errors=errors.filter(e=>e.type==='vocabulary')
-  else if(f==='unreviewed')errors=errors.filter(e=>!e.reviewed)
+  else errors=errors.filter(e=>!e.reviewed)
   if(App.pendingDailyTaskReviewId)errors=errors.filter(e=>e.dailyTaskId===App.pendingDailyTaskReviewId)
   errors.sort((a,b)=>b.lastWrongAt-a.lastWrongAt)
   const el=document.getElementById('error-list');if(!el)return
@@ -367,7 +381,7 @@ function renderErrors(){
     const fullAnswer=e.fullCorrectAnswer?'<div class="full-answer"><i class="bi bi-list-check me-1"></i>完整答案：'+esc(e.fullCorrectAnswer)+'</div>':''
     const explain=e.explanation?'<div class="explain"><i class="bi bi-lightbulb me-1"></i>'+esc(e.explanation)+'</div>':''
     const displayQuestion=e.type==='vocabulary'?cleanVocabQuestionText(e.questionText||('围绕正确答案 '+e.correctAnswer+' 复习这道错题')):(e.questionText||('围绕正确答案 '+e.correctAnswer+' 复习这道错题'))
-    return'<div class="error-item" data-id="'+e.id+'">'+kp+title+'<div class="q-text">'+typeBadge+esc(displayQuestion)+'</div><div class="answer-row"><span class="wrong"><i class="bi bi-x-lg me-1"></i>你的答案：'+esc(e.wrongAnswer)+'</span><span class="correct"><i class="bi bi-check-lg me-1"></i>正确答案：'+esc(e.correctAnswer)+'</span></div>'+fullAnswer+explain+'<div class="d-flex gap-2 flex-wrap"><button class="btn btn-sm btn-outline-warning err-btn-review" data-id="'+e.id+'"><i class="bi bi-eye me-1"></i>标记已复习</button></div></div>'
+    return'<div class="error-item" data-id="'+e.id+'">'+kp+title+'<div class="q-text">'+typeBadge+esc(displayQuestion)+'</div><div class="answer-row"><span class="wrong"><i class="bi bi-x-lg me-1"></i>你的答案：'+esc(e.wrongAnswer)+'</span><span class="correct"><i class="bi bi-check-lg me-1"></i>正确答案：'+esc(e.correctAnswer)+'</span></div>'+fullAnswer+explain+(f==='grammar'||f==='vocabulary'?'':'<div class="d-flex gap-2 flex-wrap"><button class="btn btn-sm btn-outline-warning err-btn-review" data-id="'+e.id+'"><i class="bi bi-eye me-1"></i>标记已复习</button></div>')+'</div>'
   }).join('')
   el.querySelectorAll('.error-item').forEach(item=>{item.onpointerdown=function(){clearTimeout(this.touchTimer);this.classList.add('touching');this.touchTimer=setTimeout(()=>this.classList.remove('touching'),520)}})
   el.querySelectorAll('.err-btn-review').forEach(b=>{b.onclick=function(e){e.stopPropagation();markReviewed(this.dataset.id)}})
@@ -397,6 +411,7 @@ function selectQuizType(type){
   if(type==='passage')App.quizQtyTouched=false
   document.querySelectorAll('.quiz-type-card').forEach(c=>c.classList.remove('selected'))
   document.querySelector('.quiz-type-card[data-type="'+type+'"]').classList.add('selected')
+  document.getElementById('quiz-vocab-type-section')?.classList.toggle('d-none',type!=='vocabulary')
   renderSourceOptions()
 }
 function syncQtyOptions(){
@@ -428,9 +443,11 @@ function renderSourceOptions(){
   syncQtyOptions()
   const container=document.getElementById('source-options'),label=document.getElementById('source-label'),section=document.getElementById('quiz-source-section')
   if(App.quizType==='vocabulary'){
-    label.textContent='选择词汇范围';section.classList.remove('d-none')
-    const ready=VOCABULARY.filter(hasVocabQuizData).length
-    container.innerHTML='<div class="small text-secondary">词汇测试覆盖基本词汇、小学阶段、初中阶段和专题补充词；单句语法题与短文完形也会结合这些词汇生成自然语境。词汇测试还会穿插不规则动词过去式/过去分词变形题。当前可出题 '+ready+' 词，另含 '+IRREGULAR_VERBS.length+' 组不规则动词。</div>'
+    label.textContent='选择词汇范围（不选=全部词汇）';section.classList.remove('d-none')
+    const allLevels=[{key:'secondary',label:'小学'},{key:'junior',label:'初中'},{key:'ket',label:'KET'},{key:'supplemental',label:'其他'}]
+    const cur=App.vocabLevelFilter
+    container.innerHTML='<div class="d-flex gap-2 flex-wrap">'+allLevels.map(l=>'<span class="badge '+(cur&&cur.includes(l.key)?'bg-primary':'bg-light text-dark')+' rounded-pill px-3 py-2" onclick="selectVocabLevel(\''+l.key+'\',this)" style="cursor:pointer">'+l.label+'</span>').join('')+'</div>'
+    document.getElementById('quiz-vocab-type-section')?.classList.remove('d-none')
     return
   }
   if(App.quizType==='error'){
@@ -451,6 +468,20 @@ function renderSourceOptions(){
 function selectErrorSrc(val,el){
   document.querySelectorAll('#source-options .badge').forEach(o=>{o.className='badge bg-light text-dark rounded-pill px-3 py-2';o.style.cursor='pointer'})
   el.className='badge bg-primary rounded-pill px-3 py-2';el.style.cursor='pointer';App.errorSrcFilter=val
+}
+function selectVocabLevel(key,el){
+  if(!App.vocabLevelFilter)App.vocabLevelFilter=[]
+  const idx=App.vocabLevelFilter.indexOf(key)
+  if(idx>=0)App.vocabLevelFilter.splice(idx,1)
+  else App.vocabLevelFilter.push(key)
+  el.classList.toggle('bg-primary')
+  el.classList.toggle('bg-light')
+  el.classList.toggle('text-dark')
+}
+function selectVocabType(type,el){
+  App.vocabType=type
+  document.querySelectorAll('#quiz-vocab-type-section .badge').forEach(b=>{b.className='badge bg-light text-dark rounded-pill px-3 py-2';b.style.cursor='pointer'})
+  el.className='badge bg-primary rounded-pill px-3 py-2';el.style.cursor='pointer'
 }
 function toggleSrcGroup(btn){
   const icon=btn.querySelector('.bi-chevron-right')
@@ -476,7 +507,7 @@ function startQuiz(){
     const count=App.quizType==='passage'&&!App.quizQtyTouched?1:App.quizQty
     qs=generateGrammar(ids,count,App.quizType==='passage',App.quizType==='passage')
   }else if(App.quizType==='vocabulary'){
-    qs=generateVocab(App.quizQty)
+    qs=generateVocab(App.quizQty, App.vocabLevelFilter, App.vocabType)
   }else if(App.quizType==='error'){qs=generateError(App.quizQty,App.errorSrcFilter||'all')}
   if(qs.length===0){showToast('没有足够的题目');return}
   App.questions=qs;App.currentQ=0;App.answers=qs.map(()=>null);App.seconds=0

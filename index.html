@@ -34,7 +34,8 @@
 <div id="page-home" class="page active">
   <div class="page-sticky-header" id="home-toolbar">
   <div class="text-center py-2 mb-2">
-    <div class="home-title-wrap"><h2 class="fw-bold mb-1">英语学习工具</h2><button class="home-info-btn" type="button" onclick="openStudentGuide()" aria-label="查看使用说明" title="使用说明"><i class="bi bi-info-lg"></i></button><span class="user-badge" id="user-badge"></span><button class="home-info-btn logout-btn" onclick="handleLogout()" aria-label="退出登录" title="退出登录"><i class="bi bi-box-arrow-right"></i></button></div>
+    <div class="home-user-bar"><span class="user-badge" id="user-badge"></span><button class="home-info-btn logout-btn" onclick="handleLogout()" aria-label="退出登录" title="退出登录"><i class="bi bi-box-arrow-right"></i></button></div>
+    <div class="home-title-wrap"><h2 class="fw-bold mb-1">英语学习工具</h2><button class="home-info-btn" type="button" onclick="openStudentGuide()" aria-label="查看使用说明" title="使用说明"><i class="bi bi-info-lg"></i></button></div>
     <p class="text-secondary small mb-0" id="greeting">今天也来学习英语吧！</p>
     <div class="home-actions">
       <button class="home-action-btn report" onclick="openParentReport('daily')" title="家长日报"><i class="bi bi-clipboard-data me-1"></i>家长日报</button>
@@ -135,7 +136,7 @@
 <!-- ============ 词汇库 ============ -->
 <div id="page-vocabulary" class="page">
   <div class="vocab-toolbar" id="vocab-toolbar">
-  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-bookmark-fill me-2"></i>词汇库<span class="title-count" id="vocab-total-text"></span></h4>
+  <h4 class="fw-bold mb-3 page-title"><i class="bi bi-bookmark-fill me-2"></i>词汇库 <span class="vocab-level-tabs" id="vocab-level-tabs"></span></h4>
   <div class="input-group mb-2">
     <span class="input-group-text bg-white border-end-0 rounded-start-3"><i class="bi bi-search"></i></span>
     <input id="vocab-search" class="form-control border-start-0 rounded-end-3" placeholder="搜索单词或中文..." oninput="handleVocabSearch()">
@@ -174,8 +175,8 @@
       <div class="quiz-section mb-0">
         <div class="quiz-section-label">测试类型</div>
         <div class="row g-2">
+          <div class="col-6 col-md-3"><div class="quiz-type-card quiz-type-vocab" data-type="vocabulary" onclick="selectQuizType('vocabulary')"><div class="icon"><i class="bi bi-fonts fs-2"></i></div><div class="label">词汇测试</div><div class="desc">释义/拼写</div></div></div>
           <div class="col-6 col-md-3"><div class="quiz-type-card selected" data-type="grammar" onclick="selectQuizType('grammar')"><div class="icon"><i class="bi bi-journal-check fs-2"></i></div><div class="label">单句练习</div><div class="desc">选择/填空</div></div></div>
-          <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="vocabulary" onclick="selectQuizType('vocabulary')"><div class="icon"><i class="bi bi-fonts fs-2"></i></div><div class="label">词汇测试</div><div class="desc">释义/拼写/变形</div></div></div>
           <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="passage" onclick="selectQuizType('passage')"><div class="icon"><i class="bi bi-file-earmark-text fs-2"></i></div><div class="label">短文练习</div><div class="desc">多空短文填空</div></div></div>
           <div class="col-6 col-md-3"><div class="quiz-type-card" data-type="error" onclick="selectQuizType('error')"><div class="icon"><i class="bi bi-arrow-repeat fs-2"></i></div><div class="label">错题重练</div><div class="desc">针对错题练习</div></div></div>
         </div>
@@ -197,6 +198,13 @@
       <div id="quiz-source-section" class="quiz-section">
         <div class="quiz-section-label" id="source-label">选择语法范围</div>
         <div id="source-options" class="mt-1"></div>
+      </div>
+      <div id="quiz-vocab-type-section" class="quiz-section d-none">
+        <div class="quiz-section-label">选择题型</div>
+        <div class="d-flex gap-2 flex-wrap mt-1">
+          <span class="badge bg-primary rounded-pill px-3 py-2" onclick="selectVocabType('choice',this)" style="cursor:pointer">选择</span>
+          <span class="badge bg-light text-dark rounded-pill px-3 py-2" onclick="selectVocabType('dictation',this)" style="cursor:pointer">默写</span>
+        </div>
       </div>
     </div>
 
@@ -269,10 +277,9 @@
   <div class="page-sticky-header" id="errors-toolbar">
   <h4 class="fw-bold mb-3 page-title"><i class="bi bi-exclamation-triangle-fill me-2"></i>错题集</h4>
   <div class="d-flex gap-1 flex-wrap mb-3" id="error-filter">
-    <span class="badge bg-primary rounded-pill px-3 py-2" data-filter="all" onclick="filterErrors('all',this)" style="cursor:pointer">全部</span>
+    <span class="badge bg-primary rounded-pill px-3 py-2" data-filter="unreviewed" onclick="filterErrors('unreviewed',this)" style="cursor:pointer">未复习</span>
     <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="grammar" onclick="filterErrors('grammar',this)" style="cursor:pointer">语法类</span>
     <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="vocabulary" onclick="filterErrors('vocabulary',this)" style="cursor:pointer">词汇类</span>
-    <span class="badge bg-light text-dark rounded-pill px-3 py-2" data-filter="unreviewed" onclick="filterErrors('unreviewed',this)" style="cursor:pointer">未复习</span>
   </div>
   </div>
   <div id="error-list"></div>

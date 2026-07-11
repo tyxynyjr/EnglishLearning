@@ -26,46 +26,57 @@ const WORD_CLASS_GROUPS = [
   { key:'numeral', title:'数词', desc:'基数词、序数词、分数、小数、百分数和年月日时间表达。', ids:[65,66,67,68] },
   { key:'article', title:'冠词', desc:'不定冠词、定冠词、零冠词和常见固定搭配。', ids:[20,70,71,72,73] },
   { key:'preposition', title:'介词', desc:'时间、地点方位、方式和固定介词搭配。', ids:[21,61,62,63,64] },
-  { key:'conjunction', title:'连词', desc:'并列连词和从属连词的分类、功能及常见连词用法。', ids:[200,201,202] }
-]
+  { key:'conjunction', title:'连词', desc:'并列连词和从属连词的分类、功能及常见连词用法。', ids:[200,201,202] }]
 const WORD_CLASS_POINT_IDS = new Set(WORD_CLASS_GROUPS.flatMap(g=>g.ids))
 KNOWLEDGE_POINTS.forEach(kp=>{if(WORD_CLASS_POINT_IDS.has(kp.id))kp.categoryId=3})
 const SYNTAX_GROUPS = [
   { key:'sentence-kind', title:'句子种类', desc:'陈述句、疑问句、祈使句、感叹句和反意疑问句。', ids:[74,75,76,77,78,23,24] },
-  { key:'simple-sentence', title:'简单句的基本句型', desc:'五种基本句型和 There be 结构。', ids:[79,80,81,82,83,12,29] },
-  { key:'tense', title:'谓语动词的时态', desc:'be 动词、一般时、进行时、完成时以及时态相关动词变化。', ids:[27,28,1,2,3,4,5,6,17,18,30,31,32,33,34,35,36] },
-  { key:'passive', title:'被动语态', desc:'不同时态的被动语态、by 短语、主动被动转换和特殊动词被动。', ids:[7,8,37,38,39,40,41,42] },
+  { key:'simple-sentence', title:'简单句的基本句型', desc:'五种基本句型和 There be 结构。', ids:[12,79,80,81,82,83] },
+  { key:'tense', title:'谓语动词的时态', desc:'be 动词、一般时态、进行时态、完成时态。', ids:[1,2,3,4,5,6,17,18] },
+  { key:'passive', title:'被动语态', desc:'不同时态的被动语态、感官/使役动词。', ids:[7,8,37,38,39,42] },
   { key:'nonfinite', title:'动词的非谓语形式', desc:'动词不定式、动词-ing形式。', ids:[16,114,129] },
-  { key:'compound', title:'并列复合句', desc:'并列连词和相关并列结构。', ids:[134,135,136,137,138] },
-  { key:'complex', title:'主从复合句', desc:'宾语从句、状语从句、定语从句和从属连词。', ids:[13,14,22,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,139,140,141,142,143] },
-  { key:'agreement', title:'主谓一致', desc:'单复数一致、就近原则、不定代词和集合名词作主语。', ids:[25,104,105,106,107,108,109] },
-  { key:'other-patterns', title:'其他常用句式', desc:'不便归入前面句法组的常用结构和固定句型。', ids:[144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159] }
+  { key:'compound', title:'并列复合句', desc:'并列连词和相关并列结构。', ids:[134] },
+  { key:'complex', title:'主从复合句', desc:'宾语从句、状语从句、定语从句。', ids:[13,14,22] },
+  { key:'agreement', title:'主谓一致', desc:'单复数一致、就近原则。', ids:[25] }
 ]
 const SYNTAX_POINT_IDS = new Set(SYNTAX_GROUPS.flatMap(g=>g.ids))
 KNOWLEDGE_POINTS.forEach(kp=>{if(SYNTAX_POINT_IDS.has(kp.id))kp.categoryId=8})
 const KNOWLEDGE_GROUPS_BY_CATEGORY = {3:WORD_CLASS_GROUPS,8:SYNTAX_GROUPS}
 const ACTIVE_GRAMMAR_POINT_IDS = [...new Set([...WORD_CLASS_GROUPS.flatMap(g=>g.ids),...SYNTAX_GROUPS.flatMap(g=>g.ids)])]
 let VOCABULARY = []
+let KET_VOCABULARY = []
 async function loadVocabularyData() {
     try {
         const response = await fetch('data/vocabulary.json');
         VOCABULARY = await response.json();
         console.log('✅ 加载成功，共', VOCABULARY.length, '个词汇');
+        if(typeof refreshDailyTaskWithKET==='function')refreshDailyTaskWithKET()
     } catch (error) {
         console.error('❌ 加载失败:', error);
     }
 }
+async function loadKETData() {
+    try {
+        const response = await fetch('data/ket.json');
+        KET_VOCABULARY = await response.json();
+        console.log('✅ KET词汇加载成功，共', KET_VOCABULARY.length, '个');
+        if(typeof refreshDailyTaskWithKET==='function')refreshDailyTaskWithKET()
+    } catch (error) {
+        console.log('ℹ️ KET词汇表未找到');
+    }
+}
 loadVocabularyData();
-function vocabStageKey(v){return v?.isSupplementalVocabulary?'supplemental':v?.isSecondaryVocabulary?'secondary':'junior'}
+loadKETData();
+function vocabStageKey(v){return v?.isSupplementalVocabulary?'supplemental':v?.isKETVocabulary?'ket':v?.isSecondaryVocabulary?'secondary':'junior'}
 function vocabStatsLevel(v){
   if(v?.isSupplementalVocabulary)return{key:'supplemental',label:'专题补充词'}
-  if(v?.isSecondaryVocabulary)return{key:'secondary',label:'二级词汇'}
-  if(v?.curriculumLevel==='基本词汇')return{key:'basic',label:'基本词汇'}
+  if(v?.isKETVocabulary)return{key:'ket',label:'KET词汇'}
+  if(v?.isSecondaryVocabulary)return{key:'secondary',label:'小学阶段'}
   return{key:'junior',label:'初中阶段'}
 }
-function vocabStageLabel(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='secondary'?'小学阶段':'初中阶段'}
-function vocabStageShort(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='secondary'?'小学阶段':'初中阶段'}
-function vocabStageClass(v){const key=vocabStageKey(v);return key==='supplemental'?'tag-stage-supplemental':key==='secondary'?'tag-stage-secondary':'tag-stage-junior'}
+function vocabStageLabel(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='ket'?'KET':key==='secondary'?'小学阶段':'初中阶段'}
+function vocabStageShort(v){const key=vocabStageKey(v);return key==='supplemental'?'专题补充':key==='ket'?'KET':key==='secondary'?'小学阶段':'初中阶段'}
+function vocabStageClass(v){const key=vocabStageKey(v);return key==='supplemental'?'tag-stage-supplemental':key==='ket'?'tag-stage-secondary':key==='secondary'?'tag-stage-secondary':'tag-stage-junior'}
 function vocabHeadwordCount(words){return words.reduce((s,v)=>s+Math.max(1,(v.headwords||[]).length),0)}
 function vocabByWord(word){const raw=String(word||''),l=raw.toLowerCase();return VOCABULARY.find(v=>v.word===raw||(v.headwords||[]).some(h=>String(h)===raw))||VOCABULARY.find(v=>v.word.toLowerCase()===l||(v.headwords||[]).some(h=>String(h).toLowerCase()===l))}
 function vocabRowsByWords(words){return words.map(word=>vocabByWord(word)).filter(Boolean)}

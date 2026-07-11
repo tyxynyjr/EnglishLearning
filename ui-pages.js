@@ -118,6 +118,10 @@ function vocabMetaHtml(v,stars){
   const tags=[]
   if(v.pos)tags.push('<span class="badge tag-blue">'+esc(v.pos)+(v.posExtra?' / '+esc(v.posExtra):'')+'</span>')
   tags.push('<span class="badge '+vocabStageClass(v)+'">'+esc(vocabStageLabel(v))+'</span>')
+  if(v?.isKETVocabulary && v?.dupInVocab){
+    const dupCls=v.dupLevel==='小学'?'tag-stage-secondary':v.dupLevel==='补充'?'tag-stage-supplemental':'tag-stage-junior'
+    tags.push('<span class="badge '+dupCls+'">'+esc(v.dupLevel)+'</span>')
+  }
   if(!hasVocabQuizData(v))tags.push('<span class="text-secondary" style="font-size:.7rem">待补释义</span>')
   tags.push('<span class="stars">'+stars+'</span>')
   return tags.join('')
@@ -185,11 +189,33 @@ function renderIndefinitePronouns(){
 function handleVocabSearch(){App.vocabView='words';App.vocabFilters.letter=null;renderVocabulary()}
 function renderVocabulary(){
   applyVocabView(App.vocabView||'words')
+    // Render level tabs with counts
+  const levelTabContainer=document.getElementById('vocab-level-tabs')
+  if(levelTabContainer){
+    function levelCount(key){
+      if(key==='ket')return(KET_VOCABULARY||[]).length
+      return VOCABULARY.filter(function(v){return vocabStatsLevel(v).key===key}).length
+    }
+    var allWords={};[].concat(VOCABULARY,(KET_VOCABULARY||[])).forEach(function(v){allWords[v.word.toLowerCase()]=true})
+    const allCount=Object.keys(allWords).length
+    const levels=[{key:'secondary',label:'小学'},{key:'junior',label:'初中'},{key:'ket',label:'KET'}]
+    const flt=App.vocabLevelFilter||[]
+    levelTabContainer.innerHTML='<span class="vocab-level-tab'+(flt.length===0?' active':'')+'" onclick="switchVocabLevel(\'\')">全部 ('+allCount+')</span>'+
+      levels.map(function(l){return '<span class="vocab-level-tab'+(flt.includes(l.key)?' active':'')+'" onclick="switchVocabLevel(\''+l.key+'\')">'+l.label+' ('+levelCount(l.key)+')</span>'}).join('')
+  }
   const search=document.getElementById('vocab-search').value.trim().toLowerCase()
   const mastery=getMastery()
   const masteryFilter=App.vocabFilters.mastery
   const letterFilter=App.vocabFilters.letter
-  let baseList=VOCABULARY.filter(v=>{
+  let vocabSource=[...VOCABULARY]
+  const flt=App.vocabLevelFilter||[]
+  if(flt.length>0){
+    if(flt.includes('ket'))vocabSource=vocabSource.concat(KET_VOCABULARY||[])
+    vocabSource=vocabSource.filter(v=>flt.includes(vocabStatsLevel(v).key)||(flt.includes('ket')&&v.isKETVocabulary))
+  }else{
+    vocabSource=vocabSource.concat(KET_VOCABULARY||[])
+  }
+  let baseList=vocabSource.filter(v=>{
     if(search)return v.word.toLowerCase().includes(search)||String(v.translation||'').includes(search)||String(v.sourceRaw||'').toLowerCase().includes(search)
     return true
   })
@@ -230,6 +256,15 @@ function renderVocabulary(){
     }).sort((a,b)=>a.level-b.level).map(x=>x.html).join('')
     return '<div class="vocab-group-header" id="vg-'+l+'"><span>📌 '+l+'</span><span class="count">'+groups[l].length+'词</span></div>'+words
   }).join('')
+}
+function switchVocabLevel(key){
+  if(!key){App.vocabLevelFilter=[];App.vocabView='words';renderVocabulary();return}
+  if(!App.vocabLevelFilter)App.vocabLevelFilter=[]
+  const idx=App.vocabLevelFilter.indexOf(key)
+  if(idx>=0)App.vocabLevelFilter.splice(idx,1)
+  else App.vocabLevelFilter.push(key)
+  App.vocabView='words'
+  renderVocabulary()
 }
 function setVocabLetterFilter(letter){
   App.vocabFilters.letter=!letter||App.vocabFilters.letter===letter?null:letter
@@ -276,22 +311,35 @@ function renderStats(){
   html+='<tr class="table-active fw-bold"><td><button class="stats-toggle collapsed" data-group="grammar" onclick="toggleStatsGroup(this)"><span class="stats-arrow">▾</span>语法</button></td><td>'+grammarTotal.t+'</td><td'+cellClass(grammarTotal.e)+'>'+grammarTotal.e+'</td><td>'+acc(grammarTotal.t,grammarTotal.e)+'</td><td></td></tr>'
   const gRows=[...WORD_CLASS_GROUPS,...SYNTAX_GROUPS].map(group=>{const s=sumKpIds(group.ids);return{title:group.title,t:s.t,e:s.e}}).sort((a,b)=>b.e-a.e)
   gRows.forEach(r=>{html+='<tr class="stats-sub stats-sub-grammar collapsed'+rowClass(r.e,r.t)+'"><td class="ps-3">'+esc(r.title)+'</td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t)+'</td></tr>'})
-  const vAll=VOCABULARY,vocabRecords=records.filter(r=>r.type==='vocabulary')
+  function sumKindByLevel(lvl,kind){
+    let t=0,c=0
+    records.filter(r=>r.type==='vocabulary').forEach(r=>{
+      const st=r.kindStats&&r.kindStats[lvl+'|'+kind]
+      if(st){t+=st.total||0;c+=st.correct||0}
+    })
+    return{total:t,err:t-c}
+  }
+  const vAll=[...VOCABULARY,...(KET_VOCABULARY||[])],vocabRecords=records.filter(r=>r.type==='vocabulary')
   const recTotal=vocabRecords.reduce((s,r)=>s+(r.total||0),0),recCorrect=vocabRecords.reduce((s,r)=>s+(r.correct||0),0)
   let masteryTotal=0,masteryErr=0
   vAll.forEach(v=>{const m=vocabMastery[v.id]||{};masteryTotal+=m.quizzedCount||0;masteryErr+=m.errorCount||0})
   const vTotal=recTotal||masteryTotal,vErr=recTotal?recTotal-recCorrect:masteryErr
   html+='<tr class="table-active fw-bold"><td><button class="stats-toggle collapsed" data-group="vocab" onclick="toggleStatsGroup(this)"><span class="stats-arrow">▾</span>词汇</button></td><td>'+vTotal+'</td><td'+cellClass(vErr)+'>'+vErr+'</td><td>'+acc(vTotal,vErr)+'</td><td></td></tr>'
-  const vocabLevelOrder={basic:1,secondary:2,junior:3,supplemental:4}
+  const vocabLevelOrder={basic:1,secondary:2,ket:3,junior:4,supplemental:5}
   const vocabLevels=new Map()
-  vAll.forEach(v=>{
+  ;[...vAll,...(KET_VOCABULARY||[])].forEach(v=>{
     const level=vocabStatsLevel(v)
     if(!vocabLevels.has(level.key))vocabLevels.set(level.key,{key:level.key,label:level.label,t:0,e:0})
     const row=vocabLevels.get(level.key),m=vocabMastery[v.id]||{}
     row.t+=m.quizzedCount||0;row.e+=m.errorCount||0
   })
+  const kindTypes=[{key:'vocab_regular',label:'选择题'},{key:'vocab_dictation',label:'默写题'},{key:'vocab_irregular',label:'不规则动词'}]
   ;[...vocabLevels.values()].sort((a,b)=>(vocabLevelOrder[a.key]||9)-(vocabLevelOrder[b.key]||9)).forEach(r=>{
-    html+='<tr class="stats-sub stats-sub-vocab stats-sub-vocab-main collapsed'+rowClass(r.e,r.t)+'"><td class="ps-3">'+esc(r.label)+'</td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t,'vocabulary')+'</td></tr>'
+    html+='<tr class="stats-sub stats-sub-vocab collapsed'+rowClass(r.e,r.t)+'"><td class="ps-3"><button class="stats-toggle collapsed" data-group="vocab-'+r.key+'" onclick="toggleStatsGroup(this)" style="background:none;border:none;font-weight:inherit;color:inherit;padding:0;width:100%;text-align:left"><span class="stats-arrow">▾</span>'+esc(r.label)+'</button><span class="ps-1"></span></td><td>'+r.t+'</td><td'+cellClass(r.e)+'>'+r.e+'</td><td>'+acc(r.t,r.e)+'</td><td>'+masteryTag(r.e,r.t,'vocabulary')+'</td></tr>'
+    kindTypes.forEach(k=>{
+      const ks=sumKindByLevel(r.key,k.key)
+      html+='<tr class="stats-sub stats-sub-vocab-'+r.key+' collapsed'+rowClass(ks.err,ks.total)+'"><td class="ps-4 small text-secondary">'+esc(k.label)+'</td><td>'+ks.total+'</td><td'+cellClass(ks.err)+'>'+ks.err+'</td><td>'+acc(ks.total,ks.err)+'</td><td></td></tr>'
+    })
   })
   document.getElementById('category-stats-body').innerHTML=html
 }

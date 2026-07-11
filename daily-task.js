@@ -12,11 +12,52 @@ function grammarForDailyLevel(level){
   if(level==='primary')return WORD_CLASS_GROUPS.flatMap(g=>g.ids).map(id=>KNOWLEDGE_POINTS.find(k=>k.id===id)).filter(Boolean)
   return ACTIVE_GRAMMAR_POINT_IDS.map(id=>KNOWLEDGE_POINTS.find(k=>k.id===id)).filter(Boolean)
 }
+function findVocabById(id){
+  return VOCABULARY.find(v=>v.id===id)||(KET_VOCABULARY||[]).find(v=>v.id===id)
+}
 function createDailyTask(level,date=today()){
   const cfg=dailyTaskConfig(level),seed=date+'-'+level
   const grammar=pickStable(grammarForDailyLevel(level),cfg.grammarCount,seed+'-grammar')
-  const vocab=pickStable(vocabForDailyLevel(level),cfg.vocabCount,seed+'-vocab')
+  // Weighted vocab selection: prioritize unquizzed > error > mastered
+  const mastery=getMastery()
+  function vocabWeight(arr){
+    return arr.map(v=>{
+      const m=mastery[v.id]||{},eb=ebMultiplier(m.reviewCount||0,m.lastQuizzed||0)
+      const w=(m.quizzedCount||0)===0?100:(m.errorCount||0)>0?30+m.errorCount*3+eb*2:1+eb
+      return {v,w}
+    }).sort((a,b)=>b.w-a.w).map(o=>o.v)
+  }
+  let vocab
+  if(level==='primary'){
+    vocab=pickStable(vocabWeight(vocabForDailyLevel(level)),7,seed+'-sec')
+    const seen=new Set()
+    vocab.forEach(function(v){seen.add(v.word.toLowerCase())})
+    const ketPool=(KET_VOCABULARY||[]).filter(function(kv){return !kv.dupInVocab})
+    if(ketPool.length>=3){
+      pickStable(ketPool,3,seed+'-ket').forEach(function(kv){vocab.push(kv)})
+    }else{
+      ketPool.forEach(function(kv){vocab.push(kv)})
+    }
+  }else{
+    vocab=vocabWeight(vocabForDailyLevel(level)).slice(0,Math.min(cfg.vocabCount+35,1177))
+    vocab=pickStable(vocab,cfg.vocabCount+8,seed+'-vocab')
+    const seen=new Set()
+    vocab=vocab.filter(v=>{const w=v.word.toLowerCase();if(seen.has(w))return false;seen.add(w);return true})
+    vocab=vocab.slice(0,cfg.vocabCount)
+  }
   return{id:date+'-'+level,date,level,label:cfg.label,flowVersion:DAILY_TASK_FLOW_VERSION,grammarIds:grammar.map(k=>k.id),vocabIds:vocab.map(v=>v.id),learningCheckedAt:null,testSubmittedAt:null,partialSubmittedAt:null,partialAnsweredCount:0,partialTotalCount:0,partialQuestions:null,partialAnswers:null,partialCurrentQ:0,partialSeconds:0,partialAnsweredIndexes:[],reviewCheckedAt:null,reviewItems:[],completed:false,completedAt:null}
+}
+function refreshDailyTaskWithKET(){
+  if(!VOCABULARY.length||!(KET_VOCABULARY||[]).length)return
+  const todayStr=today(),id=todayStr+'-primary'
+  const tasks=getDailyTasks()
+  if(tasks[id]){
+    tasks[id]=createDailyTask('primary',todayStr)
+    setDailyTasks(tasks)
+    renderDailyTaskBar()
+    const box=document.getElementById('daily-task-study')
+    if(box&&!box.classList.contains('d-none'))renderDailyTaskStudy(tasks[id])
+  }
 }
 function getDailyTask(level,date=today()){
   const tasks=getDailyTasks(),id=date+'-'+level
@@ -40,8 +81,8 @@ function renderDailyTaskBar(){
 }
 function dailyVocabQuestion(v,idx){
   const pool=VOCABULARY.filter(x=>hasVocabQuizData(x)&&x.id!==v.id)
-  if(idx%2===0){const opts=[v.translation,...pickStable(pool,3,'dv-cn-'+v.id).map(x=>x.translation)].sort(()=>Math.random()-.5);return{type:'vocab_en2cn',vId:v.id,word:v.word,phonetic:v.phonetic,answer:v.translation,options:opts,qText:'请选择 "'+v.word+'" 的中文意思'}}
-  const opts=[v.word,...pickStable(pool,3,'dv-en-'+v.id).map(x=>x.word)].sort(()=>Math.random()-.5);return{type:'vocab_cn2en',vId:v.id,translation:v.translation,answer:v.word,options:opts,qText:'请选择 "'+v.translation+'" 对应的英文'}
+  if(idx%2===0){const opts=[v.translation,...pickStable(pool,3,'dv-cn-'+v.id).map(x=>x.translation)].sort(()=>Math.random()-.5);return{type:'vocab_en2cn',vId:v.id,word:v.word,phonetic:v.phonetic,answer:v.translation,options:opts,qText:'请选择 "'+v.word+'" 的中文意思',vocabLevel:vocabStatsLevel(v).key}}
+  const opts=[v.word,...pickStable(pool,3,'dv-en-'+v.id).map(x=>x.word)].sort(()=>Math.random()-.5);return{type:'vocab_cn2en',vId:v.id,translation:v.translation,answer:v.word,options:opts,qText:'请选择 "'+v.translation+'" 对应的英文',vocabLevel:vocabStatsLevel(v).key}
 }
 function dailyTaskPassageQuestion(task){
   const pool=QUESTIONS?.passage||[]
@@ -61,12 +102,11 @@ function errorReviewQuestionFromRaw(raw){
   return{type:'error_review',errorId:e.id,qText:e.questionText,answer:e.correctAnswer,wrongAnswer:e.wrongAnswer,kpTitle:e.kpTitle||'',questionKind:e.questionKind||'',explanation:e.explanation||fallback}
 }
 function buildDailyTaskQuestions(task){
-  const cfg=dailyTaskConfig(task.level),grammarIds=task.grammarIds||[],vocab=(task.vocabIds||[]).map(id=>VOCABULARY.find(v=>v.id===id)).filter(Boolean)
+  const cfg=dailyTaskConfig(task.level),grammarIds=task.grammarIds||[],vocab=(task.vocabIds||[]).map(id=>findVocabById(id)).filter(Boolean)
   const grammarQs=[];let attempts=0
   while(grammarQs.length<cfg.grammarTest&&attempts<8){attempts++;for(const q of generateGrammar(grammarIds,cfg.grammarTest,false,false)){if(!grammarQs.some(x=>questionKey(x)===questionKey(q)))grammarQs.push(q);if(grammarQs.length>=cfg.grammarTest)break}}
   const vocabQs=vocab.slice(0,cfg.vocabTest).map(dailyVocabQuestion)
-  const passage=dailyTaskPassageQuestion(task)
-  return uniqueQuestions([...grammarQs,...vocabQs,...passage])
+  return uniqueQuestions([...grammarQs,...vocabQs])
 }
 function dailyTaskReviewErrors(taskId){return getErrors().filter(e=>e.dailyTaskId===taskId&&!e.reviewed&&!e.mastered)}
 function markDailyTaskStudy(taskId){
@@ -94,9 +134,9 @@ function renderDailyTaskStudy(task){
   const box=document.getElementById('daily-task-study');if(!box)return
   if(!KNOWLEDGE_POINTS.length||!VOCABULARY.length){box.innerHTML='<div class="text-center py-5"><p class="text-secondary">数据加载中...</p></div>';box.classList.remove('d-none');return}
   const grammar=task.grammarIds.map(id=>KNOWLEDGE_POINTS.find(k=>k.id===id)).filter(Boolean)
-  const vocab=task.vocabIds.map(id=>VOCABULARY.find(v=>v.id===id)).filter(Boolean)
+  const vocab=task.vocabIds.map(id=>findVocabById(id)).filter(Boolean)
   const grammarHtml=grammar.length?grammar.map(k=>'<div class="daily-study-item"><div class="daily-study-item-title">'+esc(k.title)+'</div><div class="daily-study-item-desc">'+renderKpContent(k.content||'')+'</div>'+((k.examples||[])[0]?'<div class="daily-study-example">例：'+esc(k.examples[0].en)+'｜'+esc(k.examples[0].cn)+'</div>':'')+'</div>').join(''):'<div class="daily-study-item-desc text-secondary">暂无语法内容</div>'
-  const vocabHtml=vocab.length?vocab.map(v=>'<div class="daily-study-item"><div class="daily-study-item-title">'+esc(v.word)+(v.pos?' <span class="text-secondary small">('+esc(v.pos)+(v.posExtra?' / '+esc(v.posExtra):'')+')</span>':'')+(v.phonetic?' <span class="phonetic">'+esc(v.phonetic)+'</span>':'')+' | '+esc(v.translation||'')+'</div><div class="daily-study-example">'+(v.examples?.[0]?'例：'+esc(v.examples[0].en)+'｜'+esc(v.examples[0].cn):'')+'</div></div>').join(''):'<div class="daily-study-item-desc text-secondary">暂无词汇内容</div>'
+  const vocabHtml=vocab.length?vocab.map(v=>'<div class="daily-study-item"><div class="daily-study-item-title">'+esc(v.word)+(v.pos?' <span class="text-secondary small">('+esc(v.pos)+(v.posExtra?' / '+esc(v.posExtra):'')+')</span>':'')+(v.phonetic?' <span class="phonetic">'+esc(v.phonetic)+'</span>':'')+' | '+esc(v.translation||'')+(v.isKETVocabulary&&!v.dupInVocab?' <span class="badge tag-stage-secondary" style="font-size:.65rem">KET</span>':'')+'</div><div class="daily-study-example">'+(v.examples?.[0]?'例：'+esc(v.examples[0].en)+'｜'+esc(v.examples[0].cn):'')+'</div></div>').join(''):'<div class="daily-study-item-desc text-secondary">暂无词汇内容</div>'
   const studyButton='<button class="btn btn-success fw-bold rounded-3" onclick="markDailyTaskStudy(\''+task.id+'\')">1-'+(task.learningCheckedAt?'已完成学习打卡':'完成学习打卡')+'</button>'
   const testButton=task.testSubmittedAt?'<button class="btn btn-primary fw-bold rounded-3" disabled>2-任务测试已完成</button>':'<button class="btn btn-primary fw-bold rounded-3" onclick="checkInDailyTaskAndStart(\''+task.id+'\')">'+(task.partialSubmittedAt?'2-继续任务测试':'2-开始任务测试')+'</button>'
   const reviewButton=task.testSubmittedAt?'<button class="btn btn-warning fw-bold rounded-3" onclick="dailyTaskStudyReview(\''+task.id+'\')">3-测试后标记复习</button>':'<button class="btn btn-warning fw-bold rounded-3" disabled>3-测试后标记复习</button>'

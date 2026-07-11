@@ -680,7 +680,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I saw an advertisement for a new smartphone on my way to school.",
+        "cn": "我在上学路上看到一则新手机的广告。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 21,
     "sourceLetter": "A",
@@ -1274,7 +1279,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "Artificial intelligence is now used in many everyday apps.",
+        "cn": "人工智能现在被用在很多日常应用里。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 39,
     "sourceLetter": "A",
@@ -2365,7 +2375,16 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I filled out an application for a summer camp.",
+        "cn": "我填了一份夏令营的申请表。"
+      },
+      {
+        "en": "This application helps me learn new words every day.",
+        "cn": "这个应用帮我每天学新单词。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 72,
     "sourceLetter": "A",
@@ -4921,7 +4940,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ride my bicycle to school every day.",
+        "cn": "我每天骑自行车上学。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 149,
     "sourceLetter": "B",
@@ -15525,7 +15549,16 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a final examination in history next week.",
+        "cn": "我下周有历史期末考试。"
+      },
+      {
+        "en": "The doctor made a careful examination of my eyes.",
+        "cn": "医生仔细检查了我的眼睛。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 469,
     "sourceLetter": "E",
@@ -18421,7 +18454,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "We keep all our vegetables in the refrigerator.",
+        "cn": "我们把所有蔬菜都放在冰箱里。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 556,
     "sourceLetter": "F",
@@ -20228,7 +20266,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "The basketball match will be held in the school gymnasium.",
+        "cn": "篮球赛将在学校体育馆举行。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 610,
     "sourceLetter": "G",
@@ -24507,7 +24550,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "This bag of rice weighs five kilograms.",
+        "cn": "这袋米重五公斤。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 739,
     "sourceLetter": "K",
@@ -24951,7 +24999,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "We did an experiment in the chemistry laboratory yesterday.",
+        "cn": "我们昨天在化学实验室做了一个实验。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 752,
     "sourceLetter": "L",
@@ -27749,7 +27802,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I find mathematics challenging but interesting.",
+        "cn": "我觉得数学有挑战性但也有意思。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 835,
     "sourceLetter": "M",
@@ -33152,7 +33210,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "We have physical education every Friday afternoon.",
+        "cn": "我们每周五下午有体育课。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 997,
     "sourceLetter": "P",
@@ -48928,7 +48991,12 @@
     "grade": null,
     "semester": null,
     "unit": null,
-    "examples": [],
+    "examples": [
+      {
+        "en": "I watched a nature programme on television last night.",
+        "cn": "我昨晚在电视上看了个自然节目。"
+      }
+    ],
     "source": "1600单词备用.txt",
     "sourceIndex": 1472,
     "sourceLetter": "T",

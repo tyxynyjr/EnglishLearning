@@ -67,13 +67,39 @@ function generateGrammar(ids,count,isPassage,mixedPassage=false){
   return qs
 }
 
-function generateVocab(count){
+function generateVocab(count, levelFilter, questionType){
   const mastery=getMastery()
-  let cand=VOCABULARY.filter(hasVocabQuizData)
+  let cand=(VOCABULARY||[]).filter(hasVocabQuizData)
+  if(levelFilter&&levelFilter.length>0){
+    cand=cand.filter(v=>levelFilter.includes(vocabStatsLevel(v).key))
+    if(levelFilter.includes('ket'))cand=cand.concat((KET_VOCABULARY||[]).filter(hasVocabQuizData))
+  }else if((KET_VOCABULARY||[]).length>0){
+    cand=cand.concat(KET_VOCABULARY.filter(hasVocabQuizData))
+  }
+  // Dedup by word (case-insensitive)
+  var wordSeen=new Set()
+  cand=cand.filter(function(v){var w=v.word.toLowerCase();if(wordSeen.has(w))return false;wordSeen.add(w);return true})
   const irregularRows=IRREGULAR_VERBS.filter(r=>r.base&&r.past?.length&&r.pastParticiple?.length)
   if(cand.length===0&&irregularRows.length===0)return[]
   cand=cand.map(v=>{const m=mastery[v.id]||{level:0,quizzedCount:0,errorCount:0,reviewCount:0};const reviewCount=m.reviewCount||0,lastQuizzed=m.lastQuizzed||0;let w;if((m.quizzedCount||0)===0)w=100;else if((m.errorCount||0)>0)w=30+m.errorCount*3+ebMultiplier(reviewCount,lastQuizzed)*2;else w=1+ebMultiplier(reviewCount,lastQuizzed);return{v,weight:w}})
   const qs=[],used=new Set(),usedIrregular=new Set();let att=0,direction=0
+  if(questionType==='dictation'){
+    while(qs.length<count&&att<count*3&&used.size<cand.length){
+      att++
+      const av=cand.filter(c=>!used.has(c.v.id));if(av.length===0)continue
+      const w=av.map(c=>c.weight),ch=weightedPick(av,w);if(!ch)continue
+      const v=ch.v
+      const doEn2cn=direction%2===0;direction++
+      if(doEn2cn){
+        qs.push({type:'vocab_dictation',vId:v.id,word:v.word,phonetic:v.phonetic,direction:'en2cn',answer:v.translation,qText:'请写出 "'+v.word+'" 的中文意思',vocabLevel:vocabStatsLevel(v).key})
+      }else{
+        const hint=v.translation.split(/[，,、\/\s]+/).filter(Boolean)[0]||v.translation
+        qs.push({type:'vocab_dictation',vId:v.id,word:v.word,phonetic:v.phonetic,direction:'cn2en',answer:v.word,qText:'请写出 "'+hint+'" 对应的英文单词',vocabLevel:vocabStatsLevel(v).key})
+      }
+      used.add(v.id)
+    }
+    return qs
+  }
   while(qs.length<count&&att<count*5&&(used.size<cand.length||usedIrregular.size<irregularRows.length*2)){
     att++
     const shouldIrregular=irregularRows.length>0&&(direction%3===2||used.size>=cand.length)
@@ -87,17 +113,17 @@ function generateVocab(count){
     const w=av.map(c=>c.weight),ch=weightedPick(av,w);if(!ch)continue
     const v=ch.v
     const doEn2cn=direction%2===0
-    if(doEn2cn){
-      direction++
-      const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
-      const opts=[v.translation,...wg.map(c=>c.v.translation)].sort(()=>Math.random()-0.5)
-      qs.push({type:'vocab_en2cn',vId:v.id,word:v.word,phonetic:v.phonetic,answer:v.translation,options:opts,qText:'请选择 "'+v.word+'" 的中文意思'})
-    }else{
-      direction++
-      const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
-      const opts=[v.word,...wg.map(c=>c.v.word)].sort(()=>Math.random()-0.5)
-      qs.push({type:'vocab_cn2en',vId:v.id,translation:v.translation,options:opts,answer:v.word,qText:'请选择 "'+v.translation+'" 对应的英文'})
-    }
+      if(doEn2cn){
+        direction++
+        const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
+        const opts=[v.translation,...wg.map(c=>c.v.translation)].sort(()=>Math.random()-0.5)
+        qs.push({type:'vocab_en2cn',vId:v.id,word:v.word,phonetic:v.phonetic,answer:v.translation,options:opts,qText:'请选择 "'+v.word+'" 的中文意思',vocabLevel:vocabStatsLevel(v).key})
+      }else{
+        direction++
+        const wg=cand.filter(c=>c.v.id!==v.id).sort(()=>Math.random()-0.5).slice(0,3)
+        const opts=[v.word,...wg.map(c=>c.v.word)].sort(()=>Math.random()-0.5)
+        qs.push({type:'vocab_cn2en',vId:v.id,translation:v.translation,options:opts,answer:v.word,qText:'请选择 "'+v.translation+'" 对应的英文',vocabLevel:vocabStatsLevel(v).key})
+      }
     used.add(v.id)
   }
   return qs

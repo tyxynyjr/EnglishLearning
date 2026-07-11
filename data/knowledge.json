@@ -57,7 +57,7 @@
     "id": 4,
     "categoryId": 8,
     "title": "一般将来时",
-    "content": "概念：一般将来时表示将要发生的动作。\n\n结构：主语 + will + 动词原形；主语 + am/is/are going to + 动词原形\n\n标志词：tomorrow, next week, in the future",
+    "content": "概念：一般将来时表示将要发生的动作。\n\n结构：主语 + will + 动词原形；主语 + am/is/are going to + 动词原形\n\n标志词：tomorrow, next week, in the future\n\n注意：be going to 常表示计划、打算或有迹象将要发生；will 常表示临时决定、预测或意愿。",
     "examples": [
       {
         "en": "I will go to Beijing tomorrow.",
@@ -75,7 +75,7 @@
     "id": 5,
     "categoryId": 8,
     "title": "现在完成时",
-    "content": "概念：现在完成时表示过去发生的动作对现在造成的影响，或从过去持续到现在的动作。\n\n结构：主语 +** have/has** + 过去分词\n\n标志词：already, yet, ever, never, just, since, for",
+    "content": "概念：现在完成时表示过去发生的动作对现在造成的影响，或从过去持续到现在的动作。\n\n结构：主语 +** have/has** + 过去分词\n\n标志词：already, yet, ever, never, just, since, for\n\n注意：since 接时间点或从句，for 接一段时间；二者都常与现在完成时连用，表示动作或状态持续到现在。",
     "examples": [
       {
         "en": "I have already finished my homework.",
@@ -111,7 +111,7 @@
     "id": 7,
     "categoryId": 8,
     "title": "被动语态-一般现在时",
-    "content": "概念：被动语态表示主语是动作的承受者。\n\n结构：主语 + am/is/are + 过去分词",
+    "content": "概念：表示经常性、习惯性或客观事实的被动动作，强调主语是动作的承受者。\n\n结构：主语 + am/is/are + 过去分词",
     "examples": [
       {
         "en": "English is spoken in many countries.",
@@ -129,7 +129,7 @@
     "id": 8,
     "categoryId": 8,
     "title": "被动语态-一般过去时",
-    "content": "结构：主语 + was/were + 过去分词",
+    "content": "概念：表示过去某个时间发生的被动动作，强调主语是动作的承受者，而动作的执行者由 by 引出（可省略）。\n\n结构：主语 + was/were + 过去分词",
     "examples": [
       {
         "en": "The bridge was built in 1990.",
@@ -187,7 +187,7 @@
     "id": 12,
     "categoryId": 8,
     "title": "There be 句型",
-    "content": "注意：There is/are + 名词 + 地点\nbe 动词与最近的名词保持一致",
+    "content": "概念：There be 可随时间变化为 there is/are, there was/were, there will be 等.\n\n注意：There is/are + 名词 + 地点\nbe 动词与最近的名词保持一致",
     "examples": [
       {
         "en": "There is a cat under the table.",
@@ -196,6 +196,10 @@
       {
         "en": "There are many students in the classroom.",
         "cn": "教室里有很多学生。"
+      },
+      {
+        "en": "There will be a meeting tomorrow.",
+        "cn": "明天将有一场会议。"
       }
     ],
     "difficulty": 1,
@@ -205,7 +209,7 @@
     "id": 13,
     "categoryId": 8,
     "title": "宾语从句",
-    "content": "概念：主句 + 连接词 + 从句（陈述语序）\n\n结构：that(陈述句)，if/whether(是否)，特殊疑问词",
+    "content": "概念：在复合句中充当宾语的从句，即整个从句作及物动词、介词或某些形容词的宾语。\n\n结构：从句用陈述语序。\n主句为现在时，从句按实际情况使用时态；主句为过去时，从句通常使用相应过去时态。\n\n标志词：连接词（that, whether, if）或连接代词/副词（what, who, which, when, where, why, how）",
     "examples": [
       {
         "en": "I think (that) he is right.",
@@ -223,7 +227,7 @@
     "id": 14,
     "categoryId": 8,
     "title": "状语从句",
-    "content": "概念：时间(when/while/before/after)，条件(if/unless)，原因(because/since)\n\n注意：主句将来时，从句一般现在时",
+    "content": "概念：在复合句中充当状语的从句，用来修饰主句中的动词、形容词、副词或整个句子，表示时间、地点、原因、条件、让步、目的、结果、方式、比较等逻辑关系。\n\n结构：从句用陈述语序。\n由从属连词引导，位置灵活（可放在句首或句尾），句首时通常用逗号与主句隔开。\n\n标志词：时间(when/while/before/after)，条件(if/unless)，原因(because/since)",
     "examples": [
       {
         "en": "If it rains, I will stay at home.",
@@ -331,7 +335,7 @@
     "id": 22,
     "categoryId": 8,
     "title": "定语从句",
-    "content": "概念：定语从句修饰名词或代词。\n\n结构：who(人/主语), whom(人/宾语), which(物), that(人/物)\n关系副词：when(时间), where(地点), why(原因)",
+    "content": "概念：在复合句中充当定语的从句，用来修饰名词或代词（先行词），相当于形容词的作用。\n\n结构：从句用陈述语序。\n由关系代词或关系副词引导，放在先行词之后。根据与先行词的紧密程度，分为限制性定语从句（无逗号）和非限制性定语从句（有逗号）。\n\n标志词：关系代词：who(人/主语), whom(人/宾语), which(物), that(人/物)\n关系副词：when(时间), where(地点), why(原因)",
     "examples": [
       {
         "en": "The book that I bought is very interesting.",
@@ -349,7 +353,7 @@
     "id": 23,
     "categoryId": 8,
     "title": "感叹句",
-    "content": "概念：What + (a/an) + 形容词 + 名词 + (主语+谓语)!\nHow + 形容词/副词 + (主语+谓语)!\n\n注意：What 后接名词，How 后接形容词或副词。",
+    "content": "概念：感叹句是用来表达强烈情感（如惊奇、喜悦、愤怒、赞美、痛苦等）的句子。\n\n结构：从句用陈述语序\n\n注意：What 后接名词，How 后接形容词或副词。",
     "examples": [
       {
         "en": "What a beautiful flower it is!",
@@ -385,7 +389,7 @@
     "id": 25,
     "categoryId": 8,
     "title": "主谓一致",
-    "content": "概念：谓语动词要和主语在人称和数上保持一致。\n\n注意：语法一致(单复对应)、意义一致(集合名词)、就近一致(neither...nor..., either...or..., there be)",
+    "content": "概念：谓语动词要和主语在人称和数上保持一致。\n\n结构：语法一致(单复对应)、意义一致(集合名词)、就近一致(neither...nor..., either...or..., there be)\n\n注意：family, team, class 等集合名词强调整体时谓语用单数，强调成员时可用复数。",
     "examples": [
       {
         "en": "Everyone in our class likes English.",
@@ -400,150 +404,10 @@
     "grade": 8
   },
   {
-    "id": 27,
-    "categoryId": 8,
-    "title": "be 动词一般现在时",
-    "content": "概念：am/is/are 表示现在的身份、状态、位置或性质。I 用 am，第三人称单数用 is，you 和复数主语用 are。",
-    "difficulty": 1,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I am a student, and my brother is a teacher.",
-        "cn": "我是一名学生，我哥哥是一名老师。"
-      }
-    ]
-  },
-  {
-    "id": 28,
-    "categoryId": 8,
-    "title": "be 动词一般过去时",
-    "content": "概念：was/were 表示过去的身份、状态、位置或性质。I/he/she/it 用 was，you/we/they 和复数主语用 were。",
-    "difficulty": 1,
-    "grade": null,
-    "examples": [
-      {
-        "en": "She was at home yesterday, but we were at school.",
-        "cn": "她昨天在家，但我们在学校。"
-      }
-    ]
-  },
-  {
-    "id": 29,
-    "categoryId": 8,
-    "title": "There be 的时态变化",
-    "content": "概念：There be 可随时间变化为 there is/are, there was/were, there will be 等；be 动词通常与后面最近的名词保持一致。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "There will be a meeting tomorrow.",
-        "cn": "明天将有一场会议。"
-      }
-    ]
-  },
-  {
-    "id": 30,
-    "categoryId": 8,
-    "title": "现在完成时 since / for",
-    "content": "概念：since 接时间点或从句，for 接一段时间；二者都常与现在完成时连用，表示动作或状态持续到现在。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I have lived here for three years.",
-        "cn": "我已经在这里住了三年。"
-      }
-    ]
-  },
-  {
-    "id": 31,
-    "categoryId": 8,
-    "title": "have been to / have gone to / have been in",
-    "content": "概念：have been to 表示去过已回来；have gone to 表示去了未回来；have been in 表示待在某地一段时间。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "She has been to Shanghai twice.",
-        "cn": "她去过上海两次。"
-      }
-    ]
-  },
-  {
-    "id": 32,
-    "categoryId": 8,
-    "title": "延续性动词与非延续性动词",
-    "content": "概念：和 for/since 连用时通常使用延续性动词或状态表达，如 buy 需转换为 have，die 转换为 be dead。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I have had this bike for two years.",
-        "cn": "这辆自行车我已经买了两年。"
-      }
-    ]
-  },
-  {
-    "id": 33,
-    "categoryId": 8,
-    "title": "一般过去时动词变化",
-    "content": "概念：规则动词一般加 -ed；以 e 结尾加 -d；辅音字母+y 变 y 为 i 加 -ed；部分动词为不规则变化。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "He played football after school yesterday.",
-        "cn": "他昨天放学后踢了足球。"
-      }
-    ]
-  },
-  {
-    "id": 34,
-    "categoryId": 8,
-    "title": "used to do",
-    "content": "概念：used to do 表示过去常常做某事而现在不一定如此，后接动词原形。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "My father used to walk to work.",
-        "cn": "我爸爸过去常常步行去上班。"
-      }
-    ]
-  },
-  {
-    "id": 35,
-    "categoryId": 8,
-    "title": "be going to 与 will 区分",
-    "content": "概念：be going to 常表示计划、打算或有迹象将要发生；will 常表示临时决定、预测或意愿。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "It is going to rain, so I will take an umbrella.",
-        "cn": "快要下雨了，所以我会带一把伞。"
-      }
-    ]
-  },
-  {
-    "id": 36,
-    "categoryId": 8,
-    "title": "现在进行时表将来",
-    "content": "概念：go, come, leave, arrive, start 等表示位置移动或安排的动词，可用现在进行时表示较近的计划或安排。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "We are leaving for Beijing this evening.",
-        "cn": "我们今晚要动身去北京。"
-      }
-    ]
-  },
-  {
     "id": 37,
     "categoryId": 8,
     "title": "被动语态-一般将来时",
-    "content": "概念：结构为 will be done 或 be going to be done，表示将来某事会被完成或处理。",
+    "content": "概念：表示将来某事会被完成或处理。\n\n结构：will be done 或 be going to be done",
     "difficulty": 3,
     "grade": null,
     "examples": [
@@ -557,7 +421,7 @@
     "id": 38,
     "categoryId": 8,
     "title": "被动语态-现在完成时",
-    "content": "概念：结构为 have/has been done，表示动作已经被完成并对现在有影响。",
+    "content": "概念：表示动作已经被完成并对现在有影响。\n\n结构：have/has been done",
     "difficulty": 3,
     "grade": null,
     "examples": [
@@ -571,41 +435,13 @@
     "id": 39,
     "categoryId": 8,
     "title": "含情态动词的被动语态",
-    "content": "概念：结构为 情态动词 + be + 过去分词，如 can be done, must be done, should be done。",
+    "content": "概念：同其他\n\n结构：情态动词 + be + 过去分词\n\n标志词：如 can be done, must be done, should be done。",
     "difficulty": 3,
     "grade": null,
     "examples": [
       {
         "en": "The homework must be handed in today.",
         "cn": "作业必须今天交。"
-      }
-    ]
-  },
-  {
-    "id": 40,
-    "categoryId": 8,
-    "title": "被动语态中的 by 短语",
-    "content": "概念：by 短语用于说明动作执行者；当执行者不明确或不重要时，by 短语常可省略。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The story was written by a young writer.",
-        "cn": "这个故事是一位年轻作家写的。"
-      }
-    ]
-  },
-  {
-    "id": 41,
-    "categoryId": 8,
-    "title": "主动语态与被动语态转换",
-    "content": "概念：主动句宾语变被动句主语，谓语变为 be + 过去分词，主动句主语可放在 by 后。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "People use English widely. English is widely used.",
-        "cn": "人们广泛使用英语。英语被广泛使用。"
       }
     ]
   },
@@ -701,7 +537,7 @@
     "id": 50,
     "categoryId": 3,
     "title": "反身代词",
-    "content": "概念：反身代词（Reflexive Pronoun）用来指代动作的承受者就是动作的执行者本身（即主语和宾语指向同一人或物），或用来强调主语或宾语本身。\n\n标志词：如 myself, yourself, himself, herself, ourselves, themselves。见《代词对照表》",
+    "content": "概念：反身代词（Reflexive Pronoun）用来指代动作的承受者就是动作的执行者本身（即主语和宾语指向同一人或物），或用来强调主语或宾语本身。\n\n结构：从句用陈述语序\n\n标志词：如 myself, yourself, himself, herself, ourselves, themselves。见《代词对照表》",
     "difficulty": 2,
     "grade": null,
     "examples": [
@@ -1003,13 +839,21 @@
     "id": 75,
     "categoryId": 8,
     "title": "一般疑问句",
-    "content": "概念：一般疑问句通常可用 yes/no 回答，常将 be 动词、助动词或情态动词提前。",
+    "content": "概念：一般疑问句通常可用 yes/no 回答，常将 be 动词、助动词或情态动词提前。\n\n结构：Be + 主语 + 表语?\n助动词 + 主语 + 实义动词原形?\n情态动词 + 主语 + 动词原形?",
     "difficulty": 1,
     "grade": null,
     "examples": [
       {
+        "en": "Are you a studen?",
+        "cn": "你是一个学生吗？"
+      },
+      {
         "en": "Do you often read English books?",
         "cn": "你经常读英语书吗？"
+      },
+      {
+        "en": "Can you help me?",
+        "cn": "你能帮我吗？"
       }
     ]
   },
@@ -1059,7 +903,7 @@
     "id": 79,
     "categoryId": 8,
     "title": "主语 + 谓语",
-    "content": "概念：主语 + 不及物动词构成基本句型，如 Birds fly。",
+    "content": "概念：主语 + 不及物动词构成基本句型。",
     "difficulty": 1,
     "grade": null,
     "examples": [
@@ -1073,7 +917,7 @@
     "id": 80,
     "categoryId": 8,
     "title": "主语 + 谓语 + 宾语",
-    "content": "概念：主语 + 及物动词 + 宾语构成常见句型，如 I like English。",
+    "content": "概念：主语 + 及物动词 + 宾语构成常见句型。",
     "difficulty": 1,
     "grade": null,
     "examples": [
@@ -1101,7 +945,7 @@
     "id": 82,
     "categoryId": 8,
     "title": "主语 + 谓语 + 间接宾语 + 直接宾语",
-    "content": "概念：双宾语结构中间接宾语多指人，直接宾语多指物，如 give me a book。",
+    "content": "概念：双宾语结构中间接宾语多指人，直接宾语多指物。",
     "difficulty": 2,
     "grade": null,
     "examples": [
@@ -1122,370 +966,6 @@
       {
         "en": "We found the story interesting.",
         "cn": "我们觉得这个故事很有趣。"
-      }
-    ]
-  },
-  {
-    "id": 84,
-    "categoryId": 8,
-    "title": "that 引导宾语从句",
-    "content": "概念：that 引导陈述意义的宾语从句，口语中常可省略，从句使用陈述语序。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I think that he is right.",
-        "cn": "我认为他是对的。"
-      }
-    ]
-  },
-  {
-    "id": 85,
-    "categoryId": 8,
-    "title": "if / whether 引导宾语从句",
-    "content": "概念：if/whether 表示是否，引导一般疑问句意义的宾语从句，从句用陈述语序。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I wonder whether he will come.",
-        "cn": "我想知道他是否会来。"
-      }
-    ]
-  },
-  {
-    "id": 86,
-    "categoryId": 8,
-    "title": "疑问词引导宾语从句",
-    "content": "概念：what, where, when, why, how 等可引导特殊疑问句意义的宾语从句，从句用陈述语序。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Can you tell me where the library is?",
-        "cn": "你能告诉我图书馆在哪里吗？"
-      }
-    ]
-  },
-  {
-    "id": 87,
-    "categoryId": 8,
-    "title": "宾语从句陈述语序",
-    "content": "概念：宾语从句中疑问词后不用疑问语序，应为主语 + 谓语，如 where he lives。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I do not know what he wants.",
-        "cn": "我不知道他想要什么。"
-      }
-    ]
-  },
-  {
-    "id": 88,
-    "categoryId": 8,
-    "title": "宾语从句时态一致",
-    "content": "概念：主句为现在时，从句按实际情况使用时态；主句为过去时，从句通常使用相应过去时态。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "He said that he was busy.",
-        "cn": "他说他很忙。"
-      }
-    ]
-  },
-  {
-    "id": 89,
-    "categoryId": 8,
-    "title": "宾语从句否定转移",
-    "content": "概念：think, believe, suppose 等后接宾语从句时，否定常转移到主句，如 I don't think he is right。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I don't think he will be late.",
-        "cn": "我认为他不会迟到。"
-      }
-    ]
-  },
-  {
-    "id": 90,
-    "categoryId": 8,
-    "title": "时间状语从句",
-    "content": "概念：由 when, while, before, after, until, as soon as 等引导，表示动作发生的时间关系。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I will call you when I arrive.",
-        "cn": "我到达时会给你打电话。"
-      }
-    ]
-  },
-  {
-    "id": 91,
-    "categoryId": 8,
-    "title": "条件状语从句",
-    "content": "概念：由 if, unless 等引导，表示条件；常见考点是主将从现。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "If it rains tomorrow, we will stay at home.",
-        "cn": "如果明天下雨，我们就待在家里。"
-      }
-    ]
-  },
-  {
-    "id": 92,
-    "categoryId": 8,
-    "title": "原因状语从句",
-    "content": "概念：由 because, since, as 等引导，表示原因；because 不能与 so 连用。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I stayed at home because I was ill.",
-        "cn": "我待在家里，因为我病了。"
-      }
-    ]
-  },
-  {
-    "id": 93,
-    "categoryId": 8,
-    "title": "结果状语从句",
-    "content": "概念：常由 so...that 或 such...that 引导，表示结果。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "He was so tired that he fell asleep quickly.",
-        "cn": "他太累了，很快就睡着了。"
-      }
-    ]
-  },
-  {
-    "id": 94,
-    "categoryId": 8,
-    "title": "目的状语从句",
-    "content": "概念：常由 so that, in order that 引导，表示目的，从句中常出现 can/could/may 等情态动词。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Speak clearly so that everyone can hear you.",
-        "cn": "说清楚些，以便每个人都能听见你。"
-      }
-    ]
-  },
-  {
-    "id": 95,
-    "categoryId": 8,
-    "title": "让步状语从句",
-    "content": "概念：由 although, though, even though 等引导，表示让步；although/though 不与 but 连用。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Although it was cold, we went out.",
-        "cn": "虽然天气很冷，我们还是出去了。"
-      }
-    ]
-  },
-  {
-    "id": 96,
-    "categoryId": 8,
-    "title": "比较状语从句",
-    "content": "概念：由 than, as...as 等引导，用于比较人、物或动作的程度。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Tom runs faster than I do.",
-        "cn": "汤姆跑得比我快。"
-      }
-    ]
-  },
-  {
-    "id": 97,
-    "categoryId": 8,
-    "title": "主将从现",
-    "content": "概念：在时间、条件状语从句中，主句用将来时，从句常用一般现在时表示将来。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I will tell you as soon as he comes back.",
-        "cn": "他一回来我就告诉你。"
-      }
-    ]
-  },
-  {
-    "id": 98,
-    "categoryId": 8,
-    "title": "who / that 指人",
-    "content": "概念：先行词指人时，关系代词可用 who 或 that，在从句中可作主语或宾语。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The boy who is singing is my cousin.",
-        "cn": "正在唱歌的男孩是我的表弟。"
-      }
-    ]
-  },
-  {
-    "id": 99,
-    "categoryId": 8,
-    "title": "which / that 指物",
-    "content": "概念：先行词指物时，关系代词可用 which 或 that，在从句中可作主语或宾语。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The book which you lent me is interesting.",
-        "cn": "你借给我的那本书很有趣。"
-      }
-    ]
-  },
-  {
-    "id": 100,
-    "categoryId": 8,
-    "title": "whose 表所属",
-    "content": "概念：whose 表示所属关系，后接名词，可指人也可指物。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "This is the girl whose mother is a doctor.",
-        "cn": "这就是那个妈妈是医生的女孩。"
-      }
-    ]
-  },
-  {
-    "id": 101,
-    "categoryId": 8,
-    "title": "where / when / why 引导定语从句",
-    "content": "概念：where 指地点，when 指时间，why 指原因；它们在从句中作状语。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "This is the village where I was born.",
-        "cn": "这是我出生的村庄。"
-      }
-    ]
-  },
-  {
-    "id": 102,
-    "categoryId": 8,
-    "title": "关系代词作主语/宾语",
-    "content": "概念：关系代词在定语从句中可作主语或宾语；作宾语时常可省略。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The man who called you is my teacher.",
-        "cn": "给你打电话的那个人是我的老师。"
-      }
-    ]
-  },
-  {
-    "id": 103,
-    "categoryId": 8,
-    "title": "只能用 that 的常见情况",
-    "content": "概念：先行词被最高级、序数词、all, everything, nothing 等修饰或先行词既有人又有物时，常用 that。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "This is the best film that I have ever seen.",
-        "cn": "这是我看过的最好的电影。"
-      }
-    ]
-  },
-  {
-    "id": 104,
-    "categoryId": 8,
-    "title": "单复数一致",
-    "content": "概念：谓语动词要与主语在人称和数上保持一致，单数主语用单数谓语，复数主语用复数谓语。",
-    "difficulty": 1,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The boy likes apples, and the girls like pears.",
-        "cn": "这个男孩喜欢苹果，女孩们喜欢梨。"
-      }
-    ]
-  },
-  {
-    "id": 105,
-    "categoryId": 8,
-    "title": "不定代词作主语",
-    "content": "概念：someone, everyone, anything, nothing 等不定代词作主语时，谓语通常用单数。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Nothing is impossible if you try.",
-        "cn": "只要你努力，没有什么是不可能的。"
-      }
-    ]
-  },
-  {
-    "id": 106,
-    "categoryId": 8,
-    "title": "each / every / either / neither 作主语",
-    "content": "概念：each, every, either, neither 作主语时通常看作单数，谓语动词用单数。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Each student has a dictionary.",
-        "cn": "每个学生都有一本词典。"
-      }
-    ]
-  },
-  {
-    "id": 107,
-    "categoryId": 8,
-    "title": "There be 就近原则",
-    "content": "概念：There be 句型中 be 动词通常与其后最近的名词保持数的一致。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "There is a pen and two books on the desk.",
-        "cn": "桌上有一支钢笔和两本书。"
-      }
-    ]
-  },
-  {
-    "id": 108,
-    "categoryId": 8,
-    "title": "either...or / neither...nor 就近原则",
-    "content": "概念：either...or, neither...nor, not only...but also 连接主语时，谓语常与最近的主语一致。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Either you or he is right.",
-        "cn": "不是你对，就是他对。"
-      }
-    ]
-  },
-  {
-    "id": 109,
-    "categoryId": 8,
-    "title": "集合名词作主语",
-    "content": "概念：family, team, class 等集合名词强调整体时谓语用单数，强调成员时可用复数。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "My family is a big one.",
-        "cn": "我的家庭是一个大家庭。"
       }
     ]
   },
@@ -1593,364 +1073,30 @@
   {
     "id": 134,
     "categoryId": 8,
-    "title": "and / but / or / so",
-    "content": "概念：and 表并列或顺承；but 表转折；or 表选择或否则；so 表结果。",
+    "title": "并列复合句",
+    "content": "概念：由并列连词将两个或多个独立分句连接在一起组成的句子。每个分句在语法上地位平等，都能独立成句，合在一起表达并列、转折、选择、因果等逻辑关系。\n\n结构：both...and……\neither...or……\nneither……nor……\nnot only...but also……\n\n标志词：并列连词（如 and, but, or, so, for, nor, yet）\n\n注意：both...and 连接主语时谓语通常用复数\n其他三个连接主语时谓语常遵循就近原则",
     "difficulty": 1,
     "grade": null,
     "examples": [
       {
         "en": "I wanted to go out, but it began to rain.",
         "cn": "我想出去，但是开始下雨了。"
-      }
-    ]
-  },
-  {
-    "id": 135,
-    "categoryId": 8,
-    "title": "both...and",
-    "content": "概念：both...and 连接两个并列成分，表示两者都；连接主语时谓语通常用复数。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
+      },
       {
         "en": "Both my sister and I like English.",
         "cn": "我姐姐和我都喜欢英语。"
-      }
-    ]
-  },
-  {
-    "id": 136,
-    "categoryId": 8,
-    "title": "either...or",
-    "content": "概念：either...or 表示两者之一；连接主语时谓语常遵循就近原则。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
+      },
       {
         "en": "Either Tom or Jack will help you.",
         "cn": "汤姆或杰克会帮你。"
-      }
-    ]
-  },
-  {
-    "id": 137,
-    "categoryId": 8,
-    "title": "neither...nor",
-    "content": "概念：neither...nor 表示两者都不；连接主语时谓语常遵循就近原则。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
+      },
       {
         "en": "Neither he nor I am afraid of the test.",
         "cn": "他和我都不害怕考试。"
-      }
-    ]
-  },
-  {
-    "id": 138,
-    "categoryId": 8,
-    "title": "not only...but also",
-    "content": "概念：not only...but also 表示不但……而且……；连接主语时谓语常遵循就近原则。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
+      },
       {
         "en": "Not only you but also he likes the song.",
         "cn": "不仅你喜欢这首歌，他也喜欢。"
-      }
-    ]
-  },
-  {
-    "id": 139,
-    "categoryId": 8,
-    "title": "because / because of",
-    "content": "概念：because 后接句子；because of 后接名词、代词或动名词短语。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "He was late because of the heavy rain.",
-        "cn": "由于大雨，他迟到了。"
-      }
-    ]
-  },
-  {
-    "id": 140,
-    "categoryId": 8,
-    "title": "although / though 与 but 不连用",
-    "content": "概念：although/though 引导让步状语从句时，英语中通常不再与 but 连用。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Although he is young, he works hard.",
-        "cn": "虽然他年轻，但他学习很努力。"
-      }
-    ]
-  },
-  {
-    "id": 141,
-    "categoryId": 8,
-    "title": "so 与 because 不连用",
-    "content": "概念：because 引导原因，so 引出结果；英语中一般不把 because 和 so 在同一句中配对使用。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Because he was ill, he stayed at home.",
-        "cn": "因为他生病了，所以他待在家里。"
-      }
-    ]
-  },
-  {
-    "id": 142,
-    "categoryId": 8,
-    "title": "if / whether 区分",
-    "content": "概念：if 和 whether 都可表示是否；whether 可与 or not 连用，介词后通常用 whether。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I am not sure whether he will agree or not.",
-        "cn": "我不确定他是否会同意。"
-      }
-    ]
-  },
-  {
-    "id": 143,
-    "categoryId": 8,
-    "title": "unless",
-    "content": "概念：unless 表示除非，相当于 if...not，引导条件状语从句。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "You will miss the bus unless you hurry.",
-        "cn": "除非你快点，否则会错过公交车。"
-      }
-    ]
-  },
-  {
-    "id": 144,
-    "categoryId": 8,
-    "title": "too...to",
-    "content": "概念：too + 形容词/副词 + to do 表示太……而不能做某事。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The box is too heavy to carry.",
-        "cn": "这个箱子太重，搬不动。"
-      }
-    ]
-  },
-  {
-    "id": 145,
-    "categoryId": 8,
-    "title": "so...that",
-    "content": "概念：so + 形容词/副词 + that 从句，表示如此……以至于……。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "He ran so fast that we could not catch him.",
-        "cn": "他跑得太快了，我们追不上他。"
-      }
-    ]
-  },
-  {
-    "id": 146,
-    "categoryId": 8,
-    "title": "such...that",
-    "content": "概念：such + 名词短语 + that 从句，表示如此……以至于……。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "It was such a good film that we watched it twice.",
-        "cn": "这是一部如此好的电影，我们看了两遍。"
-      }
-    ]
-  },
-  {
-    "id": 147,
-    "categoryId": 8,
-    "title": "enough to",
-    "content": "概念：形容词/副词 + enough + to do 表示足够……可以做某事。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "She is old enough to go to school.",
-        "cn": "她年龄够大，可以上学了。"
-      }
-    ]
-  },
-  {
-    "id": 148,
-    "categoryId": 8,
-    "title": "It's time to do / for sth.",
-    "content": "概念：It's time to do sth. 或 It's time for sth. 表示该做某事了。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "It's time to have lunch.",
-        "cn": "该吃午饭了。"
-      }
-    ]
-  },
-  {
-    "id": 149,
-    "categoryId": 8,
-    "title": "It takes sb. time to do",
-    "content": "概念：It takes sb. some time to do sth. 表示某人花费多少时间做某事。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "It takes me twenty minutes to walk to school.",
-        "cn": "我步行到学校要花二十分钟。"
-      }
-    ]
-  },
-  {
-    "id": 150,
-    "categoryId": 8,
-    "title": "spend / pay / cost / take",
-    "content": "概念：spend 常以人作主语；pay 表付款；cost 常以物作主语；take 常用于 It takes sb. time to do。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I spent ten yuan on the book.",
-        "cn": "我花了十元买这本书。"
-      }
-    ]
-  },
-  {
-    "id": 151,
-    "categoryId": 8,
-    "title": "prefer A to B / prefer to do",
-    "content": "概念：prefer A to B 表示比起 B 更喜欢 A；prefer to do 表示更愿意做某事。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I prefer tea to coffee.",
-        "cn": "比起咖啡，我更喜欢茶。"
-      }
-    ]
-  },
-  {
-    "id": 152,
-    "categoryId": 8,
-    "title": "would like to do",
-    "content": "概念：would like to do sth. 表示想要做某事，语气比 want 更委婉。",
-    "difficulty": 1,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I would like to join the English club.",
-        "cn": "我想加入英语俱乐部。"
-      }
-    ]
-  },
-  {
-    "id": 153,
-    "categoryId": 8,
-    "title": "Why not do / Why don't you do",
-    "content": "概念：Why not do sth.? 和 Why don't you do sth.? 用于提出建议。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Why not ask your teacher for help?",
-        "cn": "为什么不向老师求助呢？"
-      }
-    ]
-  },
-  {
-    "id": 154,
-    "categoryId": 8,
-    "title": "had better do",
-    "content": "概念：had better do sth. 表示最好做某事；否定形式为 had better not do sth.。",
-    "difficulty": 2,
-    "grade": null,
-    "examples": [
-      {
-        "en": "You had better not stay up late.",
-        "cn": "你最好不要熬夜。"
-      }
-    ]
-  },
-  {
-    "id": 155,
-    "categoryId": 8,
-    "title": "be used to doing",
-    "content": "概念：be used to doing sth. 表示习惯于做某事，其中 to 是介词。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I am used to getting up early.",
-        "cn": "我习惯早起。"
-      }
-    ]
-  },
-  {
-    "id": 156,
-    "categoryId": 8,
-    "title": "be used to do",
-    "content": "概念：be used to do sth. 表示被用来做某事，是被动结构。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Wood is used to make paper.",
-        "cn": "木头被用来造纸。"
-      }
-    ]
-  },
-  {
-    "id": 157,
-    "categoryId": 8,
-    "title": "so do I / neither do I",
-    "content": "概念：so + 助动词/be/情态动词 + 主语 表示某人也如此；neither/nor 表示某人也不。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "I like English. So do I.",
-        "cn": "我喜欢英语。我也是。"
-      }
-    ]
-  },
-  {
-    "id": 158,
-    "categoryId": 8,
-    "title": "Here / There 倒装",
-    "content": "概念：Here/There 位于句首且主语为名词时，常用倒装语序，如 Here comes the bus。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "Here comes the bus.",
-        "cn": "公交车来了。"
-      }
-    ]
-  },
-  {
-    "id": 159,
-    "categoryId": 8,
-    "title": "the 比较级, the 比较级",
-    "content": "概念：the + 比较级..., the + 比较级... 表示越……就越……。",
-    "difficulty": 3,
-    "grade": null,
-    "examples": [
-      {
-        "en": "The harder you work, the better you will become.",
-        "cn": "你越努力，就会变得越好。"
       }
     ]
   },
