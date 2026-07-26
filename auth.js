@@ -13,6 +13,9 @@ const USERS = [
   { username: 'xuruobing',   passwordHash: '2795f13848f1f4be21f06e0fd028ccd5f0dcbe69c07c8f47f347f088fd880adc', role: 'student', displayName: 'Xu Ruobing' },
   { username: 'xuruotong',   passwordHash: '4f1f91c6ff833a0df3d3ae09ffa07c7a4cd66bef2d53857332a9c5d679690a4d', role: 'student', displayName: 'Xu Ruotong' },
   { username: 'zhaoyuchen',   passwordHash: 'e18d8479a77bb9a98022a13ecbfb91b7a142f2e390aa433e735a7f2d50d5de75', role: 'student', displayName: 'Zhao Yuchen' },
+  { username: 'panyibo',   passwordHash: 'fe1c45b026cec412ca906ef8921d90bc1248ef535632dc8198692fe148660d8e', role: 'student', displayName: 'Pan Yibo' },
+  { username: 'xieshelly',   passwordHash: '1199f9cb2a5e9cbd5f2ab26eff4a129782e08ab6c0e34793401c6c07940143b4', role: 'student', displayName: 'Xie Shelly' },
+  { username: 'geruofei',   passwordHash: 'c91aaf49f251714e01a97b4c82b92b0f9dad2e9650dda44b4a4b0fe4e23be0b1', role: 'student', displayName: 'Ge Ruofei' },
   // ↑ 发布前请修改默认密码并删掉不需要的账号
 ]
 
