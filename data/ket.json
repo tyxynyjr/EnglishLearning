@@ -5,16 +5,26 @@
     "translation": "一个",
     "phonetic": "/ə/ /eɪ/ /ən/ /æn/",
     "pos": "det",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need to buy a pen and an eraser.",
+        "cn": "我需要买一支钢笔和一块橡皮。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2001,
     "word": "a few",
     "translation": "一些",
-    "phonetic": "/eɪ/",
+    "phonetic": "/ə fjuː/",
     "pos": "det, adj & pron",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a few friends in this city.",
+        "cn": "我在这个城市有几个朋友。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -87,14 +97,19 @@
     "translation": "住宿",
     "phonetic": "/əˌkɑməˈdeɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We found cheap accommodation near the station.",
+        "cn": "我们在车站附近找到了便宜的住处。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2007,
     "word": "across",
     "translation": "穿过；在对面",
-    "phonetic": "/əˈkrɔs/",
+    "phonetic": "/əˈkrɔːs/",
     "pos": "adv & prep",
     "examples": [
       {
@@ -174,7 +189,7 @@
     "id": 2012,
     "word": "actually",
     "translation": "实际上",
-    "phonetic": "/ˈæˌkʧuəli/",
+    "phonetic": "/ˈæktʃuəli/",
     "pos": "adv",
     "examples": [
       {
@@ -192,7 +207,12 @@
     "translation": "广告(简写)",
     "phonetic": "/æd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I saw an ad for a new phone online.",
+        "cn": "我在网上看到一则新手机的广告。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -249,7 +269,12 @@
     "translation": "高级的",
     "phonetic": "/ədˈvænst/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need to book the tickets in advance.",
+        "cn": "我们需要提前订票。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -258,7 +283,12 @@
     "translation": "冒险",
     "phonetic": "/ædˈvɛnʧər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She loves reading adventure stories.",
+        "cn": "她喜欢读冒险故事。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -267,7 +297,12 @@
     "translation": "广告(英式)",
     "phonetic": "/ˈædvɜːrt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The advert caught my attention immediately.",
+        "cn": "那则广告立刻引起了我的注意。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -308,7 +343,12 @@
     "translation": "飞机(英式)",
     "phonetic": "/ˈeərəpleɪn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The aeroplane took off at 7 a.m.",
+        "cn": "飞机早上七点起飞。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -365,7 +405,12 @@
     "translation": "之后",
     "phonetic": "/ˈæftərwərdz/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We went for a walk and had dinner afterwards.",
+        "cn": "我们散了步，之后吃了晚饭。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -422,7 +467,12 @@
     "translation": "…岁的",
     "phonetic": "/eɪʤd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She takes care of her aged grandmother.",
+        "cn": "她照顾年迈的祖母。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -477,7 +527,7 @@
     "id": 2035,
     "word": "airport",
     "translation": "机场",
-    "phonetic": "/ˈɛrˌpɔrt/",
+    "phonetic": "/ˈɛrˌpɔːrt/",
     "pos": "n",
     "examples": [
       {
@@ -493,9 +543,14 @@
     "id": 2036,
     "word": "alarm clock",
     "translation": "闹钟",
-    "phonetic": "/əˈlɑrm/",
+    "phonetic": "/əˈlɑːrm klɑːk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I set the alarm clock for 6 a.m.",
+        "cn": "我把闹钟设到了早上六点。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -504,14 +559,19 @@
     "translation": "相册",
     "phonetic": "/ˈælbəm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This is my favorite album of all time.",
+        "cn": "这是我一直以来最喜欢的专辑。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2038,
     "word": "all",
     "translation": "全部；所有",
-    "phonetic": "/ɔl/",
+    "phonetic": "/ɔːl/",
     "pos": "adv, det & pron",
     "examples": [
       {
@@ -527,9 +587,14 @@
     "id": 2039,
     "word": "all kinds of",
     "translation": "各种各样的",
-    "phonetic": "/ɔl/",
+    "phonetic": "/ɔːl kaɪndz əv/",
     "pos": "det & pron",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The store sells all kinds of fruits.",
+        "cn": "这家店卖各种水果。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -552,25 +617,35 @@
     "id": 2041,
     "word": "all sorts of",
     "translation": "各种各样的",
-    "phonetic": "/ɔl/",
+    "phonetic": "/ɔːl sɔːrts əv/",
     "pos": "det & pron",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We met all sorts of people during the trip.",
+        "cn": "我们在旅途中遇到了各种各样的人。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2042,
     "word": "all the time",
     "translation": "一直",
-    "phonetic": "/ɔl/",
+    "phonetic": "/ɔːl ðə taɪm/",
     "pos": "det",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He talks about football all the time.",
+        "cn": "他整天都在聊足球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2043,
     "word": "almost",
     "translation": "几乎",
-    "phonetic": "/ˈɔlˌmoʊst/",
+    "phonetic": "/ˈɔːlmoʊst/",
     "pos": "adv",
     "examples": [
       {
@@ -602,7 +677,7 @@
     "id": 2045,
     "word": "along",
     "translation": "沿着",
-    "phonetic": "/əˈlɔŋ/",
+    "phonetic": "/əˈlɔːŋ/",
     "pos": "prep",
     "examples": [
       {
@@ -618,7 +693,7 @@
     "id": 2046,
     "word": "already",
     "translation": "已经",
-    "phonetic": "/ɔˈrɛdi/",
+    "phonetic": "/ɔːlˈrɛdi/",
     "pos": "adv",
     "examples": [
       {
@@ -634,16 +709,21 @@
     "id": 2047,
     "word": "alright",
     "translation": "好吧",
-    "phonetic": "/ˌɔˈlraɪt/",
+    "phonetic": "/ˌɔːlˈraɪt/",
     "pos": "adj, adv & exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Everything will be alright in the end.",
+        "cn": "一切最终都会好起来的。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2048,
     "word": "also",
     "translation": "也",
-    "phonetic": "/ˈɔlsoʊ/",
+    "phonetic": "/ˈɔːlsoʊ/",
     "pos": "adv",
     "examples": [
       {
@@ -659,7 +739,7 @@
     "id": 2049,
     "word": "always",
     "translation": "总是",
-    "phonetic": "/ˈɔlˌweɪz/",
+    "phonetic": "/ˈɔːlweɪz/",
     "pos": "adv",
     "examples": [
       {
@@ -675,7 +755,7 @@
     "id": 2050,
     "word": "a.m",
     "translation": "上午",
-    "phonetic": "/a.m*./",
+    "phonetic": "/ˌeɪ ˈem/",
     "pos": "adv",
     "examples": [
       {
@@ -693,7 +773,12 @@
     "translation": "惊讶的",
     "phonetic": "/əˈmeɪzd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I was amazed by his performance.",
+        "cn": "我对他的表演感到惊讶。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -718,7 +803,12 @@
     "translation": "救护车",
     "phonetic": "/ˈæmbjələns/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The ambulance arrived in five minutes.",
+        "cn": "救护车五分钟内就到了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -750,14 +840,14 @@
       }
     ],
     "isKETVocabulary": true,
-    "dupInVocab": true,
+    "dupInVocab": false,
     "dupLevel": "小学"
   },
   {
     "id": 2056,
     "word": "and",
     "translation": "和；并且",
-    "phonetic": "/ənd/",
+    "phonetic": "/ænd/",
     "pos": "conj",
     "examples": [
       {
@@ -869,9 +959,14 @@
     "id": 2063,
     "word": "anymore",
     "translation": "再也",
-    "phonetic": "/ˌɛniˈmɔr/",
+    "phonetic": "/ˌɛniˈmɔːr/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She doesn't live here anymore.",
+        "cn": "她不再住在这里了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -882,12 +977,12 @@
     "pos": "pron",
     "examples": [
       {
-        "en": "Anybody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Is anyone at home? I want to ask for help.",
+        "cn": "有人在家吗？我想求助。"
       }
     ],
     "isKETVocabulary": true,
-    "dupInVocab": true,
+    "dupInVocab": false,
     "dupLevel": "初中"
   },
   {
@@ -942,7 +1037,7 @@
     "id": 2068,
     "word": "apartment",
     "translation": "公寓",
-    "phonetic": "/əˈpɑrtmənt/",
+    "phonetic": "/əˈpɑːrtmənt/",
     "pos": "n",
     "examples": [
       {
@@ -958,9 +1053,14 @@
     "id": 2069,
     "word": "apartment building",
     "translation": "公寓楼",
-    "phonetic": "/əˈpɑrtmənt/",
+    "phonetic": "/əˈpɑːrtmənt ˈbɪldɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They live in a tall apartment building.",
+        "cn": "他们住在一栋高层公寓楼里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -969,7 +1069,12 @@
     "translation": "应用程序",
     "phonetic": "/æp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I use this app to learn new words.",
+        "cn": "我用这个应用学新单词。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -994,7 +1099,12 @@
     "translation": "预约",
     "phonetic": "/əˈpɔɪntmənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a dentist appointment at 3 p.m.",
+        "cn": "我下午三点有个牙医预约。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1033,7 +1143,7 @@
     "id": 2075,
     "word": "arm",
     "translation": "手臂",
-    "phonetic": "/ɑrm/",
+    "phonetic": "/ɑːrm/",
     "pos": "n",
     "examples": [
       {
@@ -1049,16 +1159,21 @@
     "id": 2076,
     "word": "armchair",
     "translation": "扶手椅",
-    "phonetic": "/ˈɑrmˌʧɛr/",
+    "phonetic": "/ˈɑːrmˌtʃɛr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He fell asleep in the old armchair.",
+        "cn": "他在旧扶手椅上睡着了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2077,
     "word": "around",
     "translation": "在周围；大约",
-    "phonetic": "/ʌraʊnd/",
+    "phonetic": "/əˈraʊnd/",
     "pos": "adv & prep",
     "examples": [
       {
@@ -1074,7 +1189,7 @@
     "id": 2078,
     "word": "arrive",
     "translation": "到达",
-    "phonetic": "/ʌraɪv/",
+    "phonetic": "/əˈraɪv/",
     "pos": "v",
     "examples": [
       {
@@ -1090,7 +1205,7 @@
     "id": 2079,
     "word": "art",
     "translation": "艺术",
-    "phonetic": "/ɑrt/",
+    "phonetic": "/ɑːrt/",
     "pos": "n",
     "examples": [
       {
@@ -1106,7 +1221,7 @@
     "id": 2080,
     "word": "article",
     "translation": "文章；物品",
-    "phonetic": "/ˈɑrtɪkəl/",
+    "phonetic": "/ˈɑːrtɪkəl/",
     "pos": "n",
     "examples": [
       {
@@ -1122,7 +1237,7 @@
     "id": 2081,
     "word": "artist",
     "translation": "艺术家",
-    "phonetic": "/ˈɑrtɪst/",
+    "phonetic": "/ˈɑːrtɪst/",
     "pos": "n",
     "examples": [
       {
@@ -1138,7 +1253,7 @@
     "id": 2082,
     "word": "as",
     "translation": "作为；像……一样",
-    "phonetic": "/ɛz/",
+    "phonetic": "/æz/",
     "pos": "conj & adv & prep",
     "examples": [
       {
@@ -1172,16 +1287,26 @@
     "translation": "助手",
     "phonetic": "/əˈsɪstənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The shop assistant helped me find my size.",
+        "cn": "店员帮我找到了我的尺码。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2085,
     "word": "as well",
     "translation": "也",
-    "phonetic": "/æz/",
+    "phonetic": "/æz wɛl/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She can sing and dance as well.",
+        "cn": "她也会唱歌跳舞。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1204,9 +1329,14 @@
     "id": 2087,
     "word": "schools",
     "translation": "学校(复数)",
-    "phonetic": "/skulz/",
+    "phonetic": "/skuːlz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There are three schools in this town.",
+        "cn": "这个镇上有三所学校。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1215,14 +1345,19 @@
     "translation": "有吸引力的",
     "phonetic": "/əˈtræktɪv/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wears an attractive dress today.",
+        "cn": "她今天穿了一条吸引人的裙子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2090,
     "word": "august",
     "translation": "八月",
-    "phonetic": "/ˈɔgəst/",
+    "phonetic": "/ˈɔːgəst/",
     "pos": "n",
     "examples": [
       {
@@ -1238,7 +1373,7 @@
     "id": 2091,
     "word": "aunt",
     "translation": "姑母；姨母",
-    "phonetic": "/ɔnt/",
+    "phonetic": "/ɔːnt/",
     "pos": "n",
     "examples": [
       {
@@ -1254,7 +1389,7 @@
     "id": 2092,
     "word": "autumn",
     "translation": "秋天",
-    "phonetic": "/ˈɔtəm/",
+    "phonetic": "/ˈɔːtəm/",
     "pos": "n",
     "examples": [
       {
@@ -1272,7 +1407,12 @@
     "translation": "可用的",
     "phonetic": "/əˈveɪləbəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Are you available for a meeting tomorrow?",
+        "cn": "你明天有时间开会吗？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1295,16 +1435,21 @@
     "id": 2095,
     "word": "awesome",
     "translation": "太棒了",
-    "phonetic": "/ˈɔsəm/",
+    "phonetic": "/ˈɔːsəm/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The view from the top is awesome.",
+        "cn": "山顶的景色太棒了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2096,
     "word": "awful",
     "translation": "糟糕的",
-    "phonetic": "/ˈɔfəl/",
+    "phonetic": "/ˈɔːfəl/",
     "pos": "adj",
     "examples": [
       {
@@ -1358,7 +1503,12 @@
     "translation": "背包",
     "phonetic": "/ˈbækˌpæk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I carry my books in a backpack.",
+        "cn": "我把书放在背包里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1383,7 +1533,12 @@
     "translation": "糟糕地",
     "phonetic": "/ˈbædli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He hurt his leg badly in the accident.",
+        "cn": "他在事故中腿部受了重伤。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1424,14 +1579,19 @@
     "translation": "烤",
     "phonetic": "/beɪk/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My mother loves to bake cakes on weekends.",
+        "cn": "我妈妈喜欢在周末烤蛋糕。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2105,
     "word": "ball",
     "translation": "球",
-    "phonetic": "/bɔl/",
+    "phonetic": "/bɔːl/",
     "pos": "n",
     "examples": [
       {
@@ -1447,7 +1607,7 @@
     "id": 2106,
     "word": "balloon",
     "translation": "气球",
-    "phonetic": "/bəˈlun/",
+    "phonetic": "/bəˈluːn/",
     "pos": "n",
     "examples": [
       {
@@ -1513,7 +1673,12 @@
     "translation": "烧烤",
     "phonetic": "/ˈbɑːrbɪkjuː/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had a barbecue in the garden last Sunday.",
+        "cn": "我们上周日在花园里烧烤了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1588,9 +1753,14 @@
     "id": 2115,
     "word": "bathing suit",
     "translation": "泳衣",
-    "phonetic": "/ˈbeɪðɪŋ/",
+    "phonetic": "/ˈbeɪðɪŋ suːt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Don't forget to bring your bathing suit.",
+        "cn": "别忘了带上你的泳衣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1615,7 +1785,12 @@
     "translation": "浴缸",
     "phonetic": "/ˈbæθtəb/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She filled the bathtub with hot water.",
+        "cn": "她把浴缸放满了热水。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1624,7 +1799,12 @@
     "translation": "电池",
     "phonetic": "/ˈbætəri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My phone battery is running low.",
+        "cn": "我的手机快没电了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1647,7 +1827,7 @@
     "id": 2120,
     "word": "beach",
     "translation": "海滩",
-    "phonetic": "/biʧ/",
+    "phonetic": "/biːtʃ/",
     "pos": "n",
     "examples": [
       {
@@ -1663,7 +1843,7 @@
     "id": 2121,
     "word": "bean",
     "translation": "豆",
-    "phonetic": "/bin/",
+    "phonetic": "/biːn/",
     "pos": "n",
     "examples": [
       {
@@ -1697,7 +1877,12 @@
     "translation": "胡须",
     "phonetic": "/bɪrd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My uncle has a short brown beard.",
+        "cn": "我叔叔留着短棕色的胡子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1784,7 +1969,7 @@
     "id": 2129,
     "word": "bee",
     "translation": "蜜蜂",
-    "phonetic": "/bi/",
+    "phonetic": "/biː/",
     "pos": "n",
     "examples": [
       {
@@ -1802,14 +1987,19 @@
     "translation": "甲虫",
     "phonetic": "/ˈbitəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He found a beetle under the rock.",
+        "cn": "他在石头下面发现了一只甲虫。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2131,
     "word": "before",
     "translation": "在……以前",
-    "phonetic": "/ˌbiˈfɔr/",
+    "phonetic": "/ˌbiˈfɔːr/",
     "pos": "adv, conj & prep",
     "examples": [
       {
@@ -1843,7 +2033,12 @@
     "translation": "初学者",
     "phonetic": "/bɪˈgɪnər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This course is for beginners.",
+        "cn": "这门课是为初学者开设的。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -1852,7 +2047,12 @@
     "translation": "开始",
     "phonetic": "/bɪˈgɪnɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Start from the beginning of the story.",
+        "cn": "从这个故事的开头开始。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2037,7 +2237,12 @@
     "translation": "自行车",
     "phonetic": "/baɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ride my bike to school every day.",
+        "cn": "我每天骑自行车上学。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2092,7 +2297,7 @@
     "id": 2150,
     "word": "bird",
     "translation": "鸟",
-    "phonetic": "/bʌrd/",
+    "phonetic": "/bɜːrd/",
     "pos": "n",
     "examples": [
       {
@@ -2108,7 +2313,7 @@
     "id": 2151,
     "word": "birth",
     "translation": "出生",
-    "phonetic": "/bʌrθ/",
+    "phonetic": "/bɜːrθ/",
     "pos": "n",
     "examples": [
       {
@@ -2190,7 +2395,12 @@
     "translation": "毯子",
     "phonetic": "/ˈblæŋkət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wrapped herself in a warm blanket.",
+        "cn": "她用温暖的毯子裹住自己。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2213,9 +2423,14 @@
     "id": 2158,
     "word": "blog",
     "translation": "博客",
-    "phonetic": "/blɔg/",
+    "phonetic": "/blɔːɡ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She writes about food on her blog.",
+        "cn": "她在博客上写关于美食的文章。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2254,7 +2469,7 @@
     "id": 2161,
     "word": "blue",
     "translation": "蓝色；蓝的",
-    "phonetic": "/blu/",
+    "phonetic": "/bluː/",
     "pos": "adj & n",
     "examples": [
       {
@@ -2270,9 +2485,14 @@
     "id": 2164,
     "word": "board game",
     "translation": "桌面游戏",
-    "phonetic": "/bɔrd/",
+    "phonetic": "/bɔːrd geɪm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We played a board game together last night.",
+        "cn": "我们昨晚一起玩了一款桌游。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2329,7 +2549,12 @@
     "translation": "煮熟的",
     "phonetic": "/bɔɪld/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I like boiled eggs for breakfast.",
+        "cn": "我喜欢早餐吃煮鸡蛋。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2338,7 +2563,12 @@
     "translation": "书架",
     "phonetic": "/ˈbʊkˌkeɪs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There are many novels in the bookcase.",
+        "cn": "书柜里有很多小说。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2347,25 +2577,40 @@
     "translation": "书架",
     "phonetic": "/ˈbʊkˌʃɛlf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She placed the book back on the bookshelf.",
+        "cn": "她把书放回了书架上。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2172,
     "word": "boot",
     "translation": "靴子",
-    "phonetic": "/but/",
+    "phonetic": "/buːt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He wore a pair of brown boots.",
+        "cn": "他穿了一双棕色靴子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2173,
     "word": "bored",
     "translation": "无聊的",
-    "phonetic": "/bɔrd/",
+    "phonetic": "/bɔːrd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The children got bored during the long speech.",
+        "cn": "孩子们在漫长的演讲中感到无聊。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2388,7 +2633,7 @@
     "id": 2175,
     "word": "born",
     "translation": "出生的",
-    "phonetic": "/bɔrn/",
+    "phonetic": "/bɔːrn/",
     "pos": "v",
     "examples": [
       {
@@ -2420,7 +2665,7 @@
     "id": 2177,
     "word": "boss",
     "translation": "老板",
-    "phonetic": "/bɔs/",
+    "phonetic": "/bɔːs/",
     "pos": "n",
     "examples": [
       {
@@ -2454,7 +2699,12 @@
     "translation": "打扰",
     "phonetic": "/ˈbɑðər/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Don't bother him while he is reading.",
+        "cn": "他读书时别打扰他。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2543,7 +2793,12 @@
     "translation": "男朋友",
     "phonetic": "/ˈbɔɪˌfrɛnd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is going out with her boyfriend tonight.",
+        "cn": "她今晚要和男朋友出去。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2552,7 +2807,12 @@
     "translation": "手镯",
     "phonetic": "/ˈbreɪslət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wears a silver bracelet on her wrist.",
+        "cn": "她手腕上戴了一条银手链。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2673,7 +2933,12 @@
     "translation": "出色的",
     "phonetic": "/ˈbrɪljənt/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "That's a brilliant idea!",
+        "cn": "那是个绝妙的主意！"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2698,7 +2963,12 @@
     "translation": "坏掉的",
     "phonetic": "/ˈbroʊkən/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My watch is broken. I need a new one.",
+        "cn": "我的手表坏了。我需要一块新的。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2787,7 +3057,12 @@
     "translation": "汉堡",
     "phonetic": "/ˈbərgər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ordered a burger and fries for lunch.",
+        "cn": "我午餐点了一个汉堡和薯条。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2828,7 +3103,12 @@
     "translation": "商人",
     "phonetic": "/ˈbɪznəsˌmæn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My uncle is a successful businessman.",
+        "cn": "我叔叔是一位成功的商人。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2837,25 +3117,40 @@
     "translation": "女商人",
     "phonetic": "/ˈbɪznɪsˌwʊmən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a hard-working businesswoman.",
+        "cn": "她是一位勤劳的女商人。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2207,
     "word": "bus station",
     "translation": "公交车站",
-    "phonetic": "/bəs/",
+    "phonetic": "/bʌs ˈsteɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We met at the bus station this morning.",
+        "cn": "我们今天早上在公交车站见面。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2208,
     "word": "bus stop",
     "translation": "公交站",
-    "phonetic": "/bəs/",
+    "phonetic": "/bʌs stɑːp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She was waiting at the bus stop.",
+        "cn": "她正在公交车站等车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2960,7 +3255,12 @@
     "translation": "再见",
     "phonetic": "/baɪ/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Bye! See you tomorrow.",
+        "cn": "再见！明天见。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2969,7 +3269,12 @@
     "translation": "橱柜",
     "phonetic": "/ˈkæbnət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We keep our dishes in the kitchen cabinet.",
+        "cn": "我们把餐具放在厨房柜子里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -2978,7 +3283,12 @@
     "translation": "自助餐厅",
     "phonetic": "/ˌkæfəˈtɪriə/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The school cafeteria serves lunch from 11 a.m.",
+        "cn": "学校餐厅从十一点开始供应午餐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3017,7 +3327,7 @@
     "id": 2220,
     "word": "call",
     "translation": "打电话；称呼",
-    "phonetic": "/kɔl/",
+    "phonetic": "/kɔːl/",
     "pos": "n & v",
     "examples": [
       {
@@ -3035,7 +3345,12 @@
     "translation": "骆驼",
     "phonetic": "/ˈkæməl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The camel is called the ship of the desert.",
+        "cn": "骆驼被称为沙漠之舟。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3076,7 +3391,12 @@
     "translation": "露营",
     "phonetic": "/ˈkæmpɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We went camping near the lake last weekend.",
+        "cn": "我们上周末去湖边露营了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3085,7 +3405,12 @@
     "translation": "露营地",
     "phonetic": "/ˈkæmpˌsaɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They set up their tent at the campsite.",
+        "cn": "他们在营地搭起了帐篷。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3124,7 +3449,7 @@
     "id": 2228,
     "word": "can",
     "translation": "能够；可以",
-    "phonetic": "/kən/",
+    "phonetic": "/kæn/",
     "pos": "n & mv",
     "examples": [
       {
@@ -3158,14 +3483,19 @@
     "translation": "不能",
     "phonetic": "/kəˈnɑt/",
     "pos": "mv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I cannot finish this work alone.",
+        "cn": "我一个人完成不了这项工作。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2231,
     "word": "car",
     "translation": "汽车",
-    "phonetic": "/kɑr/",
+    "phonetic": "/kɑːr/",
     "pos": "n",
     "examples": [
       {
@@ -3181,7 +3511,7 @@
     "id": 2232,
     "word": "card",
     "translation": "卡片",
-    "phonetic": "/kɑrd/",
+    "phonetic": "/kɑːrd/",
     "pos": "n",
     "examples": [
       {
@@ -3199,7 +3529,12 @@
     "translation": "职业",
     "phonetic": "/kərɪr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is planning her future career.",
+        "cn": "她正在规划未来的职业。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3224,16 +3559,26 @@
     "translation": "小心地",
     "phonetic": "/ˈkɛrfəli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He drove carefully on the icy road.",
+        "cn": "他在结冰的路上小心驾驶。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2236,
     "word": "carpet",
     "translation": "地毯",
-    "phonetic": "/ˈkɑrpət/",
+    "phonetic": "/ˈkɑːrpət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The cat is sleeping on the soft carpet.",
+        "cn": "猫在柔软的地毯上睡觉。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3272,7 +3617,7 @@
     "id": 2239,
     "word": "cartoon",
     "translation": "动画片；漫画",
-    "phonetic": "/kɑrˈtun/",
+    "phonetic": "/kɑːrˈtuːn/",
     "pos": "n",
     "examples": [
       {
@@ -3322,7 +3667,12 @@
     "translation": "城堡",
     "phonetic": "/ˈkæsəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They visited an old castle in Scotland.",
+        "cn": "他们在苏格兰参观了一座古堡。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3361,18 +3711,28 @@
     "id": 2245,
     "word": "cd",
     "translation": "光盘",
-    "phonetic": "/ˈsiˈdi/",
+    "phonetic": "/ˌsiːˈdiː/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought a new CD of my favorite band.",
+        "cn": "我买了一张我最喜欢的乐队的新CD。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2246,
     "word": "ceiling",
     "translation": "天花板",
-    "phonetic": "/ˈsilɪŋ/",
+    "phonetic": "/ˈsiːlɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a light on the ceiling.",
+        "cn": "天花板上有一盏灯。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3397,7 +3757,12 @@
     "translation": "名人",
     "phonetic": "/səˈlɛbrɪti/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "That celebrity is famous all over the world.",
+        "cn": "那位名人在全世界都很有名。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3422,7 +3787,12 @@
     "translation": "中心",
     "phonetic": "/ˈsentər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a shopping centre near my home.",
+        "cn": "我家附近有一个购物中心。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3447,7 +3817,12 @@
     "translation": "麦片",
     "phonetic": "/ˈsɪriəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I usually eat cereal for breakfast.",
+        "cn": "我早餐通常吃麦片。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3456,7 +3831,12 @@
     "translation": "当然",
     "phonetic": "/ˈsərtənli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I can certainly help you with that.",
+        "cn": "我当然可以帮你做那件事。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3465,7 +3845,12 @@
     "translation": "链子",
     "phonetic": "/ʧeɪn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a gold chain around her neck.",
+        "cn": "她脖子上戴了一条金链子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3506,7 +3891,12 @@
     "translation": "频道",
     "phonetic": "/ˈʧænəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We watched a wildlife documentary on that channel.",
+        "cn": "我们在那个频道看了一部野生动物纪录片。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3547,14 +3937,19 @@
     "translation": "聊天室",
     "phonetic": "/ˈtʃætruːm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They met each other in an online chatroom.",
+        "cn": "他们在一个在线聊天室里认识了彼此。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2263,
     "word": "cheap",
     "translation": "便宜的",
-    "phonetic": "/ʧip/",
+    "phonetic": "/tʃiːp/",
     "pos": "adj",
     "examples": [
       {
@@ -3586,7 +3981,7 @@
     "id": 2265,
     "word": "cheese",
     "translation": "奶酪",
-    "phonetic": "/ʧiz/",
+    "phonetic": "/tʃiːz/",
     "pos": "n",
     "examples": [
       {
@@ -3604,7 +3999,12 @@
     "translation": "厨师",
     "phonetic": "/ʃɛf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The chef is preparing dinner in the kitchen.",
+        "cn": "厨师正在厨房准备晚餐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3629,7 +4029,12 @@
     "translation": "支票(英式)",
     "phonetic": "/ʧɛk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Can I pay by cheque?",
+        "cn": "我可以用支票支付吗？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3686,7 +4091,12 @@
     "translation": "辣椒",
     "phonetic": "/ˈtʃɪli/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The chilli made this soup very spicy.",
+        "cn": "辣椒让这碗汤变得很辣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3741,7 +4151,7 @@
     "id": 2276,
     "word": "circle",
     "translation": "圆；圈",
-    "phonetic": "/ˈsʌrkəl/",
+    "phonetic": "/ˈsɜːrkəl/",
     "pos": "n",
     "examples": [
       {
@@ -3759,7 +4169,12 @@
     "translation": "马戏团",
     "phonetic": "/ˈsərkəs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The children love going to the circus.",
+        "cn": "孩子们喜欢去马戏团。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3800,7 +4215,12 @@
     "translation": "古典的",
     "phonetic": "/ˈklæsɪkəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She enjoys listening to classical music.",
+        "cn": "她喜欢听古典音乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3839,7 +4259,7 @@
     "id": 2283,
     "word": "clean",
     "translation": "干净的；打扫",
-    "phonetic": "/klin/",
+    "phonetic": "/kliːn/",
     "pos": "adj & v",
     "examples": [
       {
@@ -3855,9 +4275,14 @@
     "id": 2284,
     "word": "cleaner",
     "translation": "清洁工",
-    "phonetic": "/ˈklinər/",
+    "phonetic": "/ˈkliːnər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The cleaner comes to our office every evening.",
+        "cn": "清洁工每晚都来我们办公室打扫。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -3914,7 +4339,12 @@
     "translation": "小丑",
     "phonetic": "/klaʊn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The clown made everyone laugh.",
+        "cn": "小丑逗得大家哈哈大笑。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4003,7 +4433,12 @@
     "translation": "可乐",
     "phonetic": "/ˈkoʊlə/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I had a glass of cola with my meal.",
+        "cn": "我吃饭时喝了一杯可乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4028,7 +4463,12 @@
     "translation": "同事",
     "phonetic": "/ˈkɑlig/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She went to lunch with her colleagues.",
+        "cn": "她和同事们一起去吃午饭了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4085,7 +4525,12 @@
     "translation": "梳子",
     "phonetic": "/koʊm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need a comb to brush my hair.",
+        "cn": "我需要一把梳子梳头发。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4110,7 +4555,12 @@
     "translation": "喜剧",
     "phonetic": "/ˈkɑmədi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We watched a funny comedy last night.",
+        "cn": "我们昨晚看了一部搞笑的喜剧。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4135,7 +4585,12 @@
     "translation": "喜剧的",
     "phonetic": "/ˈkɑmɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He collects comic books from different countries.",
+        "cn": "他收藏来自不同国家的漫画书。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4160,7 +4615,12 @@
     "translation": "比赛",
     "phonetic": "/ˌkɑmpəˈtɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She won first prize in the competition.",
+        "cn": "她在比赛中获得了一等奖。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4217,14 +4677,19 @@
     "translation": "联系",
     "phonetic": "/ˈkɑnˌtækt/",
     "pos": "n & v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'll contact you by email later.",
+        "cn": "我稍后通过邮件联系你。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2312,
     "word": "continue",
     "translation": "继续",
-    "phonetic": "/kənˈtɪnju/",
+    "phonetic": "/kənˈtɪnjuː/",
     "pos": "v",
     "examples": [
       {
@@ -4274,7 +4739,12 @@
     "translation": "炊具",
     "phonetic": "/ˈkʊkər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My mother uses a gas cooker at home.",
+        "cn": "我妈妈在家里用燃气灶。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4283,14 +4753,19 @@
     "translation": "烹饪",
     "phonetic": "/ˈkʊkɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is interested in cooking Chinese food.",
+        "cn": "她对做中餐感兴趣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2317,
     "word": "cool",
     "translation": "凉爽的；酷的",
-    "phonetic": "/kul/",
+    "phonetic": "/kuːl/",
     "pos": "adj & exclam",
     "examples": [
       {
@@ -4322,7 +4797,7 @@
     "id": 2319,
     "word": "corner",
     "translation": "角落",
-    "phonetic": "/ˈkɔrnər/",
+    "phonetic": "/ˈkɔːrnər/",
     "pos": "n",
     "examples": [
       {
@@ -4340,7 +4815,12 @@
     "translation": "清楚地",
     "phonetic": "/ˈklɪrli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please speak clearly so everyone can hear you.",
+        "cn": "请说清楚一些，这样大家都能听见你。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4411,9 +4891,14 @@
     "id": 2325,
     "word": "costume",
     "translation": "服装",
-    "phonetic": "/kɑˈstum/",
+    "phonetic": "/kɑˈstuːm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a beautiful costume to the party.",
+        "cn": "她穿着漂亮的戏服去参加派对。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4438,7 +4923,12 @@
     "translation": "攀登",
     "phonetic": "/ˈklaɪmɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Climbing that mountain is not easy.",
+        "cn": "爬那座山并不容易。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4483,7 +4973,12 @@
     "translation": "关闭的",
     "phonetic": "/kloʊzd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The store is closed on Sundays.",
+        "cn": "这家店周日关门。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4492,7 +4987,12 @@
     "translation": "壁橱",
     "phonetic": "/ˈklɑzət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She hung her coat in the closet.",
+        "cn": "她把外套挂在了衣柜里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4563,9 +5063,14 @@
     "id": 2337,
     "word": "court",
     "translation": "球场",
-    "phonetic": "/kɔrt/",
+    "phonetic": "/kɔːrt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They are playing basketball on the court.",
+        "cn": "他们正在球场上打篮球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4624,27 +5129,42 @@
     "id": 2341,
     "word": "cream",
     "translation": "奶油",
-    "phonetic": "/krim/",
+    "phonetic": "/kriːm/",
     "pos": "adj & n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I like cream in my coffee.",
+        "cn": "我喜欢在咖啡里加奶油。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2342,
     "word": "creature",
     "translation": "生物",
-    "phonetic": "/ˈkriʧər/",
+    "phonetic": "/ˈkriːtʃər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The forest is full of strange creatures.",
+        "cn": "森林里充满了奇特的生物。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2343,
     "word": "credit card",
     "translation": "信用卡",
-    "phonetic": "/ˈkrɛdət/",
+    "phonetic": "/ˈkrɛdɪt kɑːrd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I usually pay by credit card.",
+        "cn": "我通常用信用卡支付。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4653,7 +5173,12 @@
     "translation": "板球",
     "phonetic": "/ˈkrɪkɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We played cricket in the park last Sunday.",
+        "cn": "我们上周日在公园打板球了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4662,14 +5187,19 @@
     "translation": "鳄鱼",
     "phonetic": "/ˈkrɑkəˌdaɪl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The crocodile lay on the river bank.",
+        "cn": "鳄鱼躺在河岸上。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2346,
     "word": "cross",
     "translation": "穿过；十字形",
-    "phonetic": "/krɔs/",
+    "phonetic": "/krɔːs/",
     "pos": "n & v",
     "examples": [
       {
@@ -4685,9 +5215,14 @@
     "id": 2347,
     "word": "crossing",
     "translation": "十字路口",
-    "phonetic": "/ˈkrɔsɪŋ/",
+    "phonetic": "/ˈkrɔːsɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please use the zebra crossing to cross the road.",
+        "cn": "过马路请走斑马线。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4696,7 +5231,12 @@
     "translation": "人群",
     "phonetic": "/kraʊd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The crowd was cheering loudly.",
+        "cn": "人群在热烈欢呼。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4753,7 +5293,12 @@
     "translation": "橱柜",
     "phonetic": "/ˈkəbərd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She put the plates back in the cupboard.",
+        "cn": "她把盘子放回了碗柜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4762,7 +5307,12 @@
     "translation": "咖喱",
     "phonetic": "/ˈkəri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had chicken curry for dinner.",
+        "cn": "我们晚餐吃了咖喱鸡。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4771,7 +5321,12 @@
     "translation": "窗帘",
     "phonetic": "/ˈkərtən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She closed the curtain to keep the sun out.",
+        "cn": "她拉上窗帘挡住阳光。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4812,7 +5367,12 @@
     "translation": "骑自行车",
     "phonetic": "/ˈsaɪkəl/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She learned to cycle when she was six.",
+        "cn": "她六岁时学会了骑自行车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4821,7 +5381,12 @@
     "translation": "骑自行车",
     "phonetic": "/ˈsaɪklɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Cycling is good for your health.",
+        "cn": "骑自行车对你的健康有益。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4830,7 +5395,12 @@
     "translation": "爸爸",
     "phonetic": "/dæd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My dad works in a bank.",
+        "cn": "我爸爸在银行工作。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4871,7 +5441,12 @@
     "translation": "舞者",
     "phonetic": "/ˈdænsər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a professional dancer.",
+        "cn": "她是一名专业舞者。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4880,7 +5455,12 @@
     "translation": "跳舞",
     "phonetic": "/ˈdænsɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I enjoy dancing in my free time.",
+        "cn": "我喜欢空闲时间跳舞。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -4919,7 +5499,7 @@
     "id": 2366,
     "word": "dark",
     "translation": "黑暗的；深色的",
-    "phonetic": "/dɑrk/",
+    "phonetic": "/dɑːrk/",
     "pos": "adj",
     "examples": [
       {
@@ -4951,7 +5531,7 @@
     "id": 2368,
     "word": "daughter",
     "translation": "女儿",
-    "phonetic": "/ˈdɔtər/",
+    "phonetic": "/ˈdɔːtər/",
     "pos": "n",
     "examples": [
       {
@@ -5051,7 +5631,7 @@
     "id": 2374,
     "word": "deep",
     "translation": "深的",
-    "phonetic": "/dip/",
+    "phonetic": "/diːp/",
     "pos": "adj",
     "examples": [
       {
@@ -5067,7 +5647,7 @@
     "id": 2375,
     "word": "degree",
     "translation": "度；程度；学位",
-    "phonetic": "/dɪˈgri/",
+    "phonetic": "/dɪˈɡriː/",
     "pos": "n",
     "examples": [
       {
@@ -5085,7 +5665,12 @@
     "translation": "延迟",
     "phonetic": "/dɪˈleɪ/",
     "pos": "n & v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The flight was delayed due to bad weather.",
+        "cn": "航班因天气原因延误了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5094,7 +5679,12 @@
     "translation": "延迟的",
     "phonetic": "/dɪˈleɪd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Our train is delayed by 20 minutes.",
+        "cn": "我们的火车晚点了20分钟。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5119,7 +5709,12 @@
     "translation": "递送",
     "phonetic": "/dɪˈlɪvər/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The postman will deliver the package tomorrow.",
+        "cn": "邮递员明天会送这个包裹。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5142,9 +5737,14 @@
     "id": 2381,
     "word": "department",
     "translation": "部门",
-    "phonetic": "/dɪˈpɑrtmənt/",
+    "phonetic": "/dɪˈpɑːrtmənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She works in the sales department.",
+        "cn": "她在销售部工作。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5217,7 +5817,12 @@
     "translation": "甜点",
     "phonetic": "/dɪˈzərt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I had ice cream for dessert.",
+        "cn": "我吃了冰淇淋作为甜点。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5226,7 +5831,12 @@
     "translation": "细节",
     "phonetic": "/dɪˈteɪlz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please fill in your personal details on this form.",
+        "cn": "请在这张表格上填写你的个人信息。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5361,9 +5971,14 @@
     "id": 2397,
     "word": "dinosaur",
     "translation": "恐龙",
-    "phonetic": "/ˈdaɪnəˌsɔr/",
+    "phonetic": "/ˈdaɪnəˌsɔːr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The museum has a dinosaur skeleton.",
+        "cn": "这个博物馆有一具恐龙骨架。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5372,7 +5987,12 @@
     "translation": "文凭",
     "phonetic": "/dɪˈploʊmɑ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She received her diploma at the graduation ceremony.",
+        "cn": "她在毕业典礼上拿到了毕业证。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5381,14 +6001,19 @@
     "translation": "方向(复数)",
     "phonetic": "/daɪˈrɛkʃɪnz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I asked the police for directions.",
+        "cn": "我向警察问路。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2400,
     "word": "dirty",
     "translation": "脏的",
-    "phonetic": "/ˈdʌrti/",
+    "phonetic": "/ˈdɜːrti/",
     "pos": "adj",
     "examples": [
       {
@@ -5406,7 +6031,12 @@
     "translation": "迪斯科",
     "phonetic": "/ˈdɪskoʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They went to a disco on Saturday night.",
+        "cn": "他们周六晚上去了一家迪斯科舞厅。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5415,7 +6045,12 @@
     "translation": "折扣",
     "phonetic": "/dɪˈskaʊnt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I got a discount on this coat.",
+        "cn": "我买这件外套时享受了折扣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5472,7 +6107,12 @@
     "translation": "潜水",
     "phonetic": "/daɪv/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He learned to dive in the swimming pool.",
+        "cn": "他在游泳池里学会了潜水。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5481,14 +6121,19 @@
     "translation": "潜水",
     "phonetic": "/ˈdaɪvɪŋ/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They went diving in the sea last summer.",
+        "cn": "他们去年夏天去海里潜水了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2408,
     "word": "do",
     "translation": "做",
-    "phonetic": "/du/",
+    "phonetic": "/duː/",
     "pos": "av & v",
     "examples": [
       {
@@ -5522,7 +6167,12 @@
     "translation": "文件",
     "phonetic": "/ˈdɑkjumɛnt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need to print this document.",
+        "cn": "我需要打印这份文件。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5579,7 +6229,12 @@
     "translation": "海豚",
     "phonetic": "/ˈdɑlfən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The dolphins were swimming alongside the boat.",
+        "cn": "海豚在船边游动。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5588,14 +6243,19 @@
     "translation": "驴",
     "phonetic": "/ˈdɑŋki/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "A donkey was carrying heavy bags.",
+        "cn": "一头驴正驮着沉重的袋子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2416,
     "word": "door",
     "translation": "门",
-    "phonetic": "/dɔr/",
+    "phonetic": "/dɔːr/",
     "pos": "n",
     "examples": [
       {
@@ -5613,7 +6273,12 @@
     "translation": "点",
     "phonetic": "/dɑt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a dress with white dots.",
+        "cn": "她买了一条带白点的裙子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5668,9 +6333,14 @@
     "id": 2422,
     "word": "downstairs",
     "translation": "楼下",
-    "phonetic": "/ˈdaʊnˈstɛrz/",
+    "phonetic": "/ˌdaʊnˈstɛrz/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Our bedroom is downstairs.",
+        "cn": "我们的卧室在楼下。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5679,7 +6349,12 @@
     "translation": "医生(缩写)",
     "phonetic": "/draɪv/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "You need to see a Dr for your illness.",
+        "cn": "你需要去看医生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5702,9 +6377,14 @@
     "id": 2425,
     "word": "drawer",
     "translation": "抽屉",
-    "phonetic": "/drɔr/",
+    "phonetic": "/drɔːr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She put the letter in the drawer.",
+        "cn": "她把信放进了抽屉里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5713,14 +6393,19 @@
     "translation": "画画",
     "phonetic": "/drɔɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The kids are learning drawing at school.",
+        "cn": "孩子们在学校学画画。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2427,
     "word": "dream",
     "translation": "梦；梦想",
-    "phonetic": "/drim/",
+    "phonetic": "/driːm/",
     "pos": "n & v",
     "examples": [
       {
@@ -5754,7 +6439,12 @@
     "translation": "穿好衣服的",
     "phonetic": "/drɛst/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He got dressed quickly and went to work.",
+        "cn": "他很快穿好衣服去上班了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5827,7 +6517,12 @@
     "translation": "鼓",
     "phonetic": "/drəm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My brother plays the drum in a band.",
+        "cn": "我哥哥在乐队里打鼓。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -5884,14 +6579,19 @@
     "translation": "光盘",
     "phonetic": "/ˌdiˌviˈdi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought a DVD of my favorite movie.",
+        "cn": "我买了一张我最喜欢的电影的DVD。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2439,
     "word": "each",
     "translation": "每个；各自",
-    "phonetic": "/iʧ/",
+    "phonetic": "/iːtʃ/",
     "pos": "det & pron",
     "examples": [
       {
@@ -5907,7 +6607,7 @@
     "id": 2440,
     "word": "eagle",
     "translation": "鹰",
-    "phonetic": "/ˈigəl/",
+    "phonetic": "/ˈiːɡəl/",
     "pos": "n",
     "examples": [
       {
@@ -5957,32 +6657,47 @@
     "translation": "赚取",
     "phonetic": "/ərn/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She earns a lot of money from her job.",
+        "cn": "她从工作中挣了很多钱。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2444,
     "word": "earring",
     "translation": "耳环",
-    "phonetic": "/ˈirɪŋ/",
+    "phonetic": "/ˈɪrɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a small gold earring.",
+        "cn": "她戴了一只小小的金耳环。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2445,
     "word": "easily",
     "translation": "容易地",
-    "phonetic": "/ˈizəli/",
+    "phonetic": "/ˈiːzəli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She passed the exam easily.",
+        "cn": "她轻松通过了考试。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2446,
     "word": "east",
     "translation": "东方；东部",
-    "phonetic": "/ist/",
+    "phonetic": "/iːst/",
     "pos": "n, adj & adv",
     "examples": [
       {
@@ -5998,7 +6713,7 @@
     "id": 2447,
     "word": "easy",
     "translation": "容易的",
-    "phonetic": "/ˈizi/",
+    "phonetic": "/ˈiːzi/",
     "pos": "adj",
     "examples": [
       {
@@ -6014,7 +6729,7 @@
     "id": 2448,
     "word": "eat",
     "translation": "吃",
-    "phonetic": "/it/",
+    "phonetic": "/iːt/",
     "pos": "v",
     "examples": [
       {
@@ -6064,7 +6779,12 @@
     "translation": "电",
     "phonetic": "/ɪˌlɛkˈtrɪsəti/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We cannot live without electricity.",
+        "cn": "我们没有电就活不下去。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6103,7 +6823,7 @@
     "id": 2454,
     "word": "email",
     "translation": "电子邮件",
-    "phonetic": "/iˈmeɪl/",
+    "phonetic": "/ˈiːmeɪl/",
     "pos": "n & v",
     "examples": [
       {
@@ -6153,7 +6873,12 @@
     "translation": "引擎",
     "phonetic": "/ˈɛnʤən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The engine of the car is very powerful.",
+        "cn": "这辆车的引擎非常强劲。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6230,7 +6955,12 @@
     "translation": "入口",
     "phonetic": "/ˈɛntrəns/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The entrance is on the left side.",
+        "cn": "入口在左边。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6239,7 +6969,12 @@
     "translation": "信封",
     "phonetic": "/ˈɛnvəˌloʊp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She sealed the letter in an envelope.",
+        "cn": "她把信装进信封封好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6264,7 +6999,12 @@
     "translation": "设备",
     "phonetic": "/ɪkˈwɪpmənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need new camping equipment for our trip.",
+        "cn": "我们旅行需要新的露营装备。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6289,14 +7029,19 @@
     "translation": "欧元",
     "phonetic": "/ˈjuroʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The price of the ticket is 20 euros.",
+        "cn": "这张票的价格是20欧元。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2468,
     "word": "even",
     "translation": "甚至；平坦的",
-    "phonetic": "/ˈivɪn/",
+    "phonetic": "/ˈiːvən/",
     "pos": "adv",
     "examples": [
       {
@@ -6396,12 +7141,12 @@
     "pos": "pron",
     "examples": [
       {
-        "en": "Everybody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Everyone in our class likes this song.",
+        "cn": "我们班每个人都喜欢这首歌。"
       }
     ],
     "isKETVocabulary": true,
-    "dupInVocab": true,
+    "dupInVocab": false,
     "dupLevel": "初中"
   },
   {
@@ -6458,7 +7203,12 @@
     "translation": "考试",
     "phonetic": "/ɪɡˌzæmɪˈneɪʃən/ /ɪɡˈzæm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The examination will start at 9 a.m.",
+        "cn": "考试将在上午九点开始。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6545,7 +7295,7 @@
     "id": 2485,
     "word": "excuse",
     "translation": "原谅；借口",
-    "phonetic": "/ɪkˈskjuz/",
+    "phonetic": "/ɪkˈskjuːz/",
     "pos": "v",
     "examples": [
       {
@@ -6579,7 +7329,12 @@
     "translation": "展览",
     "phonetic": "/ˌɛksəˈbɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We visited an art exhibition this weekend.",
+        "cn": "我们这周末参观了一个艺术展。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6588,7 +7343,12 @@
     "translation": "出口",
     "phonetic": "/ˈɛgzɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please use the emergency exit if necessary.",
+        "cn": "如有必要，请使用紧急出口。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6629,7 +7389,12 @@
     "translation": "实验",
     "phonetic": "/ɪkˈspɛrəmənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We did a fun experiment in science class.",
+        "cn": "我们在科学课上做了一个有趣的实验。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6652,7 +7417,7 @@
     "id": 2493,
     "word": "explore",
     "translation": "探索",
-    "phonetic": "/ɪkˈsplɔr/",
+    "phonetic": "/ɪkˈsplɔːr/",
     "pos": "v",
     "examples": [
       {
@@ -6668,9 +7433,14 @@
     "id": 2494,
     "word": "explorer",
     "translation": "探险家",
-    "phonetic": "/ɪkˈsplɔrər/",
+    "phonetic": "/ɪkˈsplɔːrər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The explorer traveled across the desert alone.",
+        "cn": "那位探险家独自穿越了沙漠。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6679,7 +7449,12 @@
     "translation": "灭绝的",
     "phonetic": "/ɪkˈstɪŋkt/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Many wild animals are in danger of becoming extinct.",
+        "cn": "许多野生动物正面临灭绝的危险。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6688,7 +7463,12 @@
     "translation": "额外的",
     "phonetic": "/ˈɛkstrə/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need to buy some extra batteries.",
+        "cn": "我需要多买一些备用电池。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -6791,7 +7571,7 @@
     "id": 2503,
     "word": "fall",
     "translation": "落下；秋天",
-    "phonetic": "/fɔl/",
+    "phonetic": "/fɔːl/",
     "pos": "n & v",
     "examples": [
       {
@@ -6871,7 +7651,7 @@
     "id": 2508,
     "word": "far",
     "translation": "远的；远地",
-    "phonetic": "/fɑr/",
+    "phonetic": "/fɑːr/",
     "pos": "adv",
     "examples": [
       {
@@ -6887,7 +7667,7 @@
     "id": 2509,
     "word": "farm",
     "translation": "农场",
-    "phonetic": "/fɑrm/",
+    "phonetic": "/fɑːrm/",
     "pos": "n",
     "examples": [
       {
@@ -6903,7 +7683,7 @@
     "id": 2510,
     "word": "farmer",
     "translation": "农民",
-    "phonetic": "/ˈfɑrmər/",
+    "phonetic": "/ˈfɑːrmər/",
     "pos": "n",
     "examples": [
       {
@@ -7019,7 +7799,7 @@
     "id": 2517,
     "word": "feel",
     "translation": "感觉",
-    "phonetic": "/fil/",
+    "phonetic": "/fiːl/",
     "pos": "v",
     "examples": [
       {
@@ -7035,9 +7815,14 @@
     "id": 2518,
     "word": "feelings",
     "translation": "感觉(复数)",
-    "phonetic": "/ˈfilɪŋz/",
+    "phonetic": "/ˈfiːlɪŋz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is not good at expressing her feelings.",
+        "cn": "她不擅长表达自己的感情。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7060,7 +7845,7 @@
     "id": 2520,
     "word": "few",
     "translation": "少数；几个",
-    "phonetic": "/fju/",
+    "phonetic": "/fjuː/",
     "pos": "det & adj",
     "examples": [
       {
@@ -7076,7 +7861,7 @@
     "id": 2521,
     "word": "field",
     "translation": "田野；领域",
-    "phonetic": "/fild/",
+    "phonetic": "/fiːld/",
     "pos": "n",
     "examples": [
       {
@@ -7094,7 +7879,12 @@
     "translation": "文件",
     "phonetic": "/faɪl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please save the document as a PDF file.",
+        "cn": "请把这份文件保存为PDF格式。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7135,7 +7925,12 @@
     "translation": "最后",
     "phonetic": "/ˈfaɪnəli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We finally arrived home after a long trip.",
+        "cn": "长途旅行之后我们终于到家了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7206,7 +8001,7 @@
     "id": 2531,
     "word": "fire",
     "translation": "火；开火",
-    "phonetic": "/faɪʌr/",
+    "phonetic": "/ˈfaɪər/",
     "pos": "n",
     "examples": [
       {
@@ -7222,7 +8017,7 @@
     "id": 2532,
     "word": "first",
     "translation": "第一",
-    "phonetic": "/fʌrst/",
+    "phonetic": "/fɜːrst/",
     "pos": "adv & adj",
     "examples": [
       {
@@ -7260,7 +8055,12 @@
     "translation": "钓鱼",
     "phonetic": "/ˈfɪʃɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They went fishing by the river yesterday.",
+        "cn": "他们昨天去河边钓鱼了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7317,14 +8117,19 @@
     "translation": "航班",
     "phonetic": "/flaɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The flight to Beijing is on time.",
+        "cn": "飞往北京的航班准点。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2539,
     "word": "floor",
     "translation": "地板；楼层",
-    "phonetic": "/flɔr/",
+    "phonetic": "/flɔːr/",
     "pos": "n",
     "examples": [
       {
@@ -7340,7 +8145,7 @@
     "id": 2540,
     "word": "flower",
     "translation": "花",
-    "phonetic": "/flaʊʌr/",
+    "phonetic": "/ˈflaʊər/",
     "pos": "n",
     "examples": [
       {
@@ -7390,7 +8195,12 @@
     "translation": "有雾的",
     "phonetic": "/ˈfɑgi/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "It's very foggy this morning.",
+        "cn": "今天早上雾很大。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7399,7 +8209,12 @@
     "translation": "文件夹",
     "phonetic": "/ˈfoʊldər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She put all her papers in a blue folder.",
+        "cn": "她把所有文件都放在一个蓝色文件夹里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7422,7 +8237,7 @@
     "id": 2546,
     "word": "food",
     "translation": "食物",
-    "phonetic": "/fud/",
+    "phonetic": "/fuːd/",
     "pos": "n",
     "examples": [
       {
@@ -7454,7 +8269,7 @@
     "id": 2548,
     "word": "football",
     "translation": "足球",
-    "phonetic": "/ˈfʊtˌbɔl/",
+    "phonetic": "/ˈfʊtˌbɔːl/",
     "pos": "n",
     "examples": [
       {
@@ -7472,14 +8287,19 @@
     "translation": "足球运动员",
     "phonetic": "/ˈfʊtbɔːlər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He wants to become a famous footballer.",
+        "cn": "他想成为一名著名的足球运动员。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2551,
     "word": "for",
     "translation": "为了；对于",
-    "phonetic": "/fər/",
+    "phonetic": "/fɔːr/",
     "pos": "prep",
     "examples": [
       {
@@ -7495,7 +8315,7 @@
     "id": 2553,
     "word": "foreign",
     "translation": "外国的",
-    "phonetic": "/ˈfɔrən/",
+    "phonetic": "/ˈfɔːrən/",
     "pos": "adj",
     "examples": [
       {
@@ -7511,7 +8331,7 @@
     "id": 2554,
     "word": "forest",
     "translation": "森林",
-    "phonetic": "/ˈfɔrɪst/",
+    "phonetic": "/ˈfɔːrɪst/",
     "pos": "n",
     "examples": [
       {
@@ -7543,7 +8363,7 @@
     "id": 2556,
     "word": "fork",
     "translation": "叉子",
-    "phonetic": "/fɔrk/",
+    "phonetic": "/fɔːrk/",
     "pos": "n",
     "examples": [
       {
@@ -7559,7 +8379,7 @@
     "id": 2557,
     "word": "form",
     "translation": "形式；表格",
-    "phonetic": "/fɔrm/",
+    "phonetic": "/fɔːrm/",
     "pos": "n",
     "examples": [
       {
@@ -7575,7 +8395,7 @@
     "id": 2558,
     "word": "free",
     "translation": "免费的；自由的",
-    "phonetic": "/fri/",
+    "phonetic": "/friː/",
     "pos": "adj & adv",
     "examples": [
       {
@@ -7609,7 +8429,12 @@
     "translation": "冰箱",
     "phonetic": "/frɪʤ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is some milk in the fridge.",
+        "cn": "冰箱里有些牛奶。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7634,7 +8459,12 @@
     "translation": "油炸的",
     "phonetic": "/fraɪd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We ordered fried rice for lunch.",
+        "cn": "我们午餐点了炒饭。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7675,7 +8505,12 @@
     "translation": "害怕的",
     "phonetic": "/ˈfraɪtənd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The little girl was frightened of the dark.",
+        "cn": "那个小女孩怕黑。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7684,14 +8519,19 @@
     "translation": "青蛙",
     "phonetic": "/frɑg/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The frog jumped into the pond.",
+        "cn": "青蛙跳进了池塘里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2567,
     "word": "from",
     "translation": "来自；从",
-    "phonetic": "/frəm/",
+    "phonetic": "/frʌm/",
     "pos": "prep",
     "examples": [
       {
@@ -7723,7 +8563,7 @@
     "id": 2569,
     "word": "fruit",
     "translation": "水果",
-    "phonetic": "/frut/",
+    "phonetic": "/fruːt/",
     "pos": "n",
     "examples": [
       {
@@ -7789,7 +8629,12 @@
     "translation": "毛皮",
     "phonetic": "/fər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The cat has soft grey fur.",
+        "cn": "这只猫有柔软的灰色皮毛。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7798,7 +8643,12 @@
     "translation": "家具",
     "phonetic": "/ˈfərnɪʧər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need to buy some new furniture for the living room.",
+        "cn": "我们需要为客厅买些新家具。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7807,7 +8657,12 @@
     "translation": "进一步的",
     "phonetic": "/ˈfərðər/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need to discuss this further.",
+        "cn": "我们需要进一步讨论这件事。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7832,7 +8687,12 @@
     "translation": "画廊",
     "phonetic": "/ˈgæləri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is an art gallery near the station.",
+        "cn": "车站附近有一家美术馆。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7857,14 +8717,19 @@
     "translation": "车库",
     "phonetic": "/gərɑʒ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We keep the car in the garage.",
+        "cn": "我们把车停放在车库里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2580,
     "word": "garden",
     "translation": "花园",
-    "phonetic": "/ˈgɑrdən/",
+    "phonetic": "/ˈɡɑːrdən/",
     "pos": "n",
     "examples": [
       {
@@ -7880,9 +8745,14 @@
     "id": 2581,
     "word": "garlic",
     "translation": "大蒜",
-    "phonetic": "/ˈgɑrlɪk/",
+    "phonetic": "/ˈɡɑːrlɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The soup has a strong garlic smell.",
+        "cn": "这汤有浓浓的蒜味。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -7921,7 +8791,7 @@
     "id": 2584,
     "word": "get",
     "translation": "得到；到达",
-    "phonetic": "/gɪt/",
+    "phonetic": "/ɡɛt/",
     "pos": "v",
     "examples": [
       {
@@ -7953,7 +8823,7 @@
     "id": 2586,
     "word": "giraffe",
     "translation": "长颈鹿",
-    "phonetic": "/ʤʌræf/",
+    "phonetic": "/dʒəˈrɑːf/",
     "pos": "n",
     "examples": [
       {
@@ -7969,7 +8839,7 @@
     "id": 2587,
     "word": "girl",
     "translation": "女孩",
-    "phonetic": "/gʌrl/",
+    "phonetic": "/ɡɜːrl/",
     "pos": "n",
     "examples": [
       {
@@ -7987,7 +8857,12 @@
     "translation": "女朋友",
     "phonetic": "/ˈgərlˌfrɛnd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He is going to meet his girlfriend tonight.",
+        "cn": "他今晚要去见女朋友。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8044,7 +8919,12 @@
     "translation": "眼镜",
     "phonetic": "/ˈglæsəz/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wears glasses when she reads.",
+        "cn": "她读书时戴眼镜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8101,7 +8981,12 @@
     "translation": "山羊",
     "phonetic": "/goʊt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The goat was eating grass on the hillside.",
+        "cn": "山羊在山坡上吃草。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8126,7 +9011,12 @@
     "translation": "金色的",
     "phonetic": "/ˈgoʊldən/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She has golden hair that shines in the sun.",
+        "cn": "她有一头在阳光下闪闪发光的金发。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8135,7 +9025,12 @@
     "translation": "高尔夫",
     "phonetic": "/gɑlf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He plays golf every Saturday.",
+        "cn": "他每周六打高尔夫球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8176,7 +9071,12 @@
     "translation": "好看的",
     "phonetic": "/ˈgʊˌdlʊkɪŋ/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The actor is very good-looking.",
+        "cn": "那位演员长得很帅。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8201,16 +9101,26 @@
     "translation": "(外)孙辈",
     "phonetic": "/ˈgrænˌdʧaɪld/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is taking care of her grandchild.",
+        "cn": "她在照看她的孙子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2605,
     "word": "granddaughter",
     "translation": "孙女",
-    "phonetic": "/ˈgrænˌdɔtər/",
+    "phonetic": "/ˈgrænˌdɔːtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "His granddaughter is a primary school student.",
+        "cn": "他的孙女是一名小学生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8235,7 +9145,12 @@
     "translation": "奶奶",
     "phonetic": "/ˈgrændmɑ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My grandma makes the best cookies.",
+        "cn": "我奶奶做的饼干最好吃。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8260,7 +9175,12 @@
     "translation": "爷爷",
     "phonetic": "/ˈgrændˌpɑ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My grandpa always tells me stories.",
+        "cn": "我爷爷总是给我讲故事。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8269,7 +9189,12 @@
     "translation": "祖父母",
     "phonetic": "/ˈgrændˌpɛrənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He lives with his grandparents.",
+        "cn": "他和祖父母住在一起。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8278,7 +9203,12 @@
     "translation": "孙子",
     "phonetic": "/ˈgrændˌsən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Her grandson is a university student.",
+        "cn": "她的孙子是一名大学生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8287,7 +9217,12 @@
     "translation": "奶奶",
     "phonetic": "/ˈgræni/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Granny is making a cake for my birthday.",
+        "cn": "奶奶正在为我的生日做蛋糕。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8342,7 +9277,7 @@
     "id": 2616,
     "word": "green",
     "translation": "绿色；绿色的",
-    "phonetic": "/grin/",
+    "phonetic": "/ɡriːn/",
     "pos": "adj",
     "examples": [
       {
@@ -8360,7 +9295,12 @@
     "translation": "烤的",
     "phonetic": "/grɪld/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ordered grilled chicken for dinner.",
+        "cn": "我晚餐点了烤鸡。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8383,7 +9323,7 @@
     "id": 2619,
     "word": "group",
     "translation": "小组；群体",
-    "phonetic": "/grup/",
+    "phonetic": "/ɡruːp/",
     "pos": "n",
     "examples": [
       {
@@ -8449,7 +9389,12 @@
     "translation": "家庭旅馆",
     "phonetic": "/ˈɡest haʊs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We stayed at a small guest-house near the sea.",
+        "cn": "我们住在大海附近的一家小宾馆。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8474,7 +9419,12 @@
     "translation": "旅行指南",
     "phonetic": "/ˈgaɪdˌbʊk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We bought a guidebook before visiting the city.",
+        "cn": "我们在参观这座城市之前买了一本旅游指南。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8499,7 +9449,12 @@
     "translation": "家伙",
     "phonetic": "/gaɪ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "That guy over there is my cousin.",
+        "cn": "那边那个家伙是我的表弟。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8508,7 +9463,12 @@
     "translation": "体育馆",
     "phonetic": "/ʤɪm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She goes to the gym three times a week.",
+        "cn": "她每周去健身房三次。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8549,14 +9509,19 @@
     "translation": "半价",
     "phonetic": "/ˈhɑːf praɪs/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought this coat at half-price.",
+        "cn": "我半价买了这件外套。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2632,
     "word": "hall",
     "translation": "大厅",
-    "phonetic": "/hɔl/",
+    "phonetic": "/hɔːl/",
     "pos": "n",
     "examples": [
       {
@@ -8590,7 +9555,12 @@
     "translation": "手提包",
     "phonetic": "/ˈhændˌbæg/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She put her phone in her handbag.",
+        "cn": "她把手机放进了手提包里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8629,16 +9599,21 @@
     "id": 2637,
     "word": "harbour",
     "translation": "港口",
-    "phonetic": "/ˈhɑrbər/",
+    "phonetic": "/ˈhɑːrbər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The boats were all docked at the harbour.",
+        "cn": "船只都停泊在港口。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2638,
     "word": "hard",
     "translation": "困难的；努力地",
-    "phonetic": "/hɑrd/",
+    "phonetic": "/hɑːrd/",
     "pos": "adj & adv",
     "examples": [
       {
@@ -8706,7 +9681,7 @@
     "id": 2643,
     "word": "he",
     "translation": "他",
-    "phonetic": "/hi/",
+    "phonetic": "/hiː/",
     "pos": "pron",
     "examples": [
       {
@@ -8740,7 +9715,12 @@
     "translation": "头痛",
     "phonetic": "/ˈhɛˌdeɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a terrible headache today.",
+        "cn": "我今天头疼得厉害。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8749,7 +9729,12 @@
     "translation": "耳机",
     "phonetic": "/ˈhɛdˌfoʊnz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He is listening to music with his headphones.",
+        "cn": "他正戴着耳机听音乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8758,7 +9743,12 @@
     "translation": "校长",
     "phonetic": "/ˈhed tiːtʃər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Our headteacher gave a speech this morning.",
+        "cn": "我们的校长今天早上发表了讲话。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8797,7 +9787,7 @@
     "id": 2650,
     "word": "hear",
     "translation": "听见",
-    "phonetic": "/hir/",
+    "phonetic": "/hɪr/",
     "pos": "v",
     "examples": [
       {
@@ -8813,7 +9803,7 @@
     "id": 2651,
     "word": "heart",
     "translation": "心；心脏",
-    "phonetic": "/hɑrt/",
+    "phonetic": "/hɑːrt/",
     "pos": "n",
     "examples": [
       {
@@ -8829,9 +9819,14 @@
     "id": 2652,
     "word": "heating",
     "translation": "暖气",
-    "phonetic": "/ˈhitɪŋ/",
+    "phonetic": "/ˈhiːtɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The heating in our room doesn't work.",
+        "cn": "我们房间的暖气坏了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8856,7 +9851,12 @@
     "translation": "直升机",
     "phonetic": "/ˈhɛlɪˌkɑptər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The helicopter flew over the city.",
+        "cn": "直升机飞越了城市上空。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -8911,7 +9911,7 @@
     "id": 2658,
     "word": "her",
     "translation": "她；她的",
-    "phonetic": "/hər/",
+    "phonetic": "/hɜːr/",
     "pos": "det & pron",
     "examples": [
       {
@@ -8943,7 +9943,7 @@
     "id": 2660,
     "word": "hers",
     "translation": "她的",
-    "phonetic": "/hʌrz/",
+    "phonetic": "/hɜːrz/",
     "pos": "pron",
     "examples": [
       {
@@ -8977,7 +9977,12 @@
     "translation": "嘿",
     "phonetic": "/heɪ/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Hey, wait for me!",
+        "cn": "嘿，等等我！"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9032,7 +10037,7 @@
     "id": 2666,
     "word": "him",
     "translation": "他",
-    "phonetic": "/ɪm/",
+    "phonetic": "/hɪm/",
     "pos": "pron",
     "examples": [
       {
@@ -9066,7 +10071,12 @@
     "translation": "河马",
     "phonetic": "/ˈhɪpoʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The hippo was sleeping in the water.",
+        "cn": "河马在水里睡觉。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9139,7 +10149,12 @@
     "translation": "曲棍球",
     "phonetic": "/ˈhɑki/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We played hockey after school yesterday.",
+        "cn": "我们昨天放学后打了曲棍球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9228,7 +10243,12 @@
     "translation": "连帽衫",
     "phonetic": "/ˈhʊdi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wears a hoodie to keep warm.",
+        "cn": "她穿着连帽衫保暖。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9251,25 +10271,35 @@
     "id": 2681,
     "word": "horrible",
     "translation": "可怕的",
-    "phonetic": "/ˈhɔrəbəl/",
+    "phonetic": "/ˈhɔːrəbəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The weather is horrible today.",
+        "cn": "今天天气糟透了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2682,
     "word": "horror",
     "translation": "恐怖",
-    "phonetic": "/ˈhɔrər/",
+    "phonetic": "/ˈhɔːrər/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She doesn't like watching horror movies.",
+        "cn": "她不喜欢看恐怖电影。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2683,
     "word": "horse",
     "translation": "马",
-    "phonetic": "/hɔrs/",
+    "phonetic": "/hɔːrs/",
     "pos": "n",
     "examples": [
       {
@@ -9333,7 +10363,7 @@
     "id": 2687,
     "word": "hour",
     "translation": "小时",
-    "phonetic": "/aʊʌr/",
+    "phonetic": "/ˈaʊər/",
     "pos": "n",
     "examples": [
       {
@@ -9367,7 +10397,12 @@
     "translation": "家庭主妇",
     "phonetic": "/ˈhaʊsˌwaɪf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a busy housewife with three children.",
+        "cn": "她是一个有三个孩子的忙碌家庭主妇。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9406,7 +10441,7 @@
     "id": 2692,
     "word": "huge",
     "translation": "巨大的",
-    "phonetic": "/juʤ/",
+    "phonetic": "/hjuːdʒ/",
     "pos": "adj",
     "examples": [
       {
@@ -9454,7 +10489,7 @@
     "id": 2695,
     "word": "hurt",
     "translation": "伤害；疼痛",
-    "phonetic": "/hʌrt/",
+    "phonetic": "/hɜːrt/",
     "pos": "v",
     "examples": [
       {
@@ -9518,9 +10553,14 @@
     "id": 2699,
     "word": "ice skating",
     "translation": "滑冰",
-    "phonetic": "/aɪs/",
+    "phonetic": "/aɪs ˈskeɪtɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We went ice skating at the park.",
+        "cn": "我们去公园溜冰了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9529,7 +10569,12 @@
     "translation": "身份证(缩写)",
     "phonetic": "/ɪd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please show me your ID card.",
+        "cn": "请出示你的身份证件。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9554,7 +10599,12 @@
     "translation": "身份证明",
     "phonetic": "/aɪˌdɛntəfəˈkeɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "You need identification to get on the plane.",
+        "cn": "你需要出示身份证明才能登机。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9595,14 +10645,19 @@
     "translation": "立即",
     "phonetic": "/ˌɪˈmiˌdiətli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'll call him immediately.",
+        "cn": "我马上给他打电话。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2706,
     "word": "important",
     "translation": "重要的",
-    "phonetic": "/ˌɪmˈpɔrtənt/",
+    "phonetic": "/ˌɪmˈpɔːrtənt/",
     "pos": "adj",
     "examples": [
       {
@@ -9666,7 +10721,7 @@
     "id": 2710,
     "word": "include",
     "translation": "包括",
-    "phonetic": "/ˌɪnˈklud/",
+    "phonetic": "/ɪnˈkluːd/",
     "pos": "v",
     "examples": [
       {
@@ -9682,9 +10737,14 @@
     "id": 2711,
     "word": "including",
     "translation": "包括",
-    "phonetic": "/ˌɪnˈkludɪŋ/",
+    "phonetic": "/ɪnˈkluːdɪŋ/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The meal costs 10 dollars, including drinks.",
+        "cn": "这顿饭10美元，包括饮料。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9693,7 +10753,12 @@
     "translation": "室内的",
     "phonetic": "/ˈɪnˌdɔr/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is an indoor swimming pool in our town.",
+        "cn": "我们镇上有一个室内游泳池。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9702,7 +10767,12 @@
     "translation": "在室内",
     "phonetic": "/ˈɪnˌdɔrz/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Let's stay indoors until the rain stops.",
+        "cn": "我们待在室内直到雨停吧。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9727,7 +10797,12 @@
     "translation": "成分",
     "phonetic": "/ˌɪnˈgridiənt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The main ingredient of this dish is beef.",
+        "cn": "这道菜的主要配料是牛肉。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9784,7 +10859,12 @@
     "translation": "说明(复数)",
     "phonetic": "/ˌɪnˈstrəkʃənz/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please read the instructions before you start.",
+        "cn": "开始前请先阅读说明书。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9809,7 +10889,12 @@
     "translation": "感兴趣的",
     "phonetic": "/ˈɪntəˌrɛstɪd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'm interested in learning Chinese.",
+        "cn": "我对学中文感兴趣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9848,7 +10933,7 @@
     "id": 2727,
     "word": "into",
     "translation": "进入；到……里面",
-    "phonetic": "/ˈɪntu/",
+    "phonetic": "/ˈɪntuː/",
     "pos": "prep",
     "examples": [
       {
@@ -9882,7 +10967,12 @@
     "translation": "发明",
     "phonetic": "/ˌɪnˈvɛnʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The light bulb is a great invention.",
+        "cn": "电灯泡是一项伟大的发明。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9891,7 +10981,12 @@
     "translation": "邀请",
     "phonetic": "/ˌɪnvɪˈteɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I received an invitation to the party.",
+        "cn": "我收到了派对的邀请函。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -9996,7 +11091,12 @@
     "translation": "果酱",
     "phonetic": "/ʤæm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She spread strawberry jam on her bread.",
+        "cn": "她在面包上涂了草莓果酱。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10021,14 +11121,19 @@
     "translation": "爵士乐",
     "phonetic": "/ʤæz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She enjoys listening to jazz music.",
+        "cn": "她喜欢听爵士乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2740,
     "word": "jeans",
     "translation": "牛仔裤",
-    "phonetic": "/ʤinz/",
+    "phonetic": "/dʒiːnz/",
     "pos": "n pl",
     "examples": [
       {
@@ -10046,7 +11151,12 @@
     "translation": "水母",
     "phonetic": "/ˈʤɛliˌfɪʃ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We saw a jellyfish in the sea.",
+        "cn": "我们在海里看到了一只水母。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10087,14 +11197,19 @@
     "translation": "记者",
     "phonetic": "/ˈʤərnələst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The journalist is writing a story about the event.",
+        "cn": "那位记者正在写一篇关于这次事件的报道。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2745,
     "word": "journey",
     "translation": "旅行",
-    "phonetic": "/ˈʤʌrni/",
+    "phonetic": "/ˈdʒɜːrni/",
     "pos": "n",
     "examples": [
       {
@@ -10110,7 +11225,7 @@
     "id": 2746,
     "word": "juice",
     "translation": "果汁",
-    "phonetic": "/ʤus/",
+    "phonetic": "/dʒuːs/",
     "pos": "n",
     "examples": [
       {
@@ -10126,7 +11241,7 @@
     "id": 2747,
     "word": "july",
     "translation": "七月",
-    "phonetic": "/ˌʤuˈlaɪ/",
+    "phonetic": "/dʒuːˈlaɪ/",
     "pos": "n",
     "examples": [
       {
@@ -10160,14 +11275,19 @@
     "translation": "套头衫",
     "phonetic": "/ˈʤəmpər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a warm wool jumper.",
+        "cn": "她穿了一件温暖的羊毛套头衫。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2750,
     "word": "june",
     "translation": "六月",
-    "phonetic": "/ʤun/",
+    "phonetic": "/dʒuːn/",
     "pos": "n",
     "examples": [
       {
@@ -10199,16 +11319,21 @@
     "id": 2752,
     "word": "kangaroo",
     "translation": "袋鼠",
-    "phonetic": "/ˌkæŋgərˈu/",
+    "phonetic": "/ˌkæŋɡəˈruː/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We saw a kangaroo at the zoo.",
+        "cn": "我们在动物园看到了一只袋鼠。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2753,
     "word": "keep",
     "translation": "保持；保留",
-    "phonetic": "/kip/",
+    "phonetic": "/kiːp/",
     "pos": "v",
     "examples": [
       {
@@ -10224,7 +11349,7 @@
     "id": 2754,
     "word": "key",
     "translation": "钥匙；关键",
-    "phonetic": "/ki/",
+    "phonetic": "/kiː/",
     "pos": "n",
     "examples": [
       {
@@ -10240,7 +11365,7 @@
     "id": 2756,
     "word": "keyboard",
     "translation": "键盘",
-    "phonetic": "/ˈkiˌbɔrd/",
+    "phonetic": "/ˈkiːˌbɔːrd/",
     "pos": "n",
     "examples": [
       {
@@ -10326,7 +11451,12 @@
     "translation": "工具包",
     "phonetic": "/kɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought a first-aid kit for the trip.",
+        "cn": "我为这次旅行买了一个急救包。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10367,7 +11497,12 @@
     "translation": "小猫",
     "phonetic": "/ˈkɪtən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The kitten is playing with a ball of wool.",
+        "cn": "小猫正在玩毛线球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10454,7 +11589,7 @@
     "id": 2770,
     "word": "large",
     "translation": "大的",
-    "phonetic": "/lɑrʤ/",
+    "phonetic": "/lɑːrdʒ/",
     "pos": "adj",
     "examples": [
       {
@@ -10528,7 +11663,12 @@
     "translation": "最新的",
     "phonetic": "/ˈleɪtəst/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This is the latest news about the accident.",
+        "cn": "这是关于这次事故的最新消息。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10567,7 +11707,7 @@
     "id": 2777,
     "word": "learn",
     "translation": "学习",
-    "phonetic": "/lʌrn/",
+    "phonetic": "/lɜːrn/",
     "pos": "v",
     "examples": [
       {
@@ -10583,7 +11723,7 @@
     "id": 2778,
     "word": "least",
     "translation": "最少的",
-    "phonetic": "/list/",
+    "phonetic": "/liːst/",
     "pos": "adv",
     "examples": [
       {
@@ -10601,14 +11741,19 @@
     "translation": "皮革",
     "phonetic": "/ˈlɛðər/",
     "pos": "n & adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a leather jacket last week.",
+        "cn": "她上周买了一件皮夹克。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2780,
     "word": "leave",
     "translation": "离开；留下",
-    "phonetic": "/liv/",
+    "phonetic": "/liːv/",
     "pos": "v",
     "examples": [
       {
@@ -10646,7 +11791,12 @@
     "translation": "左边的",
     "phonetic": "/ˌlɛfˈthænd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The shops are on the left-hand side of the street.",
+        "cn": "商店在街道的左手边。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10685,9 +11835,14 @@
     "id": 2785,
     "word": "lemonade",
     "translation": "柠檬水",
-    "phonetic": "/ˈlɛməˈneɪd/",
+    "phonetic": "/ˌlɛməˈneɪd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We drank some cold lemonade.",
+        "cn": "我们喝了些冰柠檬水。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10712,7 +11867,12 @@
     "translation": "长度",
     "phonetic": "/lɛŋkθ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The length of the bridge is about 200 metres.",
+        "cn": "这座桥的长度大约200米。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10817,7 +11977,12 @@
     "translation": "许可证",
     "phonetic": "/ˈlaɪsəns/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "You need a driving licence to drive a car.",
+        "cn": "开车需要驾照。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10976,9 +12141,14 @@
     "id": 2805,
     "word": "living room",
     "translation": "客厅",
-    "phonetic": "/ˈlɪvɪŋ/",
+    "phonetic": "/ˈlɪvɪŋ ruːm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We watch TV in the living room.",
+        "cn": "我们在客厅看电视。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -10987,7 +12157,12 @@
     "translation": "蜥蜴",
     "phonetic": "/ˈlɪzərd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a small lizard on the wall.",
+        "cn": "墙上有一只小蜥蜴。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11010,7 +12185,7 @@
     "id": 2808,
     "word": "long",
     "translation": "长的",
-    "phonetic": "/lɔŋ/",
+    "phonetic": "/lɔːŋ/",
     "pos": "adj",
     "examples": [
       {
@@ -11048,14 +12223,19 @@
     "translation": "卡车(英式)",
     "phonetic": "/ˈlɔri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The lorry was carrying heavy boxes.",
+        "cn": "那辆卡车正运着重箱子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2815,
     "word": "lose",
     "translation": "失去；输掉",
-    "phonetic": "/luz/",
+    "phonetic": "/luːz/",
     "pos": "v",
     "examples": [
       {
@@ -11169,7 +12349,12 @@
     "translation": "幸运地",
     "phonetic": "/ˈləkəli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Luckily, she wasn't hurt in the accident.",
+        "cn": "幸运的是，她在事故中没有受伤。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11178,7 +12363,12 @@
     "translation": "幸运的",
     "phonetic": "/ˈləki/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'm lucky to have such good friends.",
+        "cn": "我很幸运有这样好的朋友。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11187,7 +12377,12 @@
     "translation": "行李",
     "phonetic": "/ˈləgəʤ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We have too much luggage for the trip.",
+        "cn": "我们这次旅行行李太多了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11212,14 +12407,19 @@
     "translation": "午餐时间",
     "phonetic": "/ˈlənʧˌtaɪm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I finished my homework before lunchtime today.",
+        "cn": "我今天午饭前就做完作业了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2827,
     "word": "machine",
     "translation": "机器",
-    "phonetic": "/məˈʃin/",
+    "phonetic": "/məˈʃiːn/",
     "pos": "n",
     "examples": [
       {
@@ -11269,7 +12469,12 @@
     "translation": "邮件",
     "phonetic": "/meɪl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'll send you the form by mail.",
+        "cn": "我会把表格邮寄给你。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11294,7 +12499,12 @@
     "translation": "化妆品",
     "phonetic": "/ˈmeɪˌkəp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She put on make-up before going out.",
+        "cn": "她出门前化了妆。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11319,7 +12529,12 @@
     "translation": "经理",
     "phonetic": "/ˈmænəʤər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The store manager is very friendly.",
+        "cn": "这家店的经理很友好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11328,7 +12543,12 @@
     "translation": "芒果",
     "phonetic": "/ˈmæŋgoʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought some mangoes at the market.",
+        "cn": "我在市场买了一些芒果。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11367,7 +12587,7 @@
     "id": 2838,
     "word": "march",
     "translation": "三月",
-    "phonetic": "/mɑrʧ/",
+    "phonetic": "/mɑːrtʃ/",
     "pos": "n",
     "examples": [
       {
@@ -11383,7 +12603,7 @@
     "id": 2839,
     "word": "mark",
     "translation": "标记；分数",
-    "phonetic": "/mɑrk/",
+    "phonetic": "/mɑːrk/",
     "pos": "n",
     "examples": [
       {
@@ -11399,7 +12619,7 @@
     "id": 2840,
     "word": "market",
     "translation": "市场",
-    "phonetic": "/ˈmɑrkɪt/",
+    "phonetic": "/ˈmɑːrkɪt/",
     "pos": "n",
     "examples": [
       {
@@ -11417,7 +12637,12 @@
     "translation": "已婚的",
     "phonetic": "/ˈmɛrid/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is married to a doctor.",
+        "cn": "她嫁给了一位医生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11492,7 +12717,7 @@
     "id": 2846,
     "word": "me",
     "translation": "我",
-    "phonetic": "/mi/",
+    "phonetic": "/miː/",
     "pos": "pron",
     "examples": [
       {
@@ -11508,7 +12733,7 @@
     "id": 2847,
     "word": "meal",
     "translation": "一餐",
-    "phonetic": "/mil/",
+    "phonetic": "/miːl/",
     "pos": "n",
     "examples": [
       {
@@ -11524,7 +12749,7 @@
     "id": 2848,
     "word": "mean",
     "translation": "意思是；意味着",
-    "phonetic": "/min/",
+    "phonetic": "/miːn/",
     "pos": "v",
     "examples": [
       {
@@ -11540,7 +12765,7 @@
     "id": 2849,
     "word": "meat",
     "translation": "肉",
-    "phonetic": "/mit/",
+    "phonetic": "/miːt/",
     "pos": "n",
     "examples": [
       {
@@ -11558,7 +12783,12 @@
     "translation": "机械师",
     "phonetic": "/məˈkænɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The mechanic fixed my car in two hours.",
+        "cn": "修理工两小时内修好了我的车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11597,7 +12827,7 @@
     "id": 2853,
     "word": "meeting",
     "translation": "会议",
-    "phonetic": "/ˈmitɪŋ/",
+    "phonetic": "/ˈmiːtɪŋ/",
     "pos": "n",
     "examples": [
       {
@@ -11615,7 +12845,12 @@
     "translation": "瓜",
     "phonetic": "/ˈmɛlən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This melon is very sweet.",
+        "cn": "这个甜瓜很甜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11640,14 +12875,19 @@
     "translation": "记忆",
     "phonetic": "/ˈmɛməri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She has a good memory for faces.",
+        "cn": "她对人的面孔记性很好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2857,
     "word": "menu",
     "translation": "菜单",
-    "phonetic": "/ˈmɛnju/",
+    "phonetic": "/ˈmɛnjuː/",
     "pos": "n",
     "examples": [
       {
@@ -11681,7 +12921,12 @@
     "translation": "金属",
     "phonetic": "/ˈmɛtəl/",
     "pos": "n & adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The box is made of metal.",
+        "cn": "这个箱子是金属做的。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11690,7 +12935,12 @@
     "translation": "麦克风",
     "phonetic": "/ˈmaɪkrəˌfoʊn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He spoke into the microphone.",
+        "cn": "他对着麦克风讲话。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11699,7 +12949,12 @@
     "translation": "正午",
     "phonetic": "/ˈmɪdˌdeɪ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The train leaves at midday.",
+        "cn": "火车在中午出发。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11724,7 +12979,12 @@
     "translation": "午夜",
     "phonetic": "/ˈmɪdˌnaɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Don't stay up past midnight.",
+        "cn": "别熬夜超过午夜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11829,7 +13089,12 @@
     "translation": "减去",
     "phonetic": "/ˈmaɪnəs/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Five minus two equals three.",
+        "cn": "五减二等于三。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -11886,7 +13151,12 @@
     "translation": "丢失的",
     "phonetic": "/ˈmɪsɪŋ/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My keys are missing. I can't find them.",
+        "cn": "我的钥匙不见了。我找不到它们。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12039,14 +13309,19 @@
     "translation": "每月的",
     "phonetic": "/ˈmənθli/",
     "pos": "adj & adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He takes a monthly exam at school.",
+        "cn": "他在学校每月都有一次考试。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2885,
     "word": "moon",
     "translation": "月亮",
-    "phonetic": "/mun/",
+    "phonetic": "/muːn/",
     "pos": "n",
     "examples": [
       {
@@ -12062,7 +13337,7 @@
     "id": 2886,
     "word": "more",
     "translation": "更多",
-    "phonetic": "/mɔr/",
+    "phonetic": "/mɔːr/",
     "pos": "adj, adv, det & pron",
     "examples": [
       {
@@ -12128,7 +13403,12 @@
     "translation": "摩托车",
     "phonetic": "/ˈmoʊtərˌbaɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She got a motorbike for her birthday.",
+        "cn": "她生日得到了一辆摩托车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12137,7 +13417,12 @@
     "translation": "高速公路",
     "phonetic": "/ˈmoʊtərweɪ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The motorway was busy this morning.",
+        "cn": "今天早上高速公路上很堵。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12192,7 +13477,7 @@
     "id": 2895,
     "word": "move",
     "translation": "移动；搬家",
-    "phonetic": "/muv/",
+    "phonetic": "/muːv/",
     "pos": "v",
     "examples": [
       {
@@ -12278,14 +13563,19 @@
     "translation": "杯子",
     "phonetic": "/məg/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She drank coffee from her favourite mug.",
+        "cn": "她用最喜欢的马克杯喝咖啡。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2901,
     "word": "museum",
     "translation": "博物馆",
-    "phonetic": "/mˈjuziəm/",
+    "phonetic": "/mjuˈziːəm/",
     "pos": "n",
     "examples": [
       {
@@ -12303,14 +13593,19 @@
     "translation": "蘑菇",
     "phonetic": "/ˈməʃrum/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We picked some mushrooms in the forest.",
+        "cn": "我们在森林里采了一些蘑菇。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2903,
     "word": "music",
     "translation": "音乐",
-    "phonetic": "/mˈjuzɪk/",
+    "phonetic": "/ˈmjuːzɪk/",
     "pos": "n",
     "examples": [
       {
@@ -12328,7 +13623,12 @@
     "translation": "音乐的",
     "phonetic": "/mˈjuzɪkəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is in the school musical this year.",
+        "cn": "她今年参加了学校的音乐剧。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12337,14 +13637,19 @@
     "translation": "音乐家",
     "phonetic": "/mjuˈzɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He wants to be a musician.",
+        "cn": "他想成为一名音乐家。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2906,
     "word": "must",
     "translation": "必须",
-    "phonetic": "/məst/",
+    "phonetic": "/mʌst/",
     "pos": "mv",
     "examples": [
       {
@@ -12410,7 +13715,12 @@
     "translation": "国家的",
     "phonetic": "/ˈnæʃnəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This is our national flag.",
+        "cn": "这是我们的国旗。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12419,7 +13729,12 @@
     "translation": "国籍",
     "phonetic": "/ˌnæʃəˈnæləti/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Her nationality is Canadian.",
+        "cn": "她的国籍是加拿大。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12492,14 +13807,19 @@
     "translation": "项链",
     "phonetic": "/ˈnɛkləs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wears a gold necklace.",
+        "cn": "她戴了一条金项链。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2917,
     "word": "need",
     "translation": "需要",
-    "phonetic": "/nid/",
+    "phonetic": "/niːd/",
     "pos": "v",
     "examples": [
       {
@@ -12531,7 +13851,7 @@
     "id": 2919,
     "word": "nervous",
     "translation": "紧张的",
-    "phonetic": "/ˈnʌrvəs/",
+    "phonetic": "/ˈnɜːrvəs/",
     "pos": "adj",
     "examples": [
       {
@@ -12549,7 +13869,12 @@
     "translation": "巢",
     "phonetic": "/nɛst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The bird built a nest in the tree.",
+        "cn": "鸟在树上筑了一个巢。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12558,7 +13883,12 @@
     "translation": "网",
     "phonetic": "/nɛt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He caught the ball with a net.",
+        "cn": "他用网接住了球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12581,7 +13911,7 @@
     "id": 2923,
     "word": "new",
     "translation": "新的",
-    "phonetic": "/nu/",
+    "phonetic": "/nuː/",
     "pos": "adj",
     "examples": [
       {
@@ -12727,14 +14057,19 @@
     "translation": "吵闹的",
     "phonetic": "/ˈnɔɪzi/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The children are very noisy in the playground.",
+        "cn": "孩子们在操场上很吵闹。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2934,
     "word": "noon",
     "translation": "中午",
-    "phonetic": "/nun/",
+    "phonetic": "/nuːn/",
     "pos": "n",
     "examples": [
       {
@@ -12750,9 +14085,14 @@
     "id": 2935,
     "word": "no one",
     "translation": "没有人",
-    "phonetic": "/noʊ/",
+    "phonetic": "/noʊ wʌn/",
     "pos": "pron",
-    "examples": [],
+    "examples": [
+      {
+        "en": "No one knows the answer.",
+        "cn": "没人知道答案。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12775,7 +14115,7 @@
     "id": 2937,
     "word": "north",
     "translation": "北方",
-    "phonetic": "/nɔrθ/",
+    "phonetic": "/nɔːrθ/",
     "pos": "n, adj & adv",
     "examples": [
       {
@@ -12935,7 +14275,7 @@
     "id": 2947,
     "word": "nurse",
     "translation": "护士",
-    "phonetic": "/nʌrs/",
+    "phonetic": "/nɜːrs/",
     "pos": "n",
     "examples": [
       {
@@ -12969,7 +14309,12 @@
     "translation": "职业",
     "phonetic": "/ˌɑkjəˈpeɪʃən/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "What's your occupation?",
+        "cn": "你的职业是什么？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -12994,7 +14339,12 @@
     "translation": "章鱼",
     "phonetic": "/ˈɑktəˌpʊs/",
     "pos": " n ",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The octopus has eight arms.",
+        "cn": "章鱼有八条触手。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13017,7 +14367,7 @@
     "id": 2953,
     "word": "of",
     "translation": "……的",
-    "phonetic": "/əv/",
+    "phonetic": "/ʌv/",
     "pos": "prep",
     "examples": [
       {
@@ -13083,7 +14433,12 @@
     "translation": "哦",
     "phonetic": "/oʊ/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Oh, I forgot my keys again!",
+        "cn": "哦，我又忘带钥匙了！"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13108,7 +14463,12 @@
     "translation": "好的",
     "phonetic": "/oʊˈkeɪ/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Everything is okay now.",
+        "cn": "现在一切都好了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13149,7 +14509,12 @@
     "translation": "煎蛋卷",
     "phonetic": "/ˈɑːmlət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I had an omelette for breakfast.",
+        "cn": "我早餐吃了煎蛋卷。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13316,7 +14681,7 @@
     "id": 2974,
     "word": "or",
     "translation": "或者；否则",
-    "phonetic": "/ər/",
+    "phonetic": "/ɔːr/",
     "pos": "conj",
     "examples": [
       {
@@ -13348,7 +14713,7 @@
     "id": 2976,
     "word": "order",
     "translation": "命令；点餐；顺序",
-    "phonetic": "/ˈɔrdər/",
+    "phonetic": "/ˈɔːrdər/",
     "pos": "n & v",
     "examples": [
       {
@@ -13380,7 +14745,7 @@
     "id": 2978,
     "word": "our",
     "translation": "我们的",
-    "phonetic": "/ɑr/",
+    "phonetic": "/ˈaʊər/",
     "pos": "det",
     "examples": [
       {
@@ -13396,7 +14761,7 @@
     "id": 2979,
     "word": "ours",
     "translation": "我们的",
-    "phonetic": "/ɑrz/",
+    "phonetic": "/ˈaʊərz/",
     "pos": "pron",
     "examples": [
       {
@@ -13412,7 +14777,7 @@
     "id": 2980,
     "word": "ourselves",
     "translation": "我们自己",
-    "phonetic": "/ɑrˈsɛlvz/",
+    "phonetic": "/aʊərˈsɛlvz/",
     "pos": "pron",
     "examples": [
       {
@@ -13446,23 +14811,33 @@
     "translation": "户外的",
     "phonetic": "/ˈaʊtˌdɔr/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We played outdoor games in the garden.",
+        "cn": "我们在花园里做了户外游戏。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2983,
     "word": "outdoors",
     "translation": "在户外",
-    "phonetic": "/ˈaʊtˈdɔrz/",
+    "phonetic": "/ˌaʊtˈdɔrz/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The kids love playing outdoors.",
+        "cn": "孩子们喜欢在户外玩耍。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 2985,
     "word": "outside",
     "translation": "外面；在外面",
-    "phonetic": "/ˈaʊtˈsaɪd/",
+    "phonetic": "/ˌaʊtˈsaɪd/",
     "pos": "prep & adv",
     "examples": [
       {
@@ -13592,7 +14967,12 @@
     "translation": "画家",
     "phonetic": "/ˈpeɪntər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My uncle is a painter.",
+        "cn": "我叔叔是一名画家。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13601,7 +14981,12 @@
     "translation": "画",
     "phonetic": "/ˈpeɪntɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This painting is very colourful.",
+        "cn": "这幅画色彩很丰富。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13688,7 +15073,7 @@
     "id": 3000,
     "word": "pardon",
     "translation": "原谅；请再说一遍",
-    "phonetic": "/ˈpɑrdən/",
+    "phonetic": "/ˈpɑːrdən/",
     "pos": "exclam",
     "examples": [
       {
@@ -13720,7 +15105,7 @@
     "id": 3002,
     "word": "park",
     "translation": "公园；停车",
-    "phonetic": "/pɑrk/",
+    "phonetic": "/pɑːrk/",
     "pos": "n & v",
     "examples": [
       {
@@ -13738,14 +15123,19 @@
     "translation": "鹦鹉",
     "phonetic": "/ˈpɛrət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The parrot can say a few words.",
+        "cn": "那只鹦鹉会说几个词。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3004,
     "word": "part",
     "translation": "部分",
-    "phonetic": "/pɑrt/",
+    "phonetic": "/pɑːrt/",
     "pos": "n",
     "examples": [
       {
@@ -13777,7 +15167,7 @@
     "id": 3006,
     "word": "party",
     "translation": "聚会；政党",
-    "phonetic": "/ˈpɑrti/",
+    "phonetic": "/ˈpɑːrti/",
     "pos": "n",
     "examples": [
       {
@@ -13843,7 +15233,12 @@
     "translation": "密码",
     "phonetic": "/ˈpæsˌwərd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please enter your password.",
+        "cn": "请输入你的密码。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13872,7 +15267,12 @@
     "translation": "意大利面",
     "phonetic": "/ˈpɑstə/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had pasta for dinner last night.",
+        "cn": "我们昨晚晚餐吃了意大利面。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13881,7 +15281,12 @@
     "translation": "小路",
     "phonetic": "/pæθ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Follow the path to the lake.",
+        "cn": "沿着这条小路走到湖边。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13938,7 +15343,12 @@
     "translation": "便士",
     "phonetic": "/pɛns/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The ticket cost 50 pence.",
+        "cn": "这张票花了50便士。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13961,9 +15371,14 @@
     "id": 3019,
     "word": "pencil case",
     "translation": "铅笔盒",
-    "phonetic": "/ˈpɛnsəl/",
+    "phonetic": "/ˈpɛnsəl keɪs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She keeps her pens in a pencil case.",
+        "cn": "她把笔放在铅笔盒里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13972,7 +15387,12 @@
     "translation": "笔友",
     "phonetic": "/ˈpen frend/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I write to my penfriend in England every month.",
+        "cn": "我每月给英国的笔友写信。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -13997,7 +15417,12 @@
     "translation": "便士",
     "phonetic": "/ˈpɛni/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He found a penny on the street.",
+        "cn": "他在街上捡到了一便士。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14038,14 +15463,19 @@
     "translation": "每",
     "phonetic": "/pər/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The price is 10 dollars per person.",
+        "cn": "价格是每人10美元。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3026,
     "word": "perfect",
     "translation": "完美的",
-    "phonetic": "/ˈpʌrˌfɪkt/",
+    "phonetic": "/ˈpɜːrfɪkt/",
     "pos": "adj",
     "examples": [
       {
@@ -14063,7 +15493,12 @@
     "translation": "香水",
     "phonetic": "/pərfˈjum/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a bottle of perfume.",
+        "cn": "她买了一瓶香水。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14086,7 +15521,7 @@
     "id": 3029,
     "word": "person",
     "translation": "人",
-    "phonetic": "/ˈpʌrsən/",
+    "phonetic": "/ˈpɜːrsən/",
     "pos": "n",
     "examples": [
       {
@@ -14120,16 +15555,26 @@
     "translation": "汽油",
     "phonetic": "/ˈpɛtroʊl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need to stop for petrol.",
+        "cn": "我们需要停下来加油。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3032,
     "word": "pharmacy",
     "translation": "药房",
-    "phonetic": "/ˈfɑrməsi/",
+    "phonetic": "/ˈfɑːrməsi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought some medicine at the pharmacy.",
+        "cn": "我在药店买了一些药。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14154,7 +15599,12 @@
     "translation": "摄影师",
     "phonetic": "/fəˈtɑgrəfər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The photographer took a photo of the sunset.",
+        "cn": "那位摄影师拍了一张日落的照片。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14163,7 +15613,12 @@
     "translation": "摄影",
     "phonetic": "/fəˈtɑgrəfi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is interested in photography.",
+        "cn": "她对摄影感兴趣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14186,7 +15641,7 @@
     "id": 3037,
     "word": "piano",
     "translation": "钢琴",
-    "phonetic": "/piˈænə/",
+    "phonetic": "/piˈænoʊ/",
     "pos": "n",
     "examples": [
       {
@@ -14234,7 +15689,7 @@
     "id": 3040,
     "word": "piece",
     "translation": "一片；一块",
-    "phonetic": "/pis/",
+    "phonetic": "/piːs/",
     "pos": "n",
     "examples": [
       {
@@ -14252,7 +15707,12 @@
     "translation": "枕头",
     "phonetic": "/ˈpɪloʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He slept without a pillow.",
+        "cn": "他没枕枕头就睡了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14384,7 +15844,7 @@
     "dupLevel": "小学"
   },
   {
-    "id": 3050,
+    "id": 3624,
     "word": "plastic",
     "translation": "塑料；塑料的",
     "phonetic": "/ˈplæstɪk/",
@@ -14400,7 +15860,7 @@
     "dupLevel": "初中"
   },
   {
-    "id": 3051,
+    "id": 3625,
     "word": "plate",
     "translation": "盘子",
     "phonetic": "/pleɪt/",
@@ -14419,9 +15879,14 @@
     "id": 3052,
     "word": "platform",
     "translation": "站台",
-    "phonetic": "/ˈplætˌfɔrm/",
+    "phonetic": "/ˈplætˌfɔːrm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The train arrives at platform 3.",
+        "cn": "火车停靠3号站台。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14446,7 +15911,12 @@
     "translation": "运动员",
     "phonetic": "/pleɪər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The football player scored two goals.",
+        "cn": "这位足球运动员进了两球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14471,14 +15941,19 @@
     "translation": "愉快的",
     "phonetic": "/ˈplɛzənt/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had a pleasant afternoon in the park.",
+        "cn": "我们在公园度过了一个愉快的下午。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3057,
     "word": "please",
     "translation": "请；使高兴",
-    "phonetic": "/pliz/",
+    "phonetic": "/pliːz/",
     "pos": "v & exclam",
     "examples": [
       {
@@ -14494,9 +15969,14 @@
     "id": 3058,
     "word": "pleased",
     "translation": "高兴的",
-    "phonetic": "/plizd/",
+    "phonetic": "/pliːzd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'm pleased with your progress.",
+        "cn": "我对你的进步感到满意。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14505,14 +15985,19 @@
     "translation": "加",
     "phonetic": "/pləs/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Two plus two equals four.",
+        "cn": "二加二等于四。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3060,
     "word": "p.m",
     "translation": "下午",
-    "phonetic": "/p.m*./",
+    "phonetic": "/ˌpiː ˈem/",
     "pos": "adv",
     "examples": [
       {
@@ -14592,7 +16077,7 @@
     "id": 3065,
     "word": "pool",
     "translation": "池塘；游泳池",
-    "phonetic": "/pul/",
+    "phonetic": "/puːl/",
     "pos": "n",
     "examples": [
       {
@@ -14626,7 +16111,12 @@
     "translation": "流行音乐",
     "phonetic": "/pɑp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I like listening to pop music.",
+        "cn": "我喜欢听流行音乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14649,9 +16139,14 @@
     "id": 3069,
     "word": "port",
     "translation": "港口",
-    "phonetic": "/pɔrt/",
+    "phonetic": "/pɔːrt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The ship will arrive at the port tomorrow.",
+        "cn": "船明天到达港口。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14676,7 +16171,12 @@
     "translation": "可能",
     "phonetic": "/ˈpɑsəbli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I will possibly come to the party.",
+        "cn": "我可能会来参加派对。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14699,7 +16199,7 @@
     "id": 3073,
     "word": "postcard",
     "translation": "明信片",
-    "phonetic": "/ˈpoʊˌskɑrd/",
+    "phonetic": "/ˈpoʊˌskɑːrd/",
     "pos": "n",
     "examples": [
       {
@@ -14717,16 +16217,26 @@
     "translation": "海报",
     "phonetic": "/ˈpoʊstər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a poster on the wall.",
+        "cn": "墙上有一张海报。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3075,
     "word": "post office",
     "translation": "邮局",
-    "phonetic": "/poʊst/",
+    "phonetic": "/poʊst ˈɔːfɪs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I went to the post office to send a letter.",
+        "cn": "我去邮局寄了一封信。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14751,7 +16261,12 @@
     "translation": "练习",
     "phonetic": "/ˈpræktɪs/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "You need to practise English every day.",
+        "cn": "你需要每天练习英语。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14844,7 +16359,12 @@
     "translation": "打印机",
     "phonetic": "/ˈprɪntər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The printer is out of paper.",
+        "cn": "打印机没纸了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14901,7 +16421,12 @@
     "translation": "程序",
     "phonetic": "/ˈproʊˌgræm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I watched an interesting program on TV.",
+        "cn": "我在电视上看了个有趣的节目。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14958,7 +16483,12 @@
     "translation": "学生",
     "phonetic": "/ˈpjupəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There are forty pupils in our class.",
+        "cn": "我们班有四十个小学生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -14967,14 +16497,19 @@
     "translation": "小狗",
     "phonetic": "/ˈpəpi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The puppy is running around the garden.",
+        "cn": "小狗在花园里跑来跑去。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3094,
     "word": "purple",
     "translation": "紫色；紫色的",
-    "phonetic": "/ˈpʌrpəl/",
+    "phonetic": "/ˈpɜːrpəl/",
     "pos": "adj",
     "examples": [
       {
@@ -14992,7 +16527,12 @@
     "translation": "钱包",
     "phonetic": "/pərs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She keeps her money in a purse.",
+        "cn": "她把钱放在钱包里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15033,14 +16573,19 @@
     "translation": "拼图",
     "phonetic": "/ˈpəzəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I enjoy doing crossword puzzles.",
+        "cn": "我喜欢做填字游戏。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3100,
     "word": "quarter",
     "translation": "四分之一；一刻钟",
-    "phonetic": "/kˈwɔrtər/",
+    "phonetic": "/kˈwɔːrtər/",
     "pos": "n",
     "examples": [
       {
@@ -15106,7 +16651,12 @@
     "translation": "快速地",
     "phonetic": "/kˈwɪkli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He quickly finished his dinner.",
+        "cn": "他很快吃完了晚饭。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15147,7 +16697,12 @@
     "translation": "测验",
     "phonetic": "/kwɪz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had a history quiz today.",
+        "cn": "我们今天做了一次历史测验。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15188,7 +16743,12 @@
     "translation": "球拍",
     "phonetic": "/ˈrækɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a new tennis racket.",
+        "cn": "她买了一个新网球拍。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15229,7 +16789,12 @@
     "translation": "雨衣",
     "phonetic": "/ˈreɪnˌkoʊt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Don't forget to bring your raincoat.",
+        "cn": "别忘了带雨衣。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15238,7 +16803,12 @@
     "translation": "雨林",
     "phonetic": "/ˈraɪnˌfɔrəst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The Amazon is a large rainforest.",
+        "cn": "亚马逊是一片很大的雨林。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15247,14 +16817,19 @@
     "translation": "说唱",
     "phonetic": "/ræp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He likes listening to rap music.",
+        "cn": "他喜欢听说唱音乐。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3116,
     "word": "read",
     "translation": "读",
-    "phonetic": "/rɛd/",
+    "phonetic": "/riːd/",
     "pos": "v",
     "examples": [
       {
@@ -15270,9 +16845,14 @@
     "id": 3117,
     "word": "reading",
     "translation": "阅读",
-    "phonetic": "/ˈridɪŋ/",
+    "phonetic": "/ˈriːdɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Reading is my favourite hobby.",
+        "cn": "阅读是我最喜欢的爱好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15295,7 +16875,7 @@
     "id": 3119,
     "word": "real",
     "translation": "真实的",
-    "phonetic": "/ril/",
+    "phonetic": "/ˈriːəl/",
     "pos": "adj",
     "examples": [
       {
@@ -15327,7 +16907,7 @@
     "id": 3121,
     "word": "reason",
     "translation": "原因；理由",
-    "phonetic": "/ˈrizən/",
+    "phonetic": "/ˈriːzən/",
     "pos": "n",
     "examples": [
       {
@@ -15343,16 +16923,21 @@
     "id": 3122,
     "word": "receipt",
     "translation": "收据",
-    "phonetic": "/riˈsit/",
+    "phonetic": "/rɪˈsiːt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please keep the receipt in case you need to return it.",
+        "cn": "请保留收据，以防你需要退货。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3123,
     "word": "receive",
     "translation": "收到",
-    "phonetic": "/rɪˈsiv/",
+    "phonetic": "/rɪˈsiːv/",
     "pos": "v",
     "examples": [
       {
@@ -15370,7 +16955,12 @@
     "translation": "最近",
     "phonetic": "/ˈrisənli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I recently started learning French.",
+        "cn": "我最近开始学法语了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15379,7 +16969,12 @@
     "translation": "接待员",
     "phonetic": "/riˈsɛpʃənɪst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The receptionist greeted us with a smile.",
+        "cn": "前台接待员微笑着迎接了我们。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15388,7 +16983,12 @@
     "translation": "食谱",
     "phonetic": "/ˈrɛsəpi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This recipe is very easy to follow.",
+        "cn": "这个食谱很容易照着做。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15445,7 +17045,12 @@
     "translation": "放松的",
     "phonetic": "/riˈlæksɪŋ/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I find gardening very relaxing.",
+        "cn": "我觉得园艺很让人放松。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15470,7 +17075,12 @@
     "translation": "租金",
     "phonetic": "/rɛnt/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We pay rent for this apartment every month.",
+        "cn": "我们每月为这套公寓付房租。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15493,7 +17103,7 @@
     "id": 3134,
     "word": "repeat",
     "translation": "重复",
-    "phonetic": "/rɪˈpit/",
+    "phonetic": "/rɪˈpiːt/",
     "pos": "v",
     "examples": [
       {
@@ -15541,7 +17151,7 @@
     "id": 3137,
     "word": "return",
     "translation": "返回；归还",
-    "phonetic": "/rɪˈtʌrn/",
+    "phonetic": "/rɪˈtɜːrn/",
     "pos": "n & v",
     "examples": [
       {
@@ -15557,7 +17167,7 @@
     "id": 3138,
     "word": "review",
     "translation": "复习；评论",
-    "phonetic": "/ˌrivˈju/",
+    "phonetic": "/rɪˈvjuː/",
     "pos": "n",
     "examples": [
       {
@@ -15623,7 +17233,12 @@
     "translation": "骑",
     "phonetic": "/ˈraɪdɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She enjoys horse riding.",
+        "cn": "她喜欢骑马。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15700,7 +17315,12 @@
     "translation": "烤",
     "phonetic": "/roʊst/",
     "pos": "v & adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had roast chicken for Sunday lunch.",
+        "cn": "我们周日午餐吃了烤鸡。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15723,9 +17343,14 @@
     "id": 3149,
     "word": "roof",
     "translation": "屋顶",
-    "phonetic": "/ruf/",
+    "phonetic": "/ruːf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a cat on the roof.",
+        "cn": "屋顶上有一只猫。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15766,7 +17391,12 @@
     "translation": "环形交叉",
     "phonetic": "/ˈraʊndəˌbaʊt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Turn left at the roundabout.",
+        "cn": "在环岛处左转。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15775,7 +17405,12 @@
     "translation": "橡胶",
     "phonetic": "/ˈrəbər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need a rubber to erase this pencil mark.",
+        "cn": "我需要一块橡皮擦掉这个铅笔印。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15800,14 +17435,19 @@
     "translation": "橄榄球",
     "phonetic": "/ˈrəgbi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He plays rugby for his school team.",
+        "cn": "他为校队打橄榄球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3156,
     "word": "ruler",
     "translation": "尺子",
-    "phonetic": "/ˈrulər/",
+    "phonetic": "/ˈruːlər/",
     "pos": "n",
     "examples": [
       {
@@ -15841,7 +17481,12 @@
     "translation": "跑步者",
     "phonetic": "/ˈrənər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The runner crossed the finish line first.",
+        "cn": "那位跑步者第一个冲过终点线。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15850,7 +17495,12 @@
     "translation": "跑步",
     "phonetic": "/ˈrənɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Running is good exercise.",
+        "cn": "跑步是很好的运动。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15891,7 +17541,12 @@
     "translation": "航行",
     "phonetic": "/seɪl/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The boat is ready to sail.",
+        "cn": "船准备好了，可以起航了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15900,7 +17555,12 @@
     "translation": "航行",
     "phonetic": "/ˈseɪlɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "They went sailing on the lake.",
+        "cn": "他们去湖上航行。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -15939,7 +17599,7 @@
     "id": 3166,
     "word": "salt",
     "translation": "盐",
-    "phonetic": "/sɔlt/",
+    "phonetic": "/sɔːlt/",
     "pos": "n",
     "examples": [
       {
@@ -16003,18 +17663,28 @@
     "id": 3170,
     "word": "sauce",
     "translation": "酱汁",
-    "phonetic": "/sɔs/",
+    "phonetic": "/sɔːs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This pasta needs more sauce.",
+        "cn": "这份意面需要更多酱汁。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3171,
     "word": "sausage",
     "translation": "香肠",
-    "phonetic": "/ˈsɔsəʤ/",
+    "phonetic": "/ˈsɔːsəʤ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had sausages for breakfast.",
+        "cn": "我们早餐吃了香肠。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16055,14 +17725,19 @@
     "translation": "害怕的",
     "phonetic": "/skɛrd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is scared of spiders.",
+        "cn": "她害怕蜘蛛。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3175,
     "word": "scarf",
     "translation": "围巾",
-    "phonetic": "/skɑrf/",
+    "phonetic": "/skɑːrf/",
     "pos": "n",
     "examples": [
       {
@@ -16080,14 +17755,19 @@
     "translation": "可怕的",
     "phonetic": "/ˈskɛri/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "That horror movie was really scary.",
+        "cn": "那部恐怖片真的很吓人。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3177,
     "word": "school",
     "translation": "学校",
-    "phonetic": "/skul/",
+    "phonetic": "/skuːl/",
     "pos": "n",
     "examples": [
       {
@@ -16105,7 +17785,12 @@
     "translation": "学童",
     "phonetic": "/ˈskuˌlʧaɪld/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Every schoolchild needs to read this book.",
+        "cn": "每个小学生都需要读这本书。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16160,16 +17845,21 @@
     "id": 3182,
     "word": "scooter",
     "translation": "踏板车",
-    "phonetic": "/ˈskutər/",
+    "phonetic": "/ˈskuːtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He rides his scooter to school every day.",
+        "cn": "他每天骑滑板车上学。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3183,
     "word": "score",
     "translation": "得分；分数",
-    "phonetic": "/skɔr/",
+    "phonetic": "/skɔːr/",
     "pos": "n, v",
     "examples": [
       {
@@ -16201,7 +17891,7 @@
     "id": 3185,
     "word": "sea",
     "translation": "海",
-    "phonetic": "/si/",
+    "phonetic": "/siː/",
     "pos": "n",
     "examples": [
       {
@@ -16217,7 +17907,7 @@
     "id": 3186,
     "word": "season",
     "translation": "季节",
-    "phonetic": "/ˈsizən/",
+    "phonetic": "/ˈsiːzən/",
     "pos": "n",
     "examples": [
       {
@@ -16233,7 +17923,7 @@
     "id": 3187,
     "word": "seat",
     "translation": "座位",
-    "phonetic": "/sit/",
+    "phonetic": "/siːt/",
     "pos": "n",
     "examples": [
       {
@@ -16267,14 +17957,19 @@
     "translation": "秘书",
     "phonetic": "/ˈsɛkrəˌtɛri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The secretary is typing a letter.",
+        "cn": "秘书正在打一封信。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3190,
     "word": "see",
     "translation": "看见",
-    "phonetic": "/si/",
+    "phonetic": "/siː/",
     "pos": "v",
     "examples": [
       {
@@ -16290,7 +17985,7 @@
     "id": 3191,
     "word": "seem",
     "translation": "似乎",
-    "phonetic": "/sim/",
+    "phonetic": "/siːm/",
     "pos": "v",
     "examples": [
       {
@@ -16308,7 +18003,12 @@
     "translation": "自拍",
     "phonetic": "/ˈsɛlˌfi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She took a selfie with her friends.",
+        "cn": "她和朋友们拍了一张自拍。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16395,7 +18095,7 @@
     "id": 3198,
     "word": "serve",
     "translation": "服务；端上",
-    "phonetic": "/sʌrv/",
+    "phonetic": "/sɜːrv/",
     "pos": "v",
     "examples": [
       {
@@ -16475,9 +18175,14 @@
     "id": 3203,
     "word": "shampoo",
     "translation": "洗发水",
-    "phonetic": "/ʃæmˈpu/",
+    "phonetic": "/ʃæmˈpuː/",
     "pos": "n & v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a new bottle of shampoo.",
+        "cn": "她买了一瓶新的洗发水。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16500,7 +18205,7 @@
     "id": 3205,
     "word": "shark",
     "translation": "鲨鱼",
-    "phonetic": "/ʃɑrk/",
+    "phonetic": "/ʃɑːrk/",
     "pos": "n",
     "examples": [
       {
@@ -16516,7 +18221,7 @@
     "id": 3206,
     "word": "she",
     "translation": "她",
-    "phonetic": "/ʃi/",
+    "phonetic": "/ʃiː/",
     "pos": "pron",
     "examples": [
       {
@@ -16532,7 +18237,7 @@
     "id": 3207,
     "word": "sheep",
     "translation": "羊",
-    "phonetic": "/ʃip/",
+    "phonetic": "/ʃiːp/",
     "pos": "n",
     "examples": [
       {
@@ -16548,9 +18253,14 @@
     "id": 3208,
     "word": "sheet",
     "translation": "床单",
-    "phonetic": "/ʃit/",
+    "phonetic": "/ʃiːt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please change the bed sheet.",
+        "cn": "请换一下床单。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16589,7 +18299,7 @@
     "id": 3211,
     "word": "shirt",
     "translation": "衬衫",
-    "phonetic": "/ʃʌrt/",
+    "phonetic": "/ʃɜːrt/",
     "pos": "n",
     "examples": [
       {
@@ -16605,7 +18315,7 @@
     "id": 3212,
     "word": "shoe",
     "translation": "鞋",
-    "phonetic": "/ʃu/",
+    "phonetic": "/ʃuː/",
     "pos": "n",
     "examples": [
       {
@@ -16639,7 +18349,12 @@
     "translation": "购物者",
     "phonetic": "/ˈʃɑpər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The shopper is looking for a dress.",
+        "cn": "那位购物者正在找一条裙子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16648,23 +18363,33 @@
     "translation": "购物",
     "phonetic": "/ˈʃɑpɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I went shopping with my mother this morning.",
+        "cn": "今天早上我和妈妈去购物了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3216,
     "word": "shopping centre",
     "translation": "购物中心",
-    "phonetic": "/ˈʃɑpɪŋ/",
+    "phonetic": "/ˈʃɑːpɪŋ ˈsɛntər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a new shopping centre near our school.",
+        "cn": "我们学校附近有一个新的购物中心。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3217,
     "word": "short",
     "translation": "短的；矮的",
-    "phonetic": "/ʃɔrt/",
+    "phonetic": "/ʃɔːrt/",
     "pos": "adj",
     "examples": [
       {
@@ -16680,7 +18405,7 @@
     "id": 3218,
     "word": "shorts",
     "translation": "短裤",
-    "phonetic": "/ʃɔrts/",
+    "phonetic": "/ʃɔːrts/",
     "pos": "n pl",
     "examples": [
       {
@@ -16744,7 +18469,7 @@
     "id": 3222,
     "word": "shower",
     "translation": "淋浴；阵雨",
-    "phonetic": "/ʃaʊʌr/",
+    "phonetic": "/ˈʃaʊər/",
     "pos": "n",
     "examples": [
       {
@@ -16824,9 +18549,14 @@
     "id": 3227,
     "word": "sightseeing",
     "translation": "观光",
-    "phonetic": "/ˈsaɪtˈsiɪŋ/",
+    "phonetic": "/ˈsaɪtsiːɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We went sightseeing in London.",
+        "cn": "我们去伦敦观光了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16931,7 +18661,12 @@
     "translation": "歌手",
     "phonetic": "/ˈsɪŋər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a famous pop singer.",
+        "cn": "她是一位著名的流行歌手。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16940,7 +18675,12 @@
     "translation": "唱歌",
     "phonetic": "/ˈsɪŋɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She loves singing in the shower.",
+        "cn": "她喜欢在洗澡时唱歌。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -16965,7 +18705,12 @@
     "translation": "水槽",
     "phonetic": "/sɪŋk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The dirty plates are in the sink.",
+        "cn": "脏盘子在水槽里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17006,7 +18751,12 @@
     "translation": "地点",
     "phonetic": "/saɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This is the site of the new building.",
+        "cn": "这是新大楼的选址地。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17047,7 +18797,12 @@
     "translation": "滑板",
     "phonetic": "/ˈskeɪtˌbɔrd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The boy is riding his skateboard.",
+        "cn": "那个男孩在玩滑板。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17056,7 +18811,12 @@
     "translation": "滑板",
     "phonetic": "/ˈskeɪtˌbɔrdɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Skateboarding is fun but dangerous.",
+        "cn": "滑板很好玩但也有危险。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17065,14 +18825,19 @@
     "translation": "滑冰",
     "phonetic": "/ˈskeɪtɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She goes skating every Sunday.",
+        "cn": "她每周日去滑冰。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3247,
     "word": "ski",
     "translation": "滑雪",
-    "phonetic": "/ski/",
+    "phonetic": "/skiː/",
     "pos": "v",
     "examples": [
       {
@@ -17090,14 +18855,19 @@
     "translation": "滑雪",
     "phonetic": "/skiɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We went skiing in the mountains during the winter holiday.",
+        "cn": "寒假我们去山上滑雪了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3249,
     "word": "skirt",
     "translation": "裙子",
-    "phonetic": "/skʌrt/",
+    "phonetic": "/skɜːrt/",
     "pos": "n",
     "examples": [
       {
@@ -17129,7 +18899,7 @@
     "id": 3251,
     "word": "sleep",
     "translation": "睡觉",
-    "phonetic": "/slip/",
+    "phonetic": "/sliːp/",
     "pos": "v",
     "examples": [
       {
@@ -17147,7 +18917,12 @@
     "translation": "片",
     "phonetic": "/slaɪs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ate a slice of bread.",
+        "cn": "我吃了一片面包。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17188,14 +18963,19 @@
     "translation": "慢慢地",
     "phonetic": "/sˈloʊli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The turtle walked slowly.",
+        "cn": "乌龟走得很慢。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3256,
     "word": "small",
     "translation": "小的",
-    "phonetic": "/smɔl/",
+    "phonetic": "/smɔːl/",
     "pos": "adj",
     "examples": [
       {
@@ -17229,7 +19009,12 @@
     "translation": "吸烟",
     "phonetic": "/sˈmoʊkɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The restaurant has a no-smoking area.",
+        "cn": "这家餐厅有禁烟区。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17254,7 +19039,12 @@
     "translation": "蜗牛",
     "phonetic": "/sneɪl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I saw a snail in the garden.",
+        "cn": "我在花园里看到一只蜗牛。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17295,7 +19085,12 @@
     "translation": "滑雪板",
     "phonetic": "/sˈnoʊˌbɔrd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He bought a new snowboard for the winter.",
+        "cn": "他冬天买了一块新滑雪板。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17304,7 +19099,12 @@
     "translation": "单板滑雪",
     "phonetic": "/ˈsnoʊbɔːrdɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Snowboarding is popular among young people.",
+        "cn": "单板滑雪在年轻人中很流行。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17329,7 +19129,12 @@
     "translation": "肥皂",
     "phonetic": "/soʊp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I wash my hands with soap.",
+        "cn": "我用肥皂洗手。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17338,7 +19143,12 @@
     "translation": "足球(美式)",
     "phonetic": "/ˈsɑkər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He plays soccer after school.",
+        "cn": "他放学后踢足球。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17395,7 +19205,12 @@
     "translation": "软件",
     "phonetic": "/ˈsɔftˌwɛr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This computer software is easy to use.",
+        "cn": "这个电脑软件很好用。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17438,12 +19253,12 @@
     "pos": "pron",
     "examples": [
       {
-        "en": "Somebody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Someone left a note on my desk.",
+        "cn": "有人在我的桌上留了一张便条。"
       }
     ],
     "isKETVocabulary": true,
-    "dupInVocab": true,
+    "dupInVocab": false,
     "dupLevel": "初中"
   },
   {
@@ -17514,7 +19329,7 @@
     "id": 3279,
     "word": "song",
     "translation": "歌曲",
-    "phonetic": "/sɔŋ/",
+    "phonetic": "/sɔːŋ/",
     "pos": "n",
     "examples": [
       {
@@ -17530,7 +19345,7 @@
     "id": 3280,
     "word": "soon",
     "translation": "很快",
-    "phonetic": "/sun/",
+    "phonetic": "/suːn/",
     "pos": "adv",
     "examples": [
       {
@@ -17546,7 +19361,7 @@
     "id": 3281,
     "word": "sorry",
     "translation": "抱歉的",
-    "phonetic": "/ˈsɑri/",
+    "phonetic": "/ˈsɑːri/",
     "pos": "adj",
     "examples": [
       {
@@ -17562,9 +19377,14 @@
     "id": 3282,
     "word": "sort",
     "translation": "种类",
-    "phonetic": "/sɔrt/",
+    "phonetic": "/sɔːrt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "What sort of music do you like?",
+        "cn": "你喜欢哪种音乐？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17587,7 +19407,7 @@
     "id": 3284,
     "word": "soup",
     "translation": "汤",
-    "phonetic": "/sup/",
+    "phonetic": "/suːp/",
     "pos": "n",
     "examples": [
       {
@@ -17667,9 +19487,14 @@
     "id": 3289,
     "word": "speaker",
     "translation": "演讲者",
-    "phonetic": "/ˈspikər/",
+    "phonetic": "/ˈspiːkər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The speaker is very loud.",
+        "cn": "这个扬声器声音很大。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17710,7 +19535,12 @@
     "translation": "拼写",
     "phonetic": "/ˈspɛlɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Her spelling has improved a lot.",
+        "cn": "她的拼写进步了很多。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17735,14 +19565,19 @@
     "translation": "蜘蛛",
     "phonetic": "/ˈspaɪdər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "A spider was crawling across the wall.",
+        "cn": "一只蜘蛛正在墙上爬。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3295,
     "word": "spoon",
     "translation": "勺子",
-    "phonetic": "/spun/",
+    "phonetic": "/spuːn/",
     "pos": "n",
     "examples": [
       {
@@ -17758,7 +19593,7 @@
     "id": 3296,
     "word": "sport",
     "translation": "运动",
-    "phonetic": "/spɔrt/",
+    "phonetic": "/spɔːrt/",
     "pos": "n",
     "examples": [
       {
@@ -17774,7 +19609,7 @@
     "id": 3297,
     "word": "spring",
     "translation": "春天；弹簧",
-    "phonetic": "/spʌrɪŋ/",
+    "phonetic": "/sprɪŋ/",
     "pos": "n",
     "examples": [
       {
@@ -17808,7 +19643,12 @@
     "translation": "体育场",
     "phonetic": "/ˈsteɪdiəm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The football match was held in a big stadium.",
+        "cn": "足球赛在一个大型体育场举行。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17817,7 +19657,12 @@
     "translation": "员工",
     "phonetic": "/stæf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The hotel staff are very friendly.",
+        "cn": "酒店员工都很友好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17842,7 +19687,12 @@
     "translation": "楼梯",
     "phonetic": "/stɛrz/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ran up the stairs to catch the train.",
+        "cn": "我跑上楼梯去赶火车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -17881,7 +19731,7 @@
     "id": 3305,
     "word": "star",
     "translation": "星星；明星",
-    "phonetic": "/stɑr/",
+    "phonetic": "/stɑːr/",
     "pos": "n & v",
     "examples": [
       {
@@ -17897,7 +19747,7 @@
     "id": 3306,
     "word": "start",
     "translation": "开始",
-    "phonetic": "/stɑrt/",
+    "phonetic": "/stɑːrt/",
     "pos": "v",
     "examples": [
       {
@@ -17947,7 +19797,12 @@
     "translation": "牛排",
     "phonetic": "/steɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He ordered a medium-rare steak.",
+        "cn": "他点了一份五分熟的牛排。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18022,7 +19877,7 @@
     "id": 3314,
     "word": "store",
     "translation": "商店；储存",
-    "phonetic": "/stɔr/",
+    "phonetic": "/stɔːr/",
     "pos": "n",
     "examples": [
       {
@@ -18038,7 +19893,7 @@
     "id": 3315,
     "word": "storm",
     "translation": "暴风雨",
-    "phonetic": "/stɔrm/",
+    "phonetic": "/stɔːrm/",
     "pos": "n",
     "examples": [
       {
@@ -18118,7 +19973,7 @@
     "id": 3320,
     "word": "street",
     "translation": "街道",
-    "phonetic": "/strit/",
+    "phonetic": "/striːt/",
     "pos": "n",
     "examples": [
       {
@@ -18136,7 +19991,12 @@
     "translation": "有条纹的",
     "phonetic": "/straɪpt/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a striped shirt.",
+        "cn": "她穿了一件条纹衬衫。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18145,14 +20005,19 @@
     "translation": "条纹",
     "phonetic": "/straɪps/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The tiger has black and orange stripes.",
+        "cn": "老虎有黑色和橙色的条纹。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3323,
     "word": "strong",
     "translation": "强壮的",
-    "phonetic": "/strɔŋ/",
+    "phonetic": "/strɔːŋ/",
     "pos": "adj",
     "examples": [
       {
@@ -18168,7 +20033,7 @@
     "id": 3324,
     "word": "student",
     "translation": "学生",
-    "phonetic": "/ˈstudənt/",
+    "phonetic": "/ˈstuːdənt/",
     "pos": "n",
     "examples": [
       {
@@ -18186,7 +20051,12 @@
     "translation": "学习(复数)",
     "phonetic": "/ˈstədiz/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Her studies take up most of her time.",
+        "cn": "她的学业占用她大部分时间。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18211,16 +20081,26 @@
     "translation": "东西",
     "phonetic": "/stəf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a lot of stuff to do today.",
+        "cn": "我今天有很多事情要做。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3328,
     "word": "suitcase",
     "translation": "手提箱",
-    "phonetic": "/ˈsutˌkeɪs/",
+    "phonetic": "/ˈsuːtˌkeɪs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She packed her suitcase for the trip.",
+        "cn": "她为旅行收拾好了行李箱。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18277,7 +20157,12 @@
     "translation": "太阳镜",
     "phonetic": "/ˈsənˌglæsɪz/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He wore sunglasses to protect his eyes.",
+        "cn": "他戴了太阳镜来保护眼睛。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18300,7 +20185,7 @@
     "id": 3334,
     "word": "supermarket",
     "translation": "超市",
-    "phonetic": "/ˈsupərˌmɑrkɪt/",
+    "phonetic": "/ˈsuːpərˌmɑːrkɪt/",
     "pos": "n",
     "examples": [
       {
@@ -18318,7 +20203,12 @@
     "translation": "晚餐",
     "phonetic": "/ˈsəpər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had supper together.",
+        "cn": "我们一起吃了晚饭。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18359,7 +20249,12 @@
     "translation": "冲浪",
     "phonetic": "/sərf/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He loves to surf in the sea.",
+        "cn": "他喜欢在海里冲浪。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18368,7 +20263,12 @@
     "translation": "冲浪板",
     "phonetic": "/ˈsərfˌbɔrd/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a new surfboard.",
+        "cn": "她买了一块新冲浪板。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18377,7 +20277,12 @@
     "translation": "冲浪",
     "phonetic": "/ˈsɜːrfbɔːrdɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We tried surfboarding during our holiday.",
+        "cn": "我们在假期里尝试了冲浪。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18386,7 +20291,12 @@
     "translation": "冲浪",
     "phonetic": "/ˈsərfɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Surfing is very popular in Australia.",
+        "cn": "冲浪在澳大利亚很流行。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18395,7 +20305,12 @@
     "translation": "姓",
     "phonetic": "/ˈsərˌneɪm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "His surname is Zhang.",
+        "cn": "他姓张。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18420,7 +20335,12 @@
     "translation": "惊讶的",
     "phonetic": "/sərˈpraɪzd/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I was surprised to see him here.",
+        "cn": "我很惊讶在这里看到他。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18429,7 +20349,12 @@
     "translation": "令人惊讶的",
     "phonetic": "/sərˈpraɪzɪŋ/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "It's surprising how fast she learned.",
+        "cn": "她学得这么快，真是令人惊讶。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18438,7 +20363,12 @@
     "translation": "天鹅",
     "phonetic": "/swɑn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The swan swam gracefully across the lake.",
+        "cn": "天鹅优雅地游过湖面。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18461,7 +20391,7 @@
     "id": 3348,
     "word": "sweet",
     "translation": "甜的；糖果",
-    "phonetic": "/swit/",
+    "phonetic": "/swiːt/",
     "pos": "n & adj",
     "examples": [
       {
@@ -18495,16 +20425,26 @@
     "translation": "游泳",
     "phonetic": "/sˈwɪmɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Swimming is my favourite sport.",
+        "cn": "游泳是我最喜欢的运动。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3351,
     "word": "swimming pool",
     "translation": "游泳池",
-    "phonetic": "/sˈwɪmɪŋ/",
+    "phonetic": "/ˈswɪmɪŋ puːl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We swam in the swimming pool yesterday.",
+        "cn": "我们昨天在游泳池游泳了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18513,7 +20453,12 @@
     "translation": "泳衣",
     "phonetic": "/sˈwɪmˌsut/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need to buy a new swimsuit for the beach.",
+        "cn": "我需要买一件新的泳衣去海滩。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18538,7 +20483,12 @@
     "translation": "平板电脑",
     "phonetic": "/ˈtæblət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My mother reads news on her tablet.",
+        "cn": "我妈妈用平板电脑看新闻。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18611,7 +20561,12 @@
     "translation": "成功的",
     "phonetic": "/səkˈsɛsfəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a successful businesswoman.",
+        "cn": "她是一位成功的女商人。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18636,7 +20591,12 @@
     "translation": "突然",
     "phonetic": "/ˈsədənli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The car suddenly stopped in front of us.",
+        "cn": "那辆车突然在我们前面停了下来。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18659,7 +20619,7 @@
     "id": 3365,
     "word": "suit",
     "translation": "套装；适合",
-    "phonetic": "/sut/",
+    "phonetic": "/suːt/",
     "pos": "n",
     "examples": [
       {
@@ -18675,7 +20635,7 @@
     "id": 3366,
     "word": "talk",
     "translation": "谈话",
-    "phonetic": "/tɔk/",
+    "phonetic": "/tɔːk/",
     "pos": "n & v",
     "examples": [
       {
@@ -18691,7 +20651,7 @@
     "id": 3367,
     "word": "tall",
     "translation": "高的",
-    "phonetic": "/tɔl/",
+    "phonetic": "/tɔːl/",
     "pos": "adj",
     "examples": [
       {
@@ -18709,7 +20669,12 @@
     "translation": "美味的",
     "phonetic": "/ˈteɪsti/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This soup is very tasty.",
+        "cn": "这汤味道很好。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18732,7 +20697,7 @@
     "id": 3370,
     "word": "tea",
     "translation": "茶",
-    "phonetic": "/ti/",
+    "phonetic": "/tiː/",
     "pos": "n",
     "examples": [
       {
@@ -18748,7 +20713,7 @@
     "id": 3371,
     "word": "teach",
     "translation": "教",
-    "phonetic": "/tiʧ/",
+    "phonetic": "/tiːtʃ/",
     "pos": "v",
     "examples": [
       {
@@ -18764,7 +20729,7 @@
     "id": 3372,
     "word": "teacher",
     "translation": "老师",
-    "phonetic": "/ˈtiʧər/",
+    "phonetic": "/ˈtiːtʃər/",
     "pos": "n",
     "examples": [
       {
@@ -18780,7 +20745,7 @@
     "id": 3373,
     "word": "team",
     "translation": "队；团队",
-    "phonetic": "/tim/",
+    "phonetic": "/tiːm/",
     "pos": "n",
     "examples": [
       {
@@ -18814,7 +20779,12 @@
     "translation": "青少年",
     "phonetic": "/ˈtiˌneɪʤər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is a teenager.",
+        "cn": "她是个青少年。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18823,7 +20793,12 @@
     "translation": "电话",
     "phonetic": "/ˈtɛləˌfoʊn/",
     "pos": "n & v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He answered the telephone.",
+        "cn": "他接了电话。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -18894,7 +20869,7 @@
     "id": 3381,
     "word": "term",
     "translation": "学期；术语",
-    "phonetic": "/tʌrm/",
+    "phonetic": "/tɜːrm/",
     "pos": "n",
     "examples": [
       {
@@ -18960,16 +20935,26 @@
     "translation": "教科书",
     "phonetic": "/ˈtɛkstˌbʊk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I forgot my English textbook at home.",
+        "cn": "我把英语课本忘在家里了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3386,
     "word": "text message",
     "translation": "短信",
-    "phonetic": "/tɛkst/",
+    "phonetic": "/tɛkst ˈmɛsɪdʒ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She sent me a text message.",
+        "cn": "她给我发了一条短信。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19010,14 +20995,19 @@
     "translation": "谢谢",
     "phonetic": "/θæŋks/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Thanks for your help.",
+        "cn": "谢谢你的帮助。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3390,
     "word": "that",
     "translation": "那个；那",
-    "phonetic": "/ðət/",
+    "phonetic": "/ðæt/",
     "pos": "conj & pron",
     "examples": [
       {
@@ -19033,7 +21023,7 @@
     "id": 3391,
     "word": "the",
     "translation": "这；那（定冠词）",
-    "phonetic": "/ðə/",
+    "phonetic": "/ðiː/",
     "pos": "det",
     "examples": [
       {
@@ -19229,7 +21219,7 @@
     "id": 3403,
     "word": "thirsty",
     "translation": "口渴的",
-    "phonetic": "/ˈθʌrsti/",
+    "phonetic": "/ˈθɜːrsti/",
     "pos": "adj",
     "examples": [
       {
@@ -19277,7 +21267,7 @@
     "id": 3406,
     "word": "through",
     "translation": "穿过；通过",
-    "phonetic": "/θru/",
+    "phonetic": "/θruː/",
     "pos": "prep",
     "examples": [
       {
@@ -19311,14 +21301,19 @@
     "translation": "雷雨",
     "phonetic": "/ˈθəndərˌstɔrm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There will be a thunderstorm tonight.",
+        "cn": "今晚会有雷雨。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3409,
     "word": "thursday",
     "translation": "星期四",
-    "phonetic": "/ˈθʌrzˌdeɪ/",
+    "phonetic": "/ˈθɜːrzˌdeɪ/",
     "pos": "n",
     "examples": [
       {
@@ -19336,7 +21331,12 @@
     "translation": "票",
     "phonetic": "/ˈtɪkət/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought two tickets for the concert.",
+        "cn": "我买了两张音乐会的票。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19393,7 +21393,12 @@
     "translation": "紧身衣",
     "phonetic": "/taɪts/",
     "pos": "n pl",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She wore a skirt and tights.",
+        "cn": "她穿着裙子和连裤袜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19402,7 +21407,12 @@
     "translation": "直到",
     "phonetic": "/tɪl/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please wait here till I come back.",
+        "cn": "请在这里等到我回来。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19427,14 +21437,19 @@
     "translation": "时间表",
     "phonetic": "/ˈtaɪmˌteɪbəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Check the timetable before you go.",
+        "cn": "出发前查看一下时间表。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3418,
     "word": "tired",
     "translation": "疲劳的",
-    "phonetic": "/taɪʌrd/",
+    "phonetic": "/ˈtaɪərd/",
     "pos": "adj",
     "examples": [
       {
@@ -19452,14 +21467,19 @@
     "translation": "标题",
     "phonetic": "/ˈtaɪtəl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "What's the title of the book?",
+        "cn": "这本书的书名是什么？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3420,
     "word": "to",
     "translation": "到；向",
-    "phonetic": "/tɪ/",
+    "phonetic": "/tu/",
     "pos": "prep",
     "examples": [
       {
@@ -19477,7 +21497,12 @@
     "translation": "烤面包",
     "phonetic": "/toʊst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ate a piece of toast for breakfast.",
+        "cn": "我早餐吃了一片吐司。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19502,7 +21527,12 @@
     "translation": "脚趾",
     "phonetic": "/toʊ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I hurt my toe this morning.",
+        "cn": "我今天早上把脚趾弄伤了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19589,9 +21619,14 @@
     "id": 3429,
     "word": "tortoise",
     "translation": "乌龟",
-    "phonetic": "/ˈtɔrtəs/",
+    "phonetic": "/ˈtɔːrtəs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The tortoise moves very slowly.",
+        "cn": "乌龟走得很慢。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19614,7 +21649,7 @@
     "id": 3431,
     "word": "tooth",
     "translation": "牙齿",
-    "phonetic": "/tuθ/",
+    "phonetic": "/tuːθ/",
     "pos": "n",
     "examples": [
       {
@@ -19632,16 +21667,26 @@
     "translation": "牙痛",
     "phonetic": "/ˈtuːθeɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I have a toothache.",
+        "cn": "我牙疼。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3433,
     "word": "toothbrush",
     "translation": "牙刷",
-    "phonetic": "/ˈtuθbrəʃ/",
+    "phonetic": "/ˈtuːθbrəʃ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She bought a new toothbrush.",
+        "cn": "她买了一把新牙刷。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19670,7 +21715,12 @@
     "translation": "主题",
     "phonetic": "/ˈtɑpɪk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The topic of our discussion is environment.",
+        "cn": "我们讨论的话题是环境。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19727,7 +21777,12 @@
     "translation": "毛巾",
     "phonetic": "/taʊl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please pass me the towel.",
+        "cn": "请把毛巾递给我。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19782,9 +21837,14 @@
     "id": 3443,
     "word": "traffic light",
     "translation": "红绿灯",
-    "phonetic": "/ˈtræfɪk/",
+    "phonetic": "/ˈtræfɪk laɪt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Stop when the traffic light is red.",
+        "cn": "红灯亮时停下来。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19809,7 +21869,12 @@
     "translation": "教练",
     "phonetic": "/ˈtreɪnər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The trainer is teaching the new students.",
+        "cn": "教练正在教新生。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19818,16 +21883,26 @@
     "translation": "有轨电车",
     "phonetic": "/træm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We took a tram to the station.",
+        "cn": "我们坐有轨电车去车站。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3447,
     "word": "transport",
     "translation": "运输",
-    "phonetic": "/trænˈspɔrt/",
+    "phonetic": "/trænˈspɔːrt/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Buses and trains are forms of transport.",
+        "cn": "公交车和火车是交通方式。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -19850,7 +21925,7 @@
     "id": 3449,
     "word": "tree",
     "translation": "树",
-    "phonetic": "/tri/",
+    "phonetic": "/triː/",
     "pos": "n",
     "examples": [
       {
@@ -19914,7 +21989,7 @@
     "id": 3453,
     "word": "true",
     "translation": "真实的",
-    "phonetic": "/tru/",
+    "phonetic": "/truː/",
     "pos": "adj",
     "examples": [
       {
@@ -19962,7 +22037,7 @@
     "id": 3456,
     "word": "tuesday",
     "translation": "星期二",
-    "phonetic": "/ˈtuzˌdeɪ/",
+    "phonetic": "/ˈtuːzˌdeɪ/",
     "pos": "n",
     "examples": [
       {
@@ -19978,7 +22053,7 @@
     "id": 3457,
     "word": "turn",
     "translation": "转动；轮到",
-    "phonetic": "/tʌrn/",
+    "phonetic": "/tɜːrn/",
     "pos": "v",
     "examples": [
       {
@@ -19996,7 +22071,12 @@
     "translation": "两次",
     "phonetic": "/twaɪs/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I brush my teeth twice a day.",
+        "cn": "我每天刷两次牙。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20005,7 +22085,12 @@
     "translation": "类型",
     "phonetic": "/taɪp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "What type of music do you like?",
+        "cn": "你喜欢什么类型的音乐？"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20092,9 +22177,14 @@
     "id": 3467,
     "word": "unfortunately",
     "translation": "不幸的是",
-    "phonetic": "/ənˈfɔrʧunətli/",
+    "phonetic": "/ʌnˈfɔːrtʃənətli/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Unfortunately, I missed the last bus.",
+        "cn": "不幸的是，我错过了末班车。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20103,14 +22193,19 @@
     "translation": "不开心的",
     "phonetic": "/ənˈhæpi/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She looks unhappy today.",
+        "cn": "她今天看起来不开心。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3469,
     "word": "uniform",
     "translation": "制服",
-    "phonetic": "/ˈjunəˌfɔrm/",
+    "phonetic": "/ˈjunəˌfɔːrm/",
     "pos": "n",
     "examples": [
       {
@@ -20126,7 +22221,7 @@
     "id": 3470,
     "word": "university",
     "translation": "大学",
-    "phonetic": "/ˌjunəˈvʌrsəti/",
+    "phonetic": "/ˌjuːnəˈvɜːrsəti/",
     "pos": "n",
     "examples": [
       {
@@ -20160,7 +22255,12 @@
     "translation": "不寻常的",
     "phonetic": "/ənˈjuʒwəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "It's unusual for him to be late.",
+        "cn": "他迟到很少见。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20185,7 +22285,12 @@
     "translation": "上传",
     "phonetic": "/ˈəˌploʊd/",
     "pos": "v",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'm going to upload the photos to my computer.",
+        "cn": "我要把照片上传到电脑。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20194,7 +22299,12 @@
     "translation": "沮丧的",
     "phonetic": "/əpˈsɛt/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She was upset about the bad news.",
+        "cn": "她对坏消息感到难过。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20203,14 +22313,19 @@
     "translation": "楼上",
     "phonetic": "/əpˈstɛrz/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Her bedroom is upstairs.",
+        "cn": "她的卧室在楼上。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3477,
     "word": "us",
     "translation": "我们",
-    "phonetic": "/ˈjuˈɛs/",
+    "phonetic": "/ʌs/",
     "pos": "pron",
     "examples": [
       {
@@ -20226,7 +22341,7 @@
     "id": 3478,
     "word": "use",
     "translation": "使用",
-    "phonetic": "/juz/",
+    "phonetic": "/juːz/",
     "pos": "v",
     "examples": [
       {
@@ -20242,9 +22357,14 @@
     "id": 3479,
     "word": "useful",
     "translation": "有用的",
-    "phonetic": "/ˈjusfəl/",
+    "phonetic": "/ˈjuːsfəl/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This app is very useful.",
+        "cn": "这个应用很有用。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20269,7 +22389,12 @@
     "translation": "通常",
     "phonetic": "/ˈjuʒəli/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I usually get up at 7 a.m.",
+        "cn": "我通常在早上七点起床。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20278,7 +22403,12 @@
     "translation": "对(比赛)",
     "phonetic": "/ˈvɜːrsəs/",
     "pos": "prep",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The match is France versus England.",
+        "cn": "比赛是法国对英格兰。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20287,7 +22417,12 @@
     "translation": "多样性",
     "phonetic": "/vərˈaɪəti/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There is a variety of food in the restaurant.",
+        "cn": "这家餐厅有各种各样的食物。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20296,7 +22431,12 @@
     "translation": "各种各样的",
     "phonetic": "/ˈvɛriəs/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She has visited various countries.",
+        "cn": "她去过许多不同的国家。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20351,16 +22491,21 @@
     "id": 3488,
     "word": "video game",
     "translation": "视频游戏",
-    "phonetic": "/ˈvɪdioʊ/",
+    "phonetic": "/ˈvɪdioʊ geɪm/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The kids are playing video games.",
+        "cn": "孩子们正在玩电子游戏。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3489,
     "word": "view",
     "translation": "看法；景色",
-    "phonetic": "/vju/",
+    "phonetic": "/vjuː/",
     "pos": "n",
     "examples": [
       {
@@ -20426,7 +22571,12 @@
     "translation": "参观者",
     "phonetic": "/ˈvɪzɪtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The museum attracts many visitors.",
+        "cn": "博物馆吸引了许多游客。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20435,7 +22585,12 @@
     "translation": "词汇",
     "phonetic": "/voʊˈkæbjəˌlɛri/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She has a large English vocabulary.",
+        "cn": "她的英语词汇量很大。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20476,7 +22631,12 @@
     "translation": "服务员",
     "phonetic": "/ˈweɪtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The waiter brought us the menu.",
+        "cn": "服务员给我们拿来了菜单。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20485,7 +22645,12 @@
     "translation": "女服务员",
     "phonetic": "/ˈweɪtrəs/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The waitress took our order.",
+        "cn": "女服务员记下了我们点的菜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20508,7 +22673,7 @@
     "id": 3500,
     "word": "walk",
     "translation": "走路；散步",
-    "phonetic": "/wɔk/",
+    "phonetic": "/wɔːk/",
     "pos": "v & n",
     "examples": [
       {
@@ -20524,16 +22689,21 @@
     "id": 3501,
     "word": "walking",
     "translation": "步行",
-    "phonetic": "/ˈwɔkɪŋ/",
+    "phonetic": "/ˈwɔːkɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Walking is good for your health.",
+        "cn": "散步对你的健康有益。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3502,
     "word": "wall",
     "translation": "墙",
-    "phonetic": "/wɔl/",
+    "phonetic": "/wɔːl/",
     "pos": "n",
     "examples": [
       {
@@ -20549,7 +22719,7 @@
     "id": 3503,
     "word": "wallet",
     "translation": "钱包",
-    "phonetic": "/ˈwɔlət/",
+    "phonetic": "/ˈwɔːlət/",
     "pos": "n",
     "examples": [
       {
@@ -20583,7 +22753,12 @@
     "translation": "衣柜",
     "phonetic": "/ˈwɔrˌdroʊb/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She hung her clothes in the wardrobe.",
+        "cn": "她把衣服挂进了衣柜。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20622,18 +22797,28 @@
     "id": 3508,
     "word": "washing machine",
     "translation": "洗衣机",
-    "phonetic": "/ˈwɑʃɪŋ/",
+    "phonetic": "/ˈwɑːʃɪŋ məˈʃiːn/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Our washing machine is broken.",
+        "cn": "我们的洗衣机坏了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3509,
     "word": "washing-up",
     "translation": "洗碗",
-    "phonetic": "/ˈwɒʃɪŋ ʌp/",
+    "phonetic": "/ˈwɑːʃɪŋ ʌp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I did the washing-up after dinner.",
+        "cn": "晚饭后我洗了碗。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20696,7 +22881,7 @@
     "id": 3513,
     "word": "we",
     "translation": "我们",
-    "phonetic": "/wi/",
+    "phonetic": "/wiː/",
     "pos": "pron",
     "examples": [
       {
@@ -20746,7 +22931,12 @@
     "translation": "网络",
     "phonetic": "/wɛb/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I found the answer on the web.",
+        "cn": "我在网上找到了答案。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20785,7 +22975,7 @@
     "id": 3519,
     "word": "week",
     "translation": "星期；周",
-    "phonetic": "/wik/",
+    "phonetic": "/wiːk/",
     "pos": "n",
     "examples": [
       {
@@ -20801,7 +22991,7 @@
     "id": 3520,
     "word": "weekday",
     "translation": "工作日",
-    "phonetic": "/ˈwikˌdeɪ/",
+    "phonetic": "/ˈwiːkˌdeɪ/",
     "pos": "n",
     "examples": [
       {
@@ -20817,7 +23007,7 @@
     "id": 3521,
     "word": "weekend",
     "translation": "周末",
-    "phonetic": "/ˈwiˌkɪnd/",
+    "phonetic": "/ˈwiːkˌend/",
     "pos": "n",
     "examples": [
       {
@@ -20833,9 +23023,14 @@
     "id": 3522,
     "word": "weekly",
     "translation": "每周的",
-    "phonetic": "/ˈwikli/",
+    "phonetic": "/ˈwiːkli/",
     "pos": "adj & adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We have a weekly test at school.",
+        "cn": "我们学校每周有一次测试。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -20910,7 +23105,7 @@
     "id": 3528,
     "word": "what",
     "translation": "什么",
-    "phonetic": "/wət/",
+    "phonetic": "/wʌt/",
     "pos": "det & pron",
     "examples": [
       {
@@ -20926,7 +23121,7 @@
     "id": 3529,
     "word": "wheel",
     "translation": "轮子",
-    "phonetic": "/wil/",
+    "phonetic": "/wiːl/",
     "pos": "n",
     "examples": [
       {
@@ -20942,7 +23137,7 @@
     "id": 3530,
     "word": "when",
     "translation": "什么时候；当……时",
-    "phonetic": "/wɪn/",
+    "phonetic": "/wɛn/",
     "pos": "adv",
     "examples": [
       {
@@ -21022,7 +23217,7 @@
     "id": 3535,
     "word": "who",
     "translation": "谁",
-    "phonetic": "/hu/",
+    "phonetic": "/huː/",
     "pos": "pron",
     "examples": [
       {
@@ -21054,7 +23249,7 @@
     "id": 3537,
     "word": "whose",
     "translation": "谁的",
-    "phonetic": "/huz/",
+    "phonetic": "/huːz/",
     "pos": "det & pron",
     "examples": [
       {
@@ -21120,7 +23315,12 @@
     "translation": "无线网络",
     "phonetic": "/ˈwaɪˌfaɪ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The wifi in this hotel is very slow.",
+        "cn": "这家酒店的WiFi很慢。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21145,7 +23345,12 @@
     "translation": "野生动物",
     "phonetic": "/ˈwaɪlˌdlaɪf/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We saw a lot of wildlife in the forest.",
+        "cn": "我们在森林里看到了很多野生动物。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21202,7 +23407,12 @@
     "translation": "风帆",
     "phonetic": "/ˈwɪndsɜːrfɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He tried windsurfing during his holiday.",
+        "cn": "他在假期里尝试了风帆冲浪。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21371,7 +23581,12 @@
     "translation": "木制的",
     "phonetic": "/ˈwʊdən/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The table is made of wood.",
+        "cn": "这张桌子是木头做的。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21380,14 +23595,19 @@
     "translation": "羊毛",
     "phonetic": "/wʊl/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She knitted a scarf from wool.",
+        "cn": "她用毛线织了一条围巾。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3560,
     "word": "word",
     "translation": "单词；话语",
-    "phonetic": "/wʌrd/",
+    "phonetic": "/wɜːrd/",
     "pos": "n",
     "examples": [
       {
@@ -21403,7 +23623,7 @@
     "id": 3561,
     "word": "work",
     "translation": "工作；运转",
-    "phonetic": "/wʌrk/",
+    "phonetic": "/wɜːrk/",
     "pos": "n & v",
     "examples": [
       {
@@ -21419,7 +23639,7 @@
     "id": 3563,
     "word": "worker",
     "translation": "工人",
-    "phonetic": "/ˈwʌrkər/",
+    "phonetic": "/ˈwɜːrkər/",
     "pos": "n",
     "examples": [
       {
@@ -21435,7 +23655,7 @@
     "id": 3564,
     "word": "world",
     "translation": "世界",
-    "phonetic": "/wʌrld/",
+    "phonetic": "/wɜːrld/",
     "pos": "n",
     "examples": [
       {
@@ -21453,7 +23673,12 @@
     "translation": "担心的",
     "phonetic": "/ˈwərid/",
     "pos": "adj",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is worried about her exams.",
+        "cn": "她很担心考试。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21476,7 +23701,7 @@
     "id": 3567,
     "word": "worse",
     "translation": "更糟的",
-    "phonetic": "/wʌrs/",
+    "phonetic": "/wɜːrs/",
     "pos": "adj",
     "examples": [
       {
@@ -21492,7 +23717,7 @@
     "id": 3568,
     "word": "worst",
     "translation": "最糟的",
-    "phonetic": "/wʌrst/",
+    "phonetic": "/wɜːrst/",
     "pos": "adj",
     "examples": [
       {
@@ -21526,7 +23751,12 @@
     "translation": "哇",
     "phonetic": "/waʊ/",
     "pos": "exclam",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Wow! You did a great job.",
+        "cn": "哇！你做得太棒了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21551,7 +23781,12 @@
     "translation": "作家",
     "phonetic": "/ˈraɪtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "He wants to be a writer.",
+        "cn": "他想成为一名作家。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21560,14 +23795,19 @@
     "translation": "写作",
     "phonetic": "/ˈraɪtɪŋ/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is good at writing.",
+        "cn": "她擅长写作。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3575,
     "word": "wrong",
     "translation": "错误的",
-    "phonetic": "/rɔŋ/",
+    "phonetic": "/rɔːŋ/",
     "pos": "adj",
     "examples": [
       {
@@ -21655,7 +23895,7 @@
     "id": 3581,
     "word": "you",
     "translation": "你；你们",
-    "phonetic": "/ju/",
+    "phonetic": "/juː/",
     "pos": "pron",
     "examples": [
       {
@@ -21719,7 +23959,7 @@
     "id": 3585,
     "word": "yourself",
     "translation": "你自己",
-    "phonetic": "/ˈjɔrsɛlf/",
+    "phonetic": "/ˈjɔːrsɛlf/",
     "pos": "pron",
     "examples": [
       {
@@ -21737,7 +23977,12 @@
     "translation": "斑马",
     "phonetic": "/ˈzibrə/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The zebra has black and white stripes.",
+        "cn": "斑马有黑白相间的条纹。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21760,7 +24005,7 @@
     "id": 3588,
     "word": "zoo",
     "translation": "动物园",
-    "phonetic": "/zu/",
+    "phonetic": "/zuː/",
     "pos": "n",
     "examples": [
       {
@@ -21778,7 +24023,12 @@
     "translation": "大陆(复数)",
     "phonetic": "/ˈkɑntənənts/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "There are seven continents in the world.",
+        "cn": "世界上有七大洲。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21787,7 +24037,12 @@
     "translation": "电器(复数)",
     "phonetic": "/əˈplaɪənsɪz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Our kitchen is full of modern appliances.",
+        "cn": "我们的厨房里全是现代化电器。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21828,7 +24083,12 @@
     "translation": "灯(复数)",
     "phonetic": "/laɪts/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Please turn off the lights when you leave.",
+        "cn": "离开时请关灯。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21851,9 +24111,14 @@
     "id": 3595,
     "word": "pc",
     "translation": "个人电脑",
-    "phonetic": "/ˈpiˈsi/",
+    "phonetic": "/ˌpiːˈsiː/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need a new PC for school.",
+        "cn": "我需要一台新的电脑上学用。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21862,16 +24127,26 @@
     "translation": "背包",
     "phonetic": "/ˈrəkˌsæk/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She carried her books in a rucksack.",
+        "cn": "她把书放在背包里。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3597,
     "word": "shoes",
     "translation": "鞋子(复数)",
-    "phonetic": "/ʃuz/",
+    "phonetic": "/ʃuːz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I need to buy a new pair of shoes.",
+        "cn": "我需要买一双新鞋。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21880,7 +24155,12 @@
     "translation": "颜色(复数)",
     "phonetic": "/ˈkʌlərz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The colours of the rainbow are beautiful.",
+        "cn": "彩虹的颜色很美。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21889,7 +24169,12 @@
     "translation": "运动鞋(复数)",
     "phonetic": "/ˈtreɪnərz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I wear trainers for PE class.",
+        "cn": "我上体育课穿运动鞋。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21946,7 +24231,12 @@
     "translation": "考试",
     "phonetic": "/ɪgˈzæm/",
     "pos": "ination",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She is preparing for her final exam.",
+        "cn": "她正在准备期末考试。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21955,7 +24245,12 @@
     "translation": "数学",
     "phonetic": "/mæθs/ /ˌmæθəˈmætɪks/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I like maths more than English.",
+        "cn": "比起英语，我更喜欢数学。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -21994,9 +24289,14 @@
     "id": 3607,
     "word": "barbecue",
     "translation": "烧烤",
-    "phonetic": "/ˈbɑrbɪˌkju/",
+    "phonetic": "/ˈbɑːrbɪˌkju/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We had a barbecue in the garden last Sunday.",
+        "cn": "我们上周日在花园里烧烤了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22021,7 +24321,12 @@
     "translation": "薯条",
     "phonetic": "/ʧɪps/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I ordered fish and chips for takeaway.",
+        "cn": "我点了一份炸鱼薯条外带。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22030,7 +24335,12 @@
     "translation": "妈妈",
     "phonetic": "/məm/",
     "pos": "my",
-    "examples": [],
+    "examples": [
+      {
+        "en": "My mum wakes me up at 7 a.m. every day.",
+        "cn": "我妈妈每天早上七点叫我起床。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22039,7 +24349,12 @@
     "translation": "药剂师",
     "phonetic": "/ˈkɛmɪst/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "She works as a chemist in a lab.",
+        "cn": "她在一家实验室做药剂师。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22048,7 +24363,12 @@
     "translation": "假期(复数)",
     "phonetic": "/ˈhɑləˌdeɪz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I'll visit my grandparents during the holidays.",
+        "cn": "假期里我会去看望祖父母。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22057,7 +24377,12 @@
     "translation": "测量(复数)",
     "phonetic": "/ˈmɛʒərmənts/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "We need to take your measurements for the dress.",
+        "cn": "我们需要为你量尺寸做裙子。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22066,16 +24391,26 @@
     "translation": "克",
     "phonetic": "/græm/",
     "pos": "me",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The weight is 500 grams.",
+        "cn": "重量是500克。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3615,
     "word": "kilometre/kilometre/km",
     "translation": "公里",
-    "phonetic": "/kɪˈlɑːmɪtər/ /kɪˈlɒmɪtə/",
+    "phonetic": "/kɪˈlɑːmɪtər/ /kɪˈlɑːmɪtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The town is five kilometres away from here.",
+        "cn": "这个镇离这里五公里远。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22084,7 +24419,12 @@
     "translation": "书店",
     "phonetic": "/ˈbʊkˌʃɑp/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "I bought this novel at the bookshop.",
+        "cn": "我在书店买了这本小说。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22093,7 +24433,12 @@
     "translation": "书店(美式)",
     "phonetic": "/ˈbʊkˌstɔr/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The bookstore is closed on Sundays.",
+        "cn": "这家书店周日关门。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22102,7 +24447,12 @@
     "translation": "电梯(美式)",
     "phonetic": "/ˈɛləˌveɪtər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "Let's take the elevator to the fifth floor.",
+        "cn": "我们乘电梯去五楼吧。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22127,7 +24477,12 @@
     "translation": "服务(复数)",
     "phonetic": "/ˈsərvəsəz/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "This website offers free online services.",
+        "cn": "这个网站提供免费的在线服务。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22152,7 +24507,12 @@
     "translation": "上午/下午",
     "phonetic": "/eɪ em/ /piː em/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The store is open from 9 a.m. to 9 p.m.",
+        "cn": "这家店从上午九点营业到晚上九点。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
@@ -22161,16 +24521,26 @@
     "translation": "轮胎(英式)",
     "phonetic": "/taɪər/",
     "pos": "n",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The front tyre of my bike is flat.",
+        "cn": "我自行车的前轮胎没气了。"
+      }
+    ],
     "isKETVocabulary": true
   },
   {
     "id": 3050,
     "word": "a.m.",
     "translation": "上午",
-    "phonetic": "/eɪ em/",
+    "phonetic": "/ˌeɪ ˈem/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The first class starts at 8 a.m.",
+        "cn": "第一节课早上八点开始。"
+      }
+    ],
     "isKETVocabulary": true,
     "dupInVocab": true,
     "dupLevel": "初中"
@@ -22179,9 +24549,14 @@
     "id": 3051,
     "word": "p.m.",
     "translation": "下午",
-    "phonetic": "/piː em/",
+    "phonetic": "/ˌpiː ˈem/",
     "pos": "adv",
-    "examples": [],
+    "examples": [
+      {
+        "en": "The meeting starts at 2 p.m.",
+        "cn": "会议下午两点开始。"
+      }
+    ],
     "isKETVocabulary": true,
     "dupInVocab": true,
     "dupLevel": "初中"

@@ -4,6 +4,11 @@
 
 function switchTab(tab){
   if(App.currentTab==='quiz'&&tab!=='quiz'&&App.questions.length>0){exitQuiz(false)}
+  if(App.currentTab!=='quiz'&&tab==='quiz'&&App.activeDailyTaskId){
+    const _box=document.getElementById('daily-task-study')
+    if(_box&&!_box.classList.contains('d-none')){const _t=getDailyTasks()[App.activeDailyTaskId];if(_t&&!_t.learningCheckedAt)dailyTaskStudyTickStart(_t)}
+  }
+  if(typeof dailyTaskStudyTickPause==='function'&&App.currentTab==='quiz'&&tab!=='quiz')dailyTaskStudyTickPause()
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'))
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'))
   document.getElementById('page-'+tab).classList.add('active')
@@ -324,13 +329,14 @@ function renderStats(){
   }
   const vAll=[...VOCABULARY,...(KET_VOCABULARY||[])]
   const kindTypes=[{key:'vocab_regular',label:'选择题'},{key:'vocab_dictation',label:'默写题'},{key:'vocab_irregular',label:'不规则动词'}]
-  const vocabLevelOrder={basic:1,secondary:2,ket:3,junior:4,supplemental:5}
+  const vocabLevelOrder={basic:1,secondary:2,ket:3,junior:4,supplemental:5,other:9}
   // Compute level totals from kindStats
   const vocabLevels=new Map()
   ;[...vAll,...(KET_VOCABULARY||[])].forEach(v=>{
     const level=vocabStatsLevel(v)
     if(!vocabLevels.has(level.key))vocabLevels.set(level.key,{key:level.key,label:level.label,vT:0,vE:0})
   })
+  if(!vocabLevels.has('other'))vocabLevels.set('other',{key:'other',label:'不规则动词',vT:0,vE:0})
   ;[...vocabLevels.keys()].forEach(key=>{
     const row=vocabLevels.get(key)
     kindTypes.forEach(k=>{const ks=sumKindByLevel(key,k.key);row.vT+=ks.total||0;row.vE+=ks.err||0})
@@ -340,7 +346,7 @@ function renderStats(){
   vocabLevels.forEach(function(r){vTotal+=r.vT;vErr+=r.vE})
   html+='<tr class="table-active fw-bold"><td><button class="stats-toggle" data-group="vocab" onclick="toggleStatsGroup(this)"><span class="stats-arrow">▾</span>词汇</button></td><td>'+vTotal+'</td><td'+cellClass(vErr)+'>'+vErr+'</td><td>'+acc(vTotal,vErr)+'</td><td></td></tr>'
   ;[...vocabLevels.values()].sort((a,b)=>(vocabLevelOrder[a.key]||9)-(vocabLevelOrder[b.key]||9)).forEach(r=>{
-    html+='<tr class="stats-sub stats-sub-vocab'+rowClass(r.vE,r.vT)+'"><td class="ps-3"><button class="stats-toggle collapsed" data-group="vocab-'+r.key+'" onclick="toggleStatsGroup(this)" style="background:none;border:none;font-weight:inherit;color:inherit;padding:0;width:100%;text-align:left"><span class="stats-arrow">▾</span>'+esc(r.label)+'</button><span class="ps-1"></span></td><td>'+r.vT+'</td><td'+cellClass(r.vE)+'>'+r.vE+'</td><td>'+acc(r.vT,r.vE)+'</td><td>'+masteryTag(r.vE,r.vT,'vocabulary')+'</td></tr>'
+    html+='<tr class="stats-sub stats-sub-vocab'+rowClass(r.vE,r.vT)+'"><td class="ps-3"><button class="stats-toggle collapsed" data-group="vocab-'+r.key+'" onclick="toggleStatsGroup(this)" style="background:none;border:none;font-weight:inherit;color:inherit;padding:0;width:100%;text-align:left"><span class="stats-arrow">▾</span>'+esc(r.label)+'</button><span class="ps-1"></span></td><td>'+r.vT+'</td><td'+cellClass(r.vE)+'>'+r.vE+'</td><td>'+acc(r.vT,r.vE)+'</td><td>'+masteryTag(r.vE,r.vT,r.key==='other'?'grammar':'vocabulary')+'</td></tr>'
     kindTypes.forEach(k=>{
       const ks=sumKindByLevel(r.key,k.key)
       html+='<tr class="stats-sub stats-sub-vocab-'+r.key+' collapsed'+rowClass(ks.err,ks.total)+'"><td class="ps-4 small text-secondary">'+esc(k.label)+'</td><td>'+ks.total+'</td><td'+cellClass(ks.err)+'>'+ks.err+'</td><td>'+acc(ks.total,ks.err)+'</td><td></td></tr>'

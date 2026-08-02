@@ -1209,12 +1209,12 @@
         "options": [
           "forgot",
           "have forgot",
-          "had forgot",
+          "had forgotten",
           "was forgetting"
         ],
         "answerIndex": 2,
-        "answer": "had forgot",
-        "explanation": "【题意】我想去游泳，但我忘记带泳衣了。【解析】“想去游泳”是过去想法，“忘记带泳衣”在此之前，用过去完成时 had forgot。",
+        "answer": "had forgotten",
+        "explanation": "【题意】我想去游泳，但我忘记带泳衣了。【解析】“想去游泳”是过去想法，“忘记带泳衣”在此之前，用过去完成时 had forgotten。",
         "batch": "new"
       },
       {
@@ -1333,7 +1333,7 @@
         "kpIds": [
           12
         ],
-        "sentence": "There ___ a hospital near here?",
+        "sentence": "___ there a hospital near here?",
         "options": [
           "are",
           "is",
@@ -6917,16 +6917,16 @@
         "kpIds": [
           16
         ],
-        "sentence": "We must ___ the teacher carefully.",
+        "sentence": "We must ___ to the teacher carefully.",
         "options": [
           "listen",
-          "to listen",
+          "listens",
           "listening",
-          "to listening"
+          "to listen"
         ],
         "answerIndex": 0,
         "answer": "listen",
-        "explanation": "【题意】我们必须认真听老师讲。【解析】情态动词must后接动词原形，不用不定式。",
+        "explanation": "【题意】我们必须认真听老师讲课。【解析】must 是情态动词，后接动词原形；listen 为不及物动词，接宾语需加介词 to，listen to 意为“听……”。",
         "batch": "new"
       },
       {
@@ -8076,9 +8076,9 @@
           "ran",
           "laughed"
         ],
-        "answerIndex": 1,
-        "answer": "took",
-        "explanation": "【题意】她给妹妹买了一份生日礼物。【解析】took是及物动词，可接双宾语，但此处gave/took语义均可成立，需根据句意“给礼物”选出gave。",
+        "answerIndex": 0,
+        "answer": "gave",
+        "explanation": "【题意】她送给她妹妹一份生日礼物。【解析】give sb sth 表示“给某人某物”，gave 是 give 的过去式。",
         "batch": "new"
       },
       {
@@ -8108,9 +8108,9 @@
           "asked",
           "spoke"
         ],
-        "answerIndex": 2,
-        "answer": "asked",
-        "explanation": "【题意】老师给学生们讲了一个故事。【解析】told和read均可接双宾语，但“讲故事”固定搭配tell a story，故排除read。",
+        "answerIndex": 0,
+        "answer": "told",
+        "explanation": "【题意】老师给学生们讲了一个故事。【解析】tell sb a story 表示“给某人讲故事”，told 是 tell 的过去式。",
         "batch": "new"
       },
       {
@@ -8239,22 +8239,6 @@
         "answerIndex": 0,
         "answer": "ran",
         "explanation": "【题意】她快跑去赶公交车。【解析】ran是不及物动词，后不接宾语，quickly修饰动词。",
-        "batch": "new"
-      },
-      {
-        "kpIds": [
-          162
-        ],
-        "sentence": "The sun ___ brightly in the sky.",
-        "options": [
-          "shone",
-          "raised",
-          "rose",
-          "set"
-        ],
-        "answerIndex": 2,
-        "answer": "rose",
-        "explanation": "【题意】太阳在天空中明亮地照耀着。【解析】shone是不及物动词，表示“照耀”，后不接宾语。rose也是不及物动词表示“升起”，但句意强调“照耀”。",
         "batch": "new"
       },
       {
@@ -8725,16 +8709,16 @@
         "kpIds": [
           48
         ],
-        "sentence": "___ are my classmates.",
+        "sentence": "___ are classmates.",
         "options": [
           "We",
           "I",
           "He",
           "She"
         ],
-        "answerIndex": 1,
-        "answer": "I",
-        "explanation": "【题意】你们是我同学。【解析】are与复数主语搭配，We和You均可，此处We更符合语义。",
+        "answerIndex": 0,
+        "answer": "We",
+        "explanation": "【题意】我们是同学。【解析】主语是 we（我们），be 动词用 are。",
         "batch": "new"
       },
       {
@@ -8764,9 +8748,9 @@
           "He",
           "She"
         ],
-        "answerIndex": 0,
-        "answer": "I",
-        "explanation": "【题意】他们正在打篮球。【解析】are与复数主语搭配，They符合语义。",
+        "answerIndex": 1,
+        "answer": "They",
+        "explanation": "【题意】他们现在正在打篮球。【解析】主语 they（他们），be 动词用 are。",
         "batch": "new"
       },
       {
@@ -12581,16 +12565,16 @@
         "kpIds": [
           166
         ],
-        "sentence": "He is a ___ boy and never tells lies.",
+        "sentence": "He is an ___ boy and never tells lies.",
         "options": [
-          "honest",
-          "dishonest",
+          "an honest",
+          "an dishonest",
           "honesty",
           "honestly"
         ],
-        "answerIndex": 1,
-        "answer": "dishonest",
-        "explanation": "【题意】他是一个不诚实的男孩，从不说真话。【解析】dis-前缀表示否定，dishonest表示\"不诚实的\"。",
+        "answerIndex": 0,
+        "answer": "an honest",
+        "explanation": "【题意】他是个诚实的男孩，从不说谎。【解析】honest 以元音音素开头，前面用 an。",
         "batch": "new"
       },
       {
@@ -19825,9 +19809,9 @@
         "kpIds": [
           62
         ],
-        "sentence": "They walked ___ the street.",
+        "sentence": "They walked ___ (穿过) the street.",
         "answer": "through",
-        "explanation": "【题意】他们穿过了街道。【解析】表示从内部穿过用through。",
+        "explanation": "【题意】他们穿过了街道。【解析】through 表示从内部穿过，如穿过街道、森林等；表示“穿过街道”强调从一侧到另一侧内部穿行。",
         "batch": "new"
       },
       {

@@ -172,7 +172,7 @@
     "headwords": [
       "abroad"
     ],
-    "phonetic": "/əˈbrɔd/",
+    "phonetic": "/əˈbrɔːd/",
     "translation": "在国外；到国外",
     "pos": "adv.",
     "grade": null,
@@ -213,8 +213,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "He has been absent from his desk for two weeks.",
-        "cn": "他已经有两个星期没有坐在办公桌前了。"
+        "en": "Two students were absent from class today.",
+        "cn": "今天班上有两个学生没来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -304,7 +304,7 @@
     "headwords": [
       "according"
     ],
-    "phonetic": "/əˈkɔrdɪŋ/",
+    "phonetic": "/əˈkɔːrdɪŋ/",
     "translation": "根据",
     "pos": "n.",
     "grade": null,
@@ -408,7 +408,7 @@
     "headwords": [
       "achieve"
     ],
-    "phonetic": "/əˈʧiv/",
+    "phonetic": "/əˈtʃiːv/",
     "translation": "实现；达到",
     "pos": "v.",
     "grade": null,
@@ -441,7 +441,7 @@
     "headwords": [
       "across"
     ],
-    "phonetic": "/əˈkrɔs/",
+    "phonetic": "/əˈkrɔːs/",
     "translation": "穿过；在对面",
     "pos": "prep.",
     "grade": null,
@@ -641,7 +641,7 @@
     "headwords": [
       "actually"
     ],
-    "phonetic": "/ˈæˌkʧuəli/",
+    "phonetic": "/ˈæktʃuəli/",
     "translation": "实际上",
     "pos": "adv.",
     "grade": null,
@@ -885,8 +885,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Follow your doctor's advice .",
-        "cn": "要遵从医嘱。"
+        "en": "My teacher gave me some good advice.",
+        "cn": "老师给了我一些好建议。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -943,7 +943,7 @@
     "headwords": [
       "afford"
     ],
-    "phonetic": "/əˈfɔrd/",
+    "phonetic": "/əˈfɔːrd/",
     "translation": "负担得起",
     "pos": "v.",
     "grade": null,
@@ -1149,8 +1149,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The bus took an unbelievable age to arrive.",
-        "cn": "公共汽车花了难以置信的时间才到达。"
+        "en": "Children go to school at the age of six.",
+        "cn": "孩子们六岁上学。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -1273,7 +1273,7 @@
     "headwords": [
       "artificial intelligence"
     ],
-    "phonetic": "/ˌɑrtəˈfɪʃəl ˌɪnˈtɛləʤəns/",
+    "phonetic": "/ˌɑːrtəˈfɪʃəl ˌɪnˈtɛlədʒəns/",
     "translation": "人工智能",
     "pos": "n.",
     "grade": null,
@@ -1410,7 +1410,7 @@
     "headwords": [
       "airport"
     ],
-    "phonetic": "/ˈɛrˌpɔrt/",
+    "phonetic": "/ˈɛrˌpɔːrt/",
     "translation": "机场",
     "pos": "n.",
     "grade": null,
@@ -1443,7 +1443,7 @@
     "headwords": [
       "alarm"
     ],
-    "phonetic": "/əˈlɑrm/",
+    "phonetic": "/əˈlɑːrm/",
     "translation": "警报；闹钟",
     "pos": "n.",
     "grade": null,
@@ -1509,7 +1509,7 @@
     "headwords": [
       "all"
     ],
-    "phonetic": "/ɔl/",
+    "phonetic": "/ɔːl/",
     "translation": "全部；所有",
     "pos": "pron.",
     "grade": null,
@@ -1517,8 +1517,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "All can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "All the students passed the exam.",
+        "cn": "所有学生都通过了考试。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -1575,7 +1575,7 @@
     "headwords": [
       "almost"
     ],
-    "phonetic": "/ˈɔlˌmoʊst/",
+    "phonetic": "/ˈɔːlmoʊst/",
     "translation": "几乎",
     "pos": "adv.",
     "grade": null,
@@ -1641,7 +1641,7 @@
     "headwords": [
       "along"
     ],
-    "phonetic": "/əˈlɔŋ/",
+    "phonetic": "/əˈlɔːŋ/",
     "translation": "沿着",
     "pos": "adv.",
     "grade": null,
@@ -1707,7 +1707,7 @@
     "headwords": [
       "already"
     ],
-    "phonetic": "/ɔˈrɛdi/",
+    "phonetic": "/ɔːlˈrɛdi/",
     "translation": "已经",
     "pos": "adv.",
     "grade": null,
@@ -1740,7 +1740,7 @@
     "headwords": [
       "also"
     ],
-    "phonetic": "/ˈɔlsoʊ/",
+    "phonetic": "/ˈɔːlsoʊ/",
     "translation": "也",
     "pos": "adv.",
     "grade": null,
@@ -1806,7 +1806,7 @@
     "headwords": [
       "always"
     ],
-    "phonetic": "/ˈɔlˌweɪz/",
+    "phonetic": "/ˈɔːlweɪz/",
     "translation": "总是",
     "pos": "adv.",
     "grade": null,
@@ -1839,7 +1839,7 @@
     "headwords": [
       "a.m."
     ],
-    "phonetic": "/a.m*./",
+    "phonetic": "/ˌeɪ ˈem/",
     "translation": "上午",
     "pos": "n.",
     "grade": null,
@@ -1971,7 +1971,7 @@
     "headwords": [
       "and"
     ],
-    "phonetic": "/ənd/",
+    "phonetic": "/ænd/",
     "translation": "和；并且",
     "pos": "conj.",
     "grade": null,
@@ -2012,8 +2012,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels angry today.",
-        "cn": "她今天感到生气。"
+        "en": "Mom was angry with me for coming home late.",
+        "cn": "我回家晚了，妈妈很生气。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2078,8 +2078,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Another can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Would you like another cup of tea?",
+        "cn": "你想再来一杯茶吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2177,8 +2177,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Any can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Do you have any questions about the lesson?",
+        "cn": "你对这课有什么问题吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2211,8 +2211,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Anybody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Has anybody seen my keys?",
+        "cn": "有人看见我的钥匙了吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2245,8 +2245,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Anything can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Is there anything I can do for you?",
+        "cn": "有什么我能帮你的吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2336,7 +2336,7 @@
     "headwords": [
       "apartment"
     ],
-    "phonetic": "/əˈpɑrtmənt/",
+    "phonetic": "/əˈpɑːrtmənt/",
     "translation": "公寓",
     "pos": "n.",
     "grade": null,
@@ -2510,7 +2510,7 @@
     "headwords": [
       "argue"
     ],
-    "phonetic": "/ˈɑrgju/",
+    "phonetic": "/ˈɑːrɡjuː/",
     "translation": "争论",
     "pos": "v.",
     "grade": null,
@@ -2543,7 +2543,7 @@
     "headwords": [
       "arm"
     ],
-    "phonetic": "/ɑrm/",
+    "phonetic": "/ɑːrm/",
     "translation": "手臂",
     "pos": "n.",
     "grade": null,
@@ -2576,7 +2576,7 @@
     "headwords": [
       "army"
     ],
-    "phonetic": "/ˈɑrmi/",
+    "phonetic": "/ˈɑːrmi/",
     "translation": "军队",
     "pos": "adj.",
     "grade": null,
@@ -2609,7 +2609,7 @@
     "headwords": [
       "around"
     ],
-    "phonetic": "/ʌraʊnd/",
+    "phonetic": "/əˈraʊnd/",
     "translation": "在周围；大约",
     "pos": "prep.",
     "grade": null,
@@ -2642,7 +2642,7 @@
     "headwords": [
       "arrive"
     ],
-    "phonetic": "/ʌraɪv/",
+    "phonetic": "/əˈraɪv/",
     "translation": "到达",
     "pos": "v.",
     "grade": null,
@@ -2650,8 +2650,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They arrive after school.",
-        "cn": "他们放学后到达。"
+        "en": "We arrived at the airport early.",
+        "cn": "我们很早就到了机场。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2675,7 +2675,7 @@
     "headwords": [
       "art"
     ],
-    "phonetic": "/ɑrt/",
+    "phonetic": "/ɑːrt/",
     "translation": "艺术",
     "pos": "n.",
     "grade": null,
@@ -2708,7 +2708,7 @@
     "headwords": [
       "article"
     ],
-    "phonetic": "/ˈɑrtɪkəl/",
+    "phonetic": "/ˈɑːrtɪkəl/",
     "translation": "文章；物品",
     "pos": "n.",
     "grade": null,
@@ -2741,7 +2741,7 @@
     "headwords": [
       "artist"
     ],
-    "phonetic": "/ˈɑrtɪst/",
+    "phonetic": "/ˈɑːrtɪst/",
     "translation": "艺术家",
     "pos": "n.",
     "grade": null,
@@ -2774,7 +2774,7 @@
     "headwords": [
       "as"
     ],
-    "phonetic": "/ɛz/",
+    "phonetic": "/æz/",
     "translation": "作为；像……一样",
     "pos": "prep.",
     "grade": null,
@@ -2782,8 +2782,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is as the desk.",
-        "cn": "书在桌子附近。"
+        "en": "She works as a teacher in a primary school.",
+        "cn": "她在一所小学当老师。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2848,8 +2848,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels asleep today.",
-        "cn": "她今天感到睡着。"
+        "en": "He was so tired that he fell asleep quickly.",
+        "cn": "他太累了，很快就睡着了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -2939,7 +2939,7 @@
     "headwords": [
       "athlete"
     ],
-    "phonetic": "/ˈæθˌlit/",
+    "phonetic": "/ˈæθliːt/",
     "translation": "运动员",
     "pos": "n.",
     "grade": null,
@@ -3071,7 +3071,7 @@
     "headwords": [
       "aunt"
     ],
-    "phonetic": "/ɔnt/",
+    "phonetic": "/ɔːnt/",
     "translation": "姑母；姨母",
     "pos": "n.",
     "grade": null,
@@ -3104,7 +3104,7 @@
     "headwords": [
       "autumn"
     ],
-    "phonetic": "/ˈɔtəm/",
+    "phonetic": "/ˈɔːtəm/",
     "translation": "秋天",
     "pos": "n.",
     "grade": null,
@@ -3236,7 +3236,7 @@
     "headwords": [
       "award"
     ],
-    "phonetic": "/əˈwɔrd/",
+    "phonetic": "/əˈwɔːrd/",
     "translation": "奖；授予",
     "pos": "v.",
     "grade": null,
@@ -3335,7 +3335,7 @@
     "headwords": [
       "awful"
     ],
-    "phonetic": "/ˈɔfəl/",
+    "phonetic": "/ˈɔːfəl/",
     "translation": "糟糕的",
     "pos": "adj.",
     "grade": null,
@@ -3604,7 +3604,7 @@
     "headwords": [
       "ball"
     ],
-    "phonetic": "/bɔl/",
+    "phonetic": "/bɔːl/",
     "translation": "球",
     "pos": "n.",
     "grade": null,
@@ -3637,7 +3637,7 @@
     "headwords": [
       "balloon"
     ],
-    "phonetic": "/bəˈlun/",
+    "phonetic": "/bəˈluːn/",
     "translation": "气球",
     "pos": "n.",
     "grade": null,
@@ -3670,7 +3670,7 @@
     "headwords": [
       "bamboo"
     ],
-    "phonetic": "/bæmˈbu/",
+    "phonetic": "/bæmˈbuː/",
     "translation": "竹子",
     "pos": "n.",
     "grade": null,
@@ -4046,8 +4046,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They be after school.",
-        "cn": "他们放学后是。"
+        "en": "Don't be late for class again.",
+        "cn": "别再上课迟到了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -4076,7 +4076,7 @@
     "headwords": [
       "beach"
     ],
-    "phonetic": "/biʧ/",
+    "phonetic": "/biːtʃ/",
     "translation": "海滩",
     "pos": "n.",
     "grade": null,
@@ -4109,7 +4109,7 @@
     "headwords": [
       "bean"
     ],
-    "phonetic": "/bin/",
+    "phonetic": "/biːn/",
     "translation": "豆",
     "pos": "n.",
     "grade": null,
@@ -4175,7 +4175,7 @@
     "headwords": [
       "beat"
     ],
-    "phonetic": "/bit/",
+    "phonetic": "/biːt/",
     "translation": "打败；敲打",
     "pos": "v.",
     "grade": null,
@@ -4282,8 +4282,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They become after school.",
-        "cn": "他们放学后变成。"
+        "en": "He wants to become a pilot.",
+        "cn": "他想成为一名飞行员。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -4373,7 +4373,7 @@
     "headwords": [
       "bee"
     ],
-    "phonetic": "/bi/",
+    "phonetic": "/biː/",
     "translation": "蜜蜂",
     "pos": "n.",
     "grade": null,
@@ -4406,7 +4406,7 @@
     "headwords": [
       "beef"
     ],
-    "phonetic": "/bif/",
+    "phonetic": "/biːf/",
     "translation": "牛肉",
     "pos": "n.",
     "grade": null,
@@ -4439,7 +4439,7 @@
     "headwords": [
       "before"
     ],
-    "phonetic": "/ˌbiˈfɔr/",
+    "phonetic": "/ˌbiˈfɔːr/",
     "translation": "在……以前",
     "pos": "prep.",
     "grade": null,
@@ -4480,8 +4480,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They begin after school.",
-        "cn": "他们放学后开始。"
+        "en": "The film begins at seven thirty.",
+        "cn": "电影七点半开始。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -5071,7 +5071,7 @@
     "headwords": [
       "bird"
     ],
-    "phonetic": "/bʌrd/",
+    "phonetic": "/bɜːrd/",
     "translation": "鸟",
     "pos": "n.",
     "grade": null,
@@ -5104,7 +5104,7 @@
     "headwords": [
       "birth"
     ],
-    "phonetic": "/bʌrθ/",
+    "phonetic": "/bɜːrθ/",
     "translation": "出生",
     "pos": "n.",
     "grade": null,
@@ -5302,7 +5302,7 @@
     "headwords": [
       "bleed"
     ],
-    "phonetic": "/blid/",
+    "phonetic": "/bliːd/",
     "translation": "流血",
     "pos": "v.",
     "grade": null,
@@ -5500,7 +5500,7 @@
     "headwords": [
       "blue"
     ],
-    "phonetic": "/blu/",
+    "phonetic": "/bluː/",
     "translation": "蓝色；蓝的",
     "pos": "adj.",
     "grade": null,
@@ -5533,7 +5533,7 @@
     "headwords": [
       "board"
     ],
-    "phonetic": "/bɔrd/",
+    "phonetic": "/bɔːrd/",
     "translation": "板；登上",
     "pos": "n.",
     "grade": null,
@@ -5731,7 +5731,7 @@
     "headwords": [
       "born"
     ],
-    "phonetic": "/bɔrn/",
+    "phonetic": "/bɔːrn/",
     "translation": "出生的",
     "pos": "n.",
     "grade": null,
@@ -5797,7 +5797,7 @@
     "headwords": [
       "boss"
     ],
-    "phonetic": "/bɔs/",
+    "phonetic": "/bɔːs/",
     "translation": "老板",
     "pos": "n.",
     "grade": null,
@@ -6556,7 +6556,7 @@
     "headwords": [
       "burn"
     ],
-    "phonetic": "/bʌrn/",
+    "phonetic": "/bɜːrn/",
     "translation": "燃烧；烧伤",
     "pos": "v.",
     "grade": null,
@@ -6597,8 +6597,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These bus are useful.",
-        "cn": "这些公共汽车很有用。"
+        "en": "I missed the bus this morning.",
+        "cn": "我今天早上错过了公交车。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -6952,7 +6952,7 @@
     "headwords": [
       "call"
     ],
-    "phonetic": "/kɔl/",
+    "phonetic": "/kɔːl/",
     "translation": "打电话；称呼",
     "pos": "v.",
     "grade": null,
@@ -7084,7 +7084,7 @@
     "headwords": [
       "can"
     ],
-    "phonetic": "/kən/",
+    "phonetic": "/kæn/",
     "translation": "能够；可以",
     "pos": "modal v.",
     "grade": null,
@@ -7315,7 +7315,7 @@
     "headwords": [
       "car"
     ],
-    "phonetic": "/kɑr/",
+    "phonetic": "/kɑːr/",
     "translation": "汽车",
     "pos": "n.",
     "grade": null,
@@ -7348,7 +7348,7 @@
     "headwords": [
       "card"
     ],
-    "phonetic": "/kɑrd/",
+    "phonetic": "/kɑːrd/",
     "translation": "卡片",
     "pos": "n.",
     "grade": null,
@@ -7546,7 +7546,7 @@
     "headwords": [
       "cartoon"
     ],
-    "phonetic": "/kɑrˈtun/",
+    "phonetic": "/kɑːrˈtuːn/",
     "translation": "动画片；漫画",
     "pos": "n.",
     "grade": null,
@@ -7711,7 +7711,7 @@
     "headwords": [
       "cause"
     ],
-    "phonetic": "/kɔz/",
+    "phonetic": "/kɔːz/",
     "translation": "原因；导致",
     "pos": "v.",
     "grade": null,
@@ -7914,7 +7914,7 @@
     "headwords": [
       "certain"
     ],
-    "phonetic": "/ˈsʌrtən/",
+    "phonetic": "/ˈsɜːrtən/",
     "translation": "确定的；某个",
     "pos": "adj.",
     "grade": null,
@@ -7980,7 +7980,7 @@
     "headwords": [
       "chalk"
     ],
-    "phonetic": "/ʧɔk/",
+    "phonetic": "/tʃɔːk/",
     "translation": "粉笔",
     "pos": "n.",
     "grade": null,
@@ -8277,7 +8277,7 @@
     "headwords": [
       "cheap"
     ],
-    "phonetic": "/ʧip/",
+    "phonetic": "/tʃiːp/",
     "translation": "便宜的",
     "pos": "adj.",
     "grade": null,
@@ -8310,7 +8310,7 @@
     "headwords": [
       "cheat"
     ],
-    "phonetic": "/ʧit/",
+    "phonetic": "/tʃiːt/",
     "translation": "作弊；欺骗",
     "pos": "v.",
     "grade": null,
@@ -8409,7 +8409,7 @@
     "headwords": [
       "cheese"
     ],
-    "phonetic": "/ʧiz/",
+    "phonetic": "/tʃiːz/",
     "translation": "奶酪",
     "pos": "n.",
     "grade": null,
@@ -8785,8 +8785,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These chopsticks are useful.",
-        "cn": "这些筷子很有用。"
+        "en": "Can you use chopsticks?",
+        "cn": "你会用筷子吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -8851,8 +8851,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These Christmas are useful.",
-        "cn": "这些圣诞节很有用。"
+        "en": "We sing Christmas songs at school.",
+        "cn": "我们在学校唱圣诞歌。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -8909,7 +8909,7 @@
     "headwords": [
       "circle"
     ],
-    "phonetic": "/ˈsʌrkəl/",
+    "phonetic": "/ˈsɜːrkəl/",
     "translation": "圆；圈",
     "pos": "n.",
     "grade": null,
@@ -9140,7 +9140,7 @@
     "headwords": [
       "clean"
     ],
-    "phonetic": "/klin/",
+    "phonetic": "/kliːn/",
     "translation": "干净的；打扫",
     "pos": "adj.",
     "grade": null,
@@ -9417,8 +9417,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These clothes are useful.",
-        "cn": "这些衣服很有用。"
+        "en": "I need to buy some new clothes.",
+        "cn": "我需要买些新衣服。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -9851,8 +9851,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They come after school.",
-        "cn": "他们放学后来。"
+        "en": "Come and look at this picture.",
+        "cn": "过来看看这张照片。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -10371,7 +10371,7 @@
     "headwords": [
       "continue"
     ],
-    "phonetic": "/kənˈtɪnju/",
+    "phonetic": "/kənˈtɪnjuː/",
     "translation": "继续",
     "pos": "v.",
     "grade": null,
@@ -10569,7 +10569,7 @@
     "headwords": [
       "cool"
     ],
-    "phonetic": "/kul/",
+    "phonetic": "/kuːl/",
     "translation": "凉爽的；酷的",
     "pos": "adj.",
     "grade": null,
@@ -10668,7 +10668,7 @@
     "headwords": [
       "corn"
     ],
-    "phonetic": "/kɔrn/",
+    "phonetic": "/kɔːrn/",
     "translation": "玉米",
     "pos": "n.",
     "grade": null,
@@ -10701,7 +10701,7 @@
     "headwords": [
       "corner"
     ],
-    "phonetic": "/ˈkɔrnər/",
+    "phonetic": "/ˈkɔːrnər/",
     "translation": "角落",
     "pos": "n.",
     "grade": null,
@@ -11064,7 +11064,7 @@
     "headwords": [
       "course"
     ],
-    "phonetic": "/kɔrs/",
+    "phonetic": "/kɔːrs/",
     "translation": "课程；过程",
     "pos": "n.",
     "grade": null,
@@ -11300,7 +11300,7 @@
     "headwords": [
       "cross"
     ],
-    "phonetic": "/krɔs/",
+    "phonetic": "/krɔːs/",
     "translation": "穿过；十字形",
     "pos": "v.",
     "grade": null,
@@ -11374,8 +11374,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They cry after school.",
-        "cn": "他们放学后哭。"
+        "en": "Don't cry. Everything will be fine.",
+        "cn": "别哭了，一切都会好的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -11399,7 +11399,7 @@
     "headwords": [
       "cucumber"
     ],
-    "phonetic": "/ˈkjukəmbər/",
+    "phonetic": "/ˈkjuːkəmbər/",
     "translation": "黄瓜",
     "pos": "n.",
     "grade": null,
@@ -11597,7 +11597,7 @@
     "headwords": [
       "cute"
     ],
-    "phonetic": "/kjut/",
+    "phonetic": "/kjuːt/",
     "translation": "可爱的",
     "pos": "adj.",
     "grade": null,
@@ -11762,7 +11762,7 @@
     "headwords": [
       "dark"
     ],
-    "phonetic": "/dɑrk/",
+    "phonetic": "/dɑːrk/",
     "translation": "黑暗的；深色的",
     "pos": "adj.",
     "grade": null,
@@ -11828,7 +11828,7 @@
     "headwords": [
       "daughter"
     ],
-    "phonetic": "/ˈdɔtər/",
+    "phonetic": "/ˈdɔːtər/",
     "translation": "女儿",
     "pos": "n.",
     "grade": null,
@@ -12097,7 +12097,7 @@
     "headwords": [
       "deep"
     ],
-    "phonetic": "/dip/",
+    "phonetic": "/diːp/",
     "translation": "深的",
     "pos": "adj.",
     "grade": null,
@@ -12130,7 +12130,7 @@
     "headwords": [
       "degree"
     ],
-    "phonetic": "/dɪˈgri/",
+    "phonetic": "/dɪˈɡriː/",
     "translation": "度；程度；学位",
     "pos": "n.",
     "grade": null,
@@ -12539,8 +12539,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They die after school.",
-        "cn": "他们放学后死亡。"
+        "en": "My grandpa's cat died last year.",
+        "cn": "我爷爷的猫去年死了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -12564,7 +12564,7 @@
     "headwords": [
       "diet"
     ],
-    "phonetic": "/daɪʌt/",
+    "phonetic": "/ˈdaɪət/",
     "translation": "饮食",
     "pos": "n.",
     "grade": null,
@@ -12894,7 +12894,7 @@
     "headwords": [
       "dirty"
     ],
-    "phonetic": "/ˈdʌrti/",
+    "phonetic": "/ˈdɜːrti/",
     "translation": "脏的",
     "pos": "adj.",
     "grade": null,
@@ -13059,7 +13059,7 @@
     "headwords": [
       "disease"
     ],
-    "phonetic": "/dɪˈziz/",
+    "phonetic": "/dɪˈziːz/",
     "translation": "疾病",
     "pos": "n.",
     "grade": null,
@@ -13158,7 +13158,7 @@
     "headwords": [
       "do"
     ],
-    "phonetic": "/du/",
+    "phonetic": "/duː/",
     "translation": "做",
     "pos": "v.",
     "grade": null,
@@ -13356,7 +13356,7 @@
     "headwords": [
       "door"
     ],
-    "phonetic": "/dɔr/",
+    "phonetic": "/dɔːr/",
     "translation": "门",
     "pos": "n.",
     "grade": null,
@@ -13620,7 +13620,7 @@
     "headwords": [
       "dream"
     ],
-    "phonetic": "/drim/",
+    "phonetic": "/driːm/",
     "translation": "梦；梦想",
     "pos": "v.",
     "grade": null,
@@ -13950,7 +13950,7 @@
     "headwords": [
       "duty"
     ],
-    "phonetic": "/ˈduti/",
+    "phonetic": "/ˈduːti/",
     "translation": "职责；值日",
     "pos": "adj.",
     "grade": null,
@@ -13983,7 +13983,7 @@
     "headwords": [
       "each"
     ],
-    "phonetic": "/iʧ/",
+    "phonetic": "/iːtʃ/",
     "translation": "每个；各自",
     "pos": "det.",
     "grade": null,
@@ -14016,7 +14016,7 @@
     "headwords": [
       "eagle"
     ],
-    "phonetic": "/ˈigəl/",
+    "phonetic": "/ˈiːɡəl/",
     "translation": "鹰",
     "pos": "n.",
     "grade": null,
@@ -14115,7 +14115,7 @@
     "headwords": [
       "earth"
     ],
-    "phonetic": "/ʌrθ/",
+    "phonetic": "/ɜːrθ/",
     "translation": "地球；土地",
     "pos": "n.",
     "grade": null,
@@ -14148,7 +14148,7 @@
     "headwords": [
       "earthquake"
     ],
-    "phonetic": "/ˈʌrθkˌweɪk/",
+    "phonetic": "/ˈɜːrθkˌweɪk/",
     "translation": "地震",
     "pos": "n.",
     "grade": null,
@@ -14181,7 +14181,7 @@
     "headwords": [
       "east"
     ],
-    "phonetic": "/ist/",
+    "phonetic": "/iːst/",
     "translation": "东方；东部",
     "pos": "n.",
     "grade": null,
@@ -14214,7 +14214,7 @@
     "headwords": [
       "easy"
     ],
-    "phonetic": "/ˈizi/",
+    "phonetic": "/ˈiːzi/",
     "translation": "容易的",
     "pos": "adj.",
     "grade": null,
@@ -14247,7 +14247,7 @@
     "headwords": [
       "eat"
     ],
-    "phonetic": "/it/",
+    "phonetic": "/iːt/",
     "translation": "吃",
     "pos": "v.",
     "grade": null,
@@ -14313,7 +14313,7 @@
     "headwords": [
       "effect"
     ],
-    "phonetic": "/ˈifɛkt/",
+    "phonetic": "/ɪˈfɛkt/",
     "translation": "影响；效果",
     "pos": "n.",
     "grade": null,
@@ -14412,7 +14412,7 @@
     "headwords": [
       "either"
     ],
-    "phonetic": "/ˈiðər/",
+    "phonetic": "/ˈiːðər/",
     "translation": "两者之一；也",
     "pos": "conj.",
     "grade": null,
@@ -14420,8 +14420,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English either I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "You can either call me or send an email.",
+        "cn": "你可以给我打电话，或者发邮件。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -14610,7 +14610,7 @@
     "headwords": [
       "email"
     ],
-    "phonetic": "/iˈmeɪl/",
+    "phonetic": "/ˈiːmeɪl/",
     "translation": "电子邮件",
     "pos": "n.",
     "grade": null,
@@ -14643,7 +14643,7 @@
     "headwords": [
       "emergency"
     ],
-    "phonetic": "/ˈimərʤənsi/",
+    "phonetic": "/ɪˈmɜːrdʒənsi/",
     "translation": "紧急情况",
     "pos": "adj.",
     "grade": null,
@@ -15211,7 +15211,7 @@
     "headwords": [
       "even"
     ],
-    "phonetic": "/ˈivɪn/",
+    "phonetic": "/ˈiːvən/",
     "translation": "甚至；平坦的",
     "pos": "adv.",
     "grade": null,
@@ -15385,8 +15385,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Everybody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Everybody enjoys the party.",
+        "cn": "每个人都喜欢这个聚会。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -15411,7 +15411,7 @@
     "headwords": [
       "everyday"
     ],
-    "phonetic": "/ˈɛvriˈdeɪ/",
+    "phonetic": "/ˈɛvriˌdeɪ/",
     "translation": "日常的",
     "pos": "adj.",
     "grade": null,
@@ -15452,8 +15452,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Everything can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Everything is ready for the trip.",
+        "cn": "旅行的一切都准备好了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -15692,8 +15692,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels excited today.",
-        "cn": "她今天感到兴奋。"
+        "en": "We were all excited about the football match.",
+        "cn": "我们都对这场足球赛感到兴奋。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -15750,7 +15750,7 @@
     "headwords": [
       "excuse"
     ],
-    "phonetic": "/ɪkˈskjuz/",
+    "phonetic": "/ɪkˈskjuːz/",
     "translation": "原谅；借口",
     "pos": "v.",
     "grade": null,
@@ -15981,7 +15981,7 @@
     "headwords": [
       "explore"
     ],
-    "phonetic": "/ɪkˈsplɔr/",
+    "phonetic": "/ɪkˈsplɔːr/",
     "translation": "探索",
     "pos": "v.",
     "grade": null,
@@ -16245,7 +16245,7 @@
     "headwords": [
       "fall"
     ],
-    "phonetic": "/fɔl/",
+    "phonetic": "/fɔːl/",
     "translation": "落下；秋天",
     "pos": "v.",
     "grade": null,
@@ -16253,8 +16253,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They fall after school.",
-        "cn": "他们放学后落下。"
+        "en": "Don't fall off the bike.",
+        "cn": "别从自行车上摔下来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -16476,7 +16476,7 @@
     "headwords": [
       "far"
     ],
-    "phonetic": "/fɑr/",
+    "phonetic": "/fɑːr/",
     "translation": "远的；远地",
     "pos": "adv.",
     "grade": null,
@@ -16509,7 +16509,7 @@
     "headwords": [
       "farm"
     ],
-    "phonetic": "/fɑrm/",
+    "phonetic": "/fɑːrm/",
     "translation": "农场",
     "pos": "v.",
     "grade": null,
@@ -16542,7 +16542,7 @@
     "headwords": [
       "farmer"
     ],
-    "phonetic": "/ˈfɑrmər/",
+    "phonetic": "/ˈfɑːrmər/",
     "translation": "农民",
     "pos": "n.",
     "grade": null,
@@ -16788,7 +16788,7 @@
     "headwords": [
       "feed"
     ],
-    "phonetic": "/fid/",
+    "phonetic": "/fiːd/",
     "translation": "喂养",
     "pos": "v.",
     "grade": null,
@@ -16821,7 +16821,7 @@
     "headwords": [
       "feel"
     ],
-    "phonetic": "/fil/",
+    "phonetic": "/fiːl/",
     "translation": "感觉",
     "pos": "v.",
     "grade": null,
@@ -16854,7 +16854,7 @@
     "headwords": [
       "feeling"
     ],
-    "phonetic": "/ˈfilɪŋ/",
+    "phonetic": "/ˈfiːlɪŋ/",
     "translation": "感觉；情感",
     "pos": "n.",
     "grade": null,
@@ -16920,7 +16920,7 @@
     "headwords": [
       "fever"
     ],
-    "phonetic": "/ˈfivər/",
+    "phonetic": "/ˈfiːvər/",
     "translation": "发烧",
     "pos": "n.",
     "grade": null,
@@ -16953,7 +16953,7 @@
     "headwords": [
       "few"
     ],
-    "phonetic": "/fju/",
+    "phonetic": "/fjuː/",
     "translation": "少数；几个",
     "pos": "adj.",
     "grade": null,
@@ -16986,7 +16986,7 @@
     "headwords": [
       "field"
     ],
-    "phonetic": "/fild/",
+    "phonetic": "/fiːld/",
     "translation": "田野；领域",
     "pos": "n.",
     "grade": null,
@@ -17283,7 +17283,7 @@
     "headwords": [
       "fire"
     ],
-    "phonetic": "/faɪʌr/",
+    "phonetic": "/ˈfaɪər/",
     "translation": "火；开火",
     "pos": "v.",
     "grade": null,
@@ -17585,7 +17585,7 @@
     "headwords": [
       "floor"
     ],
-    "phonetic": "/flɔr/",
+    "phonetic": "/flɔːr/",
     "translation": "地板；楼层",
     "pos": "n.",
     "grade": null,
@@ -17618,7 +17618,7 @@
     "headwords": [
       "flower"
     ],
-    "phonetic": "/flaʊʌr/",
+    "phonetic": "/ˈflaʊər/",
     "translation": "花",
     "pos": "n.",
     "grade": null,
@@ -17651,7 +17651,7 @@
     "headwords": [
       "flu"
     ],
-    "phonetic": "/flu/",
+    "phonetic": "/fluː/",
     "translation": "流感",
     "pos": "n.",
     "grade": null,
@@ -17849,7 +17849,7 @@
     "headwords": [
       "food"
     ],
-    "phonetic": "/fud/",
+    "phonetic": "/fuːd/",
     "translation": "食物",
     "pos": "n.",
     "grade": null,
@@ -17882,7 +17882,7 @@
     "headwords": [
       "fool"
     ],
-    "phonetic": "/ful/",
+    "phonetic": "/fuːl/",
     "translation": "傻瓜；愚弄",
     "pos": "v.",
     "grade": null,
@@ -17953,7 +17953,7 @@
     "headwords": [
       "football"
     ],
-    "phonetic": "/ˈfʊtˌbɔl/",
+    "phonetic": "/ˈfʊtˌbɔːl/",
     "translation": "足球",
     "pos": "n.",
     "grade": null,
@@ -17986,7 +17986,7 @@
     "headwords": [
       "for"
     ],
-    "phonetic": "/fər/",
+    "phonetic": "/fɔːr/",
     "translation": "为了；对于",
     "pos": "prep.",
     "grade": null,
@@ -18019,7 +18019,7 @@
     "headwords": [
       "force"
     ],
-    "phonetic": "/fɔrs/",
+    "phonetic": "/fɔːrs/",
     "translation": "力量；迫使",
     "pos": "v.",
     "grade": null,
@@ -18052,7 +18052,7 @@
     "headwords": [
       "foreign"
     ],
-    "phonetic": "/ˈfɔrən/",
+    "phonetic": "/ˈfɔːrən/",
     "translation": "外国的",
     "pos": "adj.",
     "grade": null,
@@ -18085,7 +18085,7 @@
     "headwords": [
       "forest"
     ],
-    "phonetic": "/ˈfɔrɪst/",
+    "phonetic": "/ˈfɔːrɪst/",
     "translation": "森林",
     "pos": "n.",
     "grade": null,
@@ -18184,7 +18184,7 @@
     "headwords": [
       "fork"
     ],
-    "phonetic": "/fɔrk/",
+    "phonetic": "/fɔːrk/",
     "translation": "叉子",
     "pos": "n.",
     "grade": null,
@@ -18217,7 +18217,7 @@
     "headwords": [
       "form"
     ],
-    "phonetic": "/fɔrm/",
+    "phonetic": "/fɔːrm/",
     "translation": "形式；表格",
     "pos": "v.",
     "grade": null,
@@ -18250,7 +18250,7 @@
     "headwords": [
       "forward"
     ],
-    "phonetic": "/ˈfɔrwərd/",
+    "phonetic": "/ˈfɔːrwərd/",
     "translation": "向前",
     "pos": "adv.",
     "grade": null,
@@ -18349,7 +18349,7 @@
     "headwords": [
       "free"
     ],
-    "phonetic": "/fri/",
+    "phonetic": "/friː/",
     "translation": "免费的；自由的",
     "pos": "adj.",
     "grade": null,
@@ -18382,7 +18382,7 @@
     "headwords": [
       "freeze"
     ],
-    "phonetic": "/friz/",
+    "phonetic": "/friːz/",
     "translation": "结冰；冻结",
     "pos": "v.",
     "grade": null,
@@ -18585,7 +18585,7 @@
     "headwords": [
       "from"
     ],
-    "phonetic": "/frəm/",
+    "phonetic": "/frʌm/",
     "translation": "来自；从",
     "pos": "prep.",
     "grade": null,
@@ -18651,7 +18651,7 @@
     "headwords": [
       "fruit"
     ],
-    "phonetic": "/frut/",
+    "phonetic": "/fruːt/",
     "translation": "水果",
     "pos": "n.",
     "grade": null,
@@ -18849,7 +18849,7 @@
     "headwords": [
       "garden"
     ],
-    "phonetic": "/ˈgɑrdən/",
+    "phonetic": "/ˈɡɑːrdən/",
     "translation": "花园",
     "pos": "n.",
     "grade": null,
@@ -18890,8 +18890,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These gas are useful.",
-        "cn": "这些气体很有用。"
+        "en": "Be careful — the gas stove is hot.",
+        "cn": "小心——煤气灶是热的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -18981,7 +18981,7 @@
     "headwords": [
       "gentleman"
     ],
-    "phonetic": "/ˈʤɛnəlmən/",
+    "phonetic": "/ˈdʒɛntəlmən/",
     "translation": "先生；绅士",
     "pos": "n.",
     "grade": null,
@@ -19052,7 +19052,7 @@
     "headwords": [
       "get"
     ],
-    "phonetic": "/gɪt/",
+    "phonetic": "/ɡɛt/",
     "translation": "得到；到达",
     "pos": "v.",
     "grade": null,
@@ -19118,7 +19118,7 @@
     "headwords": [
       "giraffe"
     ],
-    "phonetic": "/ʤʌræf/",
+    "phonetic": "/dʒəˈrɑːf/",
     "translation": "长颈鹿",
     "pos": "n.",
     "grade": null,
@@ -19151,7 +19151,7 @@
     "headwords": [
       "girl"
     ],
-    "phonetic": "/gʌrl/",
+    "phonetic": "/ɡɜːrl/",
     "translation": "女孩",
     "pos": "n.",
     "grade": null,
@@ -19225,8 +19225,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels glad today.",
-        "cn": "她今天感到高兴。"
+        "en": "I'm glad that you can come.",
+        "cn": "我很高兴你能来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -19316,7 +19316,7 @@
     "headwords": [
       "glue"
     ],
-    "phonetic": "/glu/",
+    "phonetic": "/ɡluː/",
     "translation": "胶水",
     "pos": "v.",
     "grade": null,
@@ -19357,8 +19357,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They go after school.",
-        "cn": "他们放学后去。"
+        "en": "Let's go to the library after class.",
+        "cn": "下课后我们去图书馆吧。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -19618,7 +19618,7 @@
     "headwords": [
       "graduate"
     ],
-    "phonetic": "/ˈgræʤəˌweɪt/",
+    "phonetic": "/ˈɡrædʒuˌeɪt/",
     "translation": "毕业；毕业生",
     "pos": "v.",
     "grade": null,
@@ -19859,7 +19859,7 @@
     "headwords": [
       "green"
     ],
-    "phonetic": "/grin/",
+    "phonetic": "/ɡriːn/",
     "translation": "绿色；绿色的",
     "pos": "adj.",
     "grade": null,
@@ -19892,7 +19892,7 @@
     "headwords": [
       "greet"
     ],
-    "phonetic": "/grit/",
+    "phonetic": "/ɡriːt/",
     "translation": "问候",
     "pos": "v.",
     "grade": null,
@@ -19996,7 +19996,7 @@
     "headwords": [
       "group"
     ],
-    "phonetic": "/grup/",
+    "phonetic": "/ɡruːp/",
     "translation": "小组；群体",
     "pos": "n.",
     "grade": null,
@@ -20062,7 +20062,7 @@
     "headwords": [
       "guard"
     ],
-    "phonetic": "/gɑrd/",
+    "phonetic": "/ɡɑːrd/",
     "translation": "守卫；警卫",
     "pos": "v.",
     "grade": null,
@@ -20397,7 +20397,7 @@
     "headwords": [
       "hall"
     ],
-    "phonetic": "/hɔl/",
+    "phonetic": "/hɔːl/",
     "translation": "大厅",
     "pos": "n.",
     "grade": null,
@@ -20570,8 +20570,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They happen after school.",
-        "cn": "他们放学后发生。"
+        "en": "Where did the accident happen?",
+        "cn": "事故发生在哪里？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -20603,8 +20603,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels happy today.",
-        "cn": "她今天感到高兴。"
+        "en": "I'm happy to see my old friends again.",
+        "cn": "我很高兴再次见到我的老朋友们。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -20628,7 +20628,7 @@
     "headwords": [
       "hard"
     ],
-    "phonetic": "/hɑrd/",
+    "phonetic": "/hɑːrd/",
     "translation": "困难的；努力地",
     "pos": "adj.",
     "grade": null,
@@ -20699,7 +20699,7 @@
     "headwords": [
       "harm"
     ],
-    "phonetic": "/hɑrm/",
+    "phonetic": "/hɑːrm/",
     "translation": "伤害",
     "pos": "v.",
     "grade": null,
@@ -20836,7 +20836,7 @@
     "headwords": [
       "he"
     ],
-    "phonetic": "/hi/",
+    "phonetic": "/hiː/",
     "translation": "他",
     "pos": "pron.",
     "grade": null,
@@ -20968,7 +20968,7 @@
     "headwords": [
       "hear"
     ],
-    "phonetic": "/hir/",
+    "phonetic": "/hɪr/",
     "translation": "听见",
     "pos": "v.",
     "grade": null,
@@ -21001,7 +21001,7 @@
     "headwords": [
       "heart"
     ],
-    "phonetic": "/hɑrt/",
+    "phonetic": "/hɑːrt/",
     "translation": "心；心脏",
     "pos": "n.",
     "grade": null,
@@ -21034,7 +21034,7 @@
     "headwords": [
       "heat"
     ],
-    "phonetic": "/hit/",
+    "phonetic": "/hiːt/",
     "translation": "热；加热",
     "pos": "v.",
     "grade": null,
@@ -21265,7 +21265,7 @@
     "headwords": [
       "her"
     ],
-    "phonetic": "/hər/",
+    "phonetic": "/hɜːr/",
     "translation": "她；她的",
     "pos": "pron.",
     "grade": null,
@@ -21273,8 +21273,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Her can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "I gave her a birthday present yesterday.",
+        "cn": "昨天我送了她一个生日礼物。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -21364,7 +21364,7 @@
     "headwords": [
       "hers"
     ],
-    "phonetic": "/hʌrz/",
+    "phonetic": "/hɜːrz/",
     "translation": "她的",
     "pos": "pron.",
     "grade": null,
@@ -21372,8 +21372,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Hers can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The red scarf on the chair is hers.",
+        "cn": "椅子上的红围巾是她的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -21405,8 +21405,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Herself can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "She introduced herself to the new classmates.",
+        "cn": "她向新同学介绍了自己。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -21595,7 +21595,7 @@
     "headwords": [
       "him"
     ],
-    "phonetic": "/ɪm/",
+    "phonetic": "/hɪm/",
     "translation": "他",
     "pos": "pron.",
     "grade": null,
@@ -21603,8 +21603,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Him can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "I met him at the train station.",
+        "cn": "我在火车站遇到了他。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -21636,8 +21636,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Himself can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "He taught himself to play the guitar.",
+        "cn": "他自学了弹吉他。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -21669,8 +21669,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "His can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "This notebook is his, not mine.",
+        "cn": "这个笔记本是他的，不是我的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -22128,7 +22128,7 @@
     "headwords": [
       "horse"
     ],
-    "phonetic": "/hɔrs/",
+    "phonetic": "/hɔːrs/",
     "translation": "马",
     "pos": "n.",
     "grade": null,
@@ -22295,7 +22295,7 @@
     "headwords": [
       "hour"
     ],
-    "phonetic": "/aʊʌr/",
+    "phonetic": "/ˈaʊər/",
     "translation": "小时",
     "pos": "n.",
     "grade": null,
@@ -22493,7 +22493,7 @@
     "headwords": [
       "huge"
     ],
-    "phonetic": "/juʤ/",
+    "phonetic": "/hjuːdʒ/",
     "translation": "巨大的",
     "pos": "adj.",
     "grade": null,
@@ -22526,7 +22526,7 @@
     "headwords": [
       "human"
     ],
-    "phonetic": "/ˈjumən/",
+    "phonetic": "/ˈhjuːmən/",
     "translation": "人类；人的",
     "pos": "adj.",
     "grade": null,
@@ -22559,7 +22559,7 @@
     "headwords": [
       "humour"
     ],
-    "phonetic": "/ˈhjumər/",
+    "phonetic": "/ˈhjuːmər/",
     "translation": "幽默",
     "pos": "n.",
     "grade": null,
@@ -22696,7 +22696,7 @@
     "headwords": [
       "hurt"
     ],
-    "phonetic": "/hʌrt/",
+    "phonetic": "/hɜːrt/",
     "translation": "伤害；疼痛",
     "pos": "v.",
     "grade": null,
@@ -23026,7 +23026,7 @@
     "headwords": [
       "important"
     ],
-    "phonetic": "/ˌɪmˈpɔrtənt/",
+    "phonetic": "/ˌɪmˈpɔːrtənt/",
     "translation": "重要的",
     "pos": "adj.",
     "grade": null,
@@ -23158,7 +23158,7 @@
     "headwords": [
       "include"
     ],
-    "phonetic": "/ˌɪnˈklud/",
+    "phonetic": "/ɪnˈkluːd/",
     "translation": "包括",
     "pos": "v.",
     "grade": null,
@@ -23191,7 +23191,7 @@
     "headwords": [
       "increase"
     ],
-    "phonetic": "/ˌɪnˈkris/",
+    "phonetic": "/ɪnˈkriːs/",
     "translation": "增加",
     "pos": "v.",
     "grade": null,
@@ -23620,7 +23620,7 @@
     "headwords": [
       "interview"
     ],
-    "phonetic": "/ˈɪntərvˌju/",
+    "phonetic": "/ˈɪntərvjuː/",
     "translation": "采访；面试",
     "pos": "v.",
     "grade": null,
@@ -23653,7 +23653,7 @@
     "headwords": [
       "into"
     ],
-    "phonetic": "/ˈɪntu/",
+    "phonetic": "/ˈɪntuː/",
     "translation": "进入；到……里面",
     "pos": "prep.",
     "grade": null,
@@ -23859,8 +23859,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Its can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The cat is washing its face.",
+        "cn": "猫正在洗脸。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -23892,8 +23892,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Itself can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The dog can open the door by itself.",
+        "cn": "这只狗能自己开门。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -23950,7 +23950,7 @@
     "headwords": [
       "jeans"
     ],
-    "phonetic": "/ʤinz/",
+    "phonetic": "/dʒiːnz/",
     "translation": "牛仔裤",
     "pos": "n.",
     "grade": null,
@@ -23958,8 +23958,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These jeans are useful.",
-        "cn": "这些牛仔裤很有用。"
+        "en": "My jeans are too tight now.",
+        "cn": "我的牛仔裤现在太紧了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -24115,7 +24115,7 @@
     "headwords": [
       "journey"
     ],
-    "phonetic": "/ˈʤʌrni/",
+    "phonetic": "/ˈdʒɜːrni/",
     "translation": "旅行",
     "pos": "adj.",
     "grade": null,
@@ -24214,7 +24214,7 @@
     "headwords": [
       "juice"
     ],
-    "phonetic": "/ʤus/",
+    "phonetic": "/dʒuːs/",
     "translation": "果汁",
     "pos": "n.",
     "grade": null,
@@ -24280,7 +24280,7 @@
     "headwords": [
       "junior"
     ],
-    "phonetic": "/ˈʤunjər/",
+    "phonetic": "/ˈdʒuːnjər/",
     "translation": "初级的；年少的",
     "pos": "n.",
     "grade": null,
@@ -24346,7 +24346,7 @@
     "headwords": [
       "keep"
     ],
-    "phonetic": "/kip/",
+    "phonetic": "/kiːp/",
     "translation": "保持；保留",
     "pos": "v.",
     "grade": null,
@@ -24379,7 +24379,7 @@
     "headwords": [
       "key"
     ],
-    "phonetic": "/ki/",
+    "phonetic": "/kiː/",
     "translation": "钥匙；关键",
     "pos": "adj.",
     "grade": null,
@@ -24412,7 +24412,7 @@
     "headwords": [
       "keyboard"
     ],
-    "phonetic": "/ˈkiˌbɔrd/",
+    "phonetic": "/ˈkiːˌbɔːrd/",
     "translation": "键盘",
     "pos": "n.",
     "grade": null,
@@ -24582,7 +24582,7 @@
     "headwords": [
       "kilometre"
     ],
-    "phonetic": "/ˌkɪˈlɔˌmətər/",
+    "phonetic": "/kɪˈlɑːmɪtər/",
     "translation": "千米",
     "pos": "n.",
     "grade": null,
@@ -24790,7 +24790,7 @@
     "headwords": [
       "knee"
     ],
-    "phonetic": "/ni/",
+    "phonetic": "/niː/",
     "translation": "膝盖",
     "pos": "n.",
     "grade": null,
@@ -24960,7 +24960,7 @@
     "headwords": [
       "kung fu"
     ],
-    "phonetic": "/kʌŋ fu/",
+    "phonetic": "/kʌŋ fuː/",
     "translation": "功夫",
     "pos": "n.",
     "grade": null,
@@ -25300,7 +25300,7 @@
     "headwords": [
       "large"
     ],
-    "phonetic": "/lɑrʤ/",
+    "phonetic": "/lɑːrdʒ/",
     "translation": "大的",
     "pos": "adj.",
     "grade": null,
@@ -25450,8 +25450,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They laugh after school.",
-        "cn": "他们放学后笑。"
+        "en": "Don't laugh at others when they make mistakes.",
+        "cn": "别人犯错时不要嘲笑他们。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -25475,7 +25475,7 @@
     "headwords": [
       "law"
     ],
-    "phonetic": "/lɔ/",
+    "phonetic": "/lɔː/",
     "translation": "法律",
     "pos": "n.",
     "grade": null,
@@ -25508,7 +25508,7 @@
     "headwords": [
       "lawyer"
     ],
-    "phonetic": "/ˈlɔjər/",
+    "phonetic": "/ˈlɔːjər/",
     "translation": "律师",
     "pos": "n.",
     "grade": null,
@@ -25645,7 +25645,7 @@
     "headwords": [
       "leaf"
     ],
-    "phonetic": "/lif/",
+    "phonetic": "/liːf/",
     "translation": "叶子",
     "pos": "n.",
     "grade": null,
@@ -25683,7 +25683,7 @@
     "headwords": [
       "learn"
     ],
-    "phonetic": "/lʌrn/",
+    "phonetic": "/lɜːrn/",
     "translation": "学习",
     "pos": "v.",
     "grade": null,
@@ -25716,7 +25716,7 @@
     "headwords": [
       "least"
     ],
-    "phonetic": "/list/",
+    "phonetic": "/liːst/",
     "translation": "最少的",
     "pos": "adj.",
     "grade": null,
@@ -25749,7 +25749,7 @@
     "headwords": [
       "leave"
     ],
-    "phonetic": "/liv/",
+    "phonetic": "/liːv/",
     "translation": "离开；留下",
     "pos": "v.",
     "grade": null,
@@ -26601,8 +26601,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They live after school.",
-        "cn": "他们放学后生活。"
+        "en": "My grandparents live in the countryside.",
+        "cn": "我爷爷奶奶住在乡下。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -26758,7 +26758,7 @@
     "headwords": [
       "long"
     ],
-    "phonetic": "/lɔŋ/",
+    "phonetic": "/lɔːŋ/",
     "translation": "长的",
     "pos": "adj.",
     "grade": null,
@@ -26829,7 +26829,7 @@
     "headwords": [
       "lose"
     ],
-    "phonetic": "/luz/",
+    "phonetic": "/luːz/",
     "translation": "失去；输掉",
     "pos": "v.",
     "grade": null,
@@ -27159,7 +27159,7 @@
     "headwords": [
       "machine"
     ],
-    "phonetic": "/məˈʃin/",
+    "phonetic": "/məˈʃiːn/",
     "translation": "机器",
     "pos": "n.",
     "grade": null,
@@ -27200,8 +27200,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels mad today.",
-        "cn": "她今天感到发疯。"
+        "en": "Don't be mad at me. I didn't mean it.",
+        "cn": "别生我的气，我不是故意的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -27390,7 +27390,7 @@
     "headwords": [
       "mall"
     ],
-    "phonetic": "/mɔl/",
+    "phonetic": "/mɔːl/",
     "translation": "商场",
     "pos": "n.",
     "grade": null,
@@ -27593,7 +27593,7 @@
     "headwords": [
       "mark"
     ],
-    "phonetic": "/mɑrk/",
+    "phonetic": "/mɑːrk/",
     "translation": "标记；分数",
     "pos": "v.",
     "grade": null,
@@ -27626,7 +27626,7 @@
     "headwords": [
       "market"
     ],
-    "phonetic": "/ˈmɑrkɪt/",
+    "phonetic": "/ˈmɑːrkɪt/",
     "translation": "市场",
     "pos": "n.",
     "grade": null,
@@ -27933,7 +27933,7 @@
     "headwords": [
       "me"
     ],
-    "phonetic": "/mi/",
+    "phonetic": "/miː/",
     "translation": "我",
     "pos": "pron.",
     "grade": null,
@@ -27941,8 +27941,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Me can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Please help me carry these boxes.",
+        "cn": "请帮我搬这些箱子。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -27966,7 +27966,7 @@
     "headwords": [
       "meal"
     ],
-    "phonetic": "/mil/",
+    "phonetic": "/miːl/",
     "translation": "一餐",
     "pos": "adj.",
     "grade": null,
@@ -27999,7 +27999,7 @@
     "headwords": [
       "mean"
     ],
-    "phonetic": "/min/",
+    "phonetic": "/miːn/",
     "translation": "意思是；意味着",
     "pos": "v.",
     "grade": null,
@@ -28032,7 +28032,7 @@
     "headwords": [
       "meaning"
     ],
-    "phonetic": "/ˈminɪŋ/",
+    "phonetic": "/ˈmiːnɪŋ/",
     "translation": "意思；意义",
     "pos": "n.",
     "grade": null,
@@ -28065,7 +28065,7 @@
     "headwords": [
       "meat"
     ],
-    "phonetic": "/mit/",
+    "phonetic": "/miːt/",
     "translation": "肉",
     "pos": "n.",
     "grade": null,
@@ -28268,7 +28268,7 @@
     "headwords": [
       "meeting"
     ],
-    "phonetic": "/ˈmitɪŋ/",
+    "phonetic": "/ˈmiːtɪŋ/",
     "translation": "会议",
     "pos": "n.",
     "grade": null,
@@ -28367,7 +28367,7 @@
     "headwords": [
       "menu"
     ],
-    "phonetic": "/ˈmɛnju/",
+    "phonetic": "/ˈmɛnjuː/",
     "translation": "菜单",
     "pos": "n.",
     "grade": null,
@@ -28710,8 +28710,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Mine can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "This blue pen is mine.",
+        "cn": "这支蓝笔是我的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -29166,7 +29166,7 @@
     "headwords": [
       "moon"
     ],
-    "phonetic": "/mun/",
+    "phonetic": "/muːn/",
     "translation": "月亮",
     "pos": "n.",
     "grade": null,
@@ -29199,7 +29199,7 @@
     "headwords": [
       "more"
     ],
-    "phonetic": "/mɔr/",
+    "phonetic": "/mɔːr/",
     "translation": "更多",
     "pos": "det.",
     "grade": null,
@@ -29440,7 +29440,7 @@
     "headwords": [
       "move"
     ],
-    "phonetic": "/muv/",
+    "phonetic": "/muːv/",
     "translation": "移动；搬家",
     "pos": "v.",
     "grade": null,
@@ -29478,7 +29478,7 @@
     "headwords": [
       "movie"
     ],
-    "phonetic": "/ˈmuvi/",
+    "phonetic": "/ˈmuːvi/",
     "translation": "电影",
     "pos": "n.",
     "grade": null,
@@ -29557,8 +29557,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These Mrs are useful.",
-        "cn": "这些夫人很有用。"
+        "en": "Mrs Green lives next door to us.",
+        "cn": "格林太太住在我们隔壁。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -29595,8 +29595,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These Ms are useful.",
-        "cn": "这些女士很有用。"
+        "en": "Ms Brown gave us a test today.",
+        "cn": "布朗女士今天给我们做了一次测试。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -29658,7 +29658,7 @@
     "headwords": [
       "museum"
     ],
-    "phonetic": "/mˈjuziəm/",
+    "phonetic": "/mjuˈziːəm/",
     "translation": "博物馆",
     "pos": "n.",
     "grade": null,
@@ -29691,7 +29691,7 @@
     "headwords": [
       "music"
     ],
-    "phonetic": "/mˈjuzɪk/",
+    "phonetic": "/ˈmjuːzɪk/",
     "translation": "音乐",
     "pos": "adj.",
     "grade": null,
@@ -29724,7 +29724,7 @@
     "headwords": [
       "must"
     ],
-    "phonetic": "/məst/",
+    "phonetic": "/mʌst/",
     "translation": "必须",
     "pos": "modal v.",
     "grade": null,
@@ -29798,8 +29798,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "My can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "This is my favorite song.",
+        "cn": "这是我最喜欢的歌。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -29831,8 +29831,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Myself can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "I made this cake myself.",
+        "cn": "这个蛋糕是我自己做的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30120,7 +30120,7 @@
     "headwords": [
       "need"
     ],
-    "phonetic": "/nid/",
+    "phonetic": "/niːd/",
     "translation": "需要",
     "pos": "v.",
     "grade": null,
@@ -30232,8 +30232,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English neither I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "Neither answer is correct.",
+        "cn": "两个答案都不对。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30257,7 +30257,7 @@
     "headwords": [
       "nervous"
     ],
-    "phonetic": "/ˈnʌrvəs/",
+    "phonetic": "/ˈnɜːrvəs/",
     "translation": "紧张的",
     "pos": "adj.",
     "grade": null,
@@ -30265,8 +30265,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels nervous today.",
-        "cn": "她今天感到紧张。"
+        "en": "She felt nervous when she spoke in front of the class.",
+        "cn": "在班上发言时她很紧张。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30323,7 +30323,7 @@
     "headwords": [
       "new"
     ],
-    "phonetic": "/nu/",
+    "phonetic": "/nuː/",
     "translation": "新的",
     "pos": "adj.",
     "grade": null,
@@ -30562,8 +30562,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Nobody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Nobody knows the answer to this question.",
+        "cn": "没人知道这个问题的答案。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30661,8 +30661,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "None can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "None of the students was late.",
+        "cn": "没有一个学生迟到。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30686,7 +30686,7 @@
     "headwords": [
       "noodle"
     ],
-    "phonetic": "/ˈnudəl/",
+    "phonetic": "/ˈnuːdəl/",
     "translation": "面条",
     "pos": "n.",
     "grade": null,
@@ -30719,7 +30719,7 @@
     "headwords": [
       "noon"
     ],
-    "phonetic": "/nun/",
+    "phonetic": "/nuːn/",
     "translation": "中午",
     "pos": "n.",
     "grade": null,
@@ -30752,7 +30752,7 @@
     "headwords": [
       "nor"
     ],
-    "phonetic": "/nɔr/",
+    "phonetic": "/nɔːr/",
     "translation": "也不",
     "pos": "conj.",
     "grade": null,
@@ -30760,8 +30760,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English nor I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "He didn't call, nor did he text me.",
+        "cn": "他没打电话，也没发短信。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -30818,7 +30818,7 @@
     "headwords": [
       "north"
     ],
-    "phonetic": "/nɔrθ/",
+    "phonetic": "/nɔːrθ/",
     "translation": "北方",
     "pos": "n.",
     "grade": null,
@@ -30991,8 +30991,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Nothing can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "There is nothing in the box.",
+        "cn": "盒子里什么都没有。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -31148,7 +31148,7 @@
     "headwords": [
       "nurse"
     ],
-    "phonetic": "/nʌrs/",
+    "phonetic": "/nɜːrs/",
     "translation": "护士",
     "pos": "n.",
     "grade": null,
@@ -31280,7 +31280,7 @@
     "headwords": [
       "of"
     ],
-    "phonetic": "/əv/",
+    "phonetic": "/ʌv/",
     "translation": "……的",
     "pos": "prep.",
     "grade": null,
@@ -31511,7 +31511,7 @@
     "headwords": [
       "OK"
     ],
-    "phonetic": "/ˈoʊˈkeɪ/",
+    "phonetic": "/ˌoʊˈkeɪ/",
     "translation": "好的",
     "pos": "n.",
     "grade": null,
@@ -31940,7 +31940,7 @@
     "headwords": [
       "or"
     ],
-    "phonetic": "/ər/",
+    "phonetic": "/ɔːr/",
     "translation": "或者；否则",
     "pos": "conj.",
     "grade": null,
@@ -32006,7 +32006,7 @@
     "headwords": [
       "order"
     ],
-    "phonetic": "/ˈɔrdər/",
+    "phonetic": "/ˈɔːrdər/",
     "translation": "命令；点餐；顺序",
     "pos": "v.",
     "grade": null,
@@ -32039,7 +32039,7 @@
     "headwords": [
       "organise"
     ],
-    "phonetic": "/organise*/",
+    "phonetic": "/ˈɔːrɡənaɪz/",
     "translation": "组织",
     "pos": "v.",
     "grade": null,
@@ -32110,7 +32110,7 @@
     "headwords": [
       "our"
     ],
-    "phonetic": "/ɑr/",
+    "phonetic": "/ˈaʊər/",
     "translation": "我们的",
     "pos": "pron.",
     "grade": null,
@@ -32118,8 +32118,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Our can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "This is our new classroom.",
+        "cn": "这是我们的新教室。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -32143,7 +32143,7 @@
     "headwords": [
       "ours"
     ],
-    "phonetic": "/ɑrz/",
+    "phonetic": "/ˈaʊərz/",
     "translation": "我们的",
     "pos": "pron.",
     "grade": null,
@@ -32151,8 +32151,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Ours can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The house at the corner is ours.",
+        "cn": "街角那栋房子是我们的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -32176,7 +32176,7 @@
     "headwords": [
       "ourselves"
     ],
-    "phonetic": "/ɑrˈsɛlvz/",
+    "phonetic": "/aʊərˈsɛlvz/",
     "translation": "我们自己",
     "pos": "pron.",
     "grade": null,
@@ -32184,8 +32184,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Ourselves can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "We enjoyed ourselves at the party.",
+        "cn": "我们在聚会上玩得很开心。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -32217,8 +32217,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is out the desk.",
-        "cn": "书在桌子附近。"
+        "en": "He took a book out of his bag.",
+        "cn": "他从包里拿出一本书。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -32242,7 +32242,7 @@
     "headwords": [
       "outside"
     ],
-    "phonetic": "/ˈaʊtˈsaɪd/",
+    "phonetic": "/ˌaʊtˈsaɪd/",
     "translation": "外面；在外面",
     "pos": "prep.",
     "grade": null,
@@ -32250,8 +32250,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is outside the desk.",
-        "cn": "书在桌子附近。"
+        "en": "The children are playing outside.",
+        "cn": "孩子们在外面玩。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -32770,7 +32770,7 @@
     "headwords": [
       "pardon"
     ],
-    "phonetic": "/ˈpɑrdən/",
+    "phonetic": "/ˈpɑːrdən/",
     "translation": "原谅；请再说一遍",
     "pos": "v.",
     "grade": null,
@@ -32836,7 +32836,7 @@
     "headwords": [
       "park"
     ],
-    "phonetic": "/pɑrk/",
+    "phonetic": "/pɑːrk/",
     "translation": "公园；停车",
     "pos": "v.",
     "grade": null,
@@ -32869,7 +32869,7 @@
     "headwords": [
       "part"
     ],
-    "phonetic": "/pɑrt/",
+    "phonetic": "/pɑːrt/",
     "translation": "部分",
     "pos": "v.",
     "grade": null,
@@ -32935,7 +32935,7 @@
     "headwords": [
       "party"
     ],
-    "phonetic": "/ˈpɑrti/",
+    "phonetic": "/ˈpɑːrti/",
     "translation": "聚会；政党",
     "pos": "adj.",
     "grade": null,
@@ -33242,7 +33242,7 @@
     "headwords": [
       "peace"
     ],
-    "phonetic": "/pis/",
+    "phonetic": "/piːs/",
     "translation": "和平",
     "pos": "n.",
     "grade": null,
@@ -33473,7 +33473,7 @@
     "headwords": [
       "per cent"
     ],
-    "phonetic": "/pʌr sɛnt/",
+    "phonetic": "/pər sɛnt/",
     "translation": "百分之……",
     "pos": "n.",
     "grade": null,
@@ -33511,7 +33511,7 @@
     "headwords": [
       "perfect"
     ],
-    "phonetic": "/ˈpʌrˌfɪkt/",
+    "phonetic": "/ˈpɜːrfɪkt/",
     "translation": "完美的",
     "pos": "adj.",
     "grade": null,
@@ -33544,7 +33544,7 @@
     "headwords": [
       "perform"
     ],
-    "phonetic": "/pərˈfɔrm/",
+    "phonetic": "/pərˈfɔːrm/",
     "translation": "表演；执行",
     "pos": "n.",
     "grade": null,
@@ -33643,7 +33643,7 @@
     "headwords": [
       "person"
     ],
-    "phonetic": "/ˈpʌrsən/",
+    "phonetic": "/ˈpɜːrsən/",
     "translation": "人",
     "pos": "n.",
     "grade": null,
@@ -33676,7 +33676,7 @@
     "headwords": [
       "personal"
     ],
-    "phonetic": "/ˈpʌrsɪnəl/",
+    "phonetic": "/ˈpɜːrsənəl/",
     "translation": "个人的",
     "pos": "adj.",
     "grade": null,
@@ -33821,8 +33821,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These physics are useful.",
-        "cn": "这些物理很有用。"
+        "en": "My brother is studying physics at college.",
+        "cn": "我哥哥在大学学物理。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -33846,7 +33846,7 @@
     "headwords": [
       "piano"
     ],
-    "phonetic": "/piˈænə/",
+    "phonetic": "/piˈænoʊ/",
     "translation": "钢琴",
     "pos": "n.",
     "grade": null,
@@ -34011,7 +34011,7 @@
     "headwords": [
       "piece"
     ],
-    "phonetic": "/pis/",
+    "phonetic": "/piːs/",
     "translation": "一片；一块",
     "pos": "n.",
     "grade": null,
@@ -34605,7 +34605,7 @@
     "headwords": [
       "please"
     ],
-    "phonetic": "/pliz/",
+    "phonetic": "/pliːz/",
     "translation": "请；使高兴",
     "pos": "v.",
     "grade": null,
@@ -34704,7 +34704,7 @@
     "headwords": [
       "p.m."
     ],
-    "phonetic": "/p.m*./",
+    "phonetic": "/ˌpiː ˈem/",
     "translation": "下午",
     "pos": "n.",
     "grade": null,
@@ -34770,7 +34770,7 @@
     "headwords": [
       "poem"
     ],
-    "phonetic": "/poʊʌm/",
+    "phonetic": "/ˈpoʊəm/",
     "translation": "诗",
     "pos": "n.",
     "grade": null,
@@ -34803,7 +34803,7 @@
     "headwords": [
       "poet"
     ],
-    "phonetic": "/poʊʌt/",
+    "phonetic": "/ˈpoʊət/",
     "translation": "诗人",
     "pos": "n.",
     "grade": null,
@@ -35005,7 +35005,7 @@
     "headwords": [
       "pollute"
     ],
-    "phonetic": "/pəˈlut/",
+    "phonetic": "/pəˈluːt/",
     "translation": "污染",
     "pos": "v.",
     "grade": null,
@@ -35038,7 +35038,7 @@
     "headwords": [
       "pool"
     ],
-    "phonetic": "/pul/",
+    "phonetic": "/puːl/",
     "translation": "池塘；游泳池",
     "pos": "n.",
     "grade": null,
@@ -35170,7 +35170,7 @@
     "headwords": [
       "pork"
     ],
-    "phonetic": "/pɔrk/",
+    "phonetic": "/pɔːrk/",
     "translation": "猪肉",
     "pos": "n.",
     "grade": null,
@@ -35203,7 +35203,7 @@
     "headwords": [
       "porridge"
     ],
-    "phonetic": "/ˈpɔrəʤ/",
+    "phonetic": "/ˈpɔːrəʤ/",
     "translation": "粥",
     "pos": "n.",
     "grade": null,
@@ -35368,7 +35368,7 @@
     "headwords": [
       "postcard"
     ],
-    "phonetic": "/ˈpoʊˌskɑrd/",
+    "phonetic": "/ˈpoʊˌskɑːrd/",
     "translation": "明信片",
     "pos": "n.",
     "grade": null,
@@ -35571,7 +35571,7 @@
     "headwords": [
       "power"
     ],
-    "phonetic": "/paʊʌr/",
+    "phonetic": "/ˈpaʊər/",
     "translation": "力量；电力",
     "pos": "n.",
     "grade": null,
@@ -36540,7 +36540,7 @@
     "headwords": [
       "prove"
     ],
-    "phonetic": "/pruv/",
+    "phonetic": "/pruːv/",
     "translation": "证明",
     "pos": "v.",
     "grade": null,
@@ -36738,7 +36738,7 @@
     "headwords": [
       "purple"
     ],
-    "phonetic": "/ˈpʌrpəl/",
+    "phonetic": "/ˈpɜːrpəl/",
     "translation": "紫色；紫色的",
     "pos": "adj.",
     "grade": null,
@@ -36771,7 +36771,7 @@
     "headwords": [
       "purpose"
     ],
-    "phonetic": "/ˈpʌrpəs/",
+    "phonetic": "/ˈpɜːrpəs/",
     "translation": "目的",
     "pos": "n.",
     "grade": null,
@@ -36903,7 +36903,7 @@
     "headwords": [
       "quarter"
     ],
-    "phonetic": "/kˈwɔrtər/",
+    "phonetic": "/kˈwɔːrtər/",
     "translation": "四分之一；一刻钟",
     "pos": "n.",
     "grade": null,
@@ -37398,7 +37398,7 @@
     "headwords": [
       "reach"
     ],
-    "phonetic": "/riʧ/",
+    "phonetic": "/riːtʃ/",
     "translation": "到达；伸手够到",
     "pos": "v.",
     "grade": null,
@@ -37431,7 +37431,7 @@
     "headwords": [
       "read"
     ],
-    "phonetic": "/rɛd/",
+    "phonetic": "/riːd/",
     "translation": "读",
     "pos": "v.",
     "grade": null,
@@ -37497,7 +37497,7 @@
     "headwords": [
       "real"
     ],
-    "phonetic": "/ril/",
+    "phonetic": "/ˈriːəl/",
     "translation": "真实的",
     "pos": "adj.",
     "grade": null,
@@ -37601,7 +37601,7 @@
     "headwords": [
       "reason"
     ],
-    "phonetic": "/ˈrizən/",
+    "phonetic": "/ˈriːzən/",
     "translation": "原因；理由",
     "pos": "n.",
     "grade": null,
@@ -37634,7 +37634,7 @@
     "headwords": [
       "receive"
     ],
-    "phonetic": "/rɪˈsiv/",
+    "phonetic": "/rɪˈsiːv/",
     "translation": "收到",
     "pos": "v.",
     "grade": null,
@@ -37667,7 +37667,7 @@
     "headwords": [
       "recent"
     ],
-    "phonetic": "/ˈrisənt/",
+    "phonetic": "/ˈriːsənt/",
     "translation": "最近的",
     "pos": "adj.",
     "grade": null,
@@ -37870,7 +37870,7 @@
     "headwords": [
       "reduce"
     ],
-    "phonetic": "/rɪˈdus/",
+    "phonetic": "/rɪˈduːs/",
     "translation": "减少",
     "pos": "v.",
     "grade": null,
@@ -38200,7 +38200,7 @@
     "headwords": [
       "repeat"
     ],
-    "phonetic": "/rɪˈpit/",
+    "phonetic": "/rɪˈpiːt/",
     "translation": "重复",
     "pos": "v.",
     "grade": null,
@@ -38266,7 +38266,7 @@
     "headwords": [
       "report"
     ],
-    "phonetic": "/rɪˈpɔrt/",
+    "phonetic": "/rɪˈpɔːrt/",
     "translation": "报告",
     "pos": "v.",
     "grade": null,
@@ -38332,7 +38332,7 @@
     "headwords": [
       "research"
     ],
-    "phonetic": "/ˈrisərʧ/",
+    "phonetic": "/rɪˈsɜːrtʃ/",
     "translation": "研究",
     "pos": "v.",
     "grade": null,
@@ -38530,7 +38530,7 @@
     "headwords": [
       "return"
     ],
-    "phonetic": "/rɪˈtʌrn/",
+    "phonetic": "/rɪˈtɜːrn/",
     "translation": "返回；归还",
     "pos": "v.",
     "grade": null,
@@ -38563,7 +38563,7 @@
     "headwords": [
       "review"
     ],
-    "phonetic": "/ˌrivˈju/",
+    "phonetic": "/rɪˈvjuː/",
     "translation": "复习；评论",
     "pos": "v.",
     "grade": null,
@@ -38774,8 +38774,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They rise after school.",
-        "cn": "他们放学后上升。"
+        "en": "Prices rise slowly every year.",
+        "cn": "物价每年慢慢上涨。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -39228,7 +39228,7 @@
     "headwords": [
       "rule"
     ],
-    "phonetic": "/rul/",
+    "phonetic": "/ruːl/",
     "translation": "规则；统治",
     "pos": "v.",
     "grade": null,
@@ -39261,7 +39261,7 @@
     "headwords": [
       "ruler"
     ],
-    "phonetic": "/ˈrulər/",
+    "phonetic": "/ˈruːlər/",
     "translation": "尺子",
     "pos": "n.",
     "grade": null,
@@ -39302,8 +39302,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They run after school.",
-        "cn": "他们放学后跑。"
+        "en": "He runs faster than me.",
+        "cn": "他跑得比我快。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -39368,8 +39368,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels sad today.",
-        "cn": "她今天感到悲伤。"
+        "en": "The movie was so sad that I cried.",
+        "cn": "那部电影太感人了，我都哭了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -39525,7 +39525,7 @@
     "headwords": [
       "salt"
     ],
-    "phonetic": "/sɔlt/",
+    "phonetic": "/sɔːlt/",
     "translation": "盐",
     "pos": "n.",
     "grade": null,
@@ -39789,7 +39789,7 @@
     "headwords": [
       "scarf"
     ],
-    "phonetic": "/skɑrf/",
+    "phonetic": "/skɑːrf/",
     "translation": "围巾",
     "pos": "n.",
     "grade": null,
@@ -39822,7 +39822,7 @@
     "headwords": [
       "school"
     ],
-    "phonetic": "/skul/",
+    "phonetic": "/skuːl/",
     "translation": "学校",
     "pos": "n.",
     "grade": null,
@@ -39962,8 +39962,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These scissors are useful.",
-        "cn": "这些剪刀很有用。"
+        "en": "Don't run with scissors in your hands.",
+        "cn": "别拿着剪刀跑。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -39987,7 +39987,7 @@
     "headwords": [
       "score"
     ],
-    "phonetic": "/skɔr/",
+    "phonetic": "/skɔːr/",
     "translation": "得分；分数",
     "pos": "v.",
     "grade": null,
@@ -40053,7 +40053,7 @@
     "headwords": [
       "sea"
     ],
-    "phonetic": "/si/",
+    "phonetic": "/siː/",
     "translation": "海",
     "pos": "n.",
     "grade": null,
@@ -40086,7 +40086,7 @@
     "headwords": [
       "search"
     ],
-    "phonetic": "/sʌrʧ/",
+    "phonetic": "/sɜːrtʃ/",
     "translation": "搜索",
     "pos": "v.",
     "grade": null,
@@ -40119,7 +40119,7 @@
     "headwords": [
       "season"
     ],
-    "phonetic": "/ˈsizən/",
+    "phonetic": "/ˈsiːzən/",
     "translation": "季节",
     "pos": "n.",
     "grade": null,
@@ -40152,7 +40152,7 @@
     "headwords": [
       "seat"
     ],
-    "phonetic": "/sit/",
+    "phonetic": "/siːt/",
     "translation": "座位",
     "pos": "n.",
     "grade": null,
@@ -40185,7 +40185,7 @@
     "headwords": [
       "secret"
     ],
-    "phonetic": "/ˈsikrɪt/",
+    "phonetic": "/ˈsiːkrɪt/",
     "translation": "秘密",
     "pos": "n.",
     "grade": null,
@@ -40218,7 +40218,7 @@
     "headwords": [
       "see"
     ],
-    "phonetic": "/si/",
+    "phonetic": "/siː/",
     "translation": "看见",
     "pos": "v.",
     "grade": null,
@@ -40251,7 +40251,7 @@
     "headwords": [
       "seem"
     ],
-    "phonetic": "/sim/",
+    "phonetic": "/siːm/",
     "translation": "似乎",
     "pos": "v.",
     "grade": null,
@@ -40259,8 +40259,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They seem after school.",
-        "cn": "他们放学后似乎。"
+        "en": "She seems very happy today.",
+        "cn": "她今天似乎很高兴。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -40515,7 +40515,7 @@
     "headwords": [
       "serve"
     ],
-    "phonetic": "/sʌrv/",
+    "phonetic": "/sɜːrv/",
     "translation": "服务；端上",
     "pos": "v.",
     "grade": null,
@@ -40548,7 +40548,7 @@
     "headwords": [
       "service"
     ],
-    "phonetic": "/ˈsʌrvɪs/",
+    "phonetic": "/ˈsɜːrvɪs/",
     "translation": "服务",
     "pos": "n.",
     "grade": null,
@@ -40812,7 +40812,7 @@
     "headwords": [
       "shark"
     ],
-    "phonetic": "/ʃɑrk/",
+    "phonetic": "/ʃɑːrk/",
     "translation": "鲨鱼",
     "pos": "n.",
     "grade": null,
@@ -40845,7 +40845,7 @@
     "headwords": [
       "she"
     ],
-    "phonetic": "/ʃi/",
+    "phonetic": "/ʃiː/",
     "translation": "她",
     "pos": "pron.",
     "grade": null,
@@ -40878,7 +40878,7 @@
     "headwords": [
       "sheep"
     ],
-    "phonetic": "/ʃip/",
+    "phonetic": "/ʃiːp/",
     "translation": "羊",
     "pos": "n.",
     "grade": null,
@@ -41020,7 +41020,7 @@
     "headwords": [
       "shirt"
     ],
-    "phonetic": "/ʃʌrt/",
+    "phonetic": "/ʃɜːrt/",
     "translation": "衬衫",
     "pos": "n.",
     "grade": null,
@@ -41086,7 +41086,7 @@
     "headwords": [
       "shoe"
     ],
-    "phonetic": "/ʃu/",
+    "phonetic": "/ʃuː/",
     "translation": "鞋",
     "pos": "n.",
     "grade": null,
@@ -41119,7 +41119,7 @@
     "headwords": [
       "shoot"
     ],
-    "phonetic": "/ʃut/",
+    "phonetic": "/ʃuːt/",
     "translation": "射击；拍摄",
     "pos": "v.",
     "grade": null,
@@ -41185,7 +41185,7 @@
     "headwords": [
       "short"
     ],
-    "phonetic": "/ʃɔrt/",
+    "phonetic": "/ʃɔːrt/",
     "translation": "短的；矮的",
     "pos": "adj.",
     "grade": null,
@@ -41218,7 +41218,7 @@
     "headwords": [
       "shorts"
     ],
-    "phonetic": "/ʃɔrts/",
+    "phonetic": "/ʃɔːrts/",
     "translation": "短裤",
     "pos": "n.",
     "grade": null,
@@ -41226,8 +41226,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These shorts are useful.",
-        "cn": "这些短裤很有用。"
+        "en": "I wear shorts in summer.",
+        "cn": "夏天我穿短裤。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -41383,7 +41383,7 @@
     "headwords": [
       "shower"
     ],
-    "phonetic": "/ʃaʊʌr/",
+    "phonetic": "/ˈʃaʊər/",
     "translation": "淋浴；阵雨",
     "pos": "v.",
     "grade": null,
@@ -41457,8 +41457,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels shy today.",
-        "cn": "她今天感到害羞。"
+        "en": "Don't be shy. Just introduce yourself.",
+        "cn": "别害羞，介绍一下你自己吧。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -41787,8 +41787,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English since I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "We have lived here since 2020.",
+        "cn": "我们从 2020 年就住在这里了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -41878,7 +41878,7 @@
     "headwords": [
       "sir"
     ],
-    "phonetic": "/sʌr/",
+    "phonetic": "/sɜːr/",
     "translation": "先生",
     "pos": "n.",
     "grade": null,
@@ -41952,8 +41952,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They sit after school.",
-        "cn": "他们放学后坐。"
+        "en": "Please sit down and listen carefully.",
+        "cn": "请坐下认真听。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -41977,7 +41977,7 @@
     "headwords": [
       "situation"
     ],
-    "phonetic": "/ˌsɪʧuˈeɪʃən/",
+    "phonetic": "/ˌsɪtʃuˈeɪʃən/",
     "translation": "情况",
     "pos": "n.",
     "grade": null,
@@ -42076,7 +42076,7 @@
     "headwords": [
       "ski"
     ],
-    "phonetic": "/ski/",
+    "phonetic": "/skiː/",
     "translation": "滑雪",
     "pos": "v.",
     "grade": null,
@@ -42142,7 +42142,7 @@
     "headwords": [
       "skirt"
     ],
-    "phonetic": "/skʌrt/",
+    "phonetic": "/skɜːrt/",
     "translation": "裙子",
     "pos": "n.",
     "grade": null,
@@ -42208,7 +42208,7 @@
     "headwords": [
       "sleep"
     ],
-    "phonetic": "/slip/",
+    "phonetic": "/sliːp/",
     "translation": "睡觉",
     "pos": "v.",
     "grade": null,
@@ -42216,8 +42216,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They sleep after school.",
-        "cn": "他们放学后睡觉。"
+        "en": "The baby is sleeping now.",
+        "cn": "宝宝现在在睡觉。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -42307,7 +42307,7 @@
     "headwords": [
       "small"
     ],
-    "phonetic": "/smɔl/",
+    "phonetic": "/smɔːl/",
     "translation": "小的",
     "pos": "adj.",
     "grade": null,
@@ -42340,7 +42340,7 @@
     "headwords": [
       "smart"
     ],
-    "phonetic": "/smɑrt/",
+    "phonetic": "/smɑːrt/",
     "translation": "聪明的；智能的",
     "pos": "adj.",
     "grade": null,
@@ -42414,8 +42414,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They smile after school.",
-        "cn": "他们放学后微笑。"
+        "en": "She smiled at me when I came in.",
+        "cn": "我进来时她对我笑了笑。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -42976,8 +42976,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Somebody can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Somebody is knocking at the door.",
+        "cn": "有人在敲门。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -43010,8 +43010,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Something can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "I want to tell you something important.",
+        "cn": "我想告诉你一件重要的事。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -43134,7 +43134,7 @@
     "headwords": [
       "song"
     ],
-    "phonetic": "/sɔŋ/",
+    "phonetic": "/sɔːŋ/",
     "translation": "歌曲",
     "pos": "n.",
     "grade": null,
@@ -43167,7 +43167,7 @@
     "headwords": [
       "soon"
     ],
-    "phonetic": "/sun/",
+    "phonetic": "/suːn/",
     "translation": "很快",
     "pos": "adv.",
     "grade": null,
@@ -43200,7 +43200,7 @@
     "headwords": [
       "sore"
     ],
-    "phonetic": "/sɔr/",
+    "phonetic": "/sɔːr/",
     "translation": "疼痛的",
     "pos": "adj.",
     "grade": null,
@@ -43233,7 +43233,7 @@
     "headwords": [
       "sorry"
     ],
-    "phonetic": "/ˈsɑri/",
+    "phonetic": "/ˈsɑːri/",
     "translation": "抱歉的",
     "pos": "adj.",
     "grade": null,
@@ -43241,8 +43241,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels sorry today.",
-        "cn": "她今天感到抱歉。"
+        "en": "I'm sorry for being late.",
+        "cn": "对不起，我迟到了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -43299,7 +43299,7 @@
     "headwords": [
       "soup"
     ],
-    "phonetic": "/sup/",
+    "phonetic": "/suːp/",
     "translation": "汤",
     "pos": "n.",
     "grade": null,
@@ -43497,7 +43497,7 @@
     "headwords": [
       "speech"
     ],
-    "phonetic": "/spiʧ/",
+    "phonetic": "/spiːtʃ/",
     "translation": "演讲",
     "pos": "n.",
     "grade": null,
@@ -43530,7 +43530,7 @@
     "headwords": [
       "speed"
     ],
-    "phonetic": "/spid/",
+    "phonetic": "/spiːd/",
     "translation": "速度",
     "pos": "n.",
     "grade": null,
@@ -43662,7 +43662,7 @@
     "headwords": [
       "spoon"
     ],
-    "phonetic": "/spun/",
+    "phonetic": "/spuːn/",
     "translation": "勺子",
     "pos": "n.",
     "grade": null,
@@ -43695,7 +43695,7 @@
     "headwords": [
       "sport"
     ],
-    "phonetic": "/spɔrt/",
+    "phonetic": "/spɔːrt/",
     "translation": "运动",
     "pos": "n.",
     "grade": null,
@@ -43761,7 +43761,7 @@
     "headwords": [
       "spring"
     ],
-    "phonetic": "/spʌrɪŋ/",
+    "phonetic": "/sprɪŋ/",
     "translation": "春天；弹簧",
     "pos": "n.",
     "grade": null,
@@ -43901,8 +43901,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They stand after school.",
-        "cn": "他们放学后站立。"
+        "en": "Stand up when you answer the question.",
+        "cn": "回答问题时要站起来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -43959,7 +43959,7 @@
     "headwords": [
       "star"
     ],
-    "phonetic": "/stɑr/",
+    "phonetic": "/stɑːr/",
     "translation": "星星；明星",
     "pos": "n.",
     "grade": null,
@@ -43992,7 +43992,7 @@
     "headwords": [
       "start"
     ],
-    "phonetic": "/stɑrt/",
+    "phonetic": "/stɑːrt/",
     "translation": "开始",
     "pos": "v.",
     "grade": null,
@@ -44108,8 +44108,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They stay after school.",
-        "cn": "他们放学后停留。"
+        "en": "We stayed at home all weekend.",
+        "cn": "我们整个周末都待在家里。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -44369,7 +44369,7 @@
     "headwords": [
       "store"
     ],
-    "phonetic": "/stɔr/",
+    "phonetic": "/stɔːr/",
     "translation": "商店；储存",
     "pos": "v.",
     "grade": null,
@@ -44402,7 +44402,7 @@
     "headwords": [
       "storm"
     ],
-    "phonetic": "/stɔrm/",
+    "phonetic": "/stɔːrm/",
     "translation": "暴风雨",
     "pos": "n.",
     "grade": null,
@@ -44567,7 +44567,7 @@
     "headwords": [
       "street"
     ],
-    "phonetic": "/strit/",
+    "phonetic": "/striːt/",
     "translation": "街道",
     "pos": "n.",
     "grade": null,
@@ -44666,7 +44666,7 @@
     "headwords": [
       "strong"
     ],
-    "phonetic": "/strɔŋ/",
+    "phonetic": "/strɔːŋ/",
     "translation": "强壮的",
     "pos": "adj.",
     "grade": null,
@@ -44699,7 +44699,7 @@
     "headwords": [
       "student"
     ],
-    "phonetic": "/ˈstudənt/",
+    "phonetic": "/ˈstuːdənt/",
     "translation": "学生",
     "pos": "n.",
     "grade": null,
@@ -44831,7 +44831,7 @@
     "headwords": [
       "succeed"
     ],
-    "phonetic": "/səkˈsid/",
+    "phonetic": "/səkˈsiːd/",
     "translation": "成功",
     "pos": "v.",
     "grade": null,
@@ -45062,7 +45062,7 @@
     "headwords": [
       "suit"
     ],
-    "phonetic": "/sut/",
+    "phonetic": "/suːt/",
     "translation": "套装；适合",
     "pos": "v.",
     "grade": null,
@@ -45194,7 +45194,7 @@
     "headwords": [
       "supermarket"
     ],
-    "phonetic": "/ˈsupərˌmɑrkɪt/",
+    "phonetic": "/ˈsuːpərˌmɑːrkɪt/",
     "translation": "超市",
     "pos": "n.",
     "grade": null,
@@ -45326,7 +45326,7 @@
     "headwords": [
       "surface"
     ],
-    "phonetic": "/ˈsʌrfəs/",
+    "phonetic": "/ˈsɜːrfəs/",
     "translation": "表面",
     "pos": "n.",
     "grade": null,
@@ -45392,7 +45392,7 @@
     "headwords": [
       "survey"
     ],
-    "phonetic": "/ˈsʌrˌveɪ/",
+    "phonetic": "/ˈsɜːrˌveɪ/",
     "translation": "调查",
     "pos": "adj.",
     "grade": null,
@@ -45491,7 +45491,7 @@
     "headwords": [
       "sweep"
     ],
-    "phonetic": "/swip/",
+    "phonetic": "/swiːp/",
     "translation": "打扫；扫",
     "pos": "v.",
     "grade": null,
@@ -45524,7 +45524,7 @@
     "headwords": [
       "sweet"
     ],
-    "phonetic": "/swit/",
+    "phonetic": "/swiːt/",
     "translation": "甜的；糖果",
     "pos": "adj.",
     "grade": null,
@@ -45755,7 +45755,7 @@
     "headwords": [
       "talk"
     ],
-    "phonetic": "/tɔk/",
+    "phonetic": "/tɔːk/",
     "translation": "谈话",
     "pos": "v.",
     "grade": null,
@@ -45763,8 +45763,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They talk after school.",
-        "cn": "他们放学后谈话。"
+        "en": "Can we talk after class?",
+        "cn": "我们下课后谈谈好吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -45788,7 +45788,7 @@
     "headwords": [
       "tall"
     ],
-    "phonetic": "/tɔl/",
+    "phonetic": "/tɔːl/",
     "translation": "高的",
     "pos": "adj.",
     "grade": null,
@@ -45986,7 +45986,7 @@
     "headwords": [
       "tea"
     ],
-    "phonetic": "/ti/",
+    "phonetic": "/tiː/",
     "translation": "茶",
     "pos": "n.",
     "grade": null,
@@ -46019,7 +46019,7 @@
     "headwords": [
       "teach"
     ],
-    "phonetic": "/tiʧ/",
+    "phonetic": "/tiːtʃ/",
     "translation": "教",
     "pos": "v.",
     "grade": null,
@@ -46052,7 +46052,7 @@
     "headwords": [
       "teacher"
     ],
-    "phonetic": "/ˈtiʧər/",
+    "phonetic": "/ˈtiːtʃər/",
     "translation": "老师",
     "pos": "n.",
     "grade": null,
@@ -46085,7 +46085,7 @@
     "headwords": [
       "team"
     ],
-    "phonetic": "/tim/",
+    "phonetic": "/tiːm/",
     "translation": "队；团队",
     "pos": "n.",
     "grade": null,
@@ -46118,7 +46118,7 @@
     "headwords": [
       "teamwork"
     ],
-    "phonetic": "/ˈtimˌwərk/",
+    "phonetic": "/ˈtiːmˌwɜːrk/",
     "translation": "团队合作",
     "pos": "n.",
     "grade": null,
@@ -46349,7 +46349,7 @@
     "headwords": [
       "term"
     ],
-    "phonetic": "/tʌrm/",
+    "phonetic": "/tɜːrm/",
     "translation": "学期；术语",
     "pos": "n.",
     "grade": null,
@@ -46489,8 +46489,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English than I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "She is taller than her brother.",
+        "cn": "她比她哥哥高。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -46547,7 +46547,7 @@
     "headwords": [
       "that"
     ],
-    "phonetic": "/ðət/",
+    "phonetic": "/ðæt/",
     "translation": "那个；那",
     "pos": "pron.",
     "grade": null,
@@ -46580,7 +46580,7 @@
     "headwords": [
       "the"
     ],
-    "phonetic": "/ðə/",
+    "phonetic": "/ðiː/",
     "translation": "这；那（定冠词）",
     "pos": "det.",
     "grade": null,
@@ -46659,8 +46659,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Their can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Their house is near the school.",
+        "cn": "他们的房子在学校附近。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -46692,8 +46692,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Theirs can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The green bikes are theirs.",
+        "cn": "那些绿色自行车是他们的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -46725,8 +46725,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Them can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "I gave them some good advice.",
+        "cn": "我给了他们一些好建议。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -46758,8 +46758,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Themselves can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "They built the tree house themselves.",
+        "cn": "树屋是他们自己搭的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -47084,7 +47084,7 @@
     "headwords": [
       "thirsty"
     ],
-    "phonetic": "/ˈθʌrsti/",
+    "phonetic": "/ˈθɜːrsti/",
     "translation": "口渴的",
     "pos": "adj.",
     "grade": null,
@@ -47092,8 +47092,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels thirsty today.",
-        "cn": "她今天感到口渴。"
+        "en": "I'm so thirsty after playing basketball.",
+        "cn": "打完篮球我好渴。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -47158,8 +47158,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Those can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Those books on the shelf are mine.",
+        "cn": "架子上的那些书是我的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -47191,8 +47191,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English though I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "Though it was raining, we went out.",
+        "cn": "虽然下着雨，我们还是出去了。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -47282,7 +47282,7 @@
     "headwords": [
       "through"
     ],
-    "phonetic": "/θru/",
+    "phonetic": "/θruː/",
     "translation": "穿过；通过",
     "pos": "prep.",
     "grade": null,
@@ -47579,7 +47579,7 @@
     "headwords": [
       "tired"
     ],
-    "phonetic": "/taɪʌrd/",
+    "phonetic": "/ˈtaɪərd/",
     "translation": "疲劳的",
     "pos": "adj.",
     "grade": null,
@@ -47587,8 +47587,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "She feels tired today.",
-        "cn": "她今天感到疲劳。"
+        "en": "I'm too tired to do my homework tonight.",
+        "cn": "我今晚太累了，做不了作业。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -47612,7 +47612,7 @@
     "headwords": [
       "to"
     ],
-    "phonetic": "/tɪ/",
+    "phonetic": "/tu/",
     "translation": "到；向",
     "pos": "prep.",
     "grade": null,
@@ -47942,7 +47942,7 @@
     "headwords": [
       "tool"
     ],
-    "phonetic": "/tul/",
+    "phonetic": "/tuːl/",
     "translation": "工具",
     "pos": "n.",
     "grade": null,
@@ -47975,7 +47975,7 @@
     "headwords": [
       "tooth"
     ],
-    "phonetic": "/tuθ/",
+    "phonetic": "/tuːθ/",
     "translation": "牙齿",
     "pos": "n.",
     "grade": null,
@@ -48196,8 +48196,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is towards the desk.",
-        "cn": "书在桌子附近。"
+        "en": "The dog ran towards me.",
+        "cn": "狗朝我跑过来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -48226,7 +48226,7 @@
     "headwords": [
       "tower"
     ],
-    "phonetic": "/taʊʌr/",
+    "phonetic": "/ˈtaʊər/",
     "translation": "塔",
     "pos": "n.",
     "grade": null,
@@ -48531,8 +48531,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They travel after school.",
-        "cn": "他们放学后旅行。"
+        "en": "I want to travel around the world.",
+        "cn": "我想环游世界。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -48589,7 +48589,7 @@
     "headwords": [
       "treat"
     ],
-    "phonetic": "/trit/",
+    "phonetic": "/triːt/",
     "translation": "对待；治疗",
     "pos": "v.",
     "grade": null,
@@ -48622,7 +48622,7 @@
     "headwords": [
       "tree"
     ],
-    "phonetic": "/tri/",
+    "phonetic": "/triː/",
     "translation": "树",
     "pos": "n.",
     "grade": null,
@@ -48787,7 +48787,7 @@
     "headwords": [
       "true"
     ],
-    "phonetic": "/tru/",
+    "phonetic": "/truː/",
     "translation": "真实的",
     "pos": "adj.",
     "grade": null,
@@ -48853,7 +48853,7 @@
     "headwords": [
       "truth"
     ],
-    "phonetic": "/truθ/",
+    "phonetic": "/truːθ/",
     "translation": "真相",
     "pos": "n.",
     "grade": null,
@@ -48952,7 +48952,7 @@
     "headwords": [
       "turn"
     ],
-    "phonetic": "/tʌrn/",
+    "phonetic": "/tɜːrn/",
     "translation": "转动；轮到",
     "pos": "v.",
     "grade": null,
@@ -49221,7 +49221,7 @@
     "headwords": [
       "uniform"
     ],
-    "phonetic": "/ˈjunəˌfɔrm/",
+    "phonetic": "/ˈjunəˌfɔːrm/",
     "translation": "制服",
     "pos": "n.",
     "grade": null,
@@ -49320,7 +49320,7 @@
     "headwords": [
       "university"
     ],
-    "phonetic": "/ˌjunəˈvʌrsəti/",
+    "phonetic": "/ˌjuːnəˈvɜːrsəti/",
     "translation": "大学",
     "pos": "n.",
     "grade": null,
@@ -49361,8 +49361,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English unless I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "We'll be late unless we hurry.",
+        "cn": "除非我们快点，否则会迟到。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -49394,8 +49394,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is until the desk.",
-        "cn": "书在桌子附近。"
+        "en": "I waited until midnight for her call.",
+        "cn": "我等到半夜等她的电话。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -49465,8 +49465,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is upon the desk.",
-        "cn": "书在桌子附近。"
+        "en": "The cat jumped upon the sofa.",
+        "cn": "猫跳到沙发上。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -49490,7 +49490,7 @@
     "headwords": [
       "us"
     ],
-    "phonetic": "/ˈjuˈɛs/",
+    "phonetic": "/ʌs/",
     "translation": "我们",
     "pos": "pron.",
     "grade": null,
@@ -49498,8 +49498,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Us can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Our teacher told us an interesting story.",
+        "cn": "老师给我们讲了一个有趣的故事。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -49523,7 +49523,7 @@
     "headwords": [
       "use"
     ],
-    "phonetic": "/juz/",
+    "phonetic": "/juːz/",
     "translation": "使用",
     "pos": "v.",
     "grade": null,
@@ -49622,7 +49622,7 @@
     "headwords": [
       "value"
     ],
-    "phonetic": "/ˈvælju/",
+    "phonetic": "/ˈvæljuː/",
     "translation": "价值",
     "pos": "v.",
     "grade": null,
@@ -49787,7 +49787,7 @@
     "headwords": [
       "view"
     ],
-    "phonetic": "/vju/",
+    "phonetic": "/vjuː/",
     "translation": "看法；景色",
     "pos": "n.",
     "grade": null,
@@ -49894,8 +49894,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These virus are useful.",
-        "cn": "这些病毒很有用。"
+        "en": "This computer virus can delete your files.",
+        "cn": "这种电脑病毒会删除你的文件。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -50125,8 +50125,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They wait after school.",
-        "cn": "他们放学后等待。"
+        "en": "Wait a moment, please.",
+        "cn": "请稍等一下。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -50183,7 +50183,7 @@
     "headwords": [
       "walk"
     ],
-    "phonetic": "/wɔk/",
+    "phonetic": "/wɔːk/",
     "translation": "走路；散步",
     "pos": "v.",
     "grade": null,
@@ -50191,8 +50191,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "They walk after school.",
-        "cn": "他们放学后走路。"
+        "en": "I walk my dog every evening.",
+        "cn": "我每天晚上遛狗。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -50216,7 +50216,7 @@
     "headwords": [
       "wall"
     ],
-    "phonetic": "/wɔl/",
+    "phonetic": "/wɔːl/",
     "translation": "墙",
     "pos": "n.",
     "grade": null,
@@ -50249,7 +50249,7 @@
     "headwords": [
       "wallet"
     ],
-    "phonetic": "/ˈwɔlət/",
+    "phonetic": "/ˈwɔːlət/",
     "translation": "钱包",
     "pos": "n.",
     "grade": null,
@@ -50381,7 +50381,7 @@
     "headwords": [
       "warn"
     ],
-    "phonetic": "/wɔrn/",
+    "phonetic": "/wɔːrn/",
     "translation": "警告",
     "pos": "v.",
     "grade": null,
@@ -50665,7 +50665,7 @@
     "headwords": [
       "we"
     ],
-    "phonetic": "/wi/",
+    "phonetic": "/wiː/",
     "translation": "我们",
     "pos": "pron.",
     "grade": null,
@@ -50698,7 +50698,7 @@
     "headwords": [
       "weak"
     ],
-    "phonetic": "/wik/",
+    "phonetic": "/wiːk/",
     "translation": "虚弱的；薄弱的",
     "pos": "adj.",
     "grade": null,
@@ -50863,7 +50863,7 @@
     "headwords": [
       "week"
     ],
-    "phonetic": "/wik/",
+    "phonetic": "/wiːk/",
     "translation": "星期；周",
     "pos": "n.",
     "grade": null,
@@ -50896,7 +50896,7 @@
     "headwords": [
       "weekday"
     ],
-    "phonetic": "/ˈwikˌdeɪ/",
+    "phonetic": "/ˈwiːkˌdeɪ/",
     "translation": "工作日",
     "pos": "adj.",
     "grade": null,
@@ -50929,7 +50929,7 @@
     "headwords": [
       "weekend"
     ],
-    "phonetic": "/ˈwiˌkɪnd/",
+    "phonetic": "/ˈwiːkˌend/",
     "translation": "周末",
     "pos": "n.",
     "grade": null,
@@ -51203,7 +51203,7 @@
     "headwords": [
       "what"
     ],
-    "phonetic": "/wət/",
+    "phonetic": "/wʌt/",
     "translation": "什么",
     "pos": "pron.",
     "grade": null,
@@ -51211,8 +51211,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "What can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "What is your favorite subject?",
+        "cn": "你最喜欢的科目是什么？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51244,8 +51244,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Whatever can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Whatever you decide, I will support you.",
+        "cn": "无论你决定什么，我都支持你。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51269,7 +51269,7 @@
     "headwords": [
       "wheel"
     ],
-    "phonetic": "/wil/",
+    "phonetic": "/wiːl/",
     "translation": "轮子",
     "pos": "n.",
     "grade": null,
@@ -51302,7 +51302,7 @@
     "headwords": [
       "when"
     ],
-    "phonetic": "/wɪn/",
+    "phonetic": "/wɛn/",
     "translation": "什么时候；当……时",
     "pos": "conj.",
     "grade": null,
@@ -51343,8 +51343,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English whenever I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "Come and visit me whenever you can.",
+        "cn": "你方便的时候随时来看我。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51409,8 +51409,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "I like English whether I practise it every day.",
-        "cn": "我喜欢英语，并且每天练习。"
+        "en": "I don't know whether he will come.",
+        "cn": "我不知道他会不会来。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51442,8 +51442,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Which can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Which color do you prefer, red or blue?",
+        "cn": "你更喜欢哪个颜色，红色还是蓝色？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51533,7 +51533,7 @@
     "headwords": [
       "who"
     ],
-    "phonetic": "/hu/",
+    "phonetic": "/huː/",
     "translation": "谁",
     "pos": "pron.",
     "grade": null,
@@ -51541,8 +51541,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Who can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Who is the new teacher?",
+        "cn": "谁是新来的老师？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51599,7 +51599,7 @@
     "headwords": [
       "whom"
     ],
-    "phonetic": "/hum/",
+    "phonetic": "/huːm/",
     "translation": "谁（宾格）",
     "pos": "pron.",
     "grade": null,
@@ -51607,8 +51607,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Whom can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Whom did you invite to the party?",
+        "cn": "你邀请了谁来参加聚会？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -51632,7 +51632,7 @@
     "headwords": [
       "whose"
     ],
-    "phonetic": "/huz/",
+    "phonetic": "/huːz/",
     "translation": "谁的",
     "pos": "pron.",
     "grade": null,
@@ -51640,8 +51640,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Whose can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Whose notebook is this?",
+        "cn": "这是谁的笔记本？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -52173,8 +52173,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "The book is within the desk.",
-        "cn": "书在桌子附近。"
+        "en": "Please reply within three days.",
+        "cn": "请三天内回复。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -52406,7 +52406,7 @@
     "headwords": [
       "word"
     ],
-    "phonetic": "/wʌrd/",
+    "phonetic": "/wɜːrd/",
     "translation": "单词；话语",
     "pos": "n.",
     "grade": null,
@@ -52439,7 +52439,7 @@
     "headwords": [
       "work"
     ],
-    "phonetic": "/wʌrk/",
+    "phonetic": "/wɜːrk/",
     "translation": "工作；运转",
     "pos": "v.",
     "grade": null,
@@ -52472,7 +52472,7 @@
     "headwords": [
       "worker"
     ],
-    "phonetic": "/ˈwʌrkər/",
+    "phonetic": "/ˈwɜːrkər/",
     "translation": "工人",
     "pos": "n.",
     "grade": null,
@@ -52505,7 +52505,7 @@
     "headwords": [
       "world"
     ],
-    "phonetic": "/wʌrld/",
+    "phonetic": "/wɜːrld/",
     "translation": "世界",
     "pos": "n.",
     "grade": null,
@@ -52571,7 +52571,7 @@
     "headwords": [
       "worse"
     ],
-    "phonetic": "/wʌrs/",
+    "phonetic": "/wɜːrs/",
     "translation": "更糟的",
     "pos": "n.",
     "grade": null,
@@ -52604,7 +52604,7 @@
     "headwords": [
       "worst"
     ],
-    "phonetic": "/wʌrst/",
+    "phonetic": "/wɜːrst/",
     "translation": "最糟的",
     "pos": "n.",
     "grade": null,
@@ -52637,7 +52637,7 @@
     "headwords": [
       "worth"
     ],
-    "phonetic": "/wʌrθ/",
+    "phonetic": "/wɜːrθ/",
     "translation": "值得的",
     "pos": "n.",
     "grade": null,
@@ -52703,7 +52703,7 @@
     "headwords": [
       "wound"
     ],
-    "phonetic": "/wund/",
+    "phonetic": "/wuːnd/",
     "translation": "伤口；使受伤",
     "pos": "v.",
     "grade": null,
@@ -52769,7 +52769,7 @@
     "headwords": [
       "wrong"
     ],
-    "phonetic": "/rɔŋ/",
+    "phonetic": "/rɔːŋ/",
     "translation": "错误的",
     "pos": "adj.",
     "grade": null,
@@ -52840,7 +52840,7 @@
     "headwords": [
       "yard"
     ],
-    "phonetic": "/jɑrd/",
+    "phonetic": "/jɑːrd/",
     "translation": "院子；码",
     "pos": "n.",
     "grade": null,
@@ -52947,8 +52947,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "These yes are useful.",
-        "cn": "这些是很有用。"
+        "en": "Just say yes or no, please.",
+        "cn": "请直接回答是或不是。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -53076,7 +53076,7 @@
     "headwords": [
       "you"
     ],
-    "phonetic": "/ju/",
+    "phonetic": "/juː/",
     "translation": "你；你们",
     "pos": "pron.",
     "grade": null,
@@ -53150,8 +53150,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Your can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "Is this your dictionary?",
+        "cn": "这是你的词典吗？"
       }
     ],
     "source": "1600单词备用.txt",
@@ -53183,8 +53183,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Yours can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "The black umbrella is yours.",
+        "cn": "这把黑伞是你的。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -53208,7 +53208,7 @@
     "headwords": [
       "yourself"
     ],
-    "phonetic": "/ˈjɔrsɛlf/",
+    "phonetic": "/ˈjɔːrsɛlf/",
     "translation": "你自己",
     "pos": "pron.",
     "grade": null,
@@ -53216,8 +53216,8 @@
     "unit": null,
     "examples": [
       {
-        "en": "Yourself can join the game.",
-        "cn": "他/她/它可以参加游戏。"
+        "en": "You should take care of yourself.",
+        "cn": "你应该照顾好自己。"
       }
     ],
     "source": "1600单词备用.txt",
@@ -53246,7 +53246,7 @@
     "headwords": [
       "youth"
     ],
-    "phonetic": "/juθ/",
+    "phonetic": "/juːθ/",
     "translation": "青年；青春",
     "pos": "n.",
     "grade": null,
@@ -53312,7 +53312,7 @@
     "headwords": [
       "zoo"
     ],
-    "phonetic": "/zu/",
+    "phonetic": "/zuː/",
     "translation": "动物园",
     "pos": "n.",
     "grade": null,
@@ -53382,7 +53382,7 @@
     "headwords": [
       "two"
     ],
-    "phonetic": "/tu/",
+    "phonetic": "/tuː/",
     "translation": "二",
     "pos": "num.",
     "grade": null,
@@ -53419,7 +53419,7 @@
     "headwords": [
       "three"
     ],
-    "phonetic": "/θri/",
+    "phonetic": "/θriː/",
     "translation": "三",
     "pos": "num.",
     "grade": null,
@@ -53456,7 +53456,7 @@
     "headwords": [
       "four"
     ],
-    "phonetic": "/fɔr/",
+    "phonetic": "/fɔːr/",
     "translation": "四",
     "pos": "num.",
     "grade": null,
@@ -53715,7 +53715,7 @@
     "headwords": [
       "eleven"
     ],
-    "phonetic": "/ˈilɛvən/",
+    "phonetic": "/ɪˈlɛvən/",
     "translation": "十一",
     "pos": "num.",
     "grade": null,
@@ -53789,7 +53789,7 @@
     "headwords": [
       "thirteen"
     ],
-    "phonetic": "/ˈθʌrˈtin/",
+    "phonetic": "/ˌθɜːrˈtiːn/",
     "translation": "十三",
     "pos": "num.",
     "grade": null,
@@ -53826,7 +53826,7 @@
     "headwords": [
       "fourteen"
     ],
-    "phonetic": "/ˌfɔrˈtin/",
+    "phonetic": "/ˌfɔːrˈtiːn/",
     "translation": "十四",
     "pos": "num.",
     "grade": null,
@@ -53863,7 +53863,7 @@
     "headwords": [
       "fifteen"
     ],
-    "phonetic": "/ˈfɪfˈtin/",
+    "phonetic": "/ˌfɪfˈtiːn/",
     "translation": "十五",
     "pos": "num.",
     "grade": null,
@@ -53900,7 +53900,7 @@
     "headwords": [
       "sixteen"
     ],
-    "phonetic": "/ˈsɪkˈstin/",
+    "phonetic": "/ˌsɪksˈtiːn/",
     "translation": "十六",
     "pos": "num.",
     "grade": null,
@@ -53937,7 +53937,7 @@
     "headwords": [
       "seventeen"
     ],
-    "phonetic": "/ˈsɛvənˈtin/",
+    "phonetic": "/ˌsɛvənˈtiːn/",
     "translation": "十七",
     "pos": "num.",
     "grade": null,
@@ -53974,7 +53974,7 @@
     "headwords": [
       "eighteen"
     ],
-    "phonetic": "/ˈeɪˈtin/",
+    "phonetic": "/ˌeɪˈtiːn/",
     "translation": "十八",
     "pos": "num.",
     "grade": null,
@@ -54011,7 +54011,7 @@
     "headwords": [
       "nineteen"
     ],
-    "phonetic": "/ˈnaɪnˈtin/",
+    "phonetic": "/ˌnaɪnˈtiːn/",
     "translation": "十九",
     "pos": "num.",
     "grade": null,
@@ -54085,7 +54085,7 @@
     "headwords": [
       "thirty"
     ],
-    "phonetic": "/ˈθʌrˌdi/",
+    "phonetic": "/ˈθɜːrti/",
     "translation": "三十",
     "pos": "num.",
     "grade": null,
@@ -54122,7 +54122,7 @@
     "headwords": [
       "forty"
     ],
-    "phonetic": "/ˈfɔrti/",
+    "phonetic": "/ˈfɔːrti/",
     "translation": "四十",
     "pos": "num.",
     "grade": null,
@@ -54455,7 +54455,7 @@
     "headwords": [
       "first"
     ],
-    "phonetic": "/fʌrst/",
+    "phonetic": "/fɜːrst/",
     "translation": "第一",
     "pos": "num.",
     "grade": null,
@@ -54534,7 +54534,7 @@
     "headwords": [
       "third"
     ],
-    "phonetic": "/θʌrd/",
+    "phonetic": "/θɜːrd/",
     "translation": "第三",
     "pos": "num.",
     "grade": null,
@@ -54571,7 +54571,7 @@
     "headwords": [
       "fourth"
     ],
-    "phonetic": "/fɔrθ/",
+    "phonetic": "/fɔːrθ/",
     "translation": "第四",
     "pos": "num.",
     "grade": null,
@@ -54867,7 +54867,7 @@
     "headwords": [
       "March"
     ],
-    "phonetic": "/mɑrʧ/",
+    "phonetic": "/mɑːrtʃ/",
     "translation": "三月",
     "pos": "n.",
     "grade": null,
@@ -54978,7 +54978,7 @@
     "headwords": [
       "June"
     ],
-    "phonetic": "/ʤun/",
+    "phonetic": "/dʒuːn/",
     "translation": "六月",
     "pos": "n.",
     "grade": null,
@@ -55015,7 +55015,7 @@
     "headwords": [
       "July"
     ],
-    "phonetic": "/ˌʤuˈlaɪ/",
+    "phonetic": "/dʒuːˈlaɪ/",
     "translation": "七月",
     "pos": "n.",
     "grade": null,
@@ -55052,7 +55052,7 @@
     "headwords": [
       "August"
     ],
-    "phonetic": "/ˈɔgəst/",
+    "phonetic": "/ˈɔːgəst/",
     "translation": "八月",
     "pos": "n.",
     "grade": null,
@@ -55274,7 +55274,7 @@
     "headwords": [
       "Tuesday"
     ],
-    "phonetic": "/ˈtuzˌdeɪ/",
+    "phonetic": "/ˈtuːzˌdeɪ/",
     "translation": "星期二",
     "pos": "n.",
     "grade": null,
@@ -55348,7 +55348,7 @@
     "headwords": [
       "Thursday"
     ],
-    "phonetic": "/ˈθʌrzˌdeɪ/",
+    "phonetic": "/ˈθɜːrzˌdeɪ/",
     "translation": "星期四",
     "pos": "n.",
     "grade": null,
@@ -55755,7 +55755,7 @@
     "headwords": [
       "Australia"
     ],
-    "phonetic": "/ɔˈstreɪljə/",
+    "phonetic": "/ɔːˈstreɪljə/",
     "translation": "澳大利亚",
     "pos": "n.",
     "grade": null,
@@ -55792,7 +55792,7 @@
     "headwords": [
       "Australian"
     ],
-    "phonetic": "/ɔˈstreɪljən/",
+    "phonetic": "/ɔːˈstreɪljən/",
     "translation": "澳大利亚的；澳大利亚人",
     "pos": "n.",
     "grade": null,
@@ -56051,7 +56051,7 @@
     "headwords": [
       "Germany"
     ],
-    "phonetic": "/ˈʤʌrməni/",
+    "phonetic": "/ˈdʒɜːrməni/",
     "translation": "德国",
     "pos": "n.",
     "grade": null,
@@ -56088,7 +56088,7 @@
     "headwords": [
       "German"
     ],
-    "phonetic": "/ˈʤʌrmən/",
+    "phonetic": "/ˈdʒɜːrmən/",
     "translation": "德国的；德语；德国人",
     "pos": "n.",
     "grade": null,
@@ -56199,7 +56199,7 @@
     "headwords": [
       "Easter"
     ],
-    "phonetic": "/ˈistər/",
+    "phonetic": "/ˈiːstər/",
     "translation": "复活节",
     "pos": "n.",
     "grade": null,
